@@ -5,10 +5,10 @@ description: >
   A collection of benchmark datasets, data-loaders and evaluators for graph machine learning in PyTorch.
 lang: en-US
 
-baseurl: "/ogb.github.io" # the subpath of your site, e.g. /blog/
-url: https://weihua916.github.io # the base hostname & protocol for your site
-git_address: https://github.com/snap-stanford/ogb
-git_edit_address: https://weihua916.github.io/ogb.github.io/blob/master
+baseurl: "/ogb-web" # the subpath of your site, e.g. /blog/
+url: https://snap-stanford.github.io/ogb-web # the base hostname & protocol for your site
+git_address: https://github.com/snap-stanford/ogb-web
+git_edit_address: https://github.com/snap-stanford/ogb-web/blob/gh-pages
 
 # theme options from https://bootswatch.com/3/
 # comment out this to use default Bootstrap
