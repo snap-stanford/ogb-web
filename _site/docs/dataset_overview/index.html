@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="/ogb.github.io/assets/css/main.css">
+    <link rel="stylesheet" href="/ogb.github.io/assets/css/font-awesome.min.css">
+
+    <link rel="shortcut icon" href="/ogb.github.io/favicon.ico?1">
+    <!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>OGB Dataset Overview | Open Graph Benchmark</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="OGB Dataset Overview" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A collection of benchmark datasets, data-loaders and evaluators for graph machine learning in PyTorch." />
+<meta property="og:description" content="A collection of benchmark datasets, data-loaders and evaluators for graph machine learning in PyTorch." />
+<link rel="canonical" href="http://localhost:4000/ogb.github.io/docs/dataset_overview/" />
+<meta property="og:url" content="http://localhost:4000/ogb.github.io/docs/dataset_overview/" />
+<meta property="og:site_name" content="Open Graph Benchmark" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-03-05T19:12:27-08:00" />
+<script type="application/ld+json">
+{"description":"A collection of benchmark datasets, data-loaders and evaluators for graph machine learning in PyTorch.","@type":"WebPage","url":"http://localhost:4000/ogb.github.io/docs/dataset_overview/","headline":"OGB Dataset Overview","dateModified":"2020-03-05T19:12:27-08:00","datePublished":"2020-03-05T19:12:27-08:00","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+    <link rel="alternate" type="application/rss+xml" title="Open Graph Benchmark" href="http://localhost:4000/ogb.github.io/feed.xml" />
+</head>
+
+
+<body>
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container navbar-container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+            <a class="navbar-brand" href="/ogb.github.io/">
+                <span><img src="/ogb.github.io/assets/img/OGB_pure.png" alt="Logo"></span> 
+            </a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+            <div class="navbar-right">
+                <ul class="nav navbar-nav">
+                <li ><a href="/ogb.github.io/docs/home/">Getting Started</a></li>
+                <!-- <li ><a href="/ogb.github.io/docs/dataset_overview/">Datasets</a></li> -->
+                <li ><a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                    Datasets <span class="caret"></span>
+                </a>
+                    <ul class="dropdown-menu">
+                      <li><a href="/ogb.github.io/docs/dataset_overview/">Overview</a></li>
+                      <li class="divider"></li>
+                      <li><a href="/ogb.github.io/docs/nodeprop/">Node Property Prediction</a></li>
+                      <li class="divider"></li>
+                      <li><a href="/ogb.github.io/docs/linkprop/">Link Property Prediction</a></li>
+                      <li class="divider"></li>
+                      <li><a href="/ogb.github.io/docs/graphprop/">Graph Property Prediction</a></li>
+                    </ul>
+                </li>
+                <li ><a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                    Leaderboards <span class="caret"></span>
+                </a>
+                    <ul class="dropdown-menu">
+                      <li><a href="/ogb.github.io/docs/leader_overview/">Overview</a></li>
+                      <li class="divider"></li>
+                      <li><a href="/ogb.github.io/docs/leader_nodeprop/">Node Property Prediction</a></li>
+                      <li class="divider"></li>
+                      <li><a href="/ogb.github.io/docs/leader_linkprop/">Link Property Prediction</a></li>
+                      <li class="divider"></li>
+                      <li><a href="/ogb.github.io/docs/leader_graphprop/">Graph Property Prediction</a></li>
+                    </ul>
+                </li>
+                <li ><a href="/">Paper</a></li>
+<!--                 <li ><a href="/ogb.github.io/assets/slide/ogb-neurips-dec19.pdf">Slides</a></li> -->
+                <li ><a href="/ogb.github.io/docs/team/">Contact & Team</a></li>
+                <li ><a href="https://github.com/snap-stanford/ogb">Github</a></li>
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+    <div class="page-content">
+        <div class="wrapper">
+            <div class="container">
+    <div class="row">
+<!--         <div class="col-md-3">
+          <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+  
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-1" aria-expanded="false" aria-controls="collapse-1">
+            Welcome
+          </a>
+        </h4>
+      </div>
+      
+      
+      <div class="panel-collapse collapse" id="collapse-1" role="tabpanel" aria-label="Side Navigation">
+        <div class="list-group">
+          
+            
+            
+            <a class="list-group-item " href="/ogb.github.io/docs/home/">Getting Started</a>
+          
+        </div>
+      </div>
+    </div>
+  
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-2" aria-expanded="false" aria-controls="collapse-2">
+            Datasets
+          </a>
+        </h4>
+      </div>
+      
+      
+      <div class="panel-collapse" id="collapse-2" role="tabpanel" aria-label="Side Navigation">
+        <div class="list-group">
+          
+            
+            
+            <a class="list-group-item active" href="/ogb.github.io/docs/dataset_overview/">OGB Dataset Overview</a>
+          
+            
+            
+            <a class="list-group-item " href="/ogb.github.io/docs/nodeprop/">Node Property Prediction</a>
+          
+            
+            
+            <a class="list-group-item " href="/ogb.github.io/docs/linkprop/">Link Property Prediction</a>
+          
+            
+            
+            <a class="list-group-item " href="/ogb.github.io/docs/graphprop/">Graph Property Prediction</a>
+          
+        </div>
+      </div>
+    </div>
+  
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-3" aria-expanded="false" aria-controls="collapse-3">
+            Leaderboard
+          </a>
+        </h4>
+      </div>
+      
+      
+      <div class="panel-collapse collapse" id="collapse-3" role="tabpanel" aria-label="Side Navigation">
+        <div class="list-group">
+          
+            
+            
+            <a class="list-group-item " href="/ogb.github.io/docs/leader_overview/">Leaderboards</a>
+          
+            
+            
+            <a class="list-group-item " href="/ogb.github.io/docs/leader_nodeprop/">Leaderboards for Node Property Prediction</a>
+          
+            
+            
+            <a class="list-group-item " href="/ogb.github.io/docs/leader_linkprop/">Leaderboards for Link Property Prediction</a>
+          
+            
+            
+            <a class="list-group-item " href="/ogb.github.io/docs/leader_graphprop/">Leaderboards for Graph Property Prediction</a>
+          
+        </div>
+      </div>
+    </div>
+  
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-4" aria-expanded="false" aria-controls="collapse-4">
+            Frequently Asked Questions
+          </a>
+        </h4>
+      </div>
+      
+      
+      <div class="panel-collapse collapse" id="collapse-4" role="tabpanel" aria-label="Side Navigation">
+        <div class="list-group">
+          
+            
+            
+            <a class="list-group-item " href=""></a>
+          
+        </div>
+      </div>
+    </div>
+  
+</div>
+
+        </div> -->
+        <div class="col-md-12">
+            <h1>OGB Dataset Overview</h1>
+            <div id="markdown-content-container"><!-- Benchmark datasets are broadly classified into three categories representing three key graph machine learning tasks.  -->
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <p class="lead">
+                The Open Graph Benchmark (OGB) aims to provide graph datasets that cover important graph machine learning tasks, diverse dataset scale, and rich domains.
+            </p>
+            <p class="lead">
+                <b>Graph ML Tasks:</b> We cover three fundamental graph machine learning tasks: prediction at the level of <a href="../nodeprop/">nodes</a>, <a href="../linkprop/">links</a>, and <a href="../graphprop/">graphs</a>.  <br />
+            </p>
+            <p class="lead">
+                <b>Diverse scale:</b> Small-scale graph datasets can be processed within a single GPU, while medium- and large-scale graphs might require multiple GPUs or clever sampling/partition techniques. <br />
+            </p>
+            <p class="lead">
+                <b>Rich domains:</b> Graph datasets come from diverse domains ranging from scientific ones to social/information networks, and also include heterogeneous knowledge graphs.  <br />
+            </p>
+        </div>
+        <div class="col-md-6 text-center">
+            <img src="/ogb.github.io/assets/img/dataset_overview.png" class="img-responsive" />
+        </div>
+    </div>
+        <p class="lead">
+                OGB is an on-going effort, and we are planning to increase our coverage in the future. 
+            </p>
+
+
+<!-- #### [**Node Property Prediction**](../nodeprop/)
+The task is to predict properties of single nodes.
+
+- [**ogbn-proteins**](../nodeprop/#ogbn-proteins): Prediction of protein roles in protein-protein association network.
+- [**ogbn-products**](../nodeprop/#ogbn-products): Prediction of product categories in Amazon co-purchasing network.
+
+#### [**Link Property Prediction**](../linkprop/)
+The task is to predict properties of edges (pairs of nodes).
+
+- [**ogbl-ppa**](../linkprop/#ogbl-ppa): Prediction of protein-protein associations and their types in protein-protein association network.
+- [**ogbl-reviews**](../linkprop/#ogbl-reviews): Prediction of review ratings in Amazon user-item review network.
+
+#### [**Graph Property Prediction**](../graphprop)
+The task is to predict properties of entire graphs or subgraphs.
+
+- [**ogbg-mol**](../graphprop/#ogbg-mol): Prediction of chemical properties of molecules. -->
+
+
+</div>
+</div>
+            <!-- <hr> -->
+            <!-- 
+
+
+
+
+
+  
+  
+
+  
+  
+    <ul class="pager">
+      
+        
+        
+        <li class="previous">
+          <a href="/ogb.github.io/docs/home/">
+            <span aria-hidden="true">&larr;</span> Previous
+          </a>
+        </li>
+      
+
+      
+        
+        
+        <li class="next">
+          <a href="/ogb.github.io/docs/nodeprop/">
+            Next <span aria-hidden="true">&rarr;</span>
+          </a>
+        </li>
+      
+      </ul>
+    <div class="clear"></div>
+    
+ -->
+        </div>
+
+    </div>
+</div>
+
+        </div>
+    </div>
+
+    <footer class="footer">
+    <div class="container">
+
+        <p class="text-center">
+            Open Graph Benchmark 2020 |
+            Powered by <a href="https://github.com/aksakalli/jekyll-doc-theme">Jekyll Doc Theme</a>
+        </p>
+        <!-- <p class="text-muted">Place sticky footer content here.</p> -->
+    </div>
+</footer>
+
+    <script>
+  var baseurl = '/ogb.github.io'
+</script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script src="/ogb.github.io/assets/js/bootstrap.min.js "></script>
+<script src="/ogb.github.io/assets/js/typeahead.bundle.min.js "></script>
+
+<script src="/ogb.github.io/assets/js/main.js "></script>
+
+</body>
+
+</html>

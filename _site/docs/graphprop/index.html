@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="/ogb.github.io/assets/css/main.css">
+    <link rel="stylesheet" href="/ogb.github.io/assets/css/font-awesome.min.css">
+
+    <link rel="shortcut icon" href="/ogb.github.io/favicon.ico?1">
+    <!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>Graph Property Prediction | Open Graph Benchmark</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="Graph Property Prediction" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="The task is to predict properties of entire graphs or subgraphs." />
+<meta property="og:description" content="The task is to predict properties of entire graphs or subgraphs." />
+<link rel="canonical" href="http://localhost:4000/ogb.github.io/docs/graphprop/" />
+<meta property="og:url" content="http://localhost:4000/ogb.github.io/docs/graphprop/" />
+<meta property="og:site_name" content="Open Graph Benchmark" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-03-05T19:12:27-08:00" />
+<script type="application/ld+json">
+{"description":"The task is to predict properties of entire graphs or subgraphs.","@type":"WebPage","url":"http://localhost:4000/ogb.github.io/docs/graphprop/","headline":"Graph Property Prediction","dateModified":"2020-03-05T19:12:27-08:00","datePublished":"2020-03-05T19:12:27-08:00","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+    <link rel="alternate" type="application/rss+xml" title="Open Graph Benchmark" href="http://localhost:4000/ogb.github.io/feed.xml" />
+</head>
+
+
+<body>
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container navbar-container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+            <a class="navbar-brand" href="/ogb.github.io/">
+                <span><img src="/ogb.github.io/assets/img/OGB_pure.png" alt="Logo"></span> 
+            </a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+            <div class="navbar-right">
+                <ul class="nav navbar-nav">
+                <li ><a href="/ogb.github.io/docs/home/">Getting Started</a></li>
+                <!-- <li ><a href="/ogb.github.io/docs/dataset_overview/">Datasets</a></li> -->
+                <li ><a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                    Datasets <span class="caret"></span>
+                </a>
+                    <ul class="dropdown-menu">
+                      <li><a href="/ogb.github.io/docs/dataset_overview/">Overview</a></li>
+                      <li class="divider"></li>
+                      <li><a href="/ogb.github.io/docs/nodeprop/">Node Property Prediction</a></li>
+                      <li class="divider"></li>
+                      <li><a href="/ogb.github.io/docs/linkprop/">Link Property Prediction</a></li>
+                      <li class="divider"></li>
+                      <li><a href="/ogb.github.io/docs/graphprop/">Graph Property Prediction</a></li>
+                    </ul>
+                </li>
+                <li ><a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                    Leaderboards <span class="caret"></span>
+                </a>
+                    <ul class="dropdown-menu">
+                      <li><a href="/ogb.github.io/docs/leader_overview/">Overview</a></li>
+                      <li class="divider"></li>
+                      <li><a href="/ogb.github.io/docs/leader_nodeprop/">Node Property Prediction</a></li>
+                      <li class="divider"></li>
+                      <li><a href="/ogb.github.io/docs/leader_linkprop/">Link Property Prediction</a></li>
+                      <li class="divider"></li>
+                      <li><a href="/ogb.github.io/docs/leader_graphprop/">Graph Property Prediction</a></li>
+                    </ul>
+                </li>
+                <li ><a href="/">Paper</a></li>
+<!--                 <li ><a href="/ogb.github.io/assets/slide/ogb-neurips-dec19.pdf">Slides</a></li> -->
+                <li ><a href="/ogb.github.io/docs/team/">Contact & Team</a></li>
+                <li ><a href="https://github.com/snap-stanford/ogb">Github</a></li>
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+    <div class="page-content">
+        <div class="wrapper">
+            <div class="container">
+    <div class="row">
+<!--         <div class="col-md-3">
+          <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+  
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-1" aria-expanded="false" aria-controls="collapse-1">
+            Welcome
+          </a>
+        </h4>
+      </div>
+      
+      
+      <div class="panel-collapse collapse" id="collapse-1" role="tabpanel" aria-label="Side Navigation">
+        <div class="list-group">
+          
+            
+            
+            <a class="list-group-item " href="/ogb.github.io/docs/home/">Getting Started</a>
+          
+        </div>
+      </div>
+    </div>
+  
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-2" aria-expanded="false" aria-controls="collapse-2">
+            Datasets
+          </a>
+        </h4>
+      </div>
+      
+      
+      <div class="panel-collapse" id="collapse-2" role="tabpanel" aria-label="Side Navigation">
+        <div class="list-group">
+          
+            
+            
+            <a class="list-group-item " href="/ogb.github.io/docs/dataset_overview/">OGB Dataset Overview</a>
+          
+            
+            
+            <a class="list-group-item " href="/ogb.github.io/docs/nodeprop/">Node Property Prediction</a>
+          
+            
+            
+            <a class="list-group-item " href="/ogb.github.io/docs/linkprop/">Link Property Prediction</a>
+          
+            
+            
+            <a class="list-group-item active" href="/ogb.github.io/docs/graphprop/">Graph Property Prediction</a>
+          
+        </div>
+      </div>
+    </div>
+  
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-3" aria-expanded="false" aria-controls="collapse-3">
+            Leaderboard
+          </a>
+        </h4>
+      </div>
+      
+      
+      <div class="panel-collapse collapse" id="collapse-3" role="tabpanel" aria-label="Side Navigation">
+        <div class="list-group">
+          
+            
+            
+            <a class="list-group-item " href="/ogb.github.io/docs/leader_overview/">Leaderboards</a>
+          
+            
+            
+            <a class="list-group-item " href="/ogb.github.io/docs/leader_nodeprop/">Leaderboards for Node Property Prediction</a>
+          
+            
+            
+            <a class="list-group-item " href="/ogb.github.io/docs/leader_linkprop/">Leaderboards for Link Property Prediction</a>
+          
+            
+            
+            <a class="list-group-item " href="/ogb.github.io/docs/leader_graphprop/">Leaderboards for Graph Property Prediction</a>
+          
+        </div>
+      </div>
+    </div>
+  
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-4" aria-expanded="false" aria-controls="collapse-4">
+            Frequently Asked Questions
+          </a>
+        </h4>
+      </div>
+      
+      
+      <div class="panel-collapse collapse" id="collapse-4" role="tabpanel" aria-label="Side Navigation">
+        <div class="list-group">
+          
+            
+            
+            <a class="list-group-item " href=""></a>
+          
+        </div>
+      </div>
+    </div>
+  
+</div>
+
+        </div> -->
+        <div class="col-md-12">
+            <h1>Graph Property Prediction</h1>
+            <div id="markdown-content-container"><h5 id="the-task-is-to-predict-properties-of-entire-graphs-or-subgraphs">The task is to predict properties of entire graphs or subgraphs.</h5>
+
+<h3 id="summary">Summary</h3>
+
+<h4 id="--datasets">- Datasets</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>Scale</th>
+      <th>Name</th>
+      <th>#Graphs</th>
+      <th>#Nodes per graph</th>
+      <th>#Edges per graph*</th>
+      <th>#Task</th>
+      <th>Split Type</th>
+      <th>Task Type</th>
+      <th>Metric</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Small</td>
+      <td><a href="#ogbg-mol">ogbg-mol-tox21</a></td>
+      <td>7,831</td>
+      <td>18.6</td>
+      <td>38.6</td>
+      <td>12</td>
+      <td>Scaffold</td>
+      <td>Binary classification</td>
+      <td>ROC-AUC</td>
+    </tr>
+    <tr>
+      <td>Medium</td>
+      <td><a href="#ogbg-mol">ogbg-mol-hiv</a></td>
+      <td>41,127</td>
+      <td>25.5</td>
+      <td>54.9</td>
+      <td>1</td>
+      <td>Scaffold</td>
+      <td>Binary classification</td>
+      <td>ROC-AUC</td>
+    </tr>
+    <tr>
+      <td>Large</td>
+      <td><a href="#ogbg-mol">ogbg-mol-pcba</a></td>
+      <td>437,929</td>
+      <td>26.0</td>
+      <td>56.2</td>
+      <td>128</td>
+      <td>Scaffold</td>
+      <td>Binary classification</td>
+      <td>ROC-AUC</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>* Undirected edges are represented as bidirectional edges and counted as two edges. <br /> More datasets will be added in the future.</p>
+
+<h4 id="--module">- Module</h4>
+<p>We prepare different <a href="#loader">data loader</a> variants: (1) <a href="#pyg">Pytorch Geometric one</a> (2) <a href="#dgl">DGL one</a> and (3) <a href="#libagn">library-agnostic one</a>.
+We also prepare a unified <a href="#eval">performance evaluator</a>.</p>
+
+<hr />
+
+<p><a name="ogbg-mol"></a></p>
+<h3 id="dataset-ogbg-mol-leaderboard">Dataset <code class="language-plaintext highlighter-rouge">ogbg-mol</code>: (<a href="../leader_graphprop/#ogbg-mol">Leaderboard</a>)</h3>
+
+<p><strong>Graph:</strong> <code class="language-plaintext highlighter-rouge">ogbg-mol</code> is <em>a set of</em> molecular property prediction datasets adopted from MoleculeNet [1]. All the molecules are pre-processed using RDKit [2].
+Each graph represents a molecule, where nodes are atoms, and edges are chemical bonds.
+Input node features are 9-dimensional, containing atomic number, chirality, formal charge, etc. Input edge features are 3-dimensional, containing bond type, bond stereo, etc.
+For further details, please refer to the <a href="https://github.com/snap-stanford/ogb/blob/master/ogb/utils/features.py">code</a>. The script to convert the SMILES string [3] to the above graph object can be found <a href="../../assets/script/smile2graph.py">here</a>.
+Note that the script requires <a href="https://www.rdkit.org/docs/GettingStartedInPython.html">RDkit</a> to be installed. The script can be used to pre-process external molecule datasets so that those datasets share the same input feature space as the OGB molecule datasets. This is particularly useful for pre-training graph models, which has great potential to significantly increase generalization performance on the (<em>downstream</em>) OGB datasets [4].</p>
+
+<p>For encoding these raw input features, we prepare simple modules called <code class="language-plaintext highlighter-rouge">AtomEncoder</code> and <code class="language-plaintext highlighter-rouge">BondEncoder</code>. They can be used as follows to embed raw atom and bond features to obtain <code class="language-plaintext highlighter-rouge">atom_emb</code> and <code class="language-plaintext highlighter-rouge">bond_emb</code>.</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">ogb.graphproppred.mol_encoder</span> <span class="kn">import</span> <span class="n">AtomEncoder</span><span class="p">,</span> <span class="n">BondEncoder</span>
+<span class="n">atom_encoder</span> <span class="o">=</span> <span class="n">AtomEncoder</span><span class="p">(</span><span class="n">emb_dim</span> <span class="o">=</span> <span class="mi">100</span><span class="p">)</span>
+<span class="n">bond_encoder</span> <span class="o">=</span> <span class="n">BondEncoder</span><span class="p">(</span><span class="n">emb_dim</span> <span class="o">=</span> <span class="mi">100</span><span class="p">)</span>
+
+<span class="n">atom_emb</span> <span class="o">=</span> <span class="n">atom_encoder</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="c1"># x is input atom feature in Pytorch Geometric
+</span><span class="n">edge_emb</span> <span class="o">=</span> <span class="n">bond_encoder</span><span class="p">(</span><span class="n">edge_attr</span><span class="p">)</span> <span class="c1"># edge_attr is input edge feature in Pytorch Geometric
+</span></code></pre></div></div>
+
+<h4 id="datasets">Datasets</h4>
+
+<p><strong>Prediction task:</strong>  From MoleculeNet [1], we selected and processed three molecular property prediction datasets: <code class="language-plaintext highlighter-rouge">ogbg-mol-tox21</code>, <code class="language-plaintext highlighter-rouge">ogbg-mol-hiv</code>, <code class="language-plaintext highlighter-rouge">ogbg-mol-pcba</code>, that are of small, medium, and large sizes, respectively.
+A detailed description of each dataset can be found in [1].
+Each dataset can contain multiple labels/tasks to predict, and the performance averaged over these tasks is to be evaluated.</p>
+
+<p>The task is to predict the target chemical properties as accurately as possible.
+All the raw molecule data (including the SMILES strings) can be found in the <code class="language-plaintext highlighter-rouge">raw</code> directory in the downloaded dataset folder, e.g., <code class="language-plaintext highlighter-rouge">dataset/ogbg_mol_tox21_pyg/raw/tox21.csv.gz</code>.</p>
+
+<p>Beside the three main datasets, we also provide the other MoleculeNet datasets that are readily available from the OGB package. They are <code class="language-plaintext highlighter-rouge">ogbg-mol-bace</code>, <code class="language-plaintext highlighter-rouge">ogbg-mol-bbbp</code>, <code class="language-plaintext highlighter-rouge">ogbg-mol-clintox</code>, <code class="language-plaintext highlighter-rouge">ogbg-mol-muv</code>, <code class="language-plaintext highlighter-rouge">ogbg-mol-sider</code>, and <code class="language-plaintext highlighter-rouge">ogbg-mol-toxcast</code> for binary classification, <code class="language-plaintext highlighter-rouge">ogbg-mol-esol</code>, <code class="language-plaintext highlighter-rouge">ogbg-mol-freesolv</code>, and <code class="language-plaintext highlighter-rouge">ogbg-mol-lipo</code> for regression. Evaluators are also provided for these datasets. We encourage you to also test on these datasets if you are working on molecule-specific models.</p>
+
+<p><strong>Dataset splitting:</strong> We adopt the <em>scaffold splitting</em> (implmented in <a href="https://www.rdkit.org/docs/GettingStartedInPython.html">RDkit</a>) that splits the molecules based on their two-dimensional structural frameworks. The scaffold splitting attempts to separate structurally different molecules into different subsets, which provides a more realistic estimate of model performance in prospective settings [1].</p>
+
+<h4 id="references">References</h4>
+
+<p>[1] Wu, Z., Ramsundar, B., Feinberg, E. N., Gomes, J., Geniesse, C., Pappu, A. S., Leswing, K. &amp; Pande, V. (2018). MoleculeNet: a benchmark for molecular machine learning. Chemical science, 9(2), 513-530. <br />
+[2] Landrum, G. (2006). RDKit: Open-source cheminformatics. <br />
+[3] Anderson, Eric, Gilman D. Veith, and David Weininger. “SMILES: a line notation and computerized interpreter for chemical structures.” (1987). <br />
+[4] Hu, W., Liu, B., Gomes, J., Zitnik, M., Liang, P., Pande, V., &amp; Leskovec, J. (2020). Strategies for pre-training graph neural networks. ICLR 2020.</p>
+
+<hr />
+
+<p><a name="loader"></a></p>
+
+<h3 id="data-loader">Data Loader</h3>
+
+<p>To load a dataset replace, d_name with the dataset name (e.g., <code class="language-plaintext highlighter-rouge">"ogbg-mol-tox21"</code>).</p>
+
+<p><a name="pyg"></a></p>
+
+<h4 id="pytorch-geometric-loader">Pytorch Geometric Loader</h4>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">ogb.graphproppred.dataset_pyg</span> <span class="kn">import</span> <span class="n">PygGraphPropPredDataset</span>
+<span class="kn">from</span> <span class="nn">torch_geometric.data</span> <span class="kn">import</span> <span class="n">DataLoader</span>
+
+<span class="n">dataset</span> <span class="o">=</span> <span class="n">PygGraphPropPredDataset</span><span class="p">(</span><span class="n">name</span> <span class="o">=</span> <span class="n">d_name</span><span class="p">)</span> 
+<span class="n">num_tasks</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">num_tasks</span> <span class="c1"># obtaining the number of prediction tasks in a dataset
+</span>
+<span class="n">splitted_idx</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">get_idx_split</span><span class="p">()</span> 
+<span class="n">train_loader</span> <span class="o">=</span> <span class="n">DataLoader</span><span class="p">(</span><span class="n">dataset</span><span class="p">[</span><span class="n">splitted_idx</span><span class="p">[</span><span class="s">"train"</span><span class="p">]],</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">32</span><span class="p">,</span> <span class="n">shuffle</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<span class="n">valid_loader</span> <span class="o">=</span> <span class="n">DataLoader</span><span class="p">(</span><span class="n">dataset</span><span class="p">[</span><span class="n">splitted_idx</span><span class="p">[</span><span class="s">"valid"</span><span class="p">]],</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">32</span><span class="p">,</span> <span class="n">shuffle</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+<span class="n">test_loader</span> <span class="o">=</span> <span class="n">DataLoader</span><span class="p">(</span><span class="n">dataset</span><span class="p">[</span><span class="n">splitted_idx</span><span class="p">[</span><span class="s">"test"</span><span class="p">]],</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">32</span><span class="p">,</span> <span class="n">shuffle</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+</code></pre></div></div>
+<p>Note that the prediction targets are stored in <code class="language-plaintext highlighter-rouge">dataset.y</code>.</p>
+
+<p><a name="dgl"></a></p>
+
+<h4 id="dgl-loader">DGL Loader</h4>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">ogb.graphproppred.dataset_dgl</span> <span class="kn">import</span> <span class="n">DglGraphPropPredDataset</span><span class="p">,</span> <span class="n">collate_dgl</span>
+<span class="kn">from</span> <span class="nn">torch.utils.data</span> <span class="kn">import</span> <span class="n">DataLoader</span>
+
+<span class="n">dataset</span> <span class="o">=</span> <span class="n">DglGraphPropPredDataset</span><span class="p">(</span><span class="n">name</span> <span class="o">=</span> <span class="n">d_name</span><span class="p">)</span>
+<span class="n">num_tasks</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">num_tasks</span> <span class="c1"># obtaining the number of prediction tasks in a dataset
+</span>
+<span class="n">splitted_idx</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">get_idx_split</span><span class="p">()</span>
+<span class="n">train_loader</span> <span class="o">=</span> <span class="n">DataLoader</span><span class="p">(</span><span class="n">dataset</span><span class="p">[</span><span class="n">splitted_idx</span><span class="p">[</span><span class="s">"train"</span><span class="p">]],</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">32</span><span class="p">,</span> <span class="n">shuffle</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">collate_fn</span><span class="o">=</span><span class="n">collate_dgl</span><span class="p">)</span>
+<span class="n">valid_loader</span> <span class="o">=</span> <span class="n">DataLoader</span><span class="p">(</span><span class="n">dataset</span><span class="p">[</span><span class="n">splitted_idx</span><span class="p">[</span><span class="s">"valid"</span><span class="p">]],</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">32</span><span class="p">,</span> <span class="n">shuffle</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">collate_fn</span><span class="o">=</span><span class="n">collate_dgl</span><span class="p">)</span>
+<span class="n">test_loader</span> <span class="o">=</span> <span class="n">DataLoader</span><span class="p">(</span><span class="n">dataset</span><span class="p">[</span><span class="n">splitted_idx</span><span class="p">[</span><span class="s">"test"</span><span class="p">]],</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">32</span><span class="p">,</span> <span class="n">shuffle</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">collate_fn</span><span class="o">=</span><span class="n">collate_dgl</span><span class="p">)</span>
+</code></pre></div></div>
+<p>Note that the i-th example and its prediction targets can be obtained by <code class="language-plaintext highlighter-rouge">graph, label = dataset[i]</code>.</p>
+
+<p><a name="libagn"></a></p>
+
+<h4 id="library-agnostic-loader">Library-Agnostic Loader</h4>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">ogb.graphproppred.dataset</span> <span class="kn">import</span> <span class="n">GraphPropPredDataset</span>
+
+<span class="n">dataset</span> <span class="o">=</span> <span class="n">GraphPropPredDataset</span><span class="p">(</span><span class="n">name</span> <span class="o">=</span> <span class="n">d_name</span><span class="p">)</span>
+<span class="n">num_tasks</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">num_tasks</span> <span class="c1"># obtaining the number of prediction tasks in a dataset
+</span>
+<span class="n">splitted_idx</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">get_idx_split</span><span class="p">()</span>
+<span class="n">train_idx</span><span class="p">,</span> <span class="n">valid_idx</span><span class="p">,</span> <span class="n">test_idx</span> <span class="o">=</span> <span class="n">splitted_idx</span><span class="p">[</span><span class="s">"train"</span><span class="p">],</span> <span class="n">splitted_idx</span><span class="p">[</span><span class="s">"valid"</span><span class="p">],</span> <span class="n">splitted_idx</span><span class="p">[</span><span class="s">"test"</span><span class="p">]</span>
+
+<span class="c1">### set i as an arbitrary index
+</span><span class="n">graph</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="n">dataset</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="c1"># graph: library-agnostic graph object
+</span></code></pre></div></div>
+<p>The library-agnostic graph object is a dictionary containing the following keys: <code class="language-plaintext highlighter-rouge">edge_index</code>, <code class="language-plaintext highlighter-rouge">edge_feat</code>, <code class="language-plaintext highlighter-rouge">node_feat</code>, and <code class="language-plaintext highlighter-rouge">num_nodes</code>, which are detailed below.</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">edge_index</code>: numpy arrays of shape <code class="language-plaintext highlighter-rouge">(2, num_edges)</code>, where each column represents an edge. The first row and the second row represent the indices of source and target nodes. Undirected edges are represented by bi-directional edges.</li>
+  <li><code class="language-plaintext highlighter-rouge">edge_feat</code>: numpy arrays of shape <code class="language-plaintext highlighter-rouge">(num_edges, edgefeat_dim)</code>, where <code class="language-plaintext highlighter-rouge">edgefeat_dim</code> is the dimensionality of edge features and i-th row represents the feature of i-th edge. This can be <code class="language-plaintext highlighter-rouge">None</code> if no input edge features are available.</li>
+  <li><code class="language-plaintext highlighter-rouge">node_feat</code>: numpy arrays of shape <code class="language-plaintext highlighter-rouge">(num_nodes, nodefeat_dim)</code>, where <code class="language-plaintext highlighter-rouge">nodefeat_dim</code> is the dimensionality of node features and i-th row represents the feature of i-th node. This can be <code class="language-plaintext highlighter-rouge">None</code> if no input node features are available.</li>
+  <li><code class="language-plaintext highlighter-rouge">num_nodes</code>: number of nodes in the graph.</li>
+</ul>
+
+<hr />
+
+<p><a name="eval"></a></p>
+
+<h3 id="performance-evaluator">Performance Evaluator</h3>
+
+<p>Evaluators are customized for each dataset.
+We require users to pass a pre-specified format to the evaluator.
+First, please learn the input and output format specification of the evaluator as follows.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">ogb.graphproppred</span> <span class="kn">import</span> <span class="n">Evaluator</span>
+
+<span class="n">evaluator</span> <span class="o">=</span> <span class="n">Evaluator</span><span class="p">(</span><span class="n">name</span> <span class="o">=</span> <span class="n">d_name</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">evaluator</span><span class="o">.</span><span class="n">expected_input_format</span><span class="p">)</span> 
+<span class="k">print</span><span class="p">(</span><span class="n">evaluator</span><span class="o">.</span><span class="n">expected_output_format</span><span class="p">)</span>  
+</code></pre></div></div>
+
+<p>Then, you can pass the input dictionary (denoted by <code class="language-plaintext highlighter-rouge">input_dict</code> below) of the specified format and get the performance of your prediction.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># In most cases, input_dict is
+# input_dict = {"y_true": y_true, "y_pred": y_pred}
+</span><span class="n">result_dict</span> <span class="o">=</span> <span class="n">evaluator</span><span class="o">.</span><span class="nb">eval</span><span class="p">(</span><span class="n">input_dict</span><span class="p">)</span>
+</code></pre></div></div>
+
+</div>
+            <!-- <hr> -->
+            <!-- 
+
+
+
+
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+    <ul class="pager">
+      
+        
+        
+        <li class="previous">
+          <a href="/ogb.github.io/docs/linkprop/">
+            <span aria-hidden="true">&larr;</span> Previous
+          </a>
+        </li>
+      
+
+      
+        
+        
+        <li class="next">
+          <a href="/ogb.github.io/docs/leader_overview/">
+            Next <span aria-hidden="true">&rarr;</span>
+          </a>
+        </li>
+      
+      </ul>
+    <div class="clear"></div>
+    
+ -->
+        </div>
+
+    </div>
+</div>
+
+        </div>
+    </div>
+
+    <footer class="footer">
+    <div class="container">
+
+        <p class="text-center">
+            Open Graph Benchmark 2020 |
+            Powered by <a href="https://github.com/aksakalli/jekyll-doc-theme">Jekyll Doc Theme</a>
+        </p>
+        <!-- <p class="text-muted">Place sticky footer content here.</p> -->
+    </div>
+</footer>
+
+    <script>
+  var baseurl = '/ogb.github.io'
+</script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script src="/ogb.github.io/assets/js/bootstrap.min.js "></script>
+<script src="/ogb.github.io/assets/js/typeahead.bundle.min.js "></script>
+
+<script src="/ogb.github.io/assets/js/main.js "></script>
+
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+# Site settings
+title: Open Graph Benchmark
+email: weihua916@gmail.com
+description: >
+  A collection of benchmark datasets, data-loaders and evaluators for graph machine learning in PyTorch.
+lang: en-US
+
+baseurl: "/ogb.github.io" # the subpath of your site, e.g. /blog/
+url: https://weihua916.github.io # the base hostname & protocol for your site
+git_address: https://github.com/snap-stanford/ogb
+git_edit_address: https://weihua916.github.io/ogb.github.io/blob/master
+
+# theme options from https://bootswatch.com/3/
+# comment out this to use default Bootstrap
+bootwatch: paper # cerulean cosmo custom cyborg darkly flatly journal lumen readable sandstone simplex slate solar spacelab superhero united yeti
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+# Plugins (previously gems:)
+plugins:
+  - jekyll-feed
+  - jekyll-redirect-from
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - .idea/
+  - .gitignore
+  - README.md
+#timezone: USA/Berlin
+defaults:
+- scope:
+    path: _posts
+    type: posts
+  values:
+    layout: post
+    sectionid: blog
+
+- scope:
+    path: _docs
+    type: docs
+  values:
+    layout: docs
+    sectionid: docs
+    seo:
+      type: "WebPage"
+
+collections:
+  docs:
+    permalink: /:collection/:path/
+    output: true
+  posts:
+    permalink: /blog/:year/:month/:day/:title/
+    output: true

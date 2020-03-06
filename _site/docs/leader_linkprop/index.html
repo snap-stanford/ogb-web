@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="/ogb.github.io/assets/css/main.css">
+    <link rel="stylesheet" href="/ogb.github.io/assets/css/font-awesome.min.css">
+
+    <link rel="shortcut icon" href="/ogb.github.io/favicon.ico?1">
+    <!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>Leaderboards for Link Property Prediction | Open Graph Benchmark</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="Leaderboards for Link Property Prediction" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Check leaderboards for - ogbl-ppa - ogbl-reviews" />
+<meta property="og:description" content="Check leaderboards for - ogbl-ppa - ogbl-reviews" />
+<link rel="canonical" href="http://localhost:4000/ogb.github.io/docs/leader_linkprop/" />
+<meta property="og:url" content="http://localhost:4000/ogb.github.io/docs/leader_linkprop/" />
+<meta property="og:site_name" content="Open Graph Benchmark" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-03-05T19:12:27-08:00" />
+<script type="application/ld+json">
+{"description":"Check leaderboards for - ogbl-ppa - ogbl-reviews","@type":"WebPage","url":"http://localhost:4000/ogb.github.io/docs/leader_linkprop/","headline":"Leaderboards for Link Property Prediction","dateModified":"2020-03-05T19:12:27-08:00","datePublished":"2020-03-05T19:12:27-08:00","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+    <link rel="alternate" type="application/rss+xml" title="Open Graph Benchmark" href="http://localhost:4000/ogb.github.io/feed.xml" />
+</head>
+
+
+<body>
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container navbar-container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+            <a class="navbar-brand" href="/ogb.github.io/">
+                <span><img src="/ogb.github.io/assets/img/OGB_pure.png" alt="Logo"></span> 
+            </a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+            <div class="navbar-right">
+                <ul class="nav navbar-nav">
+                <li ><a href="/ogb.github.io/docs/home/">Getting Started</a></li>
+                <!-- <li ><a href="/ogb.github.io/docs/dataset_overview/">Datasets</a></li> -->
+                <li ><a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                    Datasets <span class="caret"></span>
+                </a>
+                    <ul class="dropdown-menu">
+                      <li><a href="/ogb.github.io/docs/dataset_overview/">Overview</a></li>
+                      <li class="divider"></li>
+                      <li><a href="/ogb.github.io/docs/nodeprop/">Node Property Prediction</a></li>
+                      <li class="divider"></li>
+                      <li><a href="/ogb.github.io/docs/linkprop/">Link Property Prediction</a></li>
+                      <li class="divider"></li>
+                      <li><a href="/ogb.github.io/docs/graphprop/">Graph Property Prediction</a></li>
+                    </ul>
+                </li>
+                <li ><a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                    Leaderboards <span class="caret"></span>
+                </a>
+                    <ul class="dropdown-menu">
+                      <li><a href="/ogb.github.io/docs/leader_overview/">Overview</a></li>
+                      <li class="divider"></li>
+                      <li><a href="/ogb.github.io/docs/leader_nodeprop/">Node Property Prediction</a></li>
+                      <li class="divider"></li>
+                      <li><a href="/ogb.github.io/docs/leader_linkprop/">Link Property Prediction</a></li>
+                      <li class="divider"></li>
+                      <li><a href="/ogb.github.io/docs/leader_graphprop/">Graph Property Prediction</a></li>
+                    </ul>
+                </li>
+                <li ><a href="/">Paper</a></li>
+<!--                 <li ><a href="/ogb.github.io/assets/slide/ogb-neurips-dec19.pdf">Slides</a></li> -->
+                <li ><a href="/ogb.github.io/docs/team/">Contact & Team</a></li>
+                <li ><a href="https://github.com/snap-stanford/ogb">Github</a></li>
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+    <div class="page-content">
+        <div class="wrapper">
+            <div class="container">
+    <div class="row">
+<!--         <div class="col-md-3">
+          <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+  
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-1" aria-expanded="false" aria-controls="collapse-1">
+            Welcome
+          </a>
+        </h4>
+      </div>
+      
+      
+      <div class="panel-collapse collapse" id="collapse-1" role="tabpanel" aria-label="Side Navigation">
+        <div class="list-group">
+          
+            
+            
+            <a class="list-group-item " href="/ogb.github.io/docs/home/">Getting Started</a>
+          
+        </div>
+      </div>
+    </div>
+  
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-2" aria-expanded="false" aria-controls="collapse-2">
+            Datasets
+          </a>
+        </h4>
+      </div>
+      
+      
+      <div class="panel-collapse collapse" id="collapse-2" role="tabpanel" aria-label="Side Navigation">
+        <div class="list-group">
+          
+            
+            
+            <a class="list-group-item " href="/ogb.github.io/docs/dataset_overview/">OGB Dataset Overview</a>
+          
+            
+            
+            <a class="list-group-item " href="/ogb.github.io/docs/nodeprop/">Node Property Prediction</a>
+          
+            
+            
+            <a class="list-group-item " href="/ogb.github.io/docs/linkprop/">Link Property Prediction</a>
+          
+            
+            
+            <a class="list-group-item " href="/ogb.github.io/docs/graphprop/">Graph Property Prediction</a>
+          
+        </div>
+      </div>
+    </div>
+  
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-3" aria-expanded="false" aria-controls="collapse-3">
+            Leaderboard
+          </a>
+        </h4>
+      </div>
+      
+      
+      <div class="panel-collapse" id="collapse-3" role="tabpanel" aria-label="Side Navigation">
+        <div class="list-group">
+          
+            
+            
+            <a class="list-group-item " href="/ogb.github.io/docs/leader_overview/">Leaderboards</a>
+          
+            
+            
+            <a class="list-group-item " href="/ogb.github.io/docs/leader_nodeprop/">Leaderboards for Node Property Prediction</a>
+          
+            
+            
+            <a class="list-group-item active" href="/ogb.github.io/docs/leader_linkprop/">Leaderboards for Link Property Prediction</a>
+          
+            
+            
+            <a class="list-group-item " href="/ogb.github.io/docs/leader_graphprop/">Leaderboards for Graph Property Prediction</a>
+          
+        </div>
+      </div>
+    </div>
+  
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-4" aria-expanded="false" aria-controls="collapse-4">
+            Frequently Asked Questions
+          </a>
+        </h4>
+      </div>
+      
+      
+      <div class="panel-collapse collapse" id="collapse-4" role="tabpanel" aria-label="Side Navigation">
+        <div class="list-group">
+          
+            
+            
+            <a class="list-group-item " href=""></a>
+          
+        </div>
+      </div>
+    </div>
+  
+</div>
+
+        </div> -->
+        <div class="col-md-12">
+            <h1>Leaderboards for Link Property Prediction</h1>
+            <div id="markdown-content-container"><h5 id="check-leaderboards-for">Check leaderboards for</h5>
+<h6 id="--ogbl-ppa">- <a href="#ogbn-ppa">ogbl-ppa</a></h6>
+<h6 id="--ogbl-reviews">- <a href="#ogbn-reviews">ogbl-reviews</a></h6>
+
+<hr />
+
+<p><a name="ogbl-ppa"></a></p>
+<h3 id="leaderboard-for-ogbl-ppa-coming-soon">Leaderboard for <a href="../linkprop/#ogbl-ppa">ogbl-ppa</a> (Coming soon)</h3>
+<p>The Hits@K score on the test set. The higher, the better.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Rank</th>
+      <th style="text-align: center">Method</th>
+      <th style="text-align: center">Hits@K</th>
+      <th style="text-align: center">References</th>
+      <th style="text-align: center">Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">1</td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: center"> </td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<p><a name="ogbl-reviews"></a></p>
+<h3 id="leaderboard-for-ogbl-reviews-coming-soon">Leaderboard for <a href="../linkprop/#ogbl-reviews">ogbl-reviews</a> (Coming soon)</h3>
+<p>The root mean squared error on the test set. The lower, the better.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Rank</th>
+      <th style="text-align: center">Method</th>
+      <th style="text-align: center">RMSE</th>
+      <th style="text-align: center">References</th>
+      <th style="text-align: center">Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">1</td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: center"> </td>
+    </tr>
+  </tbody>
+</table>
+</div>
+            <!-- <hr> -->
+            <!-- 
+
+
+
+
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+    <ul class="pager">
+      
+        
+        
+        <li class="previous">
+          <a href="/ogb.github.io/docs/leader_nodeprop/">
+            <span aria-hidden="true">&larr;</span> Previous
+          </a>
+        </li>
+      
+
+      
+        
+        
+        <li class="next">
+          <a href="/ogb.github.io/docs/leader_graphprop/">
+            Next <span aria-hidden="true">&rarr;</span>
+          </a>
+        </li>
+      
+      </ul>
+    <div class="clear"></div>
+    
+ -->
+        </div>
+
+    </div>
+</div>
+
+        </div>
+    </div>
+
+    <footer class="footer">
+    <div class="container">
+
+        <p class="text-center">
+            Open Graph Benchmark 2020 |
+            Powered by <a href="https://github.com/aksakalli/jekyll-doc-theme">Jekyll Doc Theme</a>
+        </p>
+        <!-- <p class="text-muted">Place sticky footer content here.</p> -->
+    </div>
+</footer>
+
+    <script>
+  var baseurl = '/ogb.github.io'
+</script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script src="/ogb.github.io/assets/js/bootstrap.min.js "></script>
+<script src="/ogb.github.io/assets/js/typeahead.bundle.min.js "></script>
+
+<script src="/ogb.github.io/assets/js/main.js "></script>
+
+</body>
+
+</html>
