@@ -11,12 +11,11 @@ permalink: /docs/linkprop/
 
 Scale | Name      | #Nodes | #Edges\* | #Task | Split Type   | Task Type     | Metric       |
 |------------------|--------|----------|----------|-------------------------------------------------|-----------------------|----------------------------------|----------------|
-Medium | [ogbl-ppa](#ogbl-ppa)         | 576,289 |    42,463,862 |     1      | Species  | Link prediction   |     Hits@K              |
-Medium | [ogbl-reviews](#ogbl-reviews) | 2,560,437    | 43,463,972 | 1      |     Sales ranking   | Link value regression      |    RMSE         |
+Medium | [ogbl-ppa](#ogbl-ppa)         | 576,289 |    21,231,931 |     1      | Species  | Link prediction   |     Hits@K              |
+Medium | [ogbl-reviews](#ogbl-reviews) | 2,560,437    | 21,731,986 | 1      |     Sales ranking   | Link value regression      |    RMSE         |
 
 
-
-\* Undirected edges are represented as bidirectional edges and counted as two edges. <br/> More datasets will be added in the future.
+\* Note that for undirected graphs, the loaded graphs will have the doubled number of edges becausewe add the bidirectional edges automatically.
 
 #### - Module
 We prepare different [data loader](#loader) variants: (1) [Pytorch Geometric one](#pyg) (2) [DGL one](#dgl) and (3) [library-agnostic one](#libagn).

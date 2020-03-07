@@ -11,13 +11,13 @@ permalink: /docs/graphprop/
 
 Scale | Name     | #Graphs   | #Nodes per graph | #Edges per graph\* | #Task | Split Type  | Task Type   | Metric                           |
 |-------------------------|----------|----------|----------|----------------|---------------------|------------------------|----------|
-Small | [ogbg-mol-tox21](#ogbg-mol) | 7,831 | 18.6 | 38.6 | 12   | Scaffold  |  Binary classification | ROC-AUC  |
-Medium | [ogbg-mol-hiv](#ogbg-mol) | 41,127 | 25.5 | 54.9 | 1   | Scaffold  |  Binary classification | ROC-AUC  |
-Large | [ogbg-mol-pcba](#ogbg-mol) | 437,929 | 26.0 | 56.2 | 128   | Scaffold  |  Binary classification | ROC-AUC  |
+Small | [ogbg-mol-tox21](#ogbg-mol) | 7,831 | 18.6 | 19.3 | 12   | Scaffold  |  Binary classification | ROC-AUC  |
+Medium | [ogbg-mol-hiv](#ogbg-mol) | 41,127 | 25.5 | 27.5 | 1   | Scaffold  |  Binary classification | ROC-AUC  |
+Large | [ogbg-mol-pcba](#ogbg-mol) | 437,929 | 26.0 | 28.1 | 128   | Scaffold  |  Binary classification | ROC-AUC  |
 
 
+\* Note that for undirected graphs, the loaded graphs will have the doubled number of edges becausewe add the bidirectional edges automatically.
 
-\* Undirected edges are represented as bidirectional edges and counted as two edges. <br/> More datasets will be added in the future.
 
 #### - Module
 We prepare different [data loader](#loader) variants: (1) [Pytorch Geometric one](#pyg) (2) [DGL one](#dgl) and (3) [library-agnostic one](#libagn).

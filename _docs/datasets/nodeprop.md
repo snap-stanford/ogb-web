@@ -11,13 +11,11 @@ permalink: /docs/nodeprop/
 
 Scale | Name                              | #Nodes  | #Edges\* | #Task | Split Type        | Task Type   | Metric                  |
 |-------------|---------|----------------|----------------------|---------------------|---------------------------|--------------------|
-Medium | [ogbn-proteins](#ogbn-proteins) | 132,534  |  79,122,504 | 112       | Species  | Binary classification   | ROC-AUC     |
-Medium | [ogbn-products](#ogbn-products) | 2,449,029  | 123,718,280 | 1       | Time      | Multi-class classification | Accuracy |
+Medium | [ogbn-proteins](#ogbn-proteins) | 132,534  |  39,561,252 | 112       | Species  | Binary classification   | ROC-AUC     |
+Medium | [ogbn-products](#ogbn-products) | 2,449,029  | 61,859,140 | 1       | Time      | Multi-class classification | Accuracy |
 
-<!-- | ogbn-wiki                         | TBD     | TBD            | Wikipedia hyperlinks                                       | Articles categories | TBD              |
- -->
 
-\* Undirected edges are represented as bidirectional edges and counted as two edges. <br/> More datasets will be added in the future.
+\* Note that for undirected graphs, the loaded graphs will have the doubled number of edges becausewe add the bidirectional edges automatically.
 
 #### - Module
 We prepare different [data loader](#loader) variants: (1) [Pytorch Geometric one](#pyg) (2) [DGL one](#dgl) and (3) [library-agnostic one](#libagn).
