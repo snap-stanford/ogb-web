@@ -25,9 +25,9 @@ You can install OGB using Python package manager pip.
 pip install ogb
 ```
 
-**Important**: Make sure to install the latest version of OGB package (0.2.0 as of March 2020). You can check the version by running 
+**Important**: Make sure to install the latest version of OGB package (1.0.0 as of March 2020). You can check the version by running 
 ```python 
-import ogb; print(ogb.__version__) # make sure this outputs 0.2.0. Otherwise please update your version.
+import ogb; print(ogb.__version__) # make sure this outputs 1.0.0. Otherwise please update your version.
 ```
 
 #### Requirements

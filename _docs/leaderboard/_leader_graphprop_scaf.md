@@ -9,14 +9,12 @@ permalink: /docs/leader_graphprop/
 -------------
 <a name="ogbg-mol"/>
 
-### Leaderboard for [ogbg-mol](../graphprop/#ogbg-mol)
+### Leaderboard for [ogbg-mol](../graphprop/#ogbg-mol) (Coming soon)
 
-#### - Classification datasets
-The ROC-AUC score on the test set. The higher, the better. The ranking is based on the right-most column that shows the performance averaged over the three datasets.
+The ROC-AUC score on the test set. The higher, the better. 
 
-#ogbg-mol-cls
+#ogbg-mol-tox21
 
-#### - Regression datasets
-The root mean squared error on the test set. The lower, the better. The ranking is based on the right-most column that shows the performance averaged over the three datasets.
+#ogbg-mol-hiv
 
-#ogbg-mol-reg
+#ogbg-mol-pcba
