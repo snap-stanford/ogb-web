@@ -31,7 +31,7 @@ We also prepare a unified [performance evaluator](#eval).
 **Graph:** `ogbg-mol` is *a set of* molecular property prediction datasets adopted from MoleculeNet [1]. All the molecules are pre-processed using RDKit [2].
 Each graph represents a molecule, where nodes are atoms, and edges are chemical bonds.
 Input node features are 9-dimensional, containing atomic number, chirality, formal charge, etc. Input edge features are 3-dimensional, containing bond type, bond stereo, etc.
-For further details, please refer to the [code](https://github.com/snap-stanford/ogb/blob/master/ogb/utils/features.py). The script to convert the SMILES string [3] to the above graph object can be found [here](../../assets/script/smile2graph.py).
+For further details, please refer to the [code](https://github.com/snap-stanford/ogb/blob/master/ogb/utils/features.py). The script to convert the SMILES string [3] to the above graph object can be found [here](../../assets/script/smiles2graph.py).
 Note that the script requires [RDkit](https://www.rdkit.org/docs/GettingStartedInPython.html) to be installed. The script can be used to pre-process external molecule datasets so that those datasets share the same input feature space as the OGB molecule datasets. This is particularly useful for pre-training graph models, which has great potential to significantly increase generalization performance on the (*downstream*) OGB datasets [4].
 
 For encoding these raw input features, we prepare simple modules called `AtomEncoder` and `BondEncoder`. They can be used as follows to embed raw atom and bond features to obtain `atom_emb` and `bond_emb`.
@@ -61,7 +61,7 @@ Beside the three main datasets, we also provide the other MoleculeNet datasets t
 
 [1] Wu, Z., Ramsundar, B., Feinberg, E. N., Gomes, J., Geniesse, C., Pappu, A. S., Leswing, K. & Pande, V. (2018). MoleculeNet: a benchmark for molecular machine learning. Chemical science, 9(2), 513-530. <br/>
 [2] Landrum, G. (2006). RDKit: Open-source cheminformatics. <br/>
-[3] Anderson, Eric, Gilman D. Veith, and David Weininger. "SMILES: a line notation and computerized interpreter for chemical structures." (1987). <br/>
+[3] Anderson, Eric, Gilman D. Veith, and David Weininger. SMILES: a line notation and computerized interpreter for chemical structures. (1987). <br/>
 [4] Hu, W., Liu, B., Gomes, J., Zitnik, M., Liang, P., Pande, V., & Leskovec, J. (2020). Strategies for pre-training graph neural networks. ICLR 2020.
 
 ----------

@@ -3,14 +3,14 @@ from ogb.utils.features import (allowable_features, atom_to_feature_vector,
 from rdkit import Chem
 import numpy as np
 
-def smile_to_graph(smile_string):
+def smiles_to_graph(smiles_string):
     """
     Converts SMILE string to graph Data object
     :input: SMILE string (str)
     :return: graph object
     """
 
-    mol = Chem.MolFromSmiles(smile_string)
+    mol = Chem.MolFromSmiles(smiles_string)
 
     # atoms
     atom_features_list = []
@@ -55,8 +55,8 @@ def smile_to_graph(smile_string):
 
 if __name__ == '__main__':
     ## test
-    graph = smile_to_graph('O1C=C[C@H]([C@H]1O2)c3c2cc(OC)c4c3OC(=O)C5=C4CCC(=O)5')
+    graph = smiles_to_graph('O1C=C[C@H]([C@H]1O2)c3c2cc(OC)c4c3OC(=O)C5=C4CCC(=O)5')
     print(graph)
 
-    graph = smile_to_graph('')
+    graph = smiles_to_graph('')
     print(graph)
