@@ -22,8 +22,13 @@ The Hits@K score on the test set. The higher, the better.
 
 <a name="ogbl-reviews"/> 
 ### Leaderboard for [ogbl-reviews](../linkprop/#ogbl-reviews) (Coming soon)
-The root mean squared error on the test set. The lower, the better.
+The Root Mean Squared Error (RMSE) on the test set. The lower, the better.
 
-| Rank  | Method | RMSE | References | Date 
-|:----:|:-----:|:------:|:-----:|:-----:|
-|  1  |   |  | |  | 
+| Rank |  Method |  ogbg-reviews-groc  | References | Date | 
+|:----:|:------:|:-----:|:------:|:-----:|:-----:|
+|  1  |  |  |  |  | |  
+
+
+| Rank |  Method |  ogbg-reviews-book  | References | Date | 
+|:----:|:------:|:-----:|:------:|:-----:|:-----:|
+|  1  |  |  |  |  | |  

@@ -11,8 +11,9 @@ permalink: /docs/linkprop/
 
 Scale | Name      | #Nodes | #Edges\* | #Task | Split Type   | Task Type     | Metric       |
 |------------------|--------|----------|----------|-------------------------------------------------|-----------------------|----------------------------------|----------------|
-Medium | [ogbl-ppa](#ogbl-ppa)         | 576,289 |    21,231,931 |     1      | Species  | Link prediction   |     Hits@K              |
-Medium | [ogbl-reviews](#ogbl-reviews) | 2,560,437    | 21,731,986 | 1      |     Sales ranking   | Link value regression      |    RMSE         |
+Small | [ogbl-reviews-groc](#ogbl-reviews)         | 168,816 |    915,088 |     1      | Time  | Link value regression   |     RMSE              |
+Medium | [ogbl-reviews-book](#ogbl-reviews) | 2,560,437    | 21,731,986 | 1      |   Time   | Link value regression      |    RMSE         |
+Medium | [ogbl-ppa](#ogbl-ppa)         | 576,289 |    21,231,931 |     1      | Throughput  | Link prediction   |     Hits@100              |
 
 
 \* Note that for undirected graphs, the loaded graphs will have the doubled number of edges becausewe add the bidirectional edges automatically.
@@ -25,7 +26,7 @@ We also prepare a unified [performance evaluator](#eval).
 <a name="ogbl-ppa"/>
 ### Dataset `ogbl-ppa`: ([Leaderboard](../leader_linkprop/#ogbl-ppa))
 
-**Graph:** `ogbl-ppa` is an undirected, unweighted graph, containing 576289 nodes. Nodes represent proteins from 58 different species, and edges indicate biologically meaningful associations between proteins (e.g., physical interactions, co-expression, homology, genomic neighborhood) [1]. We provide a graph object constructed from training edges (no validation and test edges are contained). Each node comes with a 58-dimensional one-hot feature indicating which species the corresponding protein comes from. 
+**Graph:** `ogbl-ppa` is an undirected, unweighted graph. Nodes represent proteins from 58 different species, and edges indicate biologically meaningful associations between proteins (e.g., physical interactions, co-expression, homology, genomic neighborhood) [1]. We provide a graph object constructed from training edges (no validation and test edges are contained). Each node comes with a 58-dimensional one-hot feature indicating which species the corresponding protein comes from. 
 
 **Prediction task:** The task is to predict new association edges given training edges. 
 
@@ -34,9 +35,7 @@ We also prepare a unified [performance evaluator](#eval).
 - Training edges: A list of edges that are present in the training graph. All the edges have positive labels (indicated by 1).
 - Validation and test edges: A list of additional edges for evaluating link prediction models. We include both positive edges (unseen during training) and negative edges (randomly sampled and no overlap with positive edges).
 
-The evaluation is based on how well a model ranks positive test edges higher than negative test edges. This is measured by Hits@K, which ranks each positive edge among all the negative edges and counts the ratio of positive edges that are ranked at K-th place or above.
-
-Note: Details will likely change change. The dataset is not yet finalized as a benchmark. 
+The evaluation is based on how well a model ranks positive test edges higher than negative test edges. This is measured by Hits@100, which ranks each positive edge among all the negative edges and counts the ratio of positive edges that are ranked at 100-th place or above.
 
 #### References
 
@@ -46,7 +45,8 @@ Note: Details will likely change change. The dataset is not yet finalized as a b
 <a name="ogbl-reviews"/>
 ### Dataset `ogbl-reviews`: ([Leaderboard](../leader_linkprop/#ogbl-reviews))
 
-**Graph:** `ogbl-reviews` is an unweighted bipartite graph, containing 2560437 nodes, constructed from the Books category in Amazon Review Data [1,2]. Nodes represent either Amazon products (704093 nodes in total) or users (1856344 nodes in total), where they are associated with 301-dimensional feature vectors. The first dimension indicates whether a given node is a product node or user node: the value of 0 indicates a product node, and 1 indicates a user node. For the next 300 features of the product nodes, we use the Glove vectors [3] averaged over words in the product descriptions. For the user nodes, we simply set the next 300 features to be all-zero.
+**Graph:** `ogbl-reviews-groc` and `ogbl-reviews-book` are unweighted bipartite graphs constructed from the "Grocery and Gourmet Food" category and the "Books" category in Amazon Review Data [1,2], respectively. `ogbl-reviews-groc` serves as a small-scale dataset and `ogbl-reviews-book` is a medium-scale dataset.
+Nodes represent either Amazon products or users, where they are associated with 301-dimensional feature vectors. The first dimension indicates whether a given node is a product node or user node: the value of 0 indicates a product node, and 1 indicates a user node. For the next 300 features of the product nodes, we use the Glove vectors [3] averaged over words in the product descriptions. For the user nodes, we simply set the next 300 features to be all-zero.
 The edges in the graph represent reviews written by users about products (thus, we have a bipartite graph).
 The edges are always between product nodes and user nodes and are assigned integer rating values ranging from 1 to 5.
 
@@ -54,8 +54,6 @@ The edges are always between product nodes and user nodes and are assigned integ
 The task is to predict the ratings assigned to the edges as accurately as possible, which are measured by the root mean squared error between true ratings and predicted ratings.
 
 **Dataset splitting:** We provide a time split of the edges into training/validation/test edges, meaning that the goal is to use the past ratings to predict future ratings.
-
-Note: Details will likely change change. The dataset is not yet finalized as a benchmark. 
 
 #### References
 
