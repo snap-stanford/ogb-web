@@ -23,25 +23,7 @@ We prepare different [data loader](#loader) variants: (1) [Pytorch Geometric one
 We also prepare a unified [performance evaluator](#eval).
 
 ----------
-<a name="ogbl-ppa"/>
-### Dataset `ogbl-ppa`: ([Leaderboard](../leader_linkprop/#ogbl-ppa))
 
-**Graph:** `ogbl-ppa` is an undirected, unweighted graph. Nodes represent proteins from 58 different species, and edges indicate biologically meaningful associations between proteins (e.g., physical interactions, co-expression, homology, genomic neighborhood) [1]. We provide a graph object constructed from training edges (no validation and test edges are contained). Each node comes with a 58-dimensional one-hot feature indicating which species the corresponding protein comes from. 
-
-**Prediction task:** The task is to predict new association edges given training edges. 
-
-**Dataset splitting:** We provide a biological throughput split of the edges into training/validation/test edges, meaning that the goal is to predict a particular type of protein association (i.e., physical protein-protein interactions) from other types of protein associations (i.e., co-expression, homology, genomic neighborhood, etc.).
-
-- Training edges: A list of edges that are present in the training graph. All the edges have positive labels (indicated by 1).
-- Validation and test edges: A list of additional edges for evaluating link prediction models. We include both positive edges (unseen during training) and negative edges (randomly sampled and no overlap with positive edges).
-
-The evaluation is based on how well a model ranks positive test edges higher than negative test edges. This is measured by Hits@100, which ranks each positive edge among all the negative edges and counts the ratio of positive edges that are ranked at 100-th place or above.
-
-#### References
-
-[1] Szklarczyk, D., Gable, A.L., Lyon, D., Junge, A., Wyder, S., Huerta-Cepas, J., Simonovic, M., Doncheva, N.T., Morris, J.H., Bork, P. and Jensen, L.J., 2018. STRING v11: protein–protein association networks with increased coverage, supporting functional discovery in genome-wide experimental datasets. Nucleic Acids Research, 47(D1), pp.D607-D613.
-
-----------
 <a name="ogbl-reviews"/>
 ### Dataset `ogbl-reviews`: ([Leaderboard](../leader_linkprop/#ogbl-reviews))
 
@@ -60,6 +42,26 @@ The task is to predict the ratings assigned to the edges as accurately as possib
 [1] https://nijianmo.github.io/amazon/index.html <br/>
 [2] Ni, J., Li, J., & McAuley, J. (2019). Justifying Recommendations using Distantly-Labeled Reviews and Fine-Grained Aspects. EMNLP 2019. <br/>
 [3] Pennington, J., Socher, R., & Manning, C. D. (2014). Glove: Global vectors for word representation. EMNLP 2014.
+
+----------
+
+<a name="ogbl-ppa"/>
+### Dataset `ogbl-ppa`: ([Leaderboard](../leader_linkprop/#ogbl-ppa))
+
+**Graph:** `ogbl-ppa` is an undirected, unweighted graph. Nodes represent proteins from 58 different species, and edges indicate biologically meaningful associations between proteins (e.g., physical interactions, co-expression, homology, genomic neighborhood) [1]. We provide a graph object constructed from training edges (no validation and test edges are contained). Each node comes with a 58-dimensional one-hot feature indicating which species the corresponding protein comes from. 
+
+**Prediction task:** The task is to predict new association edges given training edges. 
+
+**Dataset splitting:** We provide a biological throughput split of the edges into training/validation/test edges, meaning that the goal is to predict a particular type of protein association (i.e., physical protein-protein interactions) from other types of protein associations (i.e., co-expression, homology, genomic neighborhood, etc.).
+
+- Training edges: A list of edges that are present in the training graph. All the edges have positive labels (indicated by 1).
+- Validation and test edges: A list of additional edges for evaluating link prediction models. We include both positive edges (unseen during training) and negative edges (randomly sampled and no overlap with positive edges).
+
+The evaluation is based on how well a model ranks positive test edges higher than negative test edges. This is measured by Hits@100, which ranks each positive edge among all the negative edges and counts the ratio of positive edges that are ranked at 100-th place or above.
+
+#### References
+
+[1] Szklarczyk, D., Gable, A.L., Lyon, D., Junge, A., Wyder, S., Huerta-Cepas, J., Simonovic, M., Doncheva, N.T., Morris, J.H., Bork, P. and Jensen, L.J., 2018. STRING v11: protein–protein association networks with increased coverage, supporting functional discovery in genome-wide experimental datasets. Nucleic Acids Research, 47(D1), pp.D607-D613.
 
 ----------
 
