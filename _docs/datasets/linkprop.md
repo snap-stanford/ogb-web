@@ -27,7 +27,7 @@ We also prepare a unified [performance evaluator](#eval).
 <a name="ogbl-reviews"/>
 ### Dataset `ogbl-reviews`: ([Leaderboard](../leader_linkprop/#ogbl-reviews))
 
-**Graph:** `ogbl-reviews-groc` and `ogbl-reviews-book` are unweighted bipartite graphs constructed from the "Grocery and Gourmet Food" category and the "Books" category in Amazon Review Data [1,2], respectively. `ogbl-reviews-groc` serves as a small-scale dataset and `ogbl-reviews-book` is a medium-scale dataset.
+**Graph:** `ogbl-reviews-groc` and `ogbl-reviews-book` are unweighted bipartite graphs constructed from the "Grocery and Gourmet Food" category and the "Books" category in Amazon Review Data [1,2], respectively. `ogbl-reviews-groc` serves as a small-scale dataset, while `ogbl-reviews-book` is a medium-scale dataset.
 Nodes represent either Amazon products or users, where they are associated with 301-dimensional feature vectors. The first dimension indicates whether a given node is a product node or user node: the value of 0 indicates a product node, and 1 indicates a user node. For the next 300 features of the product nodes, we use the Glove vectors [3] averaged over words in the product descriptions. For the user nodes, we simply set the next 300 features to be all-zero.
 The edges in the graph represent reviews written by users about products (thus, we have a bipartite graph).
 The edges are always between product nodes and user nodes and are assigned integer rating values ranging from 1 to 5.
