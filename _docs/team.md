@@ -8,7 +8,7 @@ OGB is an ongoing effort and we expect the datasets to evolve. Please subscribe 
 ----
 
 ### Core Development Team
-Weihua Hu  <br/> Matthias Fey  <br/> Marinka Zitnik <br/> Bowen Liu <br/> Jure Leskovec
+Weihua Hu  <br/> Matthias Fey  <br/> Marinka Zitnik <br/> Yuxiao Dong <br/> Bowen Liu <br/> Jure Leskovec
 
 
 ------
