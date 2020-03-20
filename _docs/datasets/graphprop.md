@@ -69,11 +69,11 @@ Beside the two main datasets, we also provide the other MoleculeNet datasets tha
 <a name="ogbg-ppi"/>
 ### Dataset `ogbg-ppi`: ([Leaderboard](../leader_graphprop/#ogbg-ppi))
 
-**Graph:** TDA
+**Graph:** TBA
 
-**Prediction task:** TDA
+**Prediction task:** TBA
 
-**Dataset splitting:** TDA
+**Dataset splitting:** TBA
 
 
 #### References
