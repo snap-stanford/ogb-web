@@ -28,7 +28,7 @@ Please [contact us](ogb@cs.stanford.edu) if there is anything unclear or you hav
 
 ### How to Submit?
 
-Use the [Google form](https://forms.gle/dxMGTqx3MEApLxxQ9) to make a submission. 
+Use the [Google form](https://forms.gle/7PB7375i5P1rHgng6) to make a submission. 
 
 The results will be posted after we check the model validity (expect to take about about a week). 
 
