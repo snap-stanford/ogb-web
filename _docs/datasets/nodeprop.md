@@ -35,7 +35,7 @@ Each node comes with an 8-dimensional one-hot feature indicating which species t
 
 **Dataset splitting:** We split the protein nodes into training/validation/test sets according to species from which the proteins come from.  
 
-**Note:** Details of this dataset will likely change. The dataset is not yet finalized as a benchmark. 
+<!-- **Note:** Details of this dataset will likely change. The dataset is not yet finalized as a benchmark.  -->
 
 #### References
 [1] Szklarczyk, D., Gable, A.L., Lyon, D., Junge, A., Wyder, S., Huerta-Cepas, J., Simonovic, M., Doncheva, N.T., Morris, J.H., Bork, P. and Jensen, L.J., 2018. STRING v11: protein–protein association networks with increased coverage, supporting functional discovery in genome-wide experimental datasets. Nucleic Acids Research, 47(D1), pp.D607-D613. <br/>
@@ -52,7 +52,7 @@ Each node comes with an 8-dimensional one-hot feature indicating which species t
 **Dataset splitting:** We consider a more challenging and realistic dataset splitting that is different from [2]. First, unlike [2] that uses 90% of nodes for training and 10% of nodes for testing (no validation set is used), we consider a more challenging semi-supervised classification scenario, where only 10% of nodes are labeled, 2% of nodes can be used for validation. The goal is to make predictions on the rest of the 88% nodes.
 Furthermore, different from [2] that uses random node splitting, we use the sales ranking (popularity) to split nodes into train/validation/test sets. Specifically, we sort the products according to their sales ranking and use the top 10% for training, next top 2% for validation, and the rest for testing. This respects the real application where labels are first assigned to important nodes in the network, and machine learning is subsequently used to make predictions on less important ones.
 
-**Note:** Details will likely change. The dataset is not yet finalized as a benchmark. 
+<!-- **Note:** Details will likely change. The dataset is not yet finalized as a benchmark.  -->
 
 #### References
 [1] http://manikvarma.org/downloads/XC/XMLRepository.html <br/>

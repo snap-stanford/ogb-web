@@ -11,9 +11,9 @@ permalink: /docs/graphprop/
 
 Scale | Name     | #Graphs   | #Nodes per graph | #Edges per graph\* | #Task | Split Type  | Task Type   | Metric                           |
 |-------------------------|----------|----------|----------|----------------|---------------------|------------------------|----------|
-Small | [ogbg-mol-tox21](#ogbg-mol) | 7,831 | 18.6 | 19.3 | 12   | Scaffold  |  Binary classification | ROC-AUC  |
-Medium | [ogbg-mol-hiv](#ogbg-mol) | 41,127 | 25.5 | 27.5 | 1   | Scaffold  |  Binary classification | ROC-AUC  |
-Large | [ogbg-mol-pcba](#ogbg-mol) | 437,929 | 26.0 | 28.1 | 128   | Scaffold  |  Binary classification | ROC-AUC  |
+Small | [ogbg-mol-hiv](#ogbg-mol) | 41,127 | 25.5 | 27.5 | 1   | Scaffold  |  Binary classification | ROC-AUC  |
+Medium | [ogbg-mol-pcba](#ogbg-mol) | 437,929 | 26.0 | 28.1 | 128   | Scaffold  |  Binary classification | ROC-AUC  |
+Medium | [ogbg-ppi](#ogbg-ppi) | 158,100 | 243.4 | 2,266.1 | 1  | Species  |  Multi-class classification | Accuracy  |
 
 
 \* Note that for undirected graphs, the loaded graphs will have the doubled number of edges becausewe add the bidirectional edges automatically.
@@ -46,14 +46,14 @@ edge_emb = bond_encoder(edge_attr) # edge_attr is input edge feature in Pytorch 
 
 #### Datasets
 
-**Prediction task:**  From MoleculeNet [1], we selected and processed three molecular property prediction datasets: `ogbg-mol-tox21`, `ogbg-mol-hiv`, `ogbg-mol-pcba`, that are of small, medium, and large sizes, respectively.
+**Prediction task:**  From MoleculeNet [1], we selected and processed two molecular property prediction datasets: `ogbg-mol-hiv`, `ogbg-mol-pcba`, that are of small and medium sizes, respectively.
 A detailed description of each dataset can be found in [1].
 Each dataset can contain multiple labels/tasks to predict, and the performance averaged over these tasks is to be evaluated.
 
 The task is to predict the target chemical properties as accurately as possible.
-All the raw molecule data (including the SMILES strings) can be found in the `raw` directory in the downloaded dataset folder, e.g., `dataset/ogbg_mol_tox21_pyg/raw/tox21.csv.gz`.
+All the raw molecule data (including the SMILES strings) can be found in the `raw` directory in the downloaded dataset folder, e.g., `dataset/ogbg_mol_hiv_pyg/raw/hiv.csv.gz`.
 
-Beside the three main datasets, we also provide the other MoleculeNet datasets that are readily available from the OGB package. They are `ogbg-mol-bace`, `ogbg-mol-bbbp`, `ogbg-mol-clintox`, `ogbg-mol-muv`, `ogbg-mol-sider`, and `ogbg-mol-toxcast` for binary classification, `ogbg-mol-esol`, `ogbg-mol-freesolv`, and `ogbg-mol-lipo` for regression. Evaluators are also provided for these datasets. We encourage you to also test on these datasets if you are working on molecule-specific models.
+Beside the two main datasets, we also provide the other MoleculeNet datasets that are readily available from the OGB package. They are `ogbg-mol-tox21`, `ogbg-mol-bace`, `ogbg-mol-bbbp`, `ogbg-mol-clintox`, `ogbg-mol-muv`, `ogbg-mol-sider`, and `ogbg-mol-toxcast` for binary classification, `ogbg-mol-esol`, `ogbg-mol-freesolv`, and `ogbg-mol-lipo` for regression. Evaluators are also provided for these datasets. We encourage you to also test on these datasets if you are working on molecule-specific models.
 
 **Dataset splitting:** We adopt the *scaffold splitting* (implmented in [RDkit](https://www.rdkit.org/docs/GettingStartedInPython.html)) that splits the molecules based on their two-dimensional structural frameworks. The scaffold splitting attempts to separate structurally different molecules into different subsets, which provides a more realistic estimate of model performance in prospective settings [1].
 
@@ -66,11 +66,25 @@ Beside the three main datasets, we also provide the other MoleculeNet datasets t
 
 ----------
 
+<a name="ogbg-ppi"/>
+### Dataset `ogbg-ppi`: ([Leaderboard](../leader_graphprop/#ogbg-ppi))
+
+**Graph:** TDA
+
+**Prediction task:** TDA
+
+**Dataset splitting:** TDA
+
+
+#### References
+
+----------------
+
 <a name="loader"/>
 
 ### Data Loader
 
-To load a dataset replace, d_name with the dataset name (e.g., `"ogbg-mol-tox21"`).
+To load a dataset replace, d_name with the dataset name (e.g., `"ogbg-mol-hiv"`).
 
 <a name="pyg"/>
 

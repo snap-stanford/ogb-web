@@ -25,15 +25,15 @@ You can install OGB using Python package manager pip.
 pip install ogb
 ```
 
-**Important**: Make sure to install the latest version of OGB package (1.0.0 as of March 2020). If you have already installed the older version, please upgrade the version and also make sure to **remove the previously-downloaded dataset files**. This is because some datasets might be changed since the last version. 
+**Important**: Make sure to install the latest version of OGB package (1.0.* ). If you have already installed the older version, please upgrade the version and also make sure to **remove the previously-downloaded dataset files**. This is because some datasets might be changed since the last version. 
 
 You can check the version by running 
 ```python 
-import ogb; print(ogb.__version__) # make sure this outputs 1.0.0. Otherwise please update your version.
+import ogb; print(ogb.__version__) # make sure this outputs 1.0.* . Otherwise please update your version.
 ```
 
 #### Requirements
- - Python 3.7
+ - Python 3.5
  - PyTorch>=1.2
  - DGL>=0.4.1 or torch-geometric>=1.3.1
  - Numpy>=1.16.0
@@ -57,7 +57,7 @@ Following is an example in PyTorch Geometric showing that a few lines of code ar
 from ogb.graphproppred.dataset_pyg import PygGraphPropPredDataset
 from torch_geometric.data import DataLoader
 
-dataset = PygGraphPropPredDataset(name = "ogbg-mol-tox21")
+dataset = PygGraphPropPredDataset(name = "ogbg-mol-hiv")
  
 splitted_idx = dataset.get_idx_split() 
 train_loader = DataLoader(dataset[splitted_idx["train"]], batch_size=32, shuffle=True)
@@ -72,7 +72,7 @@ We prepare standardized evaluators for testing and comparing different methods. 
 ```python
 from ogb.graphproppred import Evaluator
 
-evaluator = Evaluator(name = "ogbg-mol-tox21")
+evaluator = Evaluator(name = "ogbg-mol-hiv")
 # You can learn the input and output format specification of the evaluator as follows.
 # print(evaluator.expected_input_format) 
 # print(evaluator.expected_output_format) 

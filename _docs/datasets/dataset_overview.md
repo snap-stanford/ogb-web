@@ -12,10 +12,10 @@ permalink: /docs/dataset_overview/
                 The Open Graph Benchmark (OGB) aims to provide graph datasets that cover important graph machine learning tasks, diverse dataset scale, and rich domains.
             </p>
             <p class="lead">
-                <b>Graph ML Tasks:</b> We cover three fundamental graph machine learning tasks: prediction at the level of <a href="../nodeprop/">nodes</a>, <a href="../linkprop/">links</a>, and <a href="../graphprop/">graphs</a>.  <br/>
+                <b>Multiple task categories:</b> We cover three fundamental graph machine learning task categories: prediction at the level of <a href="../nodeprop/">nodes</a>, <a href="../linkprop/">links</a>, and <a href="../graphprop/">graphs</a>.  <br/>
             </p>
             <p class="lead">
-                <b>Diverse scale:</b> Small-scale graph datasets can be processed within a single GPU, while medium- and large-scale graphs might require multiple GPUs or clever sampling/partition techniques. <br/>
+                <b>Diverse scale:</b> Small-scale graph datasets can be processed within a single GPU, while medium- and large-scale graphs might require multiple GPUs and/or sophisticated graph sampling/partition techniques. <br/>
             </p>
             <p class="lead">
                 <b>Rich domains:</b> Graph datasets come from diverse domains ranging from scientific ones to social/information networks, and also include heterogeneous knowledge graphs.  <br/>

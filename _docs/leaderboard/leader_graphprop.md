@@ -14,11 +14,6 @@ permalink: /docs/leader_graphprop/
 The ROC-AUC score on the test set. The higher, the better. 
 
 
-| Rank |  Method |  ogbg-mol-tox21  | References | Date | 
-|:----:|:------:|:-----:|:------:|:-----:|:-----:|
-|  1  |  |  |  |  | |  
-
-
 | Rank |  Method |  ogbg-mol-hiv  | References | Date | 
 |:----:|:------:|:-----:|:------:|:-----:|:-----:|
 |  1  |  |  |  |  | |  
@@ -29,4 +24,12 @@ The ROC-AUC score on the test set. The higher, the better.
 |  1  |  |  |  |  | | 
 
 
+<a name="ogbg-ppi"/>
 
+### Leaderboard for [ogbg-ppi](../graphprop/#ogbg-ppi) (Coming soon)
+
+The multi-class classification accuracy on the test set. The higher, the better. 
+
+| Rank |  Method |  Accuracy  | References | Date | 
+|:----:|:------:|:-----:|:------:|:-----:|:-----:|
+|  1  |  |  |  |  | | 

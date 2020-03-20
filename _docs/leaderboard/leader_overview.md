@@ -19,7 +19,7 @@ To make your results official, we require you to submit the following informatio
     - The authors are responsible for addressing any inquiry about their code. Please make sure results are easily reproducible by giving enough instruction in your repository.
 - **Paper**: The paper describing the approach. Always include link to the original paper describing methodology used in experiments. 
 - **OGB version**: The OGB version used to conduct the experiments.
-- **Results**: Raw results output by OGB model evaluators, where average and standard deviation need to be taken over 10 different random seeds. We highly discourage you to tune random seeds. 
+- **Results**: Raw results output by OGB model evaluators, where average (`torch.mean`) and unbiased standard deviation (`torch.std`) need to be taken over 10 different random seeds.
 
 We will remove any submissions that are invalidated, so please make sure all the results are correct and reproducible before submitting them.
 Please [contact us](ogb@cs.stanford.edu) if there is anything unclear or you have found any problematic submission on the leaderboards.
