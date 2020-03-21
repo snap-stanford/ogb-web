@@ -4,8 +4,8 @@ permalink: /docs/leader_linkprop/
 ---
 
 ##### Check leaderboards for
-###### - [ogbl-ppa](#ogbn-ppa)
 ###### - [ogbl-reviews](#ogbn-reviews)
+###### - [ogbl-ppa](#ogbn-ppa)
 
 **Note:** The **bold** method name indicates that the implementation is **official** (by the author of the original paper).
 

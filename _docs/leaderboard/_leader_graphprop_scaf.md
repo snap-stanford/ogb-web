@@ -28,6 +28,8 @@ The ROC-AUC score on the test set. The higher, the better.
 
 <a name="ogbg-ppi"/>
 
+------------
+
 ### Leaderboard for [ogbg-ppi](../graphprop/#ogbg-ppi)
 
 The multi-class classification accuracy on the test set. The higher, the better. 
