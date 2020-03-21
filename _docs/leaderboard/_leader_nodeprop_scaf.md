@@ -7,6 +7,8 @@ permalink: /docs/leader_nodeprop/
 ###### - [ogbn-proteins](#ogbn-proteins)
 ###### - [ogbn-products](#ogbn-products)
 
+**Note:** The **bold** method name indicates that the implementation is **official** (by the author of the original paper).
+
 ------
 
 <a name="ogbn-proteins"/>
