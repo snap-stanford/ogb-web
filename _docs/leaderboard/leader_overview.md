@@ -10,7 +10,7 @@ Public leaderboards allow researchers to keep track of state-of-the-art methods 
 ### How Leaderboards Work?
 
 Once you have developed your model and got results, you can submit your test results to our leaderboards. 
-For each dataset, We require you to submit the following information.
+For each dataset, we require you to submit the following information.
 
 - **OGB version**: The OGB version used to conduct the experiments.
 - **Method**: The name of the method.
