@@ -27,15 +27,15 @@ We also prepare a unified [performance evaluator](#eval).
 <a name="ogbl-reviews"/>
 ### Dataset `ogbl-reviews`: ([Leaderboard](../leader_linkprop/#ogbl-reviews))
 
-**Graph:** `ogbl-reviews-groc` and `ogbl-reviews-book` are unweighted bipartite graphs constructed from the "Grocery and Gourmet Food" category and the "Books" category in Amazon Review Data [1,2], respectively. `ogbl-reviews-groc` serves as a small-scale dataset, while `ogbl-reviews-book` is a medium-scale dataset.
-Nodes represent either Amazon products or users, where they are associated with 301-dimensional feature vectors. The first dimension indicates whether a given node is a product node or user node: the value of 0 indicates a product node, and 1 indicates a user node. For the next 300 features of the product nodes, we use the Glove vectors [3] averaged over words in the product descriptions. For the user nodes, we simply set the next 300 features to be all-zero.
-The edges in the graph represent reviews written by users about products (thus, we have a bipartite graph).
-The edges are always between product nodes and user nodes and are assigned integer rating values ranging from 1 to 5.
+**Graph:** `ogbl-reviews-groc` and `ogbl-reviews-book` are unweighted bipartite graphs constructed from the "Grocery and Gourmet Food" category and the "Books" categories in the Amazon Review Data [1,2], respectively. `ogbl-reviews-groc` serves as a small-scale dataset, while `ogbl-reviews-book` is a medium-scale dataset.
+Here, nodes represent either Amazon products or users, and are associated with 301-dimensional feature vectors. The first dimension indicates whether a given node belongs to a product or a user. The remaining 300 features further describe the product nodes: We use [spaCy](https://spacy.io/) to obtain GloVe vectors [3] averaged over words in the product title and description. For the user nodes, we simply set the next 300 features to be all-zero. The edges in the graph represent reviews written by users about products. The edges are assigned an integer rating ranging from 1 to 5.
+
 
 **Prediction task:** 
-The task is to predict the ratings assigned to the edges as accurately as possible, which are measured by the root mean squared error between true ratings and predicted ratings.
+The task is to predict the ratings of unseen edges as accurately as possible. The evaluation procedure measures the root mean squared error (RMSE) between the true ratings and the predicted ratings.
 
-**Dataset splitting:** We provide a time split of the edges into training/validation/test edges, meaning that the goal is to use the past ratings to predict future ratings.
+**Dataset splitting:** We provide a temporal split of the edges into training/validation/test edges. The goal is to use the past ratings to predict future ratings, which is typical for real-world link prediction scenarios.
+Since there exist no node features for users, we have removed all users from the graph that are unseen during training.
 
 #### References
 
@@ -48,16 +48,21 @@ The task is to predict the ratings assigned to the edges as accurately as possib
 <a name="ogbl-ppa"/>
 ### Dataset `ogbl-ppa`: ([Leaderboard](../leader_linkprop/#ogbl-ppa))
 
-**Graph:** `ogbl-ppa` is an undirected, unweighted graph. Nodes represent proteins from 58 different species, and edges indicate biologically meaningful associations between proteins (e.g., physical interactions, co-expression, homology, genomic neighborhood) [1]. We provide a graph object constructed from training edges (no validation and test edges are contained). Each node comes with a 58-dimensional one-hot feature indicating which species the corresponding protein comes from. 
+**Graph:** `ogbl-ppa` is an undirected, unweighted graph. Nodes represent proteins from 58 different species, and edges indicate biologically meaningful associations between proteins, e.g., physical interactions, co-expression, homology or genomic neighborhood [1]. We provide a graph object constructed from training edges (no validation and test edges are contained). Each node contains a 58-dimensional one-hot feature vector that indicates the species that the corresponding protein comes from.
 
-**Prediction task:** The task is to predict new association edges given training edges. 
+**Prediction task:** The task is to predict new association edges given the training edges.
+The evaluation is based on how well a model ranks positive test edges over negative test edges.
+Specifically, we rank each positive edge in the validation/test set against 3,000,000 randomly-sampled negative edges, and count the ratio of positive edges that are ranked at 100-th place or above (Hits@100). 
 
-**Dataset splitting:** We provide a biological throughput split of the edges into training/validation/test edges, meaning that the goal is to predict a particular type of protein association (i.e., physical protein-protein interactions) from other types of protein associations (i.e., co-expression, homology, genomic neighborhood, etc.).
+**Dataset splitting:** We provide a biological throughput split of the edges into training/validation/test edges.
+Training edges are known *non*-physical protein associations, and validation/test edges denote physical protein association.
+In particular, the goal is to predict a particular type of protein association, i.e., physical protein-protein interaction, from other types of *non*-physical protein associations (e.g., co-expression, homology, or genomic neighborhood) that are known to be strongly correlated with the physical associations that we are interested in.
+
+The following summarizes the traing/validation/test edges that we provide.
 
 - Training edges: A list of edges that are present in the training graph. All the edges have positive labels (indicated by 1).
-- Validation and test edges: A list of additional edges for evaluating link prediction models. We include both positive edges (unseen during training) and negative edges (randomly sampled and no overlap with positive edges).
+- Validation and test edges: A list of additional edges for evaluating link prediction models. We include both positive edges (indicated by 1, unseen during training) and negative edges (indicated by 0, randomly sampled and no overlap with the positive edges).
 
-The evaluation is based on how well a model ranks positive test edges higher than negative test edges. This is measured by Hits@100, which ranks each positive edge among all the negative edges and counts the ratio of positive edges that are ranked at 100-th place or above.
 
 #### References
 

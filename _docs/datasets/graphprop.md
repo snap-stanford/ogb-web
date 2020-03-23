@@ -28,11 +28,11 @@ We also prepare a unified [performance evaluator](#eval).
 <a name="ogbg-mol"/>
 ### Dataset `ogbg-mol`: ([Leaderboard](../leader_graphprop/#ogbg-mol))
 
-**Graph:** `ogbg-mol` is *a set of* molecular property prediction datasets adopted from MoleculeNet [1]. All the molecules are pre-processed using RDKit [2].
-Each graph represents a molecule, where nodes are atoms, and edges are chemical bonds.
-Input node features are 9-dimensional, containing atomic number, chirality, formal charge, etc. Input edge features are 3-dimensional, containing bond type, bond stereo, etc.
-For further details, please refer to the [code](https://github.com/snap-stanford/ogb/blob/master/ogb/utils/features.py). The script to convert the SMILES string [3] to the above graph object can be found [here](../../assets/script/smiles2graph.py).
+**Graph:** `ogbg-mol` consists of two molecular property prediction datasets of different sizes: `ogbg-mol-hiv` (small) and `ogbg-mol-pcba` (medium). They are adopted from the MoleculeNet [1], and are among the largest of the MoleculeNet datasets. All the molecules are pre-processed using RDKit [2]. Each graph represents a molecule, where nodes are atoms, and edges are chemical bonds. Input node features are 9-dimensional, containing atomic number, chirality, and other additional atom features. Input edge features are 3-dimensional, containing bond type, bond stereochemistry, and one additional feature indicating whether the bond is conjugated or not. 
+The full description of the features is provided in [code](https://github.com/snap-stanford/ogb/blob/master/ogb/utils/features.py). The script to convert the SMILES string [3] to the above graph object can be found [here](../../assets/script/smiles2graph.py).
 Note that the script requires [RDkit](https://www.rdkit.org/docs/GettingStartedInPython.html) to be installed. The script can be used to pre-process external molecule datasets so that those datasets share the same input feature space as the OGB molecule datasets. This is particularly useful for pre-training graph models, which has great potential to significantly increase generalization performance on the (*downstream*) OGB datasets [4].
+
+Beside the two main datasets, we additionally provide 10 smaller datasets from MoleculeNet. They are `ogbg-mol-tox21`, `ogbg-mol-bace`, `ogbg-mol-bbbp`, `ogbg-mol-clintox`, `ogbg-mol-muv`, `ogbg-mol-sider`, and `ogbg-mol-toxcast` for (multi-task) binary classification, and `ogbg-mol-esol`, `ogbg-mol-freesolv`, and `ogbg-mol-lipo` for regression. Evaluators are also provided for these datasets. These datasets can be used to stress-test molecule-specific methods or transfer learning [4].
 
 For encoding these raw input features, we prepare simple modules called `AtomEncoder` and `BondEncoder`. They can be used as follows to embed raw atom and bond features to obtain `atom_emb` and `bond_emb`.
 ```python
@@ -46,16 +46,11 @@ edge_emb = bond_encoder(edge_attr) # edge_attr is input edge feature in Pytorch 
 
 #### Datasets
 
-**Prediction task:**  From MoleculeNet [1], we selected and processed two molecular property prediction datasets: `ogbg-mol-hiv`, `ogbg-mol-pcba`, that are of small and medium sizes, respectively.
-A detailed description of each dataset can be found in [1].
-Each dataset can contain multiple labels/tasks to predict, and the performance averaged over these tasks is to be evaluated.
+**Prediction task:**  The task is to predict the target molecular properties as accurately as possible, where the molecular properties are cast as binary labels, e.g., whether a molecule inhibits HIV virus replication or not. `ogbg-mol-pcba` contains 128 kinds of labels to predict, and the ROC-AUC performance averaged over these tasks is evaluated.
 
-The task is to predict the target chemical properties as accurately as possible.
-All the raw molecule data (including the SMILES strings) can be found in the `raw` directory in the downloaded dataset folder, e.g., `dataset/ogbg_mol_hiv_pyg/raw/hiv.csv.gz`.
 
-Beside the two main datasets, we also provide the other MoleculeNet datasets that are readily available from the OGB package. They are `ogbg-mol-tox21`, `ogbg-mol-bace`, `ogbg-mol-bbbp`, `ogbg-mol-clintox`, `ogbg-mol-muv`, `ogbg-mol-sider`, and `ogbg-mol-toxcast` for binary classification, `ogbg-mol-esol`, `ogbg-mol-freesolv`, and `ogbg-mol-lipo` for regression. Evaluators are also provided for these datasets. We encourage you to also test on these datasets if you are working on molecule-specific models.
-
-**Dataset splitting:** We adopt the *scaffold splitting* (implmented in [RDkit](https://www.rdkit.org/docs/GettingStartedInPython.html)) that splits the molecules based on their two-dimensional structural frameworks. The scaffold splitting attempts to separate structurally different molecules into different subsets, which provides a more realistic estimate of model performance in prospective settings [1].
+**Dataset splitting:**
+We adopt the *scaffold splitting* procedure (implmented in [RDkit](https://www.rdkit.org/docs/GettingStartedInPython.html)) that splits the molecules based on their two-dimensional structural frameworks. The scaffold splitting attempts to separate structurally different molecules into different subsets, which provides a more realistic estimate of model performance in prospective experimental settings [1].
 
 #### References
 
@@ -69,14 +64,21 @@ Beside the two main datasets, we also provide the other MoleculeNet datasets tha
 <a name="ogbg-ppi"/>
 ### Dataset `ogbg-ppi`: ([Leaderboard](../leader_graphprop/#ogbg-ppi))
 
-**Graph:** TBA
+**Graph:** `ogbg-ppi` is a set of undirected, unweighted protein association neighborhoods extracted from the protein-protein association networks of 1581 different species [1] that cover 37 broad taxonomic groups (e.g., mammals, bacterial families, archaeans) and span the tree of life [2]. To construct the neighborhoods, we randomly selected 100 proteins from each species and constructed 2-hop protein association neighborhoods centered on each of the selected proteins [3]. We then removed the center node from each neighborhood and subsampled the neighborhood to ensure the final protein association graph is small enough (less than 300 nodes). Nodes in each protein association graph represent proteins, and edges indicate biologically meaningful associations between proteins. The edges are associated with 7-dimensional features, where each element takes a value between 0 and 1 and represents the strength of a particular type of protein protein association such as gene co-occurrence, gene fusion events, and co-expression.
 
-**Prediction task:** TBA
 
-**Dataset splitting:** TBA
+**Prediction task:** Given a protein association graph, the task is a 37-way multi-class classification to predict what taxonomic group the graph originates from.
+The ability to successfully tackle this problem has implications for understanding the evolution of protein complexes across species, the rewiring of protein interactions over time, the discovery of functional associations between genes even for otherwise rarely-studied organisms, and would give us insights into key bioinformatics tasks, such as biological network alignment.
+
+**Dataset splitting:** We adopt the *species split*, where the model is asked to predict taxonomic groups of graphs originating from species, which are not seen during training but belong to one of the 37 taxonomic groups.
+This split stress-tests the model's capability to extract graph features that are essential to the prediction of the taxonomic groups, which is important for biological understanding of protein interactions.
 
 
 #### References
+[1] Szklarczyk, D., Gable, A. L., Lyon, D., Junge, A., Wyder, S., Huerta-Cepas, J., ... & Jensen, L. J. (2019). STRING v11: protein–protein association networks with increased coverage, supporting functional discovery in genome-wide experimental datasets. Nucleic acids research, 47(D1), D607-D613. <br/>
+[2] Hug, L. A., Baker, B. J., Anantharaman, K., Brown, C. T., Probst, A. J., Castelle, C. J., ... & Suzuki, Y. (2016). A new view of the tree of life. Nature microbiology, 1(5), 16048. <br/>
+[3] Zitnik, M., Feldman, M. W., & Leskovec, J. (2019). Evolution of resilience in protein interactomes across the tree of life. Proceedings of the National Academy of Sciences, 116(10), 4426-4433.
+
 
 ----------------
 
