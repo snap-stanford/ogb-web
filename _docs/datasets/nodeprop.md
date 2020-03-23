@@ -70,7 +70,7 @@ To load a dataset, replace `d_name` with the dataset name (e.g., `"ogbn-proteins
 #### Pytorch Geometric Loader
 
 ```python
-from ogb.nodeproppred.dataset_pyg import PygNodePropPredDataset
+from ogb.nodeproppred import PygNodePropPredDataset
 
 dataset = PygNodePropPredDataset(name = d_name) 
 num_tasks = dataset.num_tasks # obtaining the number of prediction tasks in a dataset
@@ -85,7 +85,7 @@ graph = dataset[0] # pyg graph object
 #### DGL Loader
 
 ```python
-from ogb.nodeproppred.dataset_dgl import DglNodePropPredDataset
+from ogb.nodeproppred import DglNodePropPredDataset
 
 dataset = NodePropPredDataset(name = d_name)
 num_tasks = dataset.num_tasks # obtaining the number of prediction tasks in a dataset
@@ -101,7 +101,7 @@ Prediction target in the Pytorch Geometric dataset can be accessed by `graph.y`,
 
 #### Library-Agnostic Loader
 ```python
-from ogb.nodeproppred.dataset import NodePropPredDataset
+from ogb.nodeproppred import NodePropPredDataset
 
 dataset = NodePropPredDataset(name = d_name)
 num_tasks = dataset.num_tasks # obtaining the number of prediction tasks in a dataset

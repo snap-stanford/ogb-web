@@ -91,7 +91,7 @@ To load a dataset replace, d_name with the dataset name (e.g., `"ogbg-mol-hiv"`)
 #### Pytorch Geometric Loader
 
 ```python
-from ogb.graphproppred.dataset_pyg import PygGraphPropPredDataset
+from ogb.graphproppred import PygGraphPropPredDataset
 from torch_geometric.data import DataLoader
 
 dataset = PygGraphPropPredDataset(name = d_name) 
@@ -109,7 +109,7 @@ Note that the prediction targets are stored in `dataset.y`.
 #### DGL Loader
 
 ```python
-from ogb.graphproppred.dataset_dgl import DglGraphPropPredDataset, collate_dgl
+from ogb.graphproppred import DglGraphPropPredDataset, collate_dgl
 from torch.utils.data import DataLoader
 
 dataset = DglGraphPropPredDataset(name = d_name)
@@ -126,7 +126,7 @@ Note that the i-th example and its prediction targets can be obtained by `graph,
 
 #### Library-Agnostic Loader
 ```python
-from ogb.graphproppred.dataset import GraphPropPredDataset
+from ogb.graphproppred import GraphPropPredDataset
 
 dataset = GraphPropPredDataset(name = d_name)
 num_tasks = dataset.num_tasks # obtaining the number of prediction tasks in a dataset

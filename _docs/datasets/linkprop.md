@@ -76,7 +76,7 @@ To load a dataset, replace `d_name` with the dataset name (e.g., `"ogbl-ppa"`).
 #### Pytorch Geometric Loader
 
 ```python
-from ogb.linkproppred.dataset_pyg import PygLinkPropPredDataset
+from ogb.linkproppred import PygLinkPropPredDataset
 
 dataset = PygLinkPropPredDataset(name = d_name) 
 
@@ -92,7 +92,7 @@ graph = dataset[0] # pyg graph object containing only training edges
 #### DGL Loader
 
 ```python
-from ogb.linkproppred.dataset_dgl import DglLinkPropPredDataset
+from ogb.linkproppred import DglLinkPropPredDataset
 
 dataset = DglLinkPropPredDataset(name = d_name)
 
@@ -110,7 +110,7 @@ An undirected graph should include bidirectional edges for each pair of nodes th
 
 #### Library-Agnostic Loader
 ```python
-from ogb.linkproppred.dataset import LinkPropPredDataset
+from ogb.linkproppred import LinkPropPredDataset
 
 dataset = LinkPropPredDataset(name = d_name)
 

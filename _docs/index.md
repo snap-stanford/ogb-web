@@ -25,11 +25,11 @@ You can install OGB using Python package manager pip.
 pip install ogb
 ```
 
-**Important**: Make sure to install the latest version of OGB package (1.0.* ). If you have already installed the older version, please upgrade the version and also make sure to **remove the previously-downloaded dataset files**. This is because some datasets might be changed since the last version. 
+**Important**: Make sure to install the latest version of OGB package (1.0.1). If you have already installed the older version, please upgrade the version and also make sure to **remove the previously-downloaded dataset files**. This is because some datasets might be changed since the last version. 
 
 You can check the version by running 
 ```python 
-import ogb; print(ogb.__version__) # make sure this outputs 1.0.* . Otherwise please update your version.
+import ogb; print(ogb.__version__) # make sure this outputs 1.0.1 . Otherwise please update your version.
 ```
 
 #### Requirements
@@ -54,7 +54,7 @@ We prepare easy-to-use [PyTorch Geometric](https://pytorch-geometric.readthedocs
 Following is an example in PyTorch Geometric showing that a few lines of code are sufficient to prepare and split the dataset. You can enjoy the same convenience for DGL. For those who do not use neither of them, we also prepare library-agnostic dataset loaders that only depend on basic Python libraries (e.g., numpy, pickle) and thus can be used with other deep learning libraries such as Tensorflow.
 
 ```python
-from ogb.graphproppred.dataset_pyg import PygGraphPropPredDataset
+from ogb.graphproppred import PygGraphPropPredDataset
 from torch_geometric.data import DataLoader
 
 dataset = PygGraphPropPredDataset(name = "ogbg-mol-hiv")
