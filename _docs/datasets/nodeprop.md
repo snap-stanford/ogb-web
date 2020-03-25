@@ -9,11 +9,12 @@ permalink: /docs/nodeprop/
 
 #### - Datasets
 
+##### **The current datasets are subject to change until the paper is released (expected to be around mid April).**
+
 Scale | Name                              | #Nodes  | #Edges\* | #Task | Split Type        | Task Type   | Metric                  |
 |-------------|---------|----------------|----------------------|---------------------|---------------------------|--------------------|
 Medium | [ogbn-proteins](#ogbn-proteins) | 132,534  |  39,561,252 | 112       | Species  | Binary classification   | ROC-AUC     |
 Medium | [ogbn-products](#ogbn-products) | 2,449,029  | 61,859,140 | 1       | Time      | Multi-class classification | Accuracy |
-
 
 \* Note that for undirected graphs, the loaded graphs will have the doubled number of edges becausewe add the bidirectional edges automatically.
 

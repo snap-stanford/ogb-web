@@ -9,6 +9,8 @@ permalink: /docs/linkprop/
 
 #### - Datasets
 
+##### **The current datasets are subject to change until the paper is released (expected to be around mid April).**
+
 Scale | Name      | #Nodes | #Edges\* | #Task | Split Type   | Task Type     | Metric       |
 |------------------|--------|----------|----------|-------------------------------------------------|-----------------------|----------------------------------|----------------|
 Small | [ogbl-reviews-groc](#ogbl-reviews)         | 168,816 |    915,088 |     1      | Time  | Link value regression   |     RMSE              |

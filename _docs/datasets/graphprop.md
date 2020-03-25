@@ -9,6 +9,8 @@ permalink: /docs/graphprop/
 
 #### - Datasets
 
+##### **The current datasets are subject to change until the paper is released (expected to be around mid April).**
+
 Scale | Name     | #Graphs   | #Nodes per graph | #Edges per graph\* | #Task | Split Type  | Task Type   | Metric                           |
 |-------------------------|----------|----------|----------|----------------|---------------------|------------------------|----------|
 Small | [ogbg-mol-hiv](#ogbg-mol) | 41,127 | 25.5 | 27.5 | 1   | Scaffold  |  Binary classification | ROC-AUC  |
