@@ -60,7 +60,7 @@ Following is an example in PyTorch Geometric showing that a few lines of code ar
 from ogb.graphproppred import PygGraphPropPredDataset
 from torch_geometric.data import DataLoader
 
-dataset = PygGraphPropPredDataset(name = "ogbg-mol-hiv")
+dataset = PygGraphPropPredDataset(name = "ogbg-molhiv")
  
 splitted_idx = dataset.get_idx_split() 
 train_loader = DataLoader(dataset[splitted_idx["train"]], batch_size=32, shuffle=True)
@@ -75,7 +75,7 @@ We prepare standardized evaluators for testing and comparing different methods. 
 ```python
 from ogb.graphproppred import Evaluator
 
-evaluator = Evaluator(name = "ogbg-mol-hiv")
+evaluator = Evaluator(name = "ogbg-molhiv")
 # You can learn the input and output format specification of the evaluator as follows.
 # print(evaluator.expected_input_format) 
 # print(evaluator.expected_output_format) 

@@ -4,20 +4,19 @@ permalink: /docs/leader_graphprop/
 ---
 
 ##### Check leaderboards for
-###### - [ogbg-mol](#ogbg-mol)
+###### - [ogbg-mol](#ogbg-molhiv)
+###### - [ogbg-mol](#ogbg-molpcba)
 ###### - [ogbg-ppi](#ogbg-ppi)
 
 **Note:** The **bold** method name indicates that the implementation is **official** (by the author of the original paper).
 
--------------
-<a name="ogbg-mol"/>
+<a name="ogbg-molhiv"/>
 
-### Leaderboard for [ogbg-mol](../graphprop/#ogbg-mol)
+-------------
+
+### Leaderboard for [ogbg-molhiv](../graphprop/#ogbg-mol)
 
 The ROC-AUC score on the test set. The higher, the better. 
-
-
-#### ogbg-mol-hiv
 
 | Rank  | Method | ROC-AUC | Contact | References | Date 
 |:----:|:-----:|:------:|:-----:|:-----:|:-----:|
@@ -25,8 +24,13 @@ The ROC-AUC score on the test set. The higher, the better.
 |  2  |  **GIN**  | 0.7535 ± 0.0204   | [Weihua Hu -- OGB team](mailto:weihuahu@cs.stanford.edu) | [Paper](https://arxiv.org/abs/1810.00826), [Code](https://github.com/snap-stanford/ogb/tree/master/examples/graphproppred/mol) | Mar 20, 2020 | 
 
 
+<a name="ogbg-molpcba"/>
 
-#### ogbg-mol-pcba
+-----------------
+
+### Leaderboard for [ogbg-molpcba](../graphprop/#ogbg-mol)
+
+The ROC-AUC score on the test set. The higher, the better. 
 
 | Rank  | Method | ROC-AUC | Contact | References | Date 
 |:----:|:-----:|:------:|:-----:|:-----:|:-----:|
@@ -36,7 +40,7 @@ The ROC-AUC score on the test set. The higher, the better.
 
 <a name="ogbg-ppi"/>
 
-------------
+---------------------
 
 ### Leaderboard for [ogbg-ppi](../graphprop/#ogbg-ppi)
 

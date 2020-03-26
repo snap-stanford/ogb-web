@@ -9,9 +9,10 @@ permalink: /docs/leader_nodeprop/
 
 **Note:** The **bold** method name indicates that the implementation is **official** (by the author of the original paper).
 
+<a name="ogbn-proteins"/>
+
 ------
 
-<a name="ogbn-proteins"/>
 ### Leaderboard for [ogbn-proteins](../nodeprop/#ogbn-proteins)
 The ROC-AUC score on the test set. The higher, the better.
 
@@ -21,9 +22,10 @@ The ROC-AUC score on the test set. The higher, the better.
 |  2  |  node2vec  | 0.6216 ± 0.0101   | [Matthias Fey -- OGB team](mailto:matthias.fey@tu-dortmund.de) | [Paper](https://arxiv.org/abs/1607.00653), [Code](https://github.com/snap-stanford/ogb/tree/master/examples/nodeproppred/proteins) | Mar 20, 2020 | 
 
 
+<a name="ogbn-products"/>
+
 ---------
 
-<a name="ogbn-products"/>
 ### Leaderboard for [ogbn-products](../nodeprop/#ogbn-products)
 The classification accuracy on the test set. The higher, the better.
 

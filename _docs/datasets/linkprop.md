@@ -13,8 +13,6 @@ permalink: /docs/linkprop/
 
 Scale | Name      | #Nodes | #Edges\* | #Task | Split Type   | Task Type     | Metric       |
 |------------------|--------|----------|----------|-------------------------------------------------|-----------------------|----------------------------------|----------------|
-Small | [ogbl-reviews-groc](#ogbl-reviews)         | 168,816 |    915,088 |     1      | Time  | Link value regression   |     RMSE              |
-Medium | [ogbl-reviews-book](#ogbl-reviews) | 2,560,437    | 21,731,986 | 1      |   Time   | Link value regression      |    RMSE         |
 Medium | [ogbl-ppa](#ogbl-ppa)         | 576,289 |    21,231,931 |     1      | Throughput  | Link prediction   |     Hits@100              |
 
 
@@ -24,31 +22,11 @@ Medium | [ogbl-ppa](#ogbl-ppa)         | 576,289 |    21,231,931 |     1      | 
 We prepare different [data loader](#loader) variants: (1) [Pytorch Geometric one](#pyg) (2) [DGL one](#dgl) and (3) [library-agnostic one](#libagn).
 We also prepare a unified [performance evaluator](#eval).
 
-----------
-
-<a name="ogbl-reviews"/>
-### Dataset `ogbl-reviews`: ([Leaderboard](../leader_linkprop/#ogbl-reviews))
-
-**Graph:** `ogbl-reviews-groc` and `ogbl-reviews-book` are unweighted bipartite graphs constructed from the "Grocery and Gourmet Food" category and the "Books" categories in the Amazon Review Data [1,2], respectively. `ogbl-reviews-groc` serves as a small-scale dataset, while `ogbl-reviews-book` is a medium-scale dataset.
-Here, nodes represent either Amazon products or users, and are associated with 301-dimensional feature vectors. The first dimension indicates whether a given node belongs to a product or a user. The remaining 300 features further describe the product nodes: We use [spaCy](https://spacy.io/) to obtain GloVe vectors [3] averaged over words in the product title and description. For the user nodes, we simply set the next 300 features to be all-zero. The edges in the graph represent reviews written by users about products. The edges are assigned an integer rating ranging from 1 to 5.
-
-
-**Prediction task:** 
-The task is to predict the ratings of unseen edges as accurately as possible. The evaluation procedure measures the root mean squared error (RMSE) between the true ratings and the predicted ratings.
-
-**Dataset splitting:** We provide a temporal split of the edges into training/validation/test edges. The goal is to use the past ratings to predict future ratings, which is typical for real-world link prediction scenarios.
-Since there exist no node features for users, we have removed all users from the graph that are unseen during training.
-
-#### References
-
-[1] https://nijianmo.github.io/amazon/index.html <br/>
-[2] Ni, J., Li, J., & McAuley, J. (2019). Justifying Recommendations using Distantly-Labeled Reviews and Fine-Grained Aspects. EMNLP 2019. <br/>
-[3] Pennington, J., Socher, R., & Manning, C. D. (2014). Glove: Global vectors for word representation. EMNLP 2014.
-
-----------
-
 <a name="ogbl-ppa"/>
-### Dataset `ogbl-ppa`: ([Leaderboard](../leader_linkprop/#ogbl-ppa))
+
+----------
+
+### Dataset `ogbl-ppa` ([Leaderboard](../leader_linkprop/#ogbl-ppa)):
 
 **Graph:** `ogbl-ppa` is an undirected, unweighted graph. Nodes represent proteins from 58 different species, and edges indicate biologically meaningful associations between proteins, e.g., physical interactions, co-expression, homology or genomic neighborhood [1]. We provide a graph object constructed from training edges (no validation and test edges are contained). Each node contains a 58-dimensional one-hot feature vector that indicates the species that the corresponding protein comes from.
 
@@ -70,9 +48,9 @@ The following summarizes the traing/validation/test edges that we provide.
 
 [1] Szklarczyk, D., Gable, A.L., Lyon, D., Junge, A., Wyder, S., Huerta-Cepas, J., Simonovic, M., Doncheva, N.T., Morris, J.H., Bork, P. and Jensen, L.J., 2018. STRING v11: protein–protein association networks with increased coverage, supporting functional discovery in genome-wide experimental datasets. Nucleic Acids Research, 47(D1), pp.D607-D613.
 
-----------
-
 <a name="loader"/>
+
+----------
 
 ### Data Loader
 
@@ -133,9 +111,9 @@ The library-agnostic graph object is a dictionary containing the following keys:
 - `node_feat`: numpy arrays of shape `(num_nodes, nodefeat_dim)`, where `nodefeat_dim` is the dimensionality of node features and i-th row represents the feature of i-th node. This can be `None` if no input node features are available.
 - `num_nodes`: number of nodes in the graph.
 
-----------
-
 <a name="eval"/>
+
+----------
 
 ### Performance Evaluator
 

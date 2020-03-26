@@ -13,8 +13,8 @@ permalink: /docs/graphprop/
 
 Scale | Name     | #Graphs   | #Nodes per graph | #Edges per graph\* | #Task | Split Type  | Task Type   | Metric                           |
 |-------------------------|----------|----------|----------|----------------|---------------------|------------------------|----------|
-Small | [ogbg-mol-hiv](#ogbg-mol) | 41,127 | 25.5 | 27.5 | 1   | Scaffold  |  Binary classification | ROC-AUC  |
-Medium | [ogbg-mol-pcba](#ogbg-mol) | 437,929 | 26.0 | 28.1 | 128   | Scaffold  |  Binary classification | ROC-AUC  |
+Small | [ogbg-molhiv](#ogbg-mol) | 41,127 | 25.5 | 27.5 | 1   | Scaffold  |  Binary classification | ROC-AUC  |
+Medium | [ogbg-molpcba](#ogbg-mol) | 437,929 | 26.0 | 28.1 | 128   | Scaffold  |  Binary classification | ROC-AUC  |
 Medium | [ogbg-ppi](#ogbg-ppi) | 158,100 | 243.4 | 2,266.1 | 1  | Species  |  Multi-class classification | Accuracy  |
 
 
@@ -25,16 +25,17 @@ Medium | [ogbg-ppi](#ogbg-ppi) | 158,100 | 243.4 | 2,266.1 | 1  | Species  |  Mu
 We prepare different [data loader](#loader) variants: (1) [Pytorch Geometric one](#pyg) (2) [DGL one](#dgl) and (3) [library-agnostic one](#libagn).
 We also prepare a unified [performance evaluator](#eval).
 
+<a name="ogbg-mol"/>
+
 ----------
 
-<a name="ogbg-mol"/>
-### Dataset `ogbg-mol`: ([Leaderboard](../leader_graphprop/#ogbg-mol))
+### Datasets `ogbg-molhiv` ([Leaderboard](../leader_graphprop/#ogbg-molhiv)) and `ogbg-molpcba` ([Leaderboard](../leader_graphprop/#ogbg-molpcba)):
 
-**Graph:** `ogbg-mol` consists of two molecular property prediction datasets of different sizes: `ogbg-mol-hiv` (small) and `ogbg-mol-pcba` (medium). They are adopted from the MoleculeNet [1], and are among the largest of the MoleculeNet datasets. All the molecules are pre-processed using RDKit [2]. Each graph represents a molecule, where nodes are atoms, and edges are chemical bonds. Input node features are 9-dimensional, containing atomic number, chirality, and other additional atom features. Input edge features are 3-dimensional, containing bond type, bond stereochemistry, and one additional feature indicating whether the bond is conjugated or not. 
+**Graph:** `ogbg-molhiv` and `ogbg-molpcba` are two molecular property prediction datasets of different sizes: `ogbg-molhiv` (small) and `ogbg-molpcba` (medium). They are adopted from the MoleculeNet [1], and are among the largest of the MoleculeNet datasets. All the molecules are pre-processed using RDKit [2]. Each graph represents a molecule, where nodes are atoms, and edges are chemical bonds. Input node features are 9-dimensional, containing atomic number, chirality, and other additional atom features. Input edge features are 3-dimensional, containing bond type, bond stereochemistry, and one additional feature indicating whether the bond is conjugated or not. 
 The full description of the features is provided in [code](https://github.com/snap-stanford/ogb/blob/master/ogb/utils/features.py). The script to convert the SMILES string [3] to the above graph object can be found [here](../../assets/script/smiles2graph.py).
 Note that the script requires [RDkit](https://www.rdkit.org/docs/GettingStartedInPython.html) to be installed. The script can be used to pre-process external molecule datasets so that those datasets share the same input feature space as the OGB molecule datasets. This is particularly useful for pre-training graph models, which has great potential to significantly increase generalization performance on the (*downstream*) OGB datasets [4].
 
-Beside the two main datasets, we additionally provide 10 smaller datasets from MoleculeNet. They are `ogbg-mol-tox21`, `ogbg-mol-bace`, `ogbg-mol-bbbp`, `ogbg-mol-clintox`, `ogbg-mol-muv`, `ogbg-mol-sider`, and `ogbg-mol-toxcast` for (multi-task) binary classification, and `ogbg-mol-esol`, `ogbg-mol-freesolv`, and `ogbg-mol-lipo` for regression. Evaluators are also provided for these datasets. These datasets can be used to stress-test molecule-specific methods or transfer learning [4].
+Beside the two main datasets, we additionally provide 10 smaller datasets from MoleculeNet. They are `ogbg-moltox21`, `ogbg-molbace`, `ogbg-molbbbp`, `ogbg-molclintox`, `ogbg-molmuv`, `ogbg-molsider`, and `ogbg-moltoxcast` for (multi-task) binary classification, and `ogbg-molesol`, `ogbg-molfreesolv`, and `ogbg-mollipo` for regression. Evaluators are also provided for these datasets. These datasets can be used to stress-test molecule-specific methods or transfer learning [4].
 
 For encoding these raw input features, we prepare simple modules called `AtomEncoder` and `BondEncoder`. They can be used as follows to embed raw atom and bond features to obtain `atom_emb` and `bond_emb`.
 ```python
@@ -48,7 +49,7 @@ edge_emb = bond_encoder(edge_attr) # edge_attr is input edge feature in Pytorch 
 
 #### Datasets
 
-**Prediction task:**  The task is to predict the target molecular properties as accurately as possible, where the molecular properties are cast as binary labels, e.g., whether a molecule inhibits HIV virus replication or not. `ogbg-mol-pcba` contains 128 kinds of labels to predict, and the ROC-AUC performance averaged over these tasks is evaluated.
+**Prediction task:**  The task is to predict the target molecular properties as accurately as possible, where the molecular properties are cast as binary labels, e.g., whether a molecule inhibits HIV virus replication or not. `ogbg-molpcba` contains 128 kinds of labels to predict, and the ROC-AUC performance averaged over these tasks is evaluated.
 
 
 **Dataset splitting:**
@@ -61,10 +62,11 @@ We adopt the *scaffold splitting* procedure (implmented in [RDkit](https://www.r
 [3] Anderson, Eric, Gilman D. Veith, and David Weininger. SMILES: a line notation and computerized interpreter for chemical structures. (1987). <br/>
 [4] Hu, W., Liu, B., Gomes, J., Zitnik, M., Liang, P., Pande, V., & Leskovec, J. (2020). Strategies for pre-training graph neural networks. ICLR 2020.
 
+<a name="ogbg-ppi"/>
+
 ----------
 
-<a name="ogbg-ppi"/>
-### Dataset `ogbg-ppi`: ([Leaderboard](../leader_graphprop/#ogbg-ppi))
+### Dataset `ogbg-ppi` ([Leaderboard](../leader_graphprop/#ogbg-ppi)): 
 
 **Graph:** `ogbg-ppi` is a set of undirected, unweighted protein association neighborhoods extracted from the protein-protein association networks of 1581 different species [1] that cover 37 broad taxonomic groups (e.g., mammals, bacterial families, archaeans) and span the tree of life [2]. To construct the neighborhoods, we randomly selected 100 proteins from each species and constructed 2-hop protein association neighborhoods centered on each of the selected proteins [3]. We then removed the center node from each neighborhood and subsampled the neighborhood to ensure the final protein association graph is small enough (less than 300 nodes). Nodes in each protein association graph represent proteins, and edges indicate biologically meaningful associations between proteins. The edges are associated with 7-dimensional features, where each element takes a value between 0 and 1 and represents the strength of a particular type of protein protein association such as gene co-occurrence, gene fusion events, and co-expression.
 
@@ -81,14 +83,13 @@ This split stress-tests the model's capability to extract graph features that ar
 [2] Hug, L. A., Baker, B. J., Anantharaman, K., Brown, C. T., Probst, A. J., Castelle, C. J., ... & Suzuki, Y. (2016). A new view of the tree of life. Nature microbiology, 1(5), 16048. <br/>
 [3] Zitnik, M., Feldman, M. W., & Leskovec, J. (2019). Evolution of resilience in protein interactomes across the tree of life. Proceedings of the National Academy of Sciences, 116(10), 4426-4433.
 
+<a name="loader"/>
 
 ----------------
 
-<a name="loader"/>
-
 ### Data Loader
 
-To load a dataset replace, d_name with the dataset name (e.g., `"ogbg-mol-hiv"`).
+To load a dataset replace, d_name with the dataset name (e.g., `"ogbg-molhiv"`).
 
 <a name="pyg"/>
 
@@ -147,9 +148,9 @@ The library-agnostic graph object is a dictionary containing the following keys:
 - `node_feat`: numpy arrays of shape `(num_nodes, nodefeat_dim)`, where `nodefeat_dim` is the dimensionality of node features and i-th row represents the feature of i-th node. This can be `None` if no input node features are available.
 - `num_nodes`: number of nodes in the graph.
 
-----------
-
 <a name="eval"/>
+
+----------
 
 ### Performance Evaluator
 

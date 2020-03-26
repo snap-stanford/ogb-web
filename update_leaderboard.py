@@ -3,19 +3,17 @@ import numpy as np
 import os
 
 nodeprop_dataset_list = ['ogbn-proteins', 'ogbn-products']
-linkprop_dataset_list = ['ogbl-ppa', 'ogbl-reviews-groc', 'ogbl-reviews-book']
-graphprop_mol_dataset_list = ['ogbg-mol-hiv', 'ogbg-mol-pcba', 'ogbg-ppi']
+linkprop_dataset_list = ['ogbl-ppa']
+graphprop_mol_dataset_list = ['ogbg-molhiv', 'ogbg-molpcba', 'ogbg-ppi']
 graphprop_other_dataset_list = []
 
 dataset2metric = {}
 dataset2metric['ogbn-proteins'] = 'ROC-AUC'
 dataset2metric['ogbn-products'] = 'Accuracy'
 dataset2metric['ogbl-ppa'] = 'Hits@100'
-dataset2metric['ogbl-reviews-book'] = 'RMSE'
-dataset2metric['ogbl-reviews-groc'] = 'RMSE'
 dataset2metric['ogbg-ppi'] = 'Accuracy'
-dataset2metric['ogbg-mol-hiv'] = 'ROC-AUC'
-dataset2metric['ogbg-mol-pcba'] = 'ROC-AUC'
+dataset2metric['ogbg-molhiv'] = 'ROC-AUC'
+dataset2metric['ogbg-molpcba'] = 'ROC-AUC'
 
 month_dict = {1: 'Jan', 2: 'Feb', 3: 'Mar', 4: 'Apr', 5: 'May', 6: 'Jun', 7: 'Jul', 8: 'Aug', 9: 'Sep', 10: 'Oct', 11: 'Nov', 12: 'Dec'}
 

@@ -4,31 +4,35 @@ permalink: /docs/leader_graphprop/
 ---
 
 ##### Check leaderboards for
-###### - [ogbg-mol](#ogbg-mol)
+###### - [ogbg-mol](#ogbg-molhiv)
+###### - [ogbg-mol](#ogbg-molpcba)
 ###### - [ogbg-ppi](#ogbg-ppi)
 
 **Note:** The **bold** method name indicates that the implementation is **official** (by the author of the original paper).
 
--------------
-<a name="ogbg-mol"/>
+<a name="ogbg-molhiv"/>
 
-### Leaderboard for [ogbg-mol](../graphprop/#ogbg-mol)
+-------------
+
+### Leaderboard for [ogbg-molhiv](../graphprop/#ogbg-mol)
 
 The ROC-AUC score on the test set. The higher, the better. 
 
+#ogbg-molhiv
 
-#### ogbg-mol-hiv
+<a name="ogbg-molpcba"/>
 
-#ogbg-mol-hiv
+-----------------
 
+### Leaderboard for [ogbg-molpcba](../graphprop/#ogbg-mol)
 
-#### ogbg-mol-pcba
+The ROC-AUC score on the test set. The higher, the better. 
 
-#ogbg-mol-pcba
+#ogbg-molpcba
 
 <a name="ogbg-ppi"/>
 
-------------
+---------------------
 
 ### Leaderboard for [ogbg-ppi](../graphprop/#ogbg-ppi)
 
