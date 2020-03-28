@@ -28,7 +28,7 @@ We also prepare a unified [performance evaluator](#eval).
 
 ### Dataset `ogbn-proteins` ([Leaderboard](../leader_nodeprop/#ogbn-proteins)):
 
-**Graph:** `ogbn-proteins` is an undirected, weighted, and typed (according to species) graph. Nodes represent proteins, and edges indicate different types of biologically meaningful associations between proteins, e.g., physical interactions, co-expression or homology [1,2]. All edges come with 8-dimensional features, where each dimension represents the strength of a single association type and takes values between 0 and 1 (the larger the value is, the stronger the association is). The proteins come from 8 species, and each node comes with an 8-dimensional one-hot feature indicating which species the corresponding protein comes from.
+**Graph:** `ogbn-proteins` is an undirected, weighted, and typed (according to species) graph. Nodes represent proteins, and edges indicate different types of biologically meaningful associations between proteins, e.g., physical interactions, co-expression or homology [1,2]. All edges come with 8-dimensional features, where each dimension represents the strength of a single association type and takes values between 0 and 1 (the larger the value is, the stronger the association is). The proteins come from 8 species. The nodes are attached with the taxonomy ID indicating the species from which the proteins come from.
 
 
 **Prediction task:** The task is to predict the presence of protein functions in a multi-label binary classification setup, where there are 112 kinds of labels to predict in total.
