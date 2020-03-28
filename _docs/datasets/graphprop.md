@@ -49,7 +49,7 @@ edge_emb = bond_encoder(edge_attr) # edge_attr is input edge feature in Pytorch 
 
 #### Datasets
 
-**Prediction task:**  The task is to predict the target molecular properties as accurately as possible, where the molecular properties are cast as binary labels, e.g., whether a molecule inhibits HIV virus replication or not. `ogbg-molpcba` contains 128 kinds of labels to predict, and the ROC-AUC performance averaged over these tasks is evaluated.
+**Prediction task:**  The task is to predict the target molecular properties as accurately as possible, where the molecular properties are cast as binary labels, e.g., whether a molecule inhibits HIV virus replication or not. `ogbg-molpcba` contains 128 kinds of labels to predict, and the ROC-AUC performance averaged over these tasks is evaluated. Note that we use `nan` to represent *no label* (neigher positive nor negative). We ignore `nan` during evaluation.
 
 
 **Dataset splitting:**
