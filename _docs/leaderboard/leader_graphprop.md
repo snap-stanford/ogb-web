@@ -4,8 +4,8 @@ permalink: /docs/leader_graphprop/
 ---
 
 ##### Check leaderboards for
-###### - [ogbg-mol](#ogbg-molhiv)
-###### - [ogbg-mol](#ogbg-molpcba)
+###### - [ogbg-molhiv](#ogbg-molhiv)
+###### - [ogbg-molpcba](#ogbg-molpcba)
 ###### - [ogbg-ppi](#ogbg-ppi)
 
 **Note:** The **bold** method name indicates that the implementation is **official** (by the author of the original paper).
