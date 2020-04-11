@@ -26,7 +26,7 @@ The ROC-AUC score on the test set. The higher, the better.
 
 ### Leaderboard for [ogbg-molpcba](../graphprop/#ogbg-mol)
 
-The ROC-AUC score on the test set. The higher, the better. 
+The PRC-AUC score on the test set. The higher, the better. 
 
 #ogbg-molpcba
 

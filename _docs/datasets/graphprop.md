@@ -14,7 +14,7 @@ permalink: /docs/graphprop/
 Scale | Name     | #Graphs   | #Nodes per graph | #Edges per graph\* | #Task | Split Type  | Task Type   | Metric                           |
 |-------------------------|----------|----------|----------|----------------|---------------------|------------------------|----------|
 Small | [ogbg-molhiv](#ogbg-mol) | 41,127 | 25.5 | 27.5 | 1   | Scaffold  |  Binary classification | ROC-AUC  |
-Medium | [ogbg-molpcba](#ogbg-mol) | 437,929 | 26.0 | 28.1 | 128   | Scaffold  |  Binary classification | ROC-AUC  |
+Medium | [ogbg-molpcba](#ogbg-mol) | 437,929 | 26.0 | 28.1 | 128   | Scaffold  |  Binary classification | PRC-AUC  |
 Medium | [ogbg-ppi](#ogbg-ppi) | 158,100 | 243.4 | 2,266.1 | 1  | Species  |  Multi-class classification | Accuracy  |
 
 
@@ -49,7 +49,9 @@ edge_emb = bond_encoder(edge_attr) # edge_attr is input edge feature in Pytorch 
 
 #### Datasets
 
-**Prediction task:**  The task is to predict the target molecular properties as accurately as possible, where the molecular properties are cast as binary labels, e.g., whether a molecule inhibits HIV virus replication or not. `ogbg-molpcba` contains 128 kinds of labels to predict, and the ROC-AUC performance averaged over these tasks is evaluated. Note that we use `nan` to represent *no label* (neigher positive nor negative). We ignore `nan` during evaluation.
+**Prediction task:**  The task is to predict the target molecular properties as accurately as possible, where the molecular properties are cast as binary labels, e.g., whether a molecule inhibits HIV virus replication or not. 
+For evaluation metric, we closely follow Wu et al [1].
+Specifically, `ogbg-molhiv`, we use ROC-AUC for evaluation. For `ogbg-molpcba`, as the class balance is extremely skewed (only 1.4% of data are positive) and it contains multiple classification tasks, we use the PRC-AUC averaged over the tasks as the evaluation metric.
 
 
 **Dataset splitting:**
