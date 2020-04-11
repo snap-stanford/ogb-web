@@ -32,7 +32,7 @@ The ROC-AUC score on the test set. The higher, the better.
 
 The PRC-AUC score on the test set. The higher, the better. 
 
-| Rank  | Method | ROC-AUC | Contact | References | Date 
+| Rank  | Method | PRC-AUC | Contact | References | Date 
 |:----:|:-----:|:------:|:-----:|:-----:|:-----:|
 |  1  |  **GIN+virtual node**  | 0.2655 ± 0.0027   | [Weihua Hu -- OGB team](mailto:weihuahu@cs.stanford.edu) | [Paper](https://arxiv.org/abs/1810.00826), [Code](https://github.com/snap-stanford/ogb/tree/master/examples/graphproppred/mol) | Mar 20, 2020 | 
 |  2  |  **GIN**  | 0.2217 ± 0.0023   | [Weihua Hu -- OGB team](mailto:weihuahu@cs.stanford.edu) | [Paper](https://arxiv.org/abs/1810.00826), [Code](https://github.com/snap-stanford/ogb/tree/master/examples/graphproppred/mol) | Mar 20, 2020 | 
