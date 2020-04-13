@@ -13,7 +13,7 @@ dataset2metric['ogbn-products'] = 'Accuracy'
 dataset2metric['ogbl-ppa'] = 'Hits@100'
 dataset2metric['ogbg-ppi'] = 'Accuracy'
 dataset2metric['ogbg-molhiv'] = 'ROC-AUC'
-dataset2metric['ogbg-molpcba'] = 'ROC-AUC'
+dataset2metric['ogbg-molpcba'] = 'PRC-AUC'
 
 month_dict = {1: 'Jan', 2: 'Feb', 3: 'Mar', 4: 'Apr', 5: 'May', 6: 'Jun', 7: 'Jul', 8: 'Aug', 9: 'Sep', 10: 'Oct', 11: 'Nov', 12: 'Dec'}
 
