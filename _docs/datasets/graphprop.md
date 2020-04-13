@@ -18,7 +18,7 @@ Medium | [ogbg-molpcba](#ogbg-mol) | 437,929 | 26.0 | 28.1 | 128   | Scaffold  |
 Medium | [ogbg-ppi](#ogbg-ppi) | 158,100 | 243.4 | 2,266.1 | 1  | Species  |  Multi-class classification | Accuracy  |
 
 
-\* Note that for undirected graphs, the loaded graphs will have the doubled number of edges becausewe add the bidirectional edges automatically.
+\* Note that for undirected graphs, the loaded graphs will have the doubled number of edges because we add the bidirectional edges automatically.
 
 
 #### - Module

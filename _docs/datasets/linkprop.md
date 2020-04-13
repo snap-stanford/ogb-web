@@ -16,7 +16,7 @@ Scale | Name      | #Nodes | #Edges\* | #Task | Split Type   | Task Type     | M
 Medium | [ogbl-ppa](#ogbl-ppa)         | 576,289 |    21,231,931 |     1      | Throughput  | Link prediction   |     Hits@100              |
 
 
-\* Note that for undirected graphs, the loaded graphs will have the doubled number of edges becausewe add the bidirectional edges automatically.
+\* Note that for undirected graphs, the loaded graphs will have the doubled number of edges because we add the bidirectional edges automatically.
 
 #### - Module
 We prepare different [data loader](#loader) variants: (1) [Pytorch Geometric one](#pyg) (2) [DGL one](#dgl) and (3) [library-agnostic one](#libagn).
