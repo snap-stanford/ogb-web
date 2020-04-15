@@ -16,7 +16,7 @@ Scale | Name                              | #Nodes  | #Edges\* | #Task | Split T
 Medium | [ogbn-proteins](#ogbn-proteins) | 132,534  |  39,561,252 | 112       | Species  | Binary classification   | ROC-AUC     |
 Medium | [ogbn-products](#ogbn-products) | 2,449,029  | 61,859,140 | 1       | Time      | Multi-class classification | Accuracy |
 
-\* Note that for undirected graphs, the loaded graphs will have the doubled number of edges because we add the bidirectional edges automatically.
+**Note:** For undirected graphs, the loaded graphs will have the doubled number of edges because we add the bidirectional edges automatically.
 
 #### - Module
 We prepare different [data loader](#loader) variants: (1) [Pytorch Geometric one](#pyg) (2) [DGL one](#dgl) and (3) [library-agnostic one](#libagn).
@@ -116,6 +116,8 @@ The library-agnostic graph object is a dictionary containing the following keys:
 - `edge_feat`: numpy arrays of shape `(num_edges, edgefeat_dim)`, where `edgefeat_dim` is the dimensionality of edge features and i-th row represents the feature of i-th edge. This can be `None` if no input edge features are available.
 - `node_feat`: numpy arrays of shape `(num_nodes, nodefeat_dim)`, where `nodefeat_dim` is the dimensionality of node features and i-th row represents the feature of i-th node. This can be `None` if no input node features are available.
 - `num_nodes`: number of nodes in the graph.
+
+**Node:** Some graph datasets may contain additional meta-information in node or edges such as their time stamps. Although they are not given as default input features, researchers should feel free to exploit these additional information.
 
 <a name="eval"/>
 

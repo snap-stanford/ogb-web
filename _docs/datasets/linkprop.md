@@ -16,7 +16,7 @@ Scale | Name      | #Nodes | #Edges\* | #Task | Split Type   | Task Type     | M
 Medium | [ogbl-ppa](#ogbl-ppa)         | 576,289 |    21,231,931 |     1      | Throughput  | Link prediction   |     Hits@100              |
 
 
-\* Note that for undirected graphs, the loaded graphs will have the doubled number of edges because we add the bidirectional edges automatically.
+**Note:** For undirected graphs, the loaded graphs will have the doubled number of edges because we add the bidirectional edges automatically.
 
 #### - Module
 We prepare different [data loader](#loader) variants: (1) [Pytorch Geometric one](#pyg) (2) [DGL one](#dgl) and (3) [library-agnostic one](#libagn).
@@ -66,9 +66,7 @@ from ogb.linkproppred import PygLinkPropPredDataset
 dataset = PygLinkPropPredDataset(name = d_name) 
 
 splitted_edge = dataset.get_edge_split()
-train_edge, train_edge_label = splitted_edge["train_edge"], splitted_edge["train_edge_label"]
-valid_edge, valid_edge_label = splitted_edge["valid_edge"], splitted_edge["valid_edge_label"]
-test_edge, test_edge_label = splitted_edge["test_edge"], splitted_edge["test_edge_label"]
+train_edge, valid_edge, test_edge = splitted_edge["train"], splitted_edge["valid"], splitted_edge["test"]
 graph = dataset[0] # pyg graph object containing only training edges
 ```
 
@@ -82,14 +80,11 @@ from ogb.linkproppred import DglLinkPropPredDataset
 dataset = DglLinkPropPredDataset(name = d_name)
 
 splitted_edge = dataset.get_edge_split()
-train_edge, train_edge_label = splitted_edge["train_edge"], splitted_edge["train_edge_label"]
-valid_edge, valid_edge_label = splitted_edge["valid_edge"], splitted_edge["valid_edge_label"]
-test_edge, test_edge_label = splitted_edge["test_edge"], splitted_edge["test_edge_label"]
+train_edge, valid_edge, test_edge = splitted_edge["train"], splitted_edge["valid"], splitted_edge["test"]
 graph = dataset[0] # dgl graph object containing only training edges
 ```
-`{train,valid,edge}_edge` are torch tensors of size `(num_edges,2)`, where each row represents a directed edge, and the first/second column represents the source/sink node indices. 
+`{train,valid,edge}_edge` contains the splitting of edges whose format is dataset-dependent. For instance, it can be a dictionary containing positive and negative edges. For KG, it is a dictionary containing three keys: `head`, `relation`, and `tail`, and i-th triplet in KG is simply i-th elements of `head`, `relation`, and `tail`.
 An undirected graph should include bidirectional edges for each pair of nodes that are connected by an edge. We include the bidirectional edges in the graph object so that messages in GNNs flow in both directions. To keep a low-memory footprint, we did not duplicate edges in `{train,valid,edge}_edge`.
-`{train,valid,edge}_edge_label` are torch tensors of length `num_edges`, where the specific shape depends on the dataset at hand. The i-th entry of `{train,valid,edge}_edge_label` corresponds to that of `{train,valid,edge}_edge`, representing some label(s) assigned to the i-th edge.
 
 <a name="libagn"/>
 
@@ -100,9 +95,7 @@ from ogb.linkproppred import LinkPropPredDataset
 dataset = LinkPropPredDataset(name = d_name)
 
 splitted_edge = dataset.get_edge_split()
-train_edge, train_edge_label = splitted_edge["train_edge"], splitted_edge["train_edge_label"]
-valid_edge, valid_edge_label = splitted_edge["valid_edge"], splitted_edge["valid_edge_label"]
-test_edge, test_edge_label = splitted_edge["test_edge"], splitted_edge["test_edge_label"]
+train_edge, valid_edge, test_edge = splitted_edge["train"], splitted_edge["valid"], splitted_edge["test"]
 graph = dataset[0] # graph: library-agnostic graph object
 ```
 The library-agnostic graph object is a dictionary containing the following keys: `edge_index`, `edge_feat`, `node_feat`, and `num_nodes`, which are detailed below.
@@ -110,6 +103,8 @@ The library-agnostic graph object is a dictionary containing the following keys:
 - `edge_feat`: numpy arrays of shape `(num_edges, edgefeat_dim)`, where `edgefeat_dim` is the dimensionality of edge features and i-th row represents the feature of i-th edge. This can be `None` if no input edge features are available.
 - `node_feat`: numpy arrays of shape `(num_nodes, nodefeat_dim)`, where `nodefeat_dim` is the dimensionality of node features and i-th row represents the feature of i-th node. This can be `None` if no input node features are available.
 - `num_nodes`: number of nodes in the graph.
+
+**Node:** Some graph datasets may contain additional meta-information in node or edges such as their time stamps. Although they are not given as default input features, researchers should feel free to exploit these additional information.
 
 <a name="eval"/>
 

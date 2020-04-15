@@ -18,7 +18,7 @@ Medium | [ogbg-molpcba](#ogbg-mol) | 437,929 | 26.0 | 28.1 | 128   | Scaffold  |
 Medium | [ogbg-ppi](#ogbg-ppi) | 158,100 | 243.4 | 2,266.1 | 1  | Species  |  Multi-class classification | Accuracy  |
 
 
-\* Note that for undirected graphs, the loaded graphs will have the doubled number of edges because we add the bidirectional edges automatically.
+**Note:** For undirected graphs, the loaded graphs will have the doubled number of edges because we add the bidirectional edges automatically.
 
 
 #### - Module
@@ -149,6 +149,8 @@ The library-agnostic graph object is a dictionary containing the following keys:
 - `edge_feat`: numpy arrays of shape `(num_edges, edgefeat_dim)`, where `edgefeat_dim` is the dimensionality of edge features and i-th row represents the feature of i-th edge. This can be `None` if no input edge features are available.
 - `node_feat`: numpy arrays of shape `(num_nodes, nodefeat_dim)`, where `nodefeat_dim` is the dimensionality of node features and i-th row represents the feature of i-th node. This can be `None` if no input node features are available.
 - `num_nodes`: number of nodes in the graph.
+
+**Node:** Some graph datasets may contain additional meta-information in node or edges such as their time stamps. Although they are not given as default input features, researchers should feel free to exploit these additional information.
 
 <a name="eval"/>
 
