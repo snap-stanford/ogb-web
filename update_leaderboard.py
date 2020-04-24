@@ -4,14 +4,14 @@ import os
 
 nodeprop_dataset_list = ['ogbn-proteins', 'ogbn-products']
 linkprop_dataset_list = ['ogbl-ppa']
-graphprop_mol_dataset_list = ['ogbg-molhiv', 'ogbg-molpcba', 'ogbg-ppi']
+graphprop_mol_dataset_list = ['ogbg-molhiv', 'ogbg-molpcba', 'ogbg-ppa']
 graphprop_other_dataset_list = []
 
 dataset2metric = {}
 dataset2metric['ogbn-proteins'] = 'ROC-AUC'
 dataset2metric['ogbn-products'] = 'Accuracy'
 dataset2metric['ogbl-ppa'] = 'Hits@100'
-dataset2metric['ogbg-ppi'] = 'Accuracy'
+dataset2metric['ogbg-ppa'] = 'Accuracy'
 dataset2metric['ogbg-molhiv'] = 'ROC-AUC'
 dataset2metric['ogbg-molpcba'] = 'PRC-AUC'
 

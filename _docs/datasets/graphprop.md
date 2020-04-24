@@ -15,7 +15,7 @@ Scale | Name     | #Graphs   | #Nodes per graph | #Edges per graph\* | #Task | S
 |-------------------------|----------|----------|----------|----------------|---------------------|------------------------|----------|
 Small | [ogbg-molhiv](#ogbg-mol) | 41,127 | 25.5 | 27.5 | 1   | Scaffold  |  Binary classification | ROC-AUC  |
 Medium | [ogbg-molpcba](#ogbg-mol) | 437,929 | 26.0 | 28.1 | 128   | Scaffold  |  Binary classification | PRC-AUC  |
-Medium | [ogbg-ppi](#ogbg-ppi) | 158,100 | 243.4 | 2,266.1 | 1  | Species  |  Multi-class classification | Accuracy  |
+Medium | [ogbg-ppa](#ogbg-ppa) | 158,100 | 243.4 | 2,266.1 | 1  | Species  |  Multi-class classification | Accuracy  |
 
 
 **Note:** For undirected graphs, the loaded graphs will have the doubled number of edges because we add the bidirectional edges automatically.
@@ -64,13 +64,13 @@ We adopt the *scaffold splitting* procedure (implmented in [RDkit](https://www.r
 [3] Anderson, Eric, Gilman D. Veith, and David Weininger. SMILES: a line notation and computerized interpreter for chemical structures. (1987). <br/>
 [4] Hu, W., Liu, B., Gomes, J., Zitnik, M., Liang, P., Pande, V., & Leskovec, J. (2020). Strategies for pre-training graph neural networks. ICLR 2020.
 
-<a name="ogbg-ppi"/>
+<a name="ogbg-ppa"/>
 
 ----------
 
-### Dataset `ogbg-ppi` ([Leaderboard](../leader_graphprop/#ogbg-ppi)): 
+### Dataset `ogbg-ppa` ([Leaderboard](../leader_graphprop/#ogbg-ppa)): 
 
-**Graph:** `ogbg-ppi` is a set of undirected, unweighted protein association neighborhoods extracted from the protein-protein association networks of 1581 different species [1] that cover 37 broad taxonomic groups (e.g., mammals, bacterial families, archaeans) and span the tree of life [2]. To construct the neighborhoods, we randomly selected 100 proteins from each species and constructed 2-hop protein association neighborhoods centered on each of the selected proteins [3]. We then removed the center node from each neighborhood and subsampled the neighborhood to ensure the final protein association graph is small enough (less than 300 nodes). Nodes in each protein association graph represent proteins, and edges indicate biologically meaningful associations between proteins. The edges are associated with 7-dimensional features, where each element takes a value between 0 and 1 and represents the strength of a particular type of protein protein association such as gene co-occurrence, gene fusion events, and co-expression.
+**Graph:** `ogbg-ppa` is a set of undirected, unweighted protein association neighborhoods extracted from the protein-protein association networks of 1581 different species [1] that cover 37 broad taxonomic groups (e.g., mammals, bacterial families, archaeans) and span the tree of life [2]. To construct the neighborhoods, we randomly selected 100 proteins from each species and constructed 2-hop protein association neighborhoods centered on each of the selected proteins [3]. We then removed the center node from each neighborhood and subsampled the neighborhood to ensure the final protein association graph is small enough (less than 300 nodes). Nodes in each protein association graph represent proteins, and edges indicate biologically meaningful associations between proteins. The edges are associated with 7-dimensional features, where each element takes a value between 0 and 1 and represents the strength of a particular type of protein protein association such as gene co-occurrence, gene fusion events, and co-expression.
 
 
 **Prediction task:** Given a protein association graph, the task is a 37-way multi-class classification to predict what taxonomic group the graph originates from.
