@@ -65,8 +65,8 @@ from ogb.linkproppred import PygLinkPropPredDataset
 
 dataset = PygLinkPropPredDataset(name = d_name) 
 
-splitted_edge = dataset.get_edge_split()
-train_edge, valid_edge, test_edge = splitted_edge["train"], splitted_edge["valid"], splitted_edge["test"]
+split_edge = dataset.get_edge_split()
+train_edge, valid_edge, test_edge = split_edge["train"], split_edge["valid"], split_edge["test"]
 graph = dataset[0] # pyg graph object containing only training edges
 ```
 
@@ -79,8 +79,8 @@ from ogb.linkproppred import DglLinkPropPredDataset
 
 dataset = DglLinkPropPredDataset(name = d_name)
 
-splitted_edge = dataset.get_edge_split()
-train_edge, valid_edge, test_edge = splitted_edge["train"], splitted_edge["valid"], splitted_edge["test"]
+split_edge = dataset.get_edge_split()
+train_edge, valid_edge, test_edge = split_edge["train"], split_edge["valid"], split_edge["test"]
 graph = dataset[0] # dgl graph object containing only training edges
 ```
 `{train,valid,edge}_edge` contains the splitting of edges whose format is dataset-dependent. For instance, it can be a dictionary containing positive and negative edges. For KG, it is a dictionary containing three keys: `head`, `relation`, and `tail`, and i-th triplet in KG is simply i-th elements of `head`, `relation`, and `tail`.
@@ -94,8 +94,8 @@ from ogb.linkproppred import LinkPropPredDataset
 
 dataset = LinkPropPredDataset(name = d_name)
 
-splitted_edge = dataset.get_edge_split()
-train_edge, valid_edge, test_edge = splitted_edge["train"], splitted_edge["valid"], splitted_edge["test"]
+split_edge = dataset.get_edge_split()
+train_edge, valid_edge, test_edge = split_edge["train"], split_edge["valid"], split_edge["test"]
 graph = dataset[0] # graph: library-agnostic graph object
 ```
 The library-agnostic graph object is a dictionary containing the following keys: `edge_index`, `edge_feat`, `node_feat`, and `num_nodes`, which are detailed below.

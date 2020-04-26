@@ -76,8 +76,8 @@ from ogb.nodeproppred import PygNodePropPredDataset
 dataset = PygNodePropPredDataset(name = d_name) 
 num_tasks = dataset.num_tasks # obtaining the number of prediction tasks in a dataset
 
-splitted_idx = dataset.get_idx_split()
-train_idx, valid_idx, test_idx = splitted_idx["train"], splitted_idx["valid"], splitted_idx["test"]
+split_idx = dataset.get_idx_split()
+train_idx, valid_idx, test_idx = split_idx["train"], split_idx["valid"], split_idx["test"]
 graph = dataset[0] # pyg graph object
 ```
 
@@ -91,8 +91,8 @@ from ogb.nodeproppred import DglNodePropPredDataset
 dataset = NodePropPredDataset(name = d_name)
 num_tasks = dataset.num_tasks # obtaining the number of prediction tasks in a dataset
 
-splitted_idx = dataset.get_idx_split()
-train_idx, valid_idx, test_idx = splitted_idx["train"], splitted_idx["valid"], splitted_idx["test"]
+split_idx = dataset.get_idx_split()
+train_idx, valid_idx, test_idx = split_idx["train"], split_idx["valid"], split_idx["test"]
 graph, label = dataset[0] # graph: dgl graph object, label: torch tensor of shape (num_nodes, num_tasks)
 ```
 `{train,valid,test}_idx` are torch tensors of shape `(num_nodes,)`, representing the node indices assigned to training/validation/test sets.
@@ -107,8 +107,8 @@ from ogb.nodeproppred import NodePropPredDataset
 dataset = NodePropPredDataset(name = d_name)
 num_tasks = dataset.num_tasks # obtaining the number of prediction tasks in a dataset
 
-splitted_idx = dataset.get_idx_split()
-train_idx, valid_idx, test_idx = splitted_idx["train"], splitted_idx["valid"], splitted_idx["test"]
+split_idx = dataset.get_idx_split()
+train_idx, valid_idx, test_idx = split_idx["train"], split_idx["valid"], split_idx["test"]
 graph, label = dataset[0] # graph: library-agnostic graph object
 ```
 The library-agnostic graph object is a dictionary containing the following keys: `edge_index`, `edge_feat`, `node_feat`, and `num_nodes`, which are detailed below.

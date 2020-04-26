@@ -104,10 +104,10 @@ from torch_geometric.data import DataLoader
 dataset = PygGraphPropPredDataset(name = d_name) 
 num_tasks = dataset.num_tasks # obtaining the number of prediction tasks in a dataset
 
-splitted_idx = dataset.get_idx_split() 
-train_loader = DataLoader(dataset[splitted_idx["train"]], batch_size=32, shuffle=True)
-valid_loader = DataLoader(dataset[splitted_idx["valid"]], batch_size=32, shuffle=False)
-test_loader = DataLoader(dataset[splitted_idx["test"]], batch_size=32, shuffle=False)
+split_idx = dataset.get_idx_split() 
+train_loader = DataLoader(dataset[split_idx["train"]], batch_size=32, shuffle=True)
+valid_loader = DataLoader(dataset[split_idx["valid"]], batch_size=32, shuffle=False)
+test_loader = DataLoader(dataset[split_idx["test"]], batch_size=32, shuffle=False)
 ```
 Note that the prediction targets are stored in `dataset.y`.
 
@@ -122,10 +122,10 @@ from torch.utils.data import DataLoader
 dataset = DglGraphPropPredDataset(name = d_name)
 num_tasks = dataset.num_tasks # obtaining the number of prediction tasks in a dataset
 
-splitted_idx = dataset.get_idx_split()
-train_loader = DataLoader(dataset[splitted_idx["train"]], batch_size=32, shuffle=True, collate_fn=collate_dgl)
-valid_loader = DataLoader(dataset[splitted_idx["valid"]], batch_size=32, shuffle=False, collate_fn=collate_dgl)
-test_loader = DataLoader(dataset[splitted_idx["test"]], batch_size=32, shuffle=False, collate_fn=collate_dgl)
+split_idx = dataset.get_idx_split()
+train_loader = DataLoader(dataset[split_idx["train"]], batch_size=32, shuffle=True, collate_fn=collate_dgl)
+valid_loader = DataLoader(dataset[split_idx["valid"]], batch_size=32, shuffle=False, collate_fn=collate_dgl)
+test_loader = DataLoader(dataset[split_idx["test"]], batch_size=32, shuffle=False, collate_fn=collate_dgl)
 ```
 Note that the i-th example and its prediction targets can be obtained by `graph, label = dataset[i]`.
 
@@ -138,8 +138,8 @@ from ogb.graphproppred import GraphPropPredDataset
 dataset = GraphPropPredDataset(name = d_name)
 num_tasks = dataset.num_tasks # obtaining the number of prediction tasks in a dataset
 
-splitted_idx = dataset.get_idx_split()
-train_idx, valid_idx, test_idx = splitted_idx["train"], splitted_idx["valid"], splitted_idx["test"]
+split_idx = dataset.get_idx_split()
+train_idx, valid_idx, test_idx = split_idx["train"], split_idx["valid"], split_idx["test"]
 
 ### set i as an arbitrary index
 graph, label = dataset[i] # graph: library-agnostic graph object
