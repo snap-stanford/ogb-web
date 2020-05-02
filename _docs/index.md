@@ -17,6 +17,12 @@ The OGB components are closely tied to OGB Python package, as detailed below.
 
 -----
 
+### Updates
+
+###### - **May 1st, 2020**: We have made our first major release of OGB! The package version is `1.1.*`.
+
+-----
+
 ### Package Installation
 
 You can install OGB using Python package manager pip.
@@ -25,15 +31,13 @@ You can install OGB using Python package manager pip.
 pip install ogb
 ```
 
-#### **Important**
-**The currently-available OGB datasets are subject to change.** Datasets might be deleted/modified/added. The datasets will be fixed *after* the OGB paper is released (expected to be around mid April). Thank you for your patience.
-
-<!-- **Important**: Make sure to install the latest version of OGB package (1.0.1). If you have already installed the older version, please upgrade the version and also make sure to **remove the previously-downloaded dataset files**. This is because some datasets might be changed since the last version. 
-
-You can check the version by running 
-```python 
-import ogb; print(ogb.__version__) # make sure this outputs 1.0.1 . Otherwise please update your version.
-``` -->
+Please check the version is `1.1.*`.
+```bash
+python -c "import ogb; print(ogb.__version__)"
+# This should print "1.1.*". Otherwise, please update the version by
+pip install -U ogb
+# Then, delete all the downloaded dataset folders.
+```
 
 #### Requirements
  - Python 3.5
