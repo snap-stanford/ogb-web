@@ -51,8 +51,7 @@ In particular, the goal is to predict a particular type of protein association, 
 
 ### Dataset `ogbl-collab` ([Leaderboard](../leader_linkprop/#ogbl-collab)):
 
-**Graph:** The dataseto `gbl-collab` is an undirected %multi-
-graph, representing a subset of the collaboration network between authors indexed by MAG.
+**Graph:** The dataset `ogbl-collab` is an undirected graph, representing a subset of the collaboration network between authors indexed by MAG.
 Each node represents an author and edges indicate the collaboration between authors. All nodes come with 128-dimensional features, obtained by averaging the word embeddings of papers that are published by the authors. All edges are associated with two meta-information: the year and the edge weight, representing the number of co-authored papers published in that year. 
 The graph can be viewed as a dynamic multi-graph since there can be multiple edges between two nodes if they collaborate in more than one year. 
 
@@ -79,8 +78,7 @@ Dach node is a paper with 128-dimensional word2vec features [2] that summarizes 
 **Prediction task:** The task is to predict missing citations given existing citations. Specifically, 
 for each source paper, two of its references are randomly dropped, and we would like the model to rank the missing two references higher than 1,000 negative reference candidates.
 The negative references are randomly-sampled from all the previous papers that are not referenced by the source paper. 
-The evaluation metric is Mean Reciprocal Rank (MRR), where the reciprocal rank of the true reference among the negative candidates is calculated for each source paper, %in the subset,
-and then the average is taken over all source papers. 
+The evaluation metric is Mean Reciprocal Rank (MRR), where the reciprocal rank of the true reference among the negative candidates is calculated for each source paper, and then the average is taken over all source papers. 
 
 **Dataset splitting:** We split the edges according to time, in order to simulate a realistic application in citation recommendation (e.g., a user is writing a new paper and has already cited several existing papers, but wants to be recommended additional references). To this end, we use the most recent papers (those published in 2019) as the source papers for which we want to recommend the references. For each source paper, we drop *two* papers from its references---the resulting two dropped edges (pointing from the source paper to the dropped papers) are used respectively for validation and testing. All the rest of the edges are used for training.
 
