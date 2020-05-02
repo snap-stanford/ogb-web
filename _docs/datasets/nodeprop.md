@@ -32,8 +32,8 @@ We also prepare a unified [performance evaluator](#eval).
 **Prediction task:** The task is to predict the category of a product in a multi-class classification setup, where the 47 top-level categories are used for target labels.
 
 **Dataset splitting:** We consider a more challenging and realistic dataset splitting that differs from the one used in [2]
-Instead of randomly assigning 90\% of the nodes for training and 10\% of the nodes for testing (without use of a validation set), we use the *sales ranking* (popularity) to split nodes into training/validation/test sets.
-Specifically, we sort the products according to their sales ranking and use the top 10\% for training, next top 2\% for validation, and the rest for testing. This is a more challenging splitting procedure that closely matches the real-world application where labels are first assigned to important nodes in the network and ML models are subsequently used to make predictions on less important ones.
+Instead of randomly assigning 90% of the nodes for training and 10% of the nodes for testing (without use of a validation set), we use the *sales ranking* (popularity) to split nodes into training/validation/test sets.
+Specifically, we sort the products according to their sales ranking and use the top 10% for training, next top 2% for validation, and the rest for testing. This is a more challenging splitting procedure that closely matches the real-world application where labels are first assigned to important nodes in the network and ML models are subsequently used to make predictions on less important ones.
 
 #### References
 [1] [http://manikvarma.org/downloads/XC/XMLRepository.html](http://manikvarma.org/downloads/XC/XMLRepository.html) <br/>
@@ -54,8 +54,8 @@ In addition, all papers are also associated with the year that the corresponding
 **Prediction task:** The task is to predict the category of a product in a multi-class classification setup, where the 47 top-level categories are used for target labels.
 
 **Dataset splitting:** We consider a more challenging and realistic dataset splitting that differs from the one used in [2]
-Instead of randomly assigning 90\% of the nodes for training and 10\% of the nodes for testing (without use of a validation set), we use the *sales ranking* (popularity) to split nodes into training/validation/test sets.
-Specifically, we sort the products according to their sales ranking and use the top 10\% for training, next top 2\% for validation, and the rest for testing. This is a more challenging splitting procedure that closely matches the real-world application where labels are first assigned to important nodes in the network and ML models are subsequently used to make predictions on less important ones.
+Instead of randomly assigning 90% of the nodes for training and 10% of the nodes for testing (without use of a validation set), we use the *sales ranking* (popularity) to split nodes into training/validation/test sets.
+Specifically, we sort the products according to their sales ranking and use the top 10% for training, next top 2% for validation, and the rest for testing. This is a more challenging splitting procedure that closely matches the real-world application where labels are first assigned to important nodes in the network and ML models are subsequently used to make predictions on less important ones.
 
 #### References
 [1] Kuansan Wang, Zhihong Shen, Chiyuan Huang, Chieh-Han Wu, Yuxiao Dong, and Anshul Kanakia.Microsoft academic graph:  When experts are not enough. Quantitative Science Studies, 1(1):396–413, 2020. <br/>
