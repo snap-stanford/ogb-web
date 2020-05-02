@@ -45,8 +45,8 @@ Specifically, we sort the products according to their sales ranking and use the 
 
 ### Dataset `ogbn-arxiv` ([Leaderboard](../leader_nodeprop/#ogbn-arxiv)):
 
-**Graph:** The `ogbn-arxiv` is a %dynamic and 
-directed graph, representing the citation network between all Computer Science (CS) arXiv papers indexed by MAG [1]. Each node is an arXiv paper and each directed edge indicates that one paper cites another one. 
+**Graph:** 
+The dataset `ogbn-arxiv` is a directed graph, representing the citation network between all Computer Science (CS) arXiv papers indexed by MAG [1]. Each node is an arXiv paper and each directed edge indicates that one paper cites another one. 
 Each paper comes with a 128-dimensional feature vector obtained by averaging the embeddings of words in its title and abstract. 
 The embeddings of individual words are computed by running the skip-gram model [2] over the MAG corpus. 
 In addition, all papers are also associated with the year that the corresponding paper was published. 
