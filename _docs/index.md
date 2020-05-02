@@ -20,6 +20,7 @@ The OGB components are closely tied to OGB Python package, as detailed below.
 ### Updates
 
 ###### - **May 1st, 2020**: We have made our first major release of OGB! The package version is `1.1.*`.
+###### - **May 4th, 2020**: Our paper will be on Arxiv!
 
 -----
 

@@ -9,7 +9,7 @@ permalink: /docs/nodeprop/
 
 #### - Datasets
 
-Scale | Name                              | #Nodes  | #Edges\* | #Task | Split Type        | Task Type   | Metric                  |
+Scale | Name                              | #Nodes  | #Edges\* | #Tasks | Split Type        | Task Type   | Metric                  |
 |:---------:|:--------|----------------:|----------------------:|---------------------:|:-------------------------:|:------------------:|
 Medium | [ogbn-products](#ogbn-products) | 2,449,029  | 61,859,140 | 1       | Sales rank      | Multi-class classification | Accuracy |
 Small | [ogbn-arxiv](#ogbn-arxiv) | 169,343  | 1,166,243 | 1       | Time      | Multi-class classification | Accuracy |

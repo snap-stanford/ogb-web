@@ -9,7 +9,7 @@ permalink: /docs/graphprop/
 
 #### - Datasets
 
-Scale | Name     | #Graphs   | #Nodes per graph | #Edges per graph\* | #Task | Split Type  | Task Type   | Metric                           |
+Scale | Name     | #Graphs   | #Nodes per graph | #Edges per graph\* | #Tasks | Split Type  | Task Type   | Metric                           |
 |:-----:|:-------|----------:|----------:|-------------:|------------------:|:-----------:|:----------:|
 Small | [ogbg-molhiv](#ogbg-mol) | 41,127 | 25.5 | 27.5 | 1   | Scaffold  |  Binary classification | ROC-AUC  |
 Medium | [ogbg-molpcba](#ogbg-mol) | 437,929 | 26.0 | 28.1 | 128   | Scaffold  |  Binary classification | PRC-AUC  |
