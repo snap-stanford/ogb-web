@@ -18,7 +18,7 @@ permalink: /docs/dataset_overview/
                 <b>Diverse scale:</b> Small-scale graph datasets can be processed within a single GPU, while medium- and large-scale graphs might require multiple GPUs and/or sophisticated mini-batching techniques. <br/>
             </p>
             <p class="lead">
-                <b>Rich domains:</b> Graph datasets come from diverse application domains and include biological networks, molecular graphs, academic networks, and knowledge graphs.  <br/>
+                <b>Rich domains:</b> Graph datasets come from diverse domains and include biological networks, molecular graphs, academic networks, and knowledge graphs.  <br/>
             </p>
         </div>
         <div class="col-md-6 text-center">
