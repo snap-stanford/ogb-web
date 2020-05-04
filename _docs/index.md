@@ -22,7 +22,7 @@ The OGB components are closely tied to OGB Python package, as detailed below.
 ###### - **May 4th, 2020**: We have made our first major release of OGB! 
 ###### - **May 4th, 2020**: Our paper will be on arXiv!
 ###### - **May 4th, 2020**: The package version has been updated to `1.1.0`. See [release note](https://github.com/snap-stanford/ogb/releases/tag/1.1.0) for the change. <br/>
-**Important:** If you have used previous OGB versions, please delete any downloaded dataset folders (e.g., run `rm -rf dataset/` in the main script directory).
+**Important:** If you have used previous OGB versions, **please delete any downloaded dataset folders** (e.g., run `rm -rf dataset/` in the main script directory).
 
 
 -----
