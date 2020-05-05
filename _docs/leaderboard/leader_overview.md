@@ -12,7 +12,7 @@ Public leaderboards allow researchers to keep track of state-of-the-art methods 
 Once you have developed your model and got results, you can submit your test results to our leaderboards. 
 For each dataset, we require you to submit the following information.
 
-- **OGB version**: The OGB version used to conduct the experiments. **Must be 1.1.1.**
+- **OGB version**: The OGB version used to conduct the experiments. **Must be >=1.1.1.**
 - **Method**: The name of the method.
 - **Dataset**: The name of an OGB dataset that you use to evaluate the method.
 - **Performance**: Raw performance output by OGB model evaluators, where **average (`torch.mean`) and unbiased standard deviation (`torch.std`) must be taken over 10 different random seeds.** You can either not fix random seeds at all, or use the random seeds from 0 to 9. We highly discourage you to tune the random seeds.

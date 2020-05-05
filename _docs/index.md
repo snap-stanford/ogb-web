@@ -34,10 +34,10 @@ You can install OGB using Python package manager pip.
 pip install ogb
 ```
 
-Please check the version is `1.1.1`.
+Please check the version is `=> 1.1.1`.
 ```bash
 python -c "import ogb; print(ogb.__version__)"
-# This should print "1.1.1". Otherwise, please update the version by running
+# Otherwise, please update the version by running
 pip install -U ogb
 ```
 
