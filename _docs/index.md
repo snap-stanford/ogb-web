@@ -17,16 +17,6 @@ The OGB components are closely tied to OGB Python package, as detailed below.
 
 -----
 
-### News
-
-###### - **May 4th, 2020**: We have made our first major release of OGB! 
-###### - **May 4th, 2020**: The package version has been updated to `1.1.1`. The package will now automatically fetch the datasets if they have been updated. 
-###### - **May 4th, 2020**: Our paper is available on [arXiv](https://arxiv.org/abs/2005.00687).
-###### - **May 1th, 2020**: The package version has been updated to `1.1.0`. See [release note](https://github.com/snap-stanford/ogb/releases/tag/1.1.0) for the change. 
-
-
------
-
 ### Package Installation
 
 You can install OGB using Python package manager pip.
