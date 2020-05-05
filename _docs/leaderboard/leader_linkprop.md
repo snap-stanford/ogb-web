@@ -21,7 +21,7 @@ The Hits@100 score on the test set. The higher, the better.
 
 | Rank  | Method | Hits@100 | Contact | References | Date 
 |:----:|:-----:|:------:|:-----:|:-----:|:-----:|
-|  1  |  Matrix Factorization  | 0.3229 ± 0.0094   | [Matthias Fey -- OGB team](mailto:matthias.fey@tu-dortmund.de) | [Paper](OGB), [Code](https://github.com/snap-stanford/ogb/tree/master/examples/linkproppred/ppa) | May 1, 2020 | 
+|  1  |  Matrix Factorization  | 0.3229 ± 0.0094   | [Matthias Fey -- OGB team](mailto:matthias.fey@tu-dortmund.de) | [Paper](https://arxiv.org/abs/2005.00687), [Code](https://github.com/snap-stanford/ogb/tree/master/examples/linkproppred/ppa) | May 1, 2020 | 
 |  2  |  Node2vec  | 0.2226 ± 0.0083   | [Matthias Fey -- OGB team](mailto:matthias.fey@tu-dortmund.de) | [Paper](https://arxiv.org/abs/1607.00653), [Code](https://github.com/snap-stanford/ogb/tree/master/examples/linkproppred/ppa) | May 1, 2020 | 
 |  3  |  GCN  | 0.1155 ± 0.0153   | [Matthias Fey -- OGB team](mailto:matthias.fey@tu-dortmund.de) | [Paper](https://arxiv.org/abs/1609.02907), [Code](https://github.com/snap-stanford/ogb/tree/master/examples/linkproppred/ppa) | May 1, 2020 | 
 |  4  |  GraphSAGE  | 0.1063 ± 0.0244   | [Matthias Fey -- OGB team](mailto:matthias.fey@tu-dortmund.de) | [Paper](https://arxiv.org/abs/1706.02216), [Code](https://github.com/snap-stanford/ogb/tree/master/examples/linkproppred/ppa) | May 1, 2020 | 
@@ -39,7 +39,7 @@ The Hits@10 score on the test set. The higher, the better.
 | Rank  | Method | Hits@10 | Contact | References | Date 
 |:----:|:-----:|:------:|:-----:|:-----:|:-----:|
 |  1  |  Node2vec  | 0.4281 ± 0.0140   | [Matthias Fey -- OGB team](mailto:matthias.fey@tu-dortmund.de) | [Paper](https://arxiv.org/abs/1607.00653), [Code](https://github.com/snap-stanford/ogb/tree/master/examples/linkproppred/collab) | May 1, 2020 | 
-|  2  |  Matrix Factorization  | 0.3805 ± 0.0018   | [Matthias Fey -- OGB team](mailto:matthias.fey@tu-dortmund.de) | [Paper](OGB), [Code](https://github.com/snap-stanford/ogb/tree/master/examples/linkproppred/collab) | May 1, 2020 | 
+|  2  |  Matrix Factorization  | 0.3805 ± 0.0018   | [Matthias Fey -- OGB team](mailto:matthias.fey@tu-dortmund.de) | [Paper](https://arxiv.org/abs/2005.00687), [Code](https://github.com/snap-stanford/ogb/tree/master/examples/linkproppred/collab) | May 1, 2020 | 
 |  3  |  GCN  | 0.3329 ± 0.0190   | [Matthias Fey -- OGB team](mailto:matthias.fey@tu-dortmund.de) | [Paper](https://arxiv.org/abs/1609.02907), [Code](https://github.com/snap-stanford/ogb/tree/master/examples/linkproppred/collab) | May 1, 2020 | 
 |  4  |  GraphSAGE  | 0.3121 ± 0.0620   | [Matthias Fey -- OGB team](mailto:matthias.fey@tu-dortmund.de) | [Paper](https://arxiv.org/abs/1706.02216), [Code](https://github.com/snap-stanford/ogb/tree/master/examples/linkproppred/collab) | May 1, 2020 | 
 
@@ -58,7 +58,7 @@ The MRR score on the test set. The higher, the better.
 |:----:|:-----:|:------:|:-----:|:-----:|:-----:|
 |  1  |  ClusterGCN (GCN aggr)  | 0.7997 ± 0.0037   | [Matthias Fey -- OGB team](mailto:matthias.fey@tu-dortmund.de) | [Paper](https://arxiv.org/abs/1905.07953), [Code](https://github.com/snap-stanford/ogb/tree/master/examples/linkproppred/citation) | May 1, 2020 | 
 |  2  |  GraphSAINT (GCN aggr)  | 0.7875 ± 0.0060   | [Matthias Fey -- OGB team](mailto:matthias.fey@tu-dortmund.de) | [Paper](https://arxiv.org/abs/1907.04931), [Code](https://github.com/snap-stanford/ogb/tree/master/examples/linkproppred/citation) | May 1, 2020 | 
-|  3  |  Matrix Factorization  | 0.6162 ± 0.0012   | [Matthias Fey -- OGB team](mailto:matthias.fey@tu-dortmund.de) | [Paper](OGB), [Code](https://github.com/snap-stanford/ogb/tree/master/examples/linkproppred/citation) | May 1, 2020 | 
+|  3  |  Matrix Factorization  | 0.6162 ± 0.0012   | [Matthias Fey -- OGB team](mailto:matthias.fey@tu-dortmund.de) | [Paper](https://arxiv.org/abs/2005.00687), [Code](https://github.com/snap-stanford/ogb/tree/master/examples/linkproppred/citation) | May 1, 2020 | 
 |  4  |  Node2vec  | 0.5960 ± 0.0013   | [Matthias Fey -- OGB team](mailto:matthias.fey@tu-dortmund.de) | [Paper](https://arxiv.org/abs/1607.00653), [Code](https://github.com/snap-stanford/ogb/tree/master/examples/linkproppred/citation) | May 1, 2020 | 
 
 
