@@ -8,7 +8,7 @@ lang: en-US
 baseurl: "/" # the subpath of your site, e.g. /blog/
 url: https://snap-stanford.github.io/ogb-web # the base hostname & protocol for your site
 git_address: https://github.com/snap-stanford/ogb
-paper_address: https://ogb.stanford.edu # TODO replace with the real paper.
+paper_address: https://arxiv.org/abs/2005.00687
 git_edit_address: https://github.com/snap-stanford/ogb-web/blob/gh-pages
 
 # theme options from https://bootswatch.com/3/
