@@ -24,7 +24,7 @@ For each dataset, we require you to submit the following information.
 - **Officiality**: Whether the implementation is **official** (implementation by authors who proposed the method) or **unofficial** (re-implementation of the method by non-authors).
 
 **Note:** OGB is a platform for reproducible and reliable research. We will remove any invalid submissions, so please make sure all the results are correct and reproducible before submitting them.
-Please [contact us](ogb@cs.stanford.edu) if there is anything unclear or you have found any problematic submission on the leaderboards.
+Please [contact us](mailto:ogb@cs.stanford.edu) if there is anything unclear or you have found any problematic submission on the leaderboards.
 
 **To authors of original papers/methods:** We highly encourage you to contribute your **official result** to the OGB leaderboards. Even if your method is published *before* the OGB release, please still evaluate your method on OGB datasets and contribute to the leaderboards. **This would be a great opporunity to let people know about your work and compare with it.**
 
