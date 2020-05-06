@@ -94,7 +94,7 @@ The evaluation metric is Mean Reciprocal Rank (MRR), where the reciprocal rank o
 
 ### Dataset `ogbl-wikikg` ([Leaderboard](../leader_linkprop/#ogbl-wikikg)):
 
-**Graph:** The dataset `ogbl-wikikg` is a Knowledge Graph (KG) extracted from the Wikidata knowledge base [1]. It contains a set of triplet edges (`head`, `relation`, `tail`), capturing the different types of relations between entities in the world, e.g., (Canada, citizen, Hinton). We retrieve all the relational statements in Wikidata and filter out rare entities. Our KG contains 2,500,604 entities and 534 relation types.
+**Graph:** The dataset `ogbl-wikikg` is a Knowledge Graph (KG) extracted from the Wikidata knowledge base [1]. It contains a set of triplet edges (`head`, `relation`, `tail`), capturing the different types of relations between entities in the world, e.g., (Canada, citizen, Hinton). We retrieve all the relational statements in Wikidata and filter out rare entities. Our KG contains 2,500,604 entities and 535 relation types.
 
 
 **Prediction task:** The task is to predict new triplet edges given the training edges. The evaluation metric follows the standard filtered metric widely used in KG. Specifically, we corrupt each test triplet edges by replacing its `head` or `tail` with randomly-sampled 1,000 negative entities (500 for `head` and 500 for `tail`), while ensuring the resulting triplets do not appear in KG. The goal is to rank the true `head` (or `tail`) entities higher than the negative entities, which is measured by Mean Reciprocal Rank (MRR).
