@@ -30,7 +30,6 @@ We also prepare a unified [performance evaluator](#eval).
 ### Datasets `ogbg-molhiv` ([Leaderboard](../leader_graphprop/#ogbg-molhiv)) and `ogbg-molpcba` ([Leaderboard](../leader_graphprop/#ogbg-molpcba)):
 
 **Graph:** 
-
 The datasets `ogbg-molhiv` and `ogbg-molpcba` are two molecular property prediction datasets of different sizes: `ogbg-molhiv` (small) and `ogbg-molpcba` (medium). They are adopted from the MoleculeNet [1], and are among the largest of the MoleculeNet datasets. All the molecules are pre-processed using RDKit [2]. Each graph represents a molecule, where nodes are atoms, and edges are chemical bonds. Input node features are 9-dimensional, containing atomic number and chirality, as well as other additional atom features such as formal charge and whether the atom is in the ring or not.
 The full description of the features is provided in [code](https://github.com/snap-stanford/ogb/blob/master/ogb/utils/features.py). The script to convert the SMILES string [3] to the above graph object can be found [here](https://github.com/snap-stanford/ogb/blob/master/examples/graphproppred/mol/smiles2graph.py).
 Note that the script requires [RDkit](https://www.rdkit.org/docs/GettingStartedInPython.html) to be installed. The script can be used to pre-process external molecule datasets so that those datasets share the same input feature space as the OGB molecule datasets. This is particularly useful for pre-training graph models, which has great potential to significantly increase generalization performance on the (*downstream*) OGB datasets [4].
@@ -49,7 +48,7 @@ edge_emb = bond_encoder(edge_attr) # edge_attr is input edge feature
 
 #### Datasets
 
-**Prediction task:**  The task is to predict the target molecular properties as accurately as possible, where the molecular properties are cast as binary labels, e.g, whether a molecule inhibits HIV virus replication or not. 
+**Prediction task:**  The task is to predict the target molecular properties as accurately as possible, where the molecular properties are cast as binary labels, e.g, whether a molecule inhibits HIV virus replication or not. Note that some datasets (e.g., `ogbg-molpcba`) can have multiple tasks, and can contain `nan` that indicates the corresponding label is not assigned to the molecule.
 For evaluation metric, we closely follow [2].
 Specifically, for `ogbg-molhiv`, we use ROC-AUC for evaluation. For `ogbg-molpcba`, as the class balance is extremely skewed (only 1.4% of data is positive) and the dataset contains multiple classification tasks, we use the PRC-AUC averaged over the tasks as the evaluation metric.
 
