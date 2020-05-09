@@ -20,10 +20,12 @@ The ROC-AUC score on the test set. The higher, the better.
 
 | Rank  | Method | ROC-AUC | Contact | References | Date 
 |:----:|:-----:|:------:|:-----:|:-----:|:-----:|
-|  1  |  **GIN+virtual node**  | 0.7707 ± 0.0149   | [Weihua Hu -- OGB team](mailto:weihuahu@cs.stanford.edu) | [Paper](https://arxiv.org/abs/1810.00826), [Code](https://github.com/snap-stanford/ogb/tree/master/examples/graphproppred/mol) | May 1, 2020 | 
-|  2  |  GCN  | 0.7606 ± 0.0097   | [Weihua Hu -- OGB team](mailto:weihuahu@cs.stanford.edu) | [Paper](https://arxiv.org/abs/1609.02907), [Code](https://github.com/snap-stanford/ogb/tree/master/examples/graphproppred/mol) | May 1, 2020 | 
-|  3  |  GCN+virtual node  | 0.7599 ± 0.0119   | [Weihua Hu -- OGB team](mailto:weihuahu@cs.stanford.edu) | [Paper](https://arxiv.org/abs/1609.02907), [Code](https://github.com/snap-stanford/ogb/tree/master/examples/graphproppred/mol) | May 1, 2020 | 
-|  4  |  **GIN**  | 0.7558 ± 0.0140   | [Weihua Hu -- OGB team](mailto:weihuahu@cs.stanford.edu) | [Paper](https://arxiv.org/abs/1810.00826), [Code](https://github.com/snap-stanford/ogb/tree/master/examples/graphproppred/mol) | May 1, 2020 | 
+|  1  |  **GatedGCN**  | 0.7765 ± 0.0050   | [Chaitanya Joshi](mailto:chaitanya.joshi@ntu.edu.sg) | [Paper](https://arxiv.org/abs/2003.00982), [Code](https://github.com/chaitjo/ogb/tree/master/examples/graphproppred/mol) | May 9, 2020 | 
+|  2  |  **GIN+virtual node**  | 0.7707 ± 0.0149   | [Weihua Hu -- OGB team](mailto:weihuahu@cs.stanford.edu) | [Paper](https://arxiv.org/abs/1810.00826), [Code](https://github.com/snap-stanford/ogb/tree/master/examples/graphproppred/mol) | May 1, 2020 | 
+|  3  |  GCN  | 0.7606 ± 0.0097   | [Weihua Hu -- OGB team](mailto:weihuahu@cs.stanford.edu) | [Paper](https://arxiv.org/abs/1609.02907), [Code](https://github.com/snap-stanford/ogb/tree/master/examples/graphproppred/mol) | May 1, 2020 | 
+|  4  |  GCN+virtual node  | 0.7599 ± 0.0119   | [Weihua Hu -- OGB team](mailto:weihuahu@cs.stanford.edu) | [Paper](https://arxiv.org/abs/1609.02907), [Code](https://github.com/snap-stanford/ogb/tree/master/examples/graphproppred/mol) | May 1, 2020 | 
+|  5  |  **GIN**  | 0.7558 ± 0.0140   | [Weihua Hu -- OGB team](mailto:weihuahu@cs.stanford.edu) | [Paper](https://arxiv.org/abs/1810.00826), [Code](https://github.com/snap-stanford/ogb/tree/master/examples/graphproppred/mol) | May 1, 2020 | 
+|  6  |  **Graph-agnostic MLP**  | 0.6819 ± 0.0071   | [Chaitanya Joshi](mailto:chaitanya.joshi@ntu.edu.sg) | [Paper](https://arxiv.org/abs/2003.00982), [Code](https://github.com/chaitjo/ogb/tree/master/examples/graphproppred/mol) | May 9, 2020 | 
 
 
 <a name="ogbg-molpcba"/>
