@@ -21,10 +21,11 @@ The classification accuracy on the test set. The higher, the better.
 
 | Rank  | Method | Accuracy | Contact | References | Date 
 |:----:|:-----:|:------:|:-----:|:-----:|:-----:|
-|  1  |  GraphSAINT (SAGE aggr)  | 0.7729 ± 0.0019   | [Matthias Fey -- OGB team](mailto:matthias.fey@tu-dortmund.de) | [Paper](https://arxiv.org/abs/1907.04931), [Code](https://github.com/snap-stanford/ogb/tree/master/examples/nodeproppred/products) | May 1, 2020 | 
-|  2  |  ClusterGCN (SAGE aggr)  | 0.7518 ± 0.0041   | [Matthias Fey -- OGB team](mailto:matthias.fey@tu-dortmund.de) | [Paper](https://arxiv.org/abs/1905.07953), [Code](https://github.com/snap-stanford/ogb/tree/master/examples/nodeproppred/products) | May 1, 2020 | 
-|  3  |  Node2vec  | 0.7212 ± 0.0024   | [Matthias Fey -- OGB team](mailto:matthias.fey@tu-dortmund.de) | [Paper](https://arxiv.org/abs/1607.00653), [Code](https://github.com/snap-stanford/ogb/tree/master/examples/nodeproppred/products) | May 1, 2020 | 
-|  4  |  MLP  | 0.6112 ± 0.0010   | [Matthias Fey -- OGB team](mailto:matthias.fey@tu-dortmund.de) | [Paper](https://arxiv.org/abs/2005.00687), [Code](https://github.com/snap-stanford/ogb/tree/master/examples/nodeproppred/products) | May 1, 2020 | 
+|  1  |  GraphSAGE  | 0.7829 ± 0.0016   | [Quan Gan (DGL Team)](mailto:quagan@amazon.com) | [Paper](https://arxiv.org/abs/1706.02216), [Code](https://github.com/dmlc/dgl/tree/master/examples/pytorch/ogb/ogbn-products/graphsage) | May 12, 2020 | 
+|  2  |  GraphSAINT (SAGE aggr)  | 0.7729 ± 0.0019   | [Matthias Fey -- OGB team](mailto:matthias.fey@tu-dortmund.de) | [Paper](https://arxiv.org/abs/1907.04931), [Code](https://github.com/snap-stanford/ogb/tree/master/examples/nodeproppred/products) | May 1, 2020 | 
+|  3  |  ClusterGCN (SAGE aggr)  | 0.7518 ± 0.0041   | [Matthias Fey -- OGB team](mailto:matthias.fey@tu-dortmund.de) | [Paper](https://arxiv.org/abs/1905.07953), [Code](https://github.com/snap-stanford/ogb/tree/master/examples/nodeproppred/products) | May 1, 2020 | 
+|  4  |  Node2vec  | 0.7212 ± 0.0024   | [Matthias Fey -- OGB team](mailto:matthias.fey@tu-dortmund.de) | [Paper](https://arxiv.org/abs/1607.00653), [Code](https://github.com/snap-stanford/ogb/tree/master/examples/nodeproppred/products) | May 1, 2020 | 
+|  5  |  MLP  | 0.6112 ± 0.0010   | [Matthias Fey -- OGB team](mailto:matthias.fey@tu-dortmund.de) | [Paper](https://arxiv.org/abs/2005.00687), [Code](https://github.com/snap-stanford/ogb/tree/master/examples/nodeproppred/products) | May 1, 2020 | 
 
 
 <a name="ogbn-arxiv"/>
