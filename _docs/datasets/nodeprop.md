@@ -96,7 +96,6 @@ To load a dataset, replace `d_name` with the dataset name (e.g., `"ogbn-proteins
 from ogb.nodeproppred import PygNodePropPredDataset
 
 dataset = PygNodePropPredDataset(name = d_name) 
-num_tasks = dataset.num_tasks # obtaining the number of prediction tasks in a dataset
 
 split_idx = dataset.get_idx_split()
 train_idx, valid_idx, test_idx = split_idx["train"], split_idx["valid"], split_idx["test"]
@@ -110,8 +109,7 @@ graph = dataset[0] # pyg graph object
 ```python
 from ogb.nodeproppred import DglNodePropPredDataset
 
-dataset = NodePropPredDataset(name = d_name)
-num_tasks = dataset.num_tasks # obtaining the number of prediction tasks in a dataset
+dataset = DglNodePropPredDataset(name = d_name)
 
 split_idx = dataset.get_idx_split()
 train_idx, valid_idx, test_idx = split_idx["train"], split_idx["valid"], split_idx["test"]
@@ -127,7 +125,6 @@ Prediction target in the Pytorch Geometric dataset can be accessed by `graph.y`,
 from ogb.nodeproppred import NodePropPredDataset
 
 dataset = NodePropPredDataset(name = d_name)
-num_tasks = dataset.num_tasks # obtaining the number of prediction tasks in a dataset
 
 split_idx = dataset.get_idx_split()
 train_idx, valid_idx, test_idx = split_idx["train"], split_idx["valid"], split_idx["test"]

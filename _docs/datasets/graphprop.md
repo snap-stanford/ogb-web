@@ -99,7 +99,6 @@ from ogb.graphproppred import PygGraphPropPredDataset
 from torch_geometric.data import DataLoader
 
 dataset = PygGraphPropPredDataset(name = d_name) 
-num_tasks = dataset.num_tasks # obtaining the number of prediction tasks in a dataset
 
 split_idx = dataset.get_idx_split() 
 train_loader = DataLoader(dataset[split_idx["train"]], batch_size=32, shuffle=True)
@@ -117,7 +116,6 @@ from ogb.graphproppred import DglGraphPropPredDataset, collate_dgl
 from torch.utils.data import DataLoader
 
 dataset = DglGraphPropPredDataset(name = d_name)
-num_tasks = dataset.num_tasks # obtaining the number of prediction tasks in a dataset
 
 split_idx = dataset.get_idx_split()
 train_loader = DataLoader(dataset[split_idx["train"]], batch_size=32, shuffle=True, collate_fn=collate_dgl)
@@ -133,7 +131,6 @@ Note that the i-th example and its prediction targets can be obtained by `graph,
 from ogb.graphproppred import GraphPropPredDataset
 
 dataset = GraphPropPredDataset(name = d_name)
-num_tasks = dataset.num_tasks # obtaining the number of prediction tasks in a dataset
 
 split_idx = dataset.get_idx_split()
 train_idx, valid_idx, test_idx = split_idx["train"], split_idx["valid"], split_idx["test"]
