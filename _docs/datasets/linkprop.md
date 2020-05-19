@@ -13,7 +13,7 @@ Scale | Name      | #Nodes | #Edges\* |  Split Type   | Task Type     | Metric  
 |:---------:|:--------|----------:|----------:|:----------------:|:------------------:|:----------------:|
 Medium | [ogbl-ppa](#ogbl-ppa)         | 576,289 |    30,326,273 |    Throughput  | Link prediction   |     Hits@100              |
 Small | [ogbl-collab](#ogbl-collab)         | 235,868 |    1,285,465 |     Time  | Link prediction   |     Hits@10              |
-Medium | [ogbl-citation](#ogbl-citation)         | 2,927,963 |    30,561,187 |     Time  | Link prediction   |     MRR              |
+Medium | [ogbl-citation](#ogbl-citation)         | 2,927,963 |    30,387,995 |     Time  | Link prediction   |     MRR              |
 Medium | [ogbl-wikikg](#ogbl-wikikg)         | 2,500,604 |    17,137,181 |     Time  | KG completion   |    MRR             |
 
 
