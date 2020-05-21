@@ -51,11 +51,13 @@ Each paper comes with a 128-dimensional feature vector obtained by averaging the
 The embeddings of individual words are computed by running the skip-gram model [2] over the MAG corpus. 
 In addition, all papers are also associated with the year that the corresponding paper was published. 
 
-**Prediction task:** The task is to predict the category of a product in a multi-class classification setup, where the 47 top-level categories are used for target labels.
+**Prediction task:** The task is to predict the 40 subject areas of arXiv CS papers, e.g., cs.AI, cs.LG, and cs.OS, which are manually determined (i.e., labeled) by the paper's authors and arXiv moderators. 
+With the volume of scientific publications doubling every 12 years over the past century, it is practically critical to automatically classify each publication's areas and topics. 
+Formally, this prediction task is formulated as a 40-class classification problem.
 
-**Dataset splitting:** We consider a more challenging and realistic dataset splitting that differs from the one used in [2]
-Instead of randomly assigning 90% of the nodes for training and 10% of the nodes for testing (without use of a validation set), we use the *sales ranking* (popularity) to split nodes into training/validation/test sets.
-Specifically, we sort the products according to their sales ranking and use the top 10% for training, next top 2% for validation, and the rest for testing. This is a more challenging splitting procedure that closely matches the real-world application where labels are first assigned to important nodes in the network and ML models are subsequently used to make predictions on less important ones.
+**Dataset splitting:** We consider a realistic data split based on the publication dates of the papers. 
+The general setting is that the ML models are trained on existing papers and then used to predict the subject areas of newly-published papers, which supports the direct application of them into real-world scenarios, such as replacing the arXiv moderators. 
+Specifically, we propose to train on papers published until 2017, validate on those published in 2018, and test on those published in 2019.
 
 #### References
 [1] Kuansan Wang, Zhihong Shen, Chiyuan Huang, Chieh-Han Wu, Yuxiao Dong, and Anshul Kanakia.Microsoft academic graph:  When experts are not enough. Quantitative Science Studies, 1(1):396–413, 2020. <br/>
