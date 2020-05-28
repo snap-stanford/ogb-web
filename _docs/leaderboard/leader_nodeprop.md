@@ -55,7 +55,7 @@ The ROC-AUC score on the test set. The higher, the better.
 
 | Rank  | Method | ROC-AUC | Contact | References | Date 
 |:----:|:-----:|:------:|:-----:|:-----:|:-----:|
-|  1  |  GaAN  | 0.7803 ± 0.0073   | [Wenjin Wang](mailto:wangwenjin02@baidu.com) | [Paper](https://arxiv.org/abs/1803.07294), [Code](https://github.com/PaddlePaddle/PGL/tree/master/examples/GaAN) | May 26, 2020 | 
+|  1  |  GaAN  | 0.7803 ± 0.0073   | [Wenjin Wang (PGL Team)](mailto:wangwenjin02@baidu.com) | [Paper](https://arxiv.org/abs/1803.07294), [Code](https://github.com/PaddlePaddle/PGL/tree/master/examples/GaAN) | May 26, 2020 | 
 |  2  |  GraphSAGE  | 0.7768 ± 0.0020   | [Matthias Fey -- OGB team](mailto:matthias.fey@tu-dortmund.de) | [Paper](https://arxiv.org/abs/1706.02216), [Code](https://github.com/snap-stanford/ogb/tree/master/examples/nodeproppred/proteins) | May 1, 2020 | 
 |  3  |  MLP  | 0.7204 ± 0.0048   | [Matthias Fey -- OGB team](mailto:matthias.fey@tu-dortmund.de) | [Paper](https://arxiv.org/abs/2005.00687), [Code](https://github.com/snap-stanford/ogb/tree/master/examples/nodeproppred/proteins) | May 1, 2020 | 
 |  4  |  Node2vec  | 0.6881 ± 0.0065   | [Matthias Fey -- OGB team](mailto:matthias.fey@tu-dortmund.de) | [Paper](https://arxiv.org/abs/1607.00653), [Code](https://github.com/snap-stanford/ogb/tree/master/examples/nodeproppred/proteins) | May 1, 2020 | 
