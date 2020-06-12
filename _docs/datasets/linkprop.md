@@ -140,7 +140,7 @@ Note that our dataset split is different from the existing Wikidata KG dataset t
 
 ### Dataset `ogbl-biokg` ([Leaderboard](../leader_linkprop/#ogbl-biokg)):
 
-**Graph:** The `ogbl-biokg` is a Knowledge Graph (KG), which we created using data from a large number of biomedical data repositories. 
+**Graph:** The `ogbl-biokg` dataset is a Knowledge Graph (KG), which we created using data from a large number of biomedical data repositories. 
 It contains 5 types of entities: diseases (10,687 nodes), proteins (17,499), drugs (10,533 nodes), side effects (9,969 nodes), and protein functions (45,085 nodes). There are 51 types of directed relations connecting two types of entities, including 39 kinds of drug-drug interactions, 8 kinds of protein-protein interaction, as well as drug-protein, drug-side effect, drug-protein, function-function relations. All relations are modeled as directed edges, among which the relations connecting the same entity types (e.g., protein-protein, drug-drug, function-function) are always symmetric, i.e., the edges are bi-directional. 
 
 This dataset is relevant to both biomedical and fundamental ML research.
