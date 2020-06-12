@@ -7,6 +7,7 @@ permalink: /docs/leader_graphprop/
 ###### - [ogbg-molhiv](#ogbg-molhiv)
 ###### - [ogbg-molpcba](#ogbg-molpcba)
 ###### - [ogbg-ppa](#ogbg-ppa)
+###### - [ogbg-code](#ogbg-code)
 
 **Note:** The **bold** method name indicates that the implementation is **official** (by the author of the original paper).
 
@@ -60,3 +61,20 @@ The multi-class classification accuracy on the test set. The higher, the better.
 |  2  |  **GIN**  | 0.6892 ± 0.0100   | [Weihua Hu -- OGB team](mailto:weihuahu@cs.stanford.edu) | [Paper](https://arxiv.org/abs/1810.00826), [Code](https://github.com/snap-stanford/ogb/tree/master/examples/graphproppred/ppa) | May 1, 2020 | 
 |  3  |  GCN+virtual node  | 0.6857 ± 0.0061   | [Weihua Hu -- OGB team](mailto:weihuahu@cs.stanford.edu) | [Paper](https://arxiv.org/abs/1609.02907), [Code](https://github.com/snap-stanford/ogb/tree/master/examples/graphproppred/ppa) | May 1, 2020 | 
 |  4  |  GCN  | 0.6839 ± 0.0084   | [Weihua Hu -- OGB team](mailto:weihuahu@cs.stanford.edu) | [Paper](https://arxiv.org/abs/1609.02907), [Code](https://github.com/snap-stanford/ogb/tree/master/examples/graphproppred/ppa) | May 1, 2020 | 
+
+
+
+<a name="ogbg-code"/>
+
+---------------------
+
+### Leaderboard for [ogbg-code](../graphprop/#ogbg-code)
+
+The F1 score on the test set. The higher, the better. 
+
+| Rank  | Method | F1 score | Contact | References | Date 
+|:----:|:-----:|:------:|:-----:|:-----:|:-----:|
+|  1  |  GCN+virtual node  | 0.3263 ± 0.0013   | [Weihua Hu -- OGB team](mailto:weihuahu@cs.stanford.edu) | [Paper](https://arxiv.org/abs/1609.02907), [Code](https://github.com/snap-stanford/ogb/tree/master/examples/graphproppred/code) | Jun 10, 2020 | 
+|  2  |  **GIN+virtual node**  | 0.3204 ± 0.0018   | [Weihua Hu -- OGB team](mailto:weihuahu@cs.stanford.edu) | [Paper](https://arxiv.org/abs/1810.00826), [Code](https://github.com/snap-stanford/ogb/tree/master/examples/graphproppred/code) | Jun 10, 2020 | 
+|  3  |  GCN  | 0.3163 ± 0.0018   | [Weihua Hu -- OGB team](mailto:weihuahu@cs.stanford.edu) | [Paper](https://arxiv.org/abs/1609.02907), [Code](https://github.com/snap-stanford/ogb/tree/master/examples/graphproppred/code) | Jun 10, 2020 | 
+|  3  |  **GIN**  | 0.3163 ± 0.0020   | [Weihua Hu -- OGB team](mailto:weihuahu@cs.stanford.edu) | [Paper](https://arxiv.org/abs/1810.00826), [Code](https://github.com/snap-stanford/ogb/tree/master/examples/graphproppred/code) | Jun 10, 2020 | 

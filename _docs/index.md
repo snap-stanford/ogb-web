@@ -19,10 +19,16 @@ The OGB components are closely tied to OGB Python package, as detailed below.
 
 ### News
 
+###### - **June 11st, 2020**: We have made our second major release of OGB! 
+- 5 new datasets ([`ogbn-papers100M`](../nodeprop/#ogbn-papers100M), [`ogbn-mag`](../nodeprop/#ogbn-mag), [`ogbl-biokg`](../linkprop/#ogbl-biokg), [`ogbl-ddi`](../linkprop/#ogbl-ddi), and [`ogbg-code`](../graphprop/#ogbg-code)) and their [benchmark experiments](https://github.com/snap-stanford/ogb/tree/master/examples) have been added.
+- Our [arXiv paper](https://arxiv.org/abs/2005.00687) has been updated accordingly.
+- Our package has been updated to [`1.2.0`](https://github.com/snap-stanford/ogb/releases/tag/1.2.0) that includes the new datasets. **No change has been applied to the existing datasets.**
+- Baseline performance on [`ogbn-products`](../leader_nodeprop/#ogbn-products) and [`ogbl-citation`](../leader_linkprop/#ogbl-citation) has been improved.
+
 ###### - **May 4th, 2020**: We have made our first major release of OGB! 
-###### - **May 4th, 2020**: The package version has been updated to `1.1.1`. The package will now automatically fetch the datasets if they have been updated. 
+###### - **May 4th, 2020**: The package version has been updated to [`1.1.1`](https://github.com/snap-stanford/ogb/releases/tag/1.1.1). 
 ###### - **May 4th, 2020**: Our paper is available on [arXiv](https://arxiv.org/abs/2005.00687).
-###### - **May 1th, 2020**: The package version has been updated to `1.1.0`. See [release note](https://github.com/snap-stanford/ogb/releases/tag/1.1.0) for the change. 
+###### - **May 1th, 2020**: The package version has been updated to [`1.1.0`](https://github.com/snap-stanford/ogb/releases/tag/1.1.0). 
 
 -----
 
@@ -34,7 +40,7 @@ You can install OGB using Python package manager pip.
 pip install ogb
 ```
 
-Please check the version is `=>1.1.1`.
+Please check the version is `1.2.0`.
 ```bash
 python -c "import ogb; print(ogb.__version__)"
 # Otherwise, please update the version by running
@@ -54,13 +60,15 @@ pip install -U ogb
 
 ### Package Usage
 
-Next, we outline two key features of the OGB package, easy-to-use data loaders, and standardized model evaluators.
+Next, we outline two key features of the OGB package, easy-to-use data loaders, and standardized model evaluators. <br/>
+Please also refer to our [example code](https://github.com/snap-stanford/ogb/tree/master/examples) for how the package can be used in practice.
 
 #### Data Loaders
 
 We prepare easy-to-use [PyTorch Geometric](https://pytorch-geometric.readthedocs.io/en/latest/) and [DGL](https://www.dgl.ai/) data loaders that handle dataset downloading and standardized dataset splits.
 
-Following is an example in PyTorch Geometric showing that a few lines of code are sufficient to prepare and split the dataset. You can enjoy the same convenience for DGL. For those who do not use neither of them, we also prepare library-agnostic dataset loaders that only depend on basic Python libraries (e.g., numpy, pickle) and thus can be used with other deep learning libraries such as Tensorflow.
+Following is an example in PyTorch Geometric showing that a few lines of code are sufficient to prepare and split the dataset. You can enjoy the same convenience for DGL. We also prepare library-agnostic dataset loaders that can be used with any other deep learning libraries such as [Tensorflow](https://www.tensorflow.org/) and [MxNet](https://mxnet.apache.org/).
+
 
 ```python
 from ogb.graphproppred import PygGraphPropPredDataset
@@ -73,6 +81,8 @@ train_loader = DataLoader(dataset[split_idx["train"]], batch_size=32, shuffle=Tr
 valid_loader = DataLoader(dataset[split_idx["valid"]], batch_size=32, shuffle=False)
 test_loader = DataLoader(dataset[split_idx["test"]], batch_size=32, shuffle=False)
 ```
+
+**Mapping:** The nodes/edges/graphs in OGB are mapped to real entities in the world, e.g., each drug node in the [drug-drug interaction network](../linkprop/#ogbl-ddi) is mapped to a unique drug ID in [DrugBank](https://www.drugbank.ca/). The mapping information is provided in `mapping/` directory of the downloaded dataset folder, and is meant to allow researchers to draw scientific insight from model's prediction and to potentially augment the given graphs with richer information.
 
 #### Evaluators
 
@@ -88,6 +98,23 @@ evaluator = Evaluator(name = "ogbg-molhiv")
 input_dict = {"y_true": y_true, "y_pred": y_pred}
 result_dict = evaluator.eval(input_dict) # E.g., {"rocauc": 0.7321}
 ```
+
+------
+
+### Citing OGB
+
+If you use OGB datasets in your work, please cite [our paper](https://arxiv.org/abs/2005.00687) (Bibtex below).
+
+```
+@article{hu2020ogb,
+  title={Open Graph Benchmark: Datasets for Machine Learning on Graphs},
+  author={Weihua Hu, Matthias Fey, Marinka Zitnik, Yuxiao Dong, Hongyu Ren, Bowen Liu, Michele Catasta, Jure Leskovec},
+  journal={arXiv preprint arXiv:2005.00687},
+  year={2020}
+}
+```
+
+
 
 --------
 ### You are ready to explore OGB [datasets](../dataset_overview/)!

@@ -2,22 +2,27 @@ import pandas as pd
 import numpy as np
 import os
 
-nodeprop_dataset_list = ['ogbn-products', 'ogbn-arxiv', 'ogbn-proteins']
-linkprop_dataset_list = ['ogbl-ppa', 'ogbl-collab', 'ogbl-citation', 'ogbl-wikikg']
-graphprop_mol_dataset_list = ['ogbg-molhiv', 'ogbg-molpcba', 'ogbg-ppa']
+nodeprop_dataset_list = ['ogbn-products', 'ogbn-proteins', 'ogbn-arxiv', 'ogbn-papers100M', 'ogbn-mag']
+linkprop_dataset_list = ['ogbl-ppa', 'ogbl-collab', 'ogbl-ddi', 'ogbl-citation', 'ogbl-wikikg', 'ogbl-biokg']
+graphprop_mol_dataset_list = ['ogbg-molhiv', 'ogbg-molpcba', 'ogbg-ppa', 'ogbg-code']
 graphprop_other_dataset_list = []
 
 dataset2metric = {}
 dataset2metric['ogbn-products'] = 'Accuracy'
-dataset2metric['ogbn-arxiv'] = 'Accuracy'
 dataset2metric['ogbn-proteins'] = 'ROC-AUC'
+dataset2metric['ogbn-arxiv'] = 'Accuracy'
+dataset2metric['ogbn-papers100M'] = 'Accuracy'
+dataset2metric['ogbn-mag'] = 'Accuracy'
 dataset2metric['ogbl-ppa'] = 'Hits@100'
 dataset2metric['ogbl-collab'] = 'Hits@10'
+dataset2metric['ogbl-ddi'] = 'Hits@20'
 dataset2metric['ogbl-citation'] = 'MRR'
 dataset2metric['ogbl-wikikg'] = 'MRR'
+dataset2metric['ogbl-biokg'] = 'MRR'
 dataset2metric['ogbg-molhiv'] = 'ROC-AUC'
 dataset2metric['ogbg-molpcba'] = 'PRC-AUC'
 dataset2metric['ogbg-ppa'] = 'Accuracy'
+dataset2metric['ogbg-code'] = 'F1 score'
 
 month_dict = {1: 'Jan', 2: 'Feb', 3: 'Mar', 4: 'Apr', 5: 'May', 6: 'Jun', 7: 'Jul', 8: 'Aug', 9: 'Sep', 10: 'Oct', 11: 'Nov', 12: 'Dec'}
 

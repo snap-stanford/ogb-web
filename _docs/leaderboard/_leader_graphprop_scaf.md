@@ -7,6 +7,7 @@ permalink: /docs/leader_graphprop/
 ###### - [ogbg-molhiv](#ogbg-molhiv)
 ###### - [ogbg-molpcba](#ogbg-molpcba)
 ###### - [ogbg-ppa](#ogbg-ppa)
+###### - [ogbg-code](#ogbg-code)
 
 **Note:** The **bold** method name indicates that the implementation is **official** (by the author of the original paper).
 
@@ -39,3 +40,14 @@ The PRC-AUC score on the test set. The higher, the better.
 The multi-class classification accuracy on the test set. The higher, the better. 
 
 #ogbg-ppa
+
+
+<a name="ogbg-code"/>
+
+---------------------
+
+### Leaderboard for [ogbg-code](../graphprop/#ogbg-code)
+
+The F1 score on the test set. The higher, the better. 
+
+#ogbg-code

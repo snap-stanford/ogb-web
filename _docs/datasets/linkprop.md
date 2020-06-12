@@ -13,9 +13,10 @@ Scale | Name      | #Nodes | #Edges\* |  Split Type   | Task Type     | Metric  
 |:---------:|:--------|----------:|----------:|:----------------:|:------------------:|:----------------:|
 Medium | [ogbl-ppa](#ogbl-ppa)         | 576,289 |    30,326,273 |    Throughput  | Link prediction   |     Hits@100              |
 Small | [ogbl-collab](#ogbl-collab)         | 235,868 |    1,285,465 |     Time  | Link prediction   |     Hits@10              |
-Medium | [ogbl-citation](#ogbl-citation)         | 2,927,963 |    30,561,187 |     Time  | Link prediction   |     MRR              |
-Medium | [ogbl-wikikg](#ogbl-wikikg)         | 2,500,604 |    17,137,181 |     Time  | KG completion   |    MRR             |
-
+Small | [ogbl-ddi](#ogbl-ddi)         | 4,267 |    1,334,889 |     Protein target  | Link prediction   |     Hits@20              |
+Medium | [ogbl-citation](#ogbl-citation)         | 2,927,963 |    30,561,187 |     Time  | Link prediction   |     MRR      |
+Medium | [ogbl-wikikg](#ogbl-wikikg)         | 2,500,604 |    17,137,181 |     Time  | KG completion   |    MRR     |
+Small | [ogbl-biokg](#ogbl-biokg)         | 93,773 |  5,088,434 |  Random  | KG completion   |    MRR     |
 
 **Note:** For undirected graphs, the loaded graphs will have the doubled number of edges because we add the bidirectional edges automatically.
 
@@ -29,7 +30,7 @@ We also prepare a unified [performance evaluator](#eval).
 
 ### Dataset `ogbl-ppa` ([Leaderboard](../leader_linkprop/#ogbl-ppa)):
 
-**Graph:** The dataset `ogbl-ppa` is an undirected, unweighted graph. Nodes represent proteins from 58 different species, and edges indicate biologically meaningful associations between proteins, e.g., physical interactions, co-expression, homology or genomic neighborhood [1]. We provide a graph object constructed from training edges (no validation and test edges are contained). Each node contains a 58-dimensional one-hot feature vector that indicates the species that the corresponding protein comes from.
+**Graph:** The `ogbl-ppa` dataset is an undirected, unweighted graph. Nodes represent proteins from 58 different species, and edges indicate biologically meaningful associations between proteins, e.g., physical interactions, co-expression, homology or genomic neighborhood [1]. We provide a graph object constructed from training edges (no validation and test edges are contained). Each node contains a 58-dimensional one-hot feature vector that indicates the species that the corresponding protein comes from.
 
 **Prediction task:** The task is to predict new association edges given the training edges.
 The evaluation is based on how well a model ranks positive test edges over negative test edges.
@@ -51,7 +52,7 @@ In particular, the goal is to predict a particular type of protein association, 
 
 ### Dataset `ogbl-collab` ([Leaderboard](../leader_linkprop/#ogbl-collab)):
 
-**Graph:** The dataset `ogbl-collab` is an undirected graph, representing a subset of the collaboration network between authors indexed by MAG.
+**Graph:** The `ogbl-collab` dataset is an undirected graph, representing a subset of the collaboration network between authors indexed by MAG.
 Each node represents an author and edges indicate the collaboration between authors. All nodes come with 128-dimensional features, obtained by averaging the word embeddings of papers that are published by the authors. All edges are associated with two meta-information: the year and the edge weight, representing the number of co-authored papers published in that year. 
 The graph can be viewed as a dynamic multi-graph since there can be multiple edges between two nodes if they collaborate in more than one year. 
 
@@ -65,13 +66,34 @@ The graph can be viewed as a dynamic multi-graph since there can be multiple edg
 
 [1] Kuansan Wang, Zhihong Shen, Chiyuan Huang, Chieh-Han Wu, Yuxiao Dong, and Anshul Kanakia.Microsoft academic graph:  When experts are not enough. Quantitative Science Studies, 1(1):396–413, 2020.
 
+
+<a name="ogbl-ddi"/>
+
+----------
+
+### Dataset `ogbl-ddi` ([Leaderboard](../leader_linkprop/#ogbl-ddi)):
+
+**Graph:** The `ogbl-ddi` dataset is a homogeneous, unweighted, undirected graph, representing the drug-drug interaction network [1]. Each node represents an FDA-approved or experimental drug. Edges represent interactions between drugs and can be interpreted as a phenomenon where the joint effect of taking the two drugs together is considerably different from the expected effect in which drugs act independently of each other. 
+
+
+**Prediction task:** The task is to predict drug-drug interactions given information on already known drug-drug interactions. The evaluation metric is similar to [`ogbl-collab`](#ogbl-collab), where we would like the model to rank true drug interactions higher than non-interacting drug pairs. Specifically, we rank each true drug interaction among a set of approximately 100,000 randomly-sampled negative drug interactions, and count the ratio of positive edges that are ranked at K-place or above (Hits@$K$). We found K = 20 to be a good threshold in our preliminary experiments.
+
+**Dataset splitting:** We develop a *protein-target split*, meaning that we split drug edges according to what proteins those drugs target in the body. As a result, the test set consists of drugs that predominantly bind to different proteins from drugs in the train and validation sets. This means that drugs in the test set work differently in the body, and have a rather different biological mechanism of action than drugs in the train and validation sets. The protein-target split thus enables us to evaluate to what extent the models can generate practically useful predictions [2], i.e., non-trivial predictions that are not hindered by the assumption that there exist already known and very similar medications available for training.
+
+
+#### References
+
+[1] David S Wishart, Yannick D Feunang, An C Guo, Elvis J Lo, Ana Marcu, Jason R Grant, TanvirSajed, Daniel Johnson, Carin Li, Zinat Sayeeda, et al.  DrugBank 5.0:  a major update to theDrugBank database for 2018. Nucleic Acids Research, 46(D1):D1074–D1082, 2018. <br/>
+[2] Emre Guney. Reproducible drug repurposing: When similarity does not suffice. In Pacific Symposiumon Biocomputing, pp. 132–143, 2017.
+
+
 <a name="ogbl-citation"/>
 
 ----------
 
 ### Dataset `ogbl-citation` ([Leaderboard](../leader_linkprop/#ogbl-citation)):
 
-**Graph:** The dataset `ogbl-citation` is a directed graph, representing the citation network between a subset of papers extracted from MAG [1]. 
+**Graph:** The `ogbl-citation` dataset is a directed graph, representing the citation network between a subset of papers extracted from MAG [1]. 
 Dach node is a paper with 128-dimensional word2vec features [2] that summarizes its title and abstract, and each directed edge indicates that one paper cites another. All nodes also come with meta-information indicating the year the corresponding paper was published. 
 
 
@@ -94,7 +116,7 @@ The evaluation metric is Mean Reciprocal Rank (MRR), where the reciprocal rank o
 
 ### Dataset `ogbl-wikikg` ([Leaderboard](../leader_linkprop/#ogbl-wikikg)):
 
-**Graph:** The dataset `ogbl-wikikg` is a Knowledge Graph (KG) extracted from the Wikidata knowledge base [1]. It contains a set of triplet edges (`head`, `relation`, `tail`), capturing the different types of relations between entities in the world, e.g., (Canada, citizen, Hinton). We retrieve all the relational statements in Wikidata and filter out rare entities. Our KG contains 2,500,604 entities and 535 relation types.
+**Graph:** The `ogbl-wikikg` dataset is a Knowledge Graph (KG) extracted from the Wikidata knowledge base [1]. It contains a set of triplet edges (`head`, `relation`, `tail`), capturing the different types of relations between entities in the world, e.g., (Canada, citizen, Hinton). We retrieve all the relational statements in Wikidata and filter out rare entities. Our KG contains 2,500,604 entities and 535 relation types.
 
 
 **Prediction task:** The task is to predict new triplet edges given the training edges. The evaluation metric follows the standard filtered metric widely used in KG. Specifically, we corrupt each test triplet edges by replacing its `head` or `tail` with randomly-sampled 1,000 negative entities (500 for `head` and 500 for `tail`), while ensuring the resulting triplets do not appear in KG. The goal is to rank the true `head` (or `tail`) entities higher than the negative entities, which is measured by Mean Reciprocal Rank (MRR).
@@ -110,6 +132,25 @@ Note that our dataset split is different from the existing Wikidata KG dataset t
 [1] Denny Vrandecˇic ́ and Markus Krötzsch. Wikidata: a free collaborative knowledgebase. Communications of the ACM, 57(10):78–85, 2014. <br/>
 [2] [https://archive.org/search.php?query=creator\%3A\%22Wikidata+editors\%22](https://archive.org/search.php?query=creator\%3A\%22Wikidata+editors\%22) <br/>
 [3] Xiaozhi Wang, Tianyu Gao, Zhaocheng Zhu, Zhiyuan Liu, Juanzi Li, and Jian Tang. Kepler: A unified model for knowledge embedding and pre-trained language representation. arXiv preprint arXiv:1911.06136, 2019.
+
+
+<a name="ogbl-biokg"/>
+
+----------
+
+### Dataset `ogbl-biokg` ([Leaderboard](../leader_linkprop/#ogbl-biokg)):
+
+**Graph:** The `ogbl-biokg` is a Knowledge Graph (KG), which we created using data from a large number of biomedical data repositories. 
+It contains 5 types of entities: diseases (10,687 nodes), proteins (17,499), drugs (10,533 nodes), side effects (9,969 nodes), and protein functions (45,085 nodes). There are 51 types of directed relations connecting two types of entities, including 39 kinds of drug-drug interactions, 8 kinds of protein-protein interaction, as well as drug-protein, drug-side effect, drug-protein, function-function relations. All relations are modeled as directed edges, among which the relations connecting the same entity types (e.g., protein-protein, drug-drug, function-function) are always symmetric, i.e., the edges are bi-directional. 
+
+This dataset is relevant to both biomedical and fundamental ML research.
+On the biomedical side, the dataset allows us to get better insights into human biology and generate predictions that can guide downstream biomedical research. On the fundamental ML side, the dataset presents challenges in handling a noisy, incomplete KG with possible contradictory observations.
+This is because the `ogbl-biokg` dataset involves heterogeneous interactions that span from the molecular scale (e.g., protein-protein interactions within a cell) to whole populations (e.g., reports of unwanted side effects experienced by patients in a particular country). Further, triplets in the KG come from sources with a variety of confidence levels, including experimental readouts, human-curated annotations, and automatically extracted metadata. 
+
+
+**Prediction task:** The task is to predict new triplets given the training triplets. The evaluation protocol is exactly the same as [`ogbl-wikikg`](#ogbl-wikikg), except that here we only consider ranking against *entities of the same type*. For instance, when corrupting head entities of the protein type, we only consider negative protein entities.
+
+**Dataset splitting:** For this dataset, we adopt a random split. While splitting the triplets according to time is an attractive alternative, we note that it is incredibly challenging to obtain accurate information as to when individual experiments and observations underlying the triplets were made. We strive to provide additional dataset splits in future versions of the OGB. 
 
 
 <a name="loader"/>
@@ -168,7 +209,14 @@ The library-agnostic graph object is a dictionary containing the following keys:
 - `node_feat`: numpy arrays of shape `(num_nodes, nodefeat_dim)`, where `nodefeat_dim` is the dimensionality of node features and i-th row represents the feature of i-th node. This can be `None` if no input node features are available.
 - `num_nodes`: number of nodes in the graph.
 
-**Node:** Some graph datasets may contain additional meta-information in node or edges such as their time stamps. Although they are not given as default input features, researchers should feel free to exploit these additional information.
+**Heterogeneous graph:** We represent a heterogeneous graph using dictionaries: `edge_index_dict`, `edge_feat_dict`, `node_feat_dict`, and `num_nodes_dict`. 
+- `edge_index_dict`: A dictionary mapping each triplet `(head type, relation type, tail type)` into corresponding `edge_index`.
+- `edge_feat_dict`: A dictionary mapping each triplet `(head type, relation type, tail type)` into corresponding `edge_feat`.
+- `node_feat_dict`: A dictionary mapping each `node type` into corresponding `node_feat`.
+- `num_nodes_dict`: A dictionary mapping each `node type` into corresponding `num_nodes`.
+
+**Note:** Some graph datasets may contain additional meta-information in node or edges such as their time stamps. Although they are not given as default input features, researchers should feel free to exploit these additional information.
+
 
 <a name="eval"/>
 

@@ -14,6 +14,7 @@ Scale | Name     | #Graphs   | #Nodes per graph | #Edges per graph\* | #Tasks | 
 Small | [ogbg-molhiv](#ogbg-mol) | 41,127 | 25.5 | 27.5 | 1   | Scaffold  |  Binary classification | ROC-AUC  |
 Medium | [ogbg-molpcba](#ogbg-mol) | 437,929 | 26.0 | 28.1 | 128   | Scaffold  |  Binary classification | PRC-AUC  |
 Medium | [ogbg-ppa](#ogbg-ppa) | 158,100 | 243.4 | 2,266.1 | 1  | Species  |  Multi-class classification | Accuracy  |
+Medium | [ogbg-code](#ogbg-code) | 452,741 | 125.2 | 124.2 | 1  | Project  |  Sub-token prediction | F1 score  |
 
 
 **Note:** For undirected graphs, the loaded graphs will have the doubled number of edges because we add the bidirectional edges automatically.
@@ -30,7 +31,7 @@ We also prepare a unified [performance evaluator](#eval).
 ### Datasets `ogbg-molhiv` ([Leaderboard](../leader_graphprop/#ogbg-molhiv)) and `ogbg-molpcba` ([Leaderboard](../leader_graphprop/#ogbg-molpcba)):
 
 **Graph:** 
-The datasets `ogbg-molhiv` and `ogbg-molpcba` are two molecular property prediction datasets of different sizes: `ogbg-molhiv` (small) and `ogbg-molpcba` (medium). They are adopted from the MoleculeNet [1], and are among the largest of the MoleculeNet datasets. All the molecules are pre-processed using RDKit [2]. Each graph represents a molecule, where nodes are atoms, and edges are chemical bonds. Input node features are 9-dimensional, containing atomic number and chirality, as well as other additional atom features such as formal charge and whether the atom is in the ring or not.
+The `ogbg-molhiv` and `ogbg-molpcba` datasets are two molecular property prediction datasets of different sizes: `ogbg-molhiv` (small) and `ogbg-molpcba` (medium). They are adopted from the MoleculeNet [1], and are among the largest of the MoleculeNet datasets. All the molecules are pre-processed using RDKit [2]. Each graph represents a molecule, where nodes are atoms, and edges are chemical bonds. Input node features are 9-dimensional, containing atomic number and chirality, as well as other additional atom features such as formal charge and whether the atom is in the ring or not.
 The full description of the features is provided in [code](https://github.com/snap-stanford/ogb/blob/master/ogb/utils/features.py). The script to convert the SMILES string [3] to the above graph object can be found [here](https://github.com/snap-stanford/ogb/blob/master/examples/graphproppred/mol/smiles2graph.py).
 Note that the script requires [RDkit](https://www.rdkit.org/docs/GettingStartedInPython.html) to be installed. The script can be used to pre-process external molecule datasets so that those datasets share the same input feature space as the OGB molecule datasets. This is particularly useful for pre-training graph models, which has great potential to significantly increase generalization performance on the (*downstream*) OGB datasets [4].
 
@@ -69,7 +70,7 @@ We adopt the *scaffold splitting* procedure that splits the molecules based on t
 
 ### Dataset `ogbg-ppa` ([Leaderboard](../leader_graphprop/#ogbg-ppa)): 
 
-**Graph:** The dataset `ogbg-ppa` is a set of undirected protein association neighborhoods extracted from the protein-protein association networks of 1,581 different species [1] that cover 37 broad taxonomic groups (e.g., mammals, bacterial families, archaeans) and span the tree of life [2]. To construct the neighborhoods, we randomly selected 100 proteins from each species and constructed 2-hop protein association neighborhoods centered on each of the selected proteins [3]. We then removed the center node from each neighborhood and subsampled the neighborhood to ensure the final protein association graph is small enough (less than 300 nodes). Nodes in each protein association graph represent proteins, and edges indicate biologically meaningful associations between proteins. The edges are associated with 7-dimensional features, where each element takes a value between 0 and 1 and represents the strength of a particular type of protein protein association such as gene co-occurrence, gene fusion events, and co-expression.
+**Graph:** The `ogbg-ppa` dataset is a set of undirected protein association neighborhoods extracted from the protein-protein association networks of 1,581 different species [1] that cover 37 broad taxonomic groups (e.g., mammals, bacterial families, archaeans) and span the tree of life [2]. To construct the neighborhoods, we randomly selected 100 proteins from each species and constructed 2-hop protein association neighborhoods centered on each of the selected proteins [3]. We then removed the center node from each neighborhood and subsampled the neighborhood to ensure the final protein association graph is small enough (less than 300 nodes). Nodes in each protein association graph represent proteins, and edges indicate biologically meaningful associations between proteins. The edges are associated with 7-dimensional features, where each element takes a value between 0 and 1 and represents the strength of a particular type of protein protein association such as gene co-occurrence, gene fusion events, and co-expression.
 
 
 **Prediction task:** Given a protein association neighborhood graph, the task is a 37-way multi-class classification to predict what taxonomic group the graph originates from. The ability to successfully tackle this problem has implications for understanding the evolution of protein complexes across species, the rewiring of protein interactions over time, the discovery of functional associations between genes even for otherwise rarely-studied organisms, and would give us insights into key bioinformatics tasks, such as biological network alignment. 
@@ -81,6 +82,33 @@ This split stress-tests the model's capability to extract graph features that ar
 [1] Damian Szklarczyk, Annika L Gable, David Lyon, Alexander Junge, Stefan Wyder, Jaime Huerta- Cepas, Milan Simonovic, Nadezhda T Doncheva, John H Morris, Peer Bork, et al. STRING v11: protein–protein association networks with increased coverage, supporting functional discovery in genome-wide experimental datasets. Nucleic Acids Research, 47(D1):D607–D613, 2019. <br/>
 [2] Laura A Hug, Brett J Baker, Karthik Anantharaman, Christopher T Brown, Alexander J Probst, Cindy J Castelle, Cristina N Butterfield, Alex W Hernsdorf, Yuki Amano, Kotaro Ise, et al. A new view of the tree of life. Nature Microbiology, 1(5):16048, 2016. <br/>
 [3] Marinka Zitnik, Marcus W Feldman, Jure Leskovec, et al. Evolution of resilience in protein interactomes across the tree of life. Proceedings of the National Academy of Sciences, 116(10): 4426–4433, 2019.
+
+
+<a name="ogbg-code"/>
+
+----------
+
+### Dataset `ogbg-code` ([Leaderboard](../leader_graphprop/#ogbg-code)): 
+
+**Graph:** The `ogbg-code` dataset is a collection of Abstract Syntax Trees (ASTs) obtained from approximately 450 thousands Python method definitions. Methods are extracted from a total of 13,587 different repositories across the most popular projects on GitHub. Our collection of Python methods originates from GitHub CodeSearchNet, a collection of datasets and benchmarks for machine-learning-based code retrieval.
+In `ogbg-code`, we contribute an additional feature extraction step, which includes: AST edges, AST nodes, and tokenized method name. Altogether, `ogbg-code` allows us to capture source code with its underlying graph structure, beyond its token sequence representation.
+
+
+**Prediction task:** The task is to predict the sub-tokens forming the method name, given the Python method body represented by AST and its node features.
+This task is often referred to as "code summarization", because the model is trained to find succinct and precise description (i.e., the method name chosen by the developer) for a complete logical unit (i.e., the method body). Code summarization is a representative task in the field of machine learning for code not only for its straightforward adoption in developer tools, but also because it is a proxy measure for assessing how well a model captures the code semantic [1]. 
+Following [2,3], we use an F1 score to evaluate predicted sub-tokens against ground-truth sub-tokens.
+
+
+**Dataset splitting:** We adopt a *project split* [4], where the ASTs for the train set are obtained from GitHub projects that do not appear in the validation and test sets. This split respects the practical scenario of training a model on a large collection of source code (obtained, for instance, from the popular GitHub projects), and then using it to predict method names on a separate code base. The project split stress-tests the model's ability to capture code's semantics, and avoids a model that trivially memorizes the idiosyncrasies of training projects (such as the naming conventions and the coding style of a specific developer) to achieve a high test score.
+
+#### References
+[1] Miltiadis Allamanis, Earl T Barr, Premkumar Devanbu, and Charles Sutton. A survey of machinelearning for big code and naturalness.ACM Computing Surveys (CSUR), 51(4):1–37, 2018. <br/>
+[2] Uri Alon, Shaked Brody, Omer Levy, and Eran Yahav. code2seq: Generating sequences fromstructured representations of code. arXiv preprint arXiv:1808.01400, 2018. <br/>
+[3] Uri Alon, Meital Zilberstein, Omer Levy, and Eran Yahav. code2vec: Learning distributed rep-resentations of code. Proceedings of the ACM on Programming Languages,  3(POPL):1–29,2019. <br/>
+[4] Miltiadis Allamanis. The adverse effects of code duplication in machine learning models of code. In Proceedings of the 2019 ACM SIGPLAN International Symposium on New Ideas, New Paradigms, and Reflections on Programming and Software, pp. 143–153, 2019.
+
+
+
 
 <a name="loader"/>
 
@@ -144,7 +172,7 @@ The library-agnostic graph object is a dictionary containing the following keys:
 - `node_feat`: numpy arrays of shape `(num_nodes, nodefeat_dim)`, where `nodefeat_dim` is the dimensionality of node features and i-th row represents the feature of i-th node. This can be `None` if no input node features are available.
 - `num_nodes`: number of nodes in the graph.
 
-**Node:** Some graph datasets may contain additional meta-information in node or edges such as their time stamps. Although they are not given as default input features, researchers should feel free to exploit these additional information.
+**Note:** Some graph datasets may contain additional meta-information in node or edges such as their time stamps. Although they are not given as default input features, researchers should feel free to exploit these additional information.
 
 <a name="eval"/>
 

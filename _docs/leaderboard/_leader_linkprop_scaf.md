@@ -6,8 +6,10 @@ permalink: /docs/leader_linkprop/
 ##### Check leaderboards for
 ###### - [ogbl-ppa](#ogbl-ppa)
 ###### - [ogbl-collab](#ogbl-collab)
+###### - [ogbl-ddi](#ogbl-ddi)
 ###### - [ogbl-citation](#ogbl-citation)
 ###### - [ogbl-wikikg](#ogbl-wikikg)
+###### - [ogbl-biokg](#ogbl-biokg)
 
 **Note:** The **bold** method name indicates that the implementation is **official** (by the author of the original paper).
 
@@ -34,6 +36,16 @@ The Hits@10 score on the test set. The higher, the better.
 
 
 
+<a name="ogbl-ddi"/>
+
+-------
+
+### Leaderboard for [ogbl-ddi](../linkprop/#ogbl-ddi)
+The Hits@20 score on the test set. The higher, the better.
+
+#ogbl-ddi
+
+
 
 <a name="ogbl-citation"/>
 
@@ -55,6 +67,18 @@ The MRR score on the test set. The higher, the better.
 The MRR score on the test set. The higher, the better.
 
 #ogbl-wikikg
+
+
+
+
+<a name="ogbl-biokg"/>
+
+-------
+
+### Leaderboard for [ogbl-biokg](../linkprop/#ogbl-biokg)
+The MRR score on the test set. The higher, the better.
+
+#ogbl-biokg
 
 
 
