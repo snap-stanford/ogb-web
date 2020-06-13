@@ -14,10 +14,10 @@ layout: default
     <div class="row">
         <div class="col-md-6">
             <p class="lead">
-                The Open Graph Benchmark (OGB) is a collection of benchmark datasets, data loaders, and evaluators for graph machine learning. Datasets cover a variety of graph machine learning tasks and real-world applications.
+                The Open Graph Benchmark (OGB) is a collection of realistic, large-scale, and diverse benchmark datasets for machine learning on graphs. 
             </p>
             <p class="lead">
-                The OGB data loaders are fully compatible with popular graph deep learning frameworks, including <a href="https://pytorch-geometric.readthedocs.io/">Pytorch Geometric</a> and <a href="https://www.dgl.ai/">DGL</a>. They provide automatic dataset downloading, standardized dataset splits, and unified performance evaluation. <br/>
+                OGB datasets are automatically downloaded, processed, and split using the <a href="{{ "/docs/home/#dataloader" | relative_url }}">OGB Data Loader</a>, which is fully compatible with <a href="https://pytorch-geometric.readthedocs.io/">Pytorch Geometric</a> and <a href="https://www.dgl.ai/">DGL</a>. The model performance can be evaluated using the <a href="{{ "/docs/home/#evaluator" | relative_url }}">OGB Evaluator</a> in a unified manner. <br/>
             </p>
             <p class="lead">
                 OGB is a community-driven initiative in active development. We expect the benchmark datasets to evolve. <b>Subscribe to our <a href="https://groups.google.com/forum/#!forum/open-graph-benchmark">google group</a></b> to ask us questions and keep up to date with major changes to the datasets.
@@ -27,7 +27,9 @@ layout: default
             <img src="{{ "/assets/img/OGB.png" | relative_url }}" alt="Jekyll logo" class="img-responsive">
         </div>
     </div>
+
     <hr>
+
     <div class="row">
         <div class="col-sm-4">
             <h1 class="text-center"><a href="{{ "/docs/dataset_overview/" | relative_url }}"><i class="fa fa-database" aria-hidden="true"></i></a></h1>
@@ -36,8 +38,6 @@ layout: default
             </p>
         </div>
         <div class="col-sm-4">
-            <!-- <h1 class="text-center"><i class="fa fa-cogs" aria-hidden="true"></i></h1>
-            <h3 class="text-center">Easy-to-Use Data Loaders</h3> -->
             <h1 class="text-center"><a href="{{ "/docs/home/#dataloader" | relative_url }}"><i class="fa fa-cogs" aria-hidden="true"></i></a></h1>
             <h3 class="text-center"><a href="{{ "/docs/home/#dataloader" | relative_url }}">Flexible data loaders</a></h3>
             <p class="f3-light">OGB fully automates dataset processing.
@@ -45,12 +45,16 @@ layout: default
             </p>
         </div>
         <div class="col-sm-4">
-            <!-- <h1 class="text-center"><i class="fa fa-bar-chart" aria-hidden="true"></i></h1>
-            <h3 class="text-center">Standardized Evaluation</h3> -->
             <h1 class="text-center"><a href="{{ "/docs/home/#evaluator" | relative_url }}"><i class="fa fa-bar-chart" aria-hidden="true"></i></a></h1>
             <h3 class="text-center"><a href="{{ "/docs/home/#evaluator" | relative_url }}">Unified evaluation</a></h3>
             <p class="f3-light">OGB provides standardized dataset splits and evaluators that allow for easy and reliable comparison of different models in a unified manner. OGB uses <a href="{{ "/docs/leader_overview/" | relative_url }}">leaderboards</a> to keep track of the state-of-the-art.
             </p>
         </div>
     </div>
-    <!-- <hr> -->
+
+        <hr>
+        <div class="col-md-12 text-center">
+            <a href="{{ site.paper_address }}">
+            <img src="{{ "/assets/img/paper_download.png" | relative_url }}" alt="Jekyll logo" class="img-responsive">
+            </a>
+        </div>

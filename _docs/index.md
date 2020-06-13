@@ -63,6 +63,8 @@ pip install -U ogb
 Next, we outline two key features of the OGB package, easy-to-use data loaders, and standardized model evaluators. <br/>
 Please also refer to our [example code](https://github.com/snap-stanford/ogb/tree/master/examples) for how the package can be used in practice.
 
+<a name="dataloader"/>
+
 #### Data Loaders
 
 We prepare easy-to-use [PyTorch Geometric](https://pytorch-geometric.readthedocs.io/en/latest/) and [DGL](https://www.dgl.ai/) data loaders that handle dataset downloading and standardized dataset splits.
@@ -83,6 +85,8 @@ test_loader = DataLoader(dataset[split_idx["test"]], batch_size=32, shuffle=Fals
 ```
 
 **Mapping:** The nodes/edges/graphs in OGB are mapped to real entities in the world, e.g., each drug node in the [drug-drug interaction network](../linkprop/#ogbl-ddi) is mapped to a unique drug ID in [DrugBank](https://www.drugbank.ca/). The mapping information is provided in `mapping/` directory of the downloaded dataset folder, and is meant to allow researchers to draw scientific insight from model's prediction and to potentially augment the given graphs with richer information.
+
+<a name="evaluator"/>
 
 #### Evaluators
 
