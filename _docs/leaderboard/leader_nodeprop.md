@@ -42,12 +42,13 @@ The ROC-AUC score on the test set. The higher, the better.
 
 | Rank  | Method | ROC-AUC | Contact | References | Date 
 |:----:|:-----:|:------:|:-----:|:-----:|:-----:|
-|  1  |  **GeniePath-BS**  | 0.7825 ± 0.0035   | [Zhengwei WU (AGL Team)](mailto:zejun.wzw@alipay.com) | [Paper](http://arxiv.org/abs/2006.05806), [Code](https://github.com/xavierzw/ogb-geniepath-bs) | Jun 10, 2020 | 
-|  2  |  GaAN  | 0.7803 ± 0.0073   | [Wenjin Wang (PGL Team)](mailto:wangwenjin02@baidu.com) | [Paper](https://arxiv.org/abs/1803.07294), [Code](https://github.com/PaddlePaddle/PGL/tree/master/examples/GaAN) | May 26, 2020 | 
-|  3  |  GraphSAGE  | 0.7768 ± 0.0020   | [Matthias Fey -- OGB team](mailto:matthias.fey@tu-dortmund.de) | [Paper](https://arxiv.org/abs/1706.02216), [Code](https://github.com/snap-stanford/ogb/tree/master/examples/nodeproppred/proteins) | May 1, 2020 | 
-|  4  |  MLP  | 0.7204 ± 0.0048   | [Matthias Fey -- OGB team](mailto:matthias.fey@tu-dortmund.de) | [Paper](https://arxiv.org/abs/2005.00687), [Code](https://github.com/snap-stanford/ogb/tree/master/examples/nodeproppred/proteins) | May 1, 2020 | 
-|  5  |  Node2vec  | 0.6881 ± 0.0065   | [Matthias Fey -- OGB team](mailto:matthias.fey@tu-dortmund.de) | [Paper](https://arxiv.org/abs/1607.00653), [Code](https://github.com/snap-stanford/ogb/tree/master/examples/nodeproppred/proteins) | May 1, 2020 | 
-|  6  |  GCN  | 0.6511 ± 0.0152   | [Matthias Fey -- OGB team](mailto:matthias.fey@tu-dortmund.de) | [Paper](https://arxiv.org/abs/1609.02907), [Code](https://github.com/snap-stanford/ogb/tree/master/examples/nodeproppred/proteins) | May 1, 2020 | 
+|  1  |  **DeeperGCN**  | 0.8580 ± 0.0017   | [Guohao Li - DeepGCNs.org](mailto:guohao.li@kaust.edu.sa) | [Paper](https://arxiv.org/abs/2006.07739), [Code](https://github.com/lightaime/deep_gcns_torch/tree/master/examples/ogb) | Jun 16, 2020 | 
+|  2  |  **GeniePath-BS**  | 0.7825 ± 0.0035   | [Zhengwei WU (AGL Team)](mailto:zejun.wzw@alipay.com) | [Paper](http://arxiv.org/abs/2006.05806), [Code](https://github.com/xavierzw/ogb-geniepath-bs) | Jun 10, 2020 | 
+|  3  |  GaAN  | 0.7803 ± 0.0073   | [Wenjin Wang (PGL Team)](mailto:wangwenjin02@baidu.com) | [Paper](https://arxiv.org/abs/1803.07294), [Code](https://github.com/PaddlePaddle/PGL/tree/master/examples/GaAN) | May 26, 2020 | 
+|  4  |  GraphSAGE  | 0.7768 ± 0.0020   | [Matthias Fey -- OGB team](mailto:matthias.fey@tu-dortmund.de) | [Paper](https://arxiv.org/abs/1706.02216), [Code](https://github.com/snap-stanford/ogb/tree/master/examples/nodeproppred/proteins) | May 1, 2020 | 
+|  5  |  MLP  | 0.7204 ± 0.0048   | [Matthias Fey -- OGB team](mailto:matthias.fey@tu-dortmund.de) | [Paper](https://arxiv.org/abs/2005.00687), [Code](https://github.com/snap-stanford/ogb/tree/master/examples/nodeproppred/proteins) | May 1, 2020 | 
+|  6  |  Node2vec  | 0.6881 ± 0.0065   | [Matthias Fey -- OGB team](mailto:matthias.fey@tu-dortmund.de) | [Paper](https://arxiv.org/abs/1607.00653), [Code](https://github.com/snap-stanford/ogb/tree/master/examples/nodeproppred/proteins) | May 1, 2020 | 
+|  7  |  GCN  | 0.6511 ± 0.0152   | [Matthias Fey -- OGB team](mailto:matthias.fey@tu-dortmund.de) | [Paper](https://arxiv.org/abs/1609.02907), [Code](https://github.com/snap-stanford/ogb/tree/master/examples/nodeproppred/proteins) | May 1, 2020 | 
 
 
 <a name="ogbn-arxiv"/>
@@ -61,10 +62,11 @@ The classification accuracy on the test set. The higher, the better.
 | Rank  | Method | Accuracy | Contact | References | Date 
 |:----:|:-----:|:------:|:-----:|:-----:|:-----:|
 |  1  |  GaAN  | 0.7197 ± 0.0024   | [Hui Zhong (PGL Team)](mailto:zhonghui03@baidu.com) | [Paper](https://arxiv.org/abs/1803.07294), [Code](https://github.com/PaddlePaddle/PGL/tree/master/ogb_examples/nodeproppred/ogbn-arxiv) | Jun 16, 2020 | 
-|  2  |  GCN  | 0.7174 ± 0.0029   | [Matthias Fey -- OGB team](mailto:matthias.fey@tu-dortmund.de) | [Paper](https://arxiv.org/abs/1609.02907), [Code](https://github.com/snap-stanford/ogb/tree/master/examples/nodeproppred/arxiv) | May 1, 2020 | 
-|  3  |  GraphSAGE  | 0.7149 ± 0.0027   | [Matthias Fey -- OGB team](mailto:matthias.fey@tu-dortmund.de) | [Paper](https://arxiv.org/abs/1706.02216), [Code](https://github.com/snap-stanford/ogb/tree/master/examples/nodeproppred/arxiv) | May 1, 2020 | 
-|  4  |  Node2vec  | 0.7007 ± 0.0013   | [Matthias Fey -- OGB team](mailto:matthias.fey@tu-dortmund.de) | [Paper](https://arxiv.org/abs/1607.00653), [Code](https://github.com/snap-stanford/ogb/tree/master/examples/nodeproppred/arxiv) | May 1, 2020 | 
-|  5  |  MLP  | 0.5550 ± 0.0023   | [Matthias Fey -- OGB team](mailto:matthias.fey@tu-dortmund.de) | [Paper](https://arxiv.org/abs/2005.00687), [Code](https://github.com/snap-stanford/ogb/tree/master/examples/nodeproppred/arxiv) | May 1, 2020 | 
+|  2  |  **DeeperGCN**  | 0.7192 ± 0.0016   | [Guohao Li - DeepGCNs.org](mailto:guohao.li@kaust.edu.sa) | [Paper](https://arxiv.org/abs/2006.07739), [Code](https://github.com/lightaime/deep_gcns_torch/tree/master/examples/ogb) | Jun 16, 2020 | 
+|  3  |  GCN  | 0.7174 ± 0.0029   | [Matthias Fey -- OGB team](mailto:matthias.fey@tu-dortmund.de) | [Paper](https://arxiv.org/abs/1609.02907), [Code](https://github.com/snap-stanford/ogb/tree/master/examples/nodeproppred/arxiv) | May 1, 2020 | 
+|  4  |  GraphSAGE  | 0.7149 ± 0.0027   | [Matthias Fey -- OGB team](mailto:matthias.fey@tu-dortmund.de) | [Paper](https://arxiv.org/abs/1706.02216), [Code](https://github.com/snap-stanford/ogb/tree/master/examples/nodeproppred/arxiv) | May 1, 2020 | 
+|  5  |  Node2vec  | 0.7007 ± 0.0013   | [Matthias Fey -- OGB team](mailto:matthias.fey@tu-dortmund.de) | [Paper](https://arxiv.org/abs/1607.00653), [Code](https://github.com/snap-stanford/ogb/tree/master/examples/nodeproppred/arxiv) | May 1, 2020 | 
+|  6  |  MLP  | 0.5550 ± 0.0023   | [Matthias Fey -- OGB team](mailto:matthias.fey@tu-dortmund.de) | [Paper](https://arxiv.org/abs/2005.00687), [Code](https://github.com/snap-stanford/ogb/tree/master/examples/nodeproppred/arxiv) | May 1, 2020 | 
 
 
 <a name="ogbn-papers100M"/>
