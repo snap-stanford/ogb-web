@@ -60,10 +60,11 @@ The classification accuracy on the test set. The higher, the better.
 
 | Rank  | Method | Accuracy | Contact | References | Date 
 |:----:|:-----:|:------:|:-----:|:-----:|:-----:|
-|  1  |  GCN  | 0.7174 ± 0.0029   | [Matthias Fey -- OGB team](mailto:matthias.fey@tu-dortmund.de) | [Paper](https://arxiv.org/abs/1609.02907), [Code](https://github.com/snap-stanford/ogb/tree/master/examples/nodeproppred/arxiv) | May 1, 2020 | 
-|  2  |  GraphSAGE  | 0.7149 ± 0.0027   | [Matthias Fey -- OGB team](mailto:matthias.fey@tu-dortmund.de) | [Paper](https://arxiv.org/abs/1706.02216), [Code](https://github.com/snap-stanford/ogb/tree/master/examples/nodeproppred/arxiv) | May 1, 2020 | 
-|  3  |  Node2vec  | 0.7007 ± 0.0013   | [Matthias Fey -- OGB team](mailto:matthias.fey@tu-dortmund.de) | [Paper](https://arxiv.org/abs/1607.00653), [Code](https://github.com/snap-stanford/ogb/tree/master/examples/nodeproppred/arxiv) | May 1, 2020 | 
-|  4  |  MLP  | 0.5550 ± 0.0023   | [Matthias Fey -- OGB team](mailto:matthias.fey@tu-dortmund.de) | [Paper](https://arxiv.org/abs/2005.00687), [Code](https://github.com/snap-stanford/ogb/tree/master/examples/nodeproppred/arxiv) | May 1, 2020 | 
+|  1  |  GaAN  | 0.7197 ± 0.0024   | [Hui Zhong (PGL Team)](mailto:zhonghui03@baidu.com) | [Paper](https://arxiv.org/abs/1803.07294), [Code](https://github.com/PaddlePaddle/PGL/tree/master/ogb_examples/nodeproppred/ogbn-arxiv) | Jun 16, 2020 | 
+|  2  |  GCN  | 0.7174 ± 0.0029   | [Matthias Fey -- OGB team](mailto:matthias.fey@tu-dortmund.de) | [Paper](https://arxiv.org/abs/1609.02907), [Code](https://github.com/snap-stanford/ogb/tree/master/examples/nodeproppred/arxiv) | May 1, 2020 | 
+|  3  |  GraphSAGE  | 0.7149 ± 0.0027   | [Matthias Fey -- OGB team](mailto:matthias.fey@tu-dortmund.de) | [Paper](https://arxiv.org/abs/1706.02216), [Code](https://github.com/snap-stanford/ogb/tree/master/examples/nodeproppred/arxiv) | May 1, 2020 | 
+|  4  |  Node2vec  | 0.7007 ± 0.0013   | [Matthias Fey -- OGB team](mailto:matthias.fey@tu-dortmund.de) | [Paper](https://arxiv.org/abs/1607.00653), [Code](https://github.com/snap-stanford/ogb/tree/master/examples/nodeproppred/arxiv) | May 1, 2020 | 
+|  5  |  MLP  | 0.5550 ± 0.0023   | [Matthias Fey -- OGB team](mailto:matthias.fey@tu-dortmund.de) | [Paper](https://arxiv.org/abs/2005.00687), [Code](https://github.com/snap-stanford/ogb/tree/master/examples/nodeproppred/arxiv) | May 1, 2020 | 
 
 
 <a name="ogbn-papers100M"/>
