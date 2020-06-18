@@ -21,8 +21,8 @@ For each dataset, we require you to submit the following information.
     - We recommend using Pytorch.
     - The authors are responsible for addressing any inquiry about their code. Please make sure results are easily reproducible by giving enough instruction in your repository.
 - **Paper**: The original paper describing the method (arXiv link is recommended. paper needs not be peer-reviewed). 
-- **Hardware**: The hardware (primarily for GPU) used for the experiments (e.g., GeForce RTX 2080). If only CPUs are used or multiple GPUs are used, please specify so.
 - **#Params**: The number of parameters of your model, which can be calculated by `sum(p.numel() for p in model.parameters())`.
+- **Hardware**: The hardware (primarily for GPU) used for the experiments (e.g., GeForce RTX 2080). If only CPUs are used or multiple GPUs are used, please specify so.
 - **Officiality**: Whether the implementation is **official** (implementation by authors who proposed the method) or **unofficial** (re-implementation of the method by non-authors).
 
 **Note:** OGB is a platform for reproducible and reliable research. We will remove any invalid submissions, so please make sure all the results are correct and reproducible before submitting them.
