@@ -14,7 +14,7 @@ dataset2metric['ogbn-arxiv'] = 'Accuracy'
 dataset2metric['ogbn-papers100M'] = 'Accuracy'
 dataset2metric['ogbn-mag'] = 'Accuracy'
 dataset2metric['ogbl-ppa'] = 'Hits@100'
-dataset2metric['ogbl-collab'] = 'Hits@10'
+dataset2metric['ogbl-collab'] = 'Hits@50'
 dataset2metric['ogbl-ddi'] = 'Hits@20'
 dataset2metric['ogbl-citation'] = 'MRR'
 dataset2metric['ogbl-wikikg'] = 'MRR'
@@ -56,22 +56,21 @@ def process_submissions(submissions, metric):
         sorted_ind_list = np.argsort(-avg_list)
         
 
-    header = '| Rank  | Method | {} | Contact | References | Date \n'.format(metric)
-    header += '|:----:|:-----:|:------:|:-----:|:-----:|:-----:|\n'
+    header = '| Rank  | Method | {} | Contact | References | #Params | Hardware | Date \n'.format(metric)
+    header += '|:----:|:-----:|:------:|:-----:|:-----:|-----:|:-----:|:-----:|\n'
 
     current_ranking = 1
 
     for i, ind in enumerate(sorted_ind_list):
         submission = submissions[ind]
-        
         if submission['Official'] == 'Official':
-            header += '|  {}  |  **{}**  | {:.4f} ± {:.4f}   | [{}](mailto:{}) | [Paper]({}), [Code]({}) | {} | \n'.\
+            header += '|  {}  |  **{}**  | {:.4f} ± {:.4f}   | [{}](mailto:{}) | [Paper]({}), [Code]({}) | {} | {} | {} |\n'.\
                         format(current_ranking, submission['Method'], avg_list[ind], std_list[ind], submission['Primary contact person'],
-                            submission['Primary contact email'], submission['Paper'], submission['Code'], convert_date_to_str(submission['Timestamp']))
+                            submission['Primary contact email'], submission['Paper'], submission['Code'], submission['#Params'], submission['Hardware'], convert_date_to_str(submission['Timestamp']))
         else:
-            header += '|  {}  |  {}  | {:.4f} ± {:.4f}   | [{}](mailto:{}) | [Paper]({}), [Code]({}) | {} | \n'.\
+            header += '|  {}  |  {}  | {:.4f} ± {:.4f}   | [{}](mailto:{}) | [Paper]({}), [Code]({}) | {} | {} | {} |\n'.\
                         format(current_ranking, submission['Method'], avg_list[ind], std_list[ind], submission['Primary contact person'],
-                            submission['Primary contact email'], submission['Paper'], submission['Code'], convert_date_to_str(submission['Timestamp']))
+                            submission['Primary contact email'], submission['Paper'], submission['Code'], submission['#Params'], submission['Hardware'], convert_date_to_str(submission['Timestamp']))
         
         if i < len(sorted_ind_list) - 1 and avg_list[ind] != avg_list[sorted_ind_list[i+1]]:
             current_ranking += 1
@@ -108,6 +107,19 @@ if __name__ == '__main__':
         if submission['Approved'] == 'Y':
             # get dataset name
             dataset = submission['Dataset']
+            print(submission)
+
+            ### Request additional information
+            if np.isnan(submission['#Params']):
+                submission['#Params'] = '[Please tell us](mailto:ogb@cs.stanford.edu)'
+            else:
+                submission['#Params'] = '{:,}'.format(int(submission['#Params']))
+            try:
+                if np.isnan(submission['Hardware']):
+                    submission['Hardware'] = '[Please tell us](mailto:ogb@cs.stanford.edu)'
+            except:
+                pass
+
             dataset2submissions[dataset].append(submission)
 
     dataset2leaderboard = {}

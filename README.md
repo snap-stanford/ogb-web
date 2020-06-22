@@ -17,7 +17,7 @@ cd jekyll-doc-theme
 # install dependencies
 bundle install
 
-# run jekyll with dependencies
+## run jekyll with dependencies
 bundle exec jekyll serve
 ```
 
