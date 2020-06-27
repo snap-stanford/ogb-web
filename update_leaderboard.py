@@ -107,7 +107,7 @@ if __name__ == '__main__':
         if submission['Approved'] == 'Y':
             # get dataset name
             dataset = submission['Dataset']
-            print(submission)
+            # print(submission)
 
             ### Request additional information
             if np.isnan(submission['#Params']):
