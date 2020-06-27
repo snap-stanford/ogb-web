@@ -9,12 +9,12 @@ permalink: /docs/graphprop/
 
 #### - Datasets
 
-Scale | Name     | #Graphs   | #Nodes per graph | #Edges per graph\* | #Tasks | Split Type  | Task Type   | Metric                           |
+Scale | Name  | Package   | #Graphs   | #Nodes per graph | #Edges per graph\* | #Tasks | Split Type  | Task Type   | Metric                           |
 |:-----:|:-------|----------:|----------:|-------------:|------------------:|:-----------:|:----------:|
-Small | [ogbg-molhiv](#ogbg-mol) | 41,127 | 25.5 | 27.5 | 1   | Scaffold  |  Binary classification | ROC-AUC  |
-Medium | [ogbg-molpcba](#ogbg-mol) | 437,929 | 26.0 | 28.1 | 128   | Scaffold  |  Binary classification | PRC-AUC  |
-Medium | [ogbg-ppa](#ogbg-ppa) | 158,100 | 243.4 | 2,266.1 | 1  | Species  |  Multi-class classification | Accuracy  |
-Medium | [ogbg-code](#ogbg-code) | 452,741 | 125.2 | 124.2 | 1  | Project  |  Sub-token prediction | F1 score  |
+Small | [ogbg-molhiv](#ogbg-mol) | >=1.1.1 | 41,127 | 25.5 | 27.5 | 1   | Scaffold  |  Binary classification | ROC-AUC  |
+Medium | [ogbg-molpcba](#ogbg-mol)| >=1.1.1  | 437,929 | 26.0 | 28.1 | 128   | Scaffold  |  Binary classification | PRC-AUC  |
+Medium | [ogbg-ppa](#ogbg-ppa) | >=1.1.1 | 158,100 | 243.4 | 2,266.1 | 1  | Species  |  Multi-class classification | Accuracy  |
+Medium | [ogbg-code](#ogbg-code) | >=1.2.0 | 452,741 | 125.2 | 124.2 | 1  | Project  |  Sub-token prediction | F1 score  |
 
 
 **Note:** For undirected graphs, the loaded graphs will have the doubled number of edges because we add the bidirectional edges automatically.

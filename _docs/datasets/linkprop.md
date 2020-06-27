@@ -9,14 +9,14 @@ permalink: /docs/linkprop/
 
 #### - Datasets
 
-Scale | Name      | #Nodes | #Edges\* |  Split Type   | Task Type     | Metric       |
-|:---------:|:--------|----------:|----------:|:----------------:|:------------------:|:----------------:|
-Medium | [ogbl-ppa](#ogbl-ppa)         | 576,289 |    30,326,273 |    Throughput  | Link prediction   |     Hits@100              |
-Small | [ogbl-collab](#ogbl-collab)         | 235,868 |    1,285,465 |     Time  | Link prediction   |     Hits@10              |
-Small | [ogbl-ddi](#ogbl-ddi)         | 4,267 |    1,334,889 |     Protein target  | Link prediction   |     Hits@20              |
-Medium | [ogbl-citation](#ogbl-citation)         | 2,927,963 |    30,561,187 |     Time  | Link prediction   |     MRR      |
-Medium | [ogbl-wikikg](#ogbl-wikikg)         | 2,500,604 |    17,137,181 |     Time  | KG completion   |    MRR     |
-Small | [ogbl-biokg](#ogbl-biokg)         | 93,773 |  5,088,434 |  Random  | KG completion   |    MRR     |
+Scale | Name      | Package | #Nodes | #Edges\* |  Split Type   | Task Type     | Metric       |
+|:---------:|:--------|:---------:|----------:|----------:|:----------------:|:------------------:|:----------------:|
+Medium | [ogbl-ppa](#ogbl-ppa)      | >=1.1.1   | 576,289 |    30,326,273 |    Throughput  | Link prediction   |     Hits@100              |
+Small | [ogbl-collab](#ogbl-collab)  | >=1.2.1       | 235,868 |    1,285,465 |     Time  | Link prediction   |     Hits@50              |
+Small | [ogbl-ddi](#ogbl-ddi)       | >=1.2.1  | 4,267 |    1,334,889 |     Protein target  | Link prediction   |     Hits@20              |
+Medium | [ogbl-citation](#ogbl-citation) | >=1.1.1       | 2,927,963 |    30,561,187 |     Time  | Link prediction   |     MRR      |
+Medium | [ogbl-wikikg](#ogbl-wikikg)  | >=1.1.1       | 2,500,604 |    17,137,181 |     Time  | KG completion   |    MRR     |
+Small | [ogbl-biokg](#ogbl-biokg)   | >=1.2.0      | 93,773 |  5,088,434 |  Random  | KG completion   |    MRR     |
 
 **Note:** For undirected graphs, the loaded graphs will have the doubled number of edges because we add the bidirectional edges automatically.
 
@@ -57,7 +57,7 @@ Each node represents an author and edges indicate the collaboration between auth
 The graph can be viewed as a dynamic multi-graph since there can be multiple edges between two nodes if they collaborate in more than one year. 
 
 
-**Prediction task:** The task is to predict the future author collaboration relationships given the past collaborations. The goal is to rank true collaborations higher than false collaborations. Specifically, we rank each true collaboration among a set of 100,000 randomly-sampled negative collaborations, and count the ratio of positive edges that are ranked at K-place or above (Hits@K). We found K = 10 to be a good threshold in our preliminary experiments.
+**Prediction task:** The task is to predict the future author collaboration relationships given the past collaborations. The goal is to rank true collaborations higher than false collaborations. Specifically, we rank each true collaboration among a set of 100,000 randomly-sampled negative collaborations, and count the ratio of positive edges that are ranked at K-place or above (Hits@K). We found K = 50 to be a good threshold in our preliminary experiments.
 
 **Dataset splitting:** We split the data according to time, in order to simulate a realistic application in collaboration recommendation. Specifically, we use the collaborations until 2017 as training edges, those in 2018 as validation edges, and those in 2019 as test edges.
 
@@ -76,7 +76,7 @@ The graph can be viewed as a dynamic multi-graph since there can be multiple edg
 **Graph:** The `ogbl-ddi` dataset is a homogeneous, unweighted, undirected graph, representing the drug-drug interaction network [1]. Each node represents an FDA-approved or experimental drug. Edges represent interactions between drugs and can be interpreted as a phenomenon where the joint effect of taking the two drugs together is considerably different from the expected effect in which drugs act independently of each other. 
 
 
-**Prediction task:** The task is to predict drug-drug interactions given information on already known drug-drug interactions. The evaluation metric is similar to [`ogbl-collab`](#ogbl-collab), where we would like the model to rank true drug interactions higher than non-interacting drug pairs. Specifically, we rank each true drug interaction among a set of approximately 100,000 randomly-sampled negative drug interactions, and count the ratio of positive edges that are ranked at K-place or above (Hits@$K$). We found K = 20 to be a good threshold in our preliminary experiments.
+**Prediction task:** The task is to predict drug-drug interactions given information on already known drug-drug interactions. The evaluation metric is similar to [`ogbl-collab`](#ogbl-collab), where we would like the model to rank true drug interactions higher than non-interacting drug pairs. Specifically, we rank each true drug interaction among a set of approximately 100,000 randomly-sampled negative drug interactions, and count the ratio of positive edges that are ranked at K-place or above (Hits@K). We found K = 20 to be a good threshold in our preliminary experiments.
 
 **Dataset splitting:** We develop a *protein-target split*, meaning that we split drug edges according to what proteins those drugs target in the body. As a result, the test set consists of drugs that predominantly bind to different proteins from drugs in the train and validation sets. This means that drugs in the test set work differently in the body, and have a rather different biological mechanism of action than drugs in the train and validation sets. The protein-target split thus enables us to evaluate to what extent the models can generate practically useful predictions [2], i.e., non-trivial predictions that are not hindered by the assumption that there exist already known and very similar medications available for training.
 

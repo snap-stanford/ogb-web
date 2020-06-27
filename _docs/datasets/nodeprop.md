@@ -9,13 +9,13 @@ permalink: /docs/nodeprop/
 
 #### - Datasets
 
-Scale | Name                              | #Nodes  | #Edges\* | #Tasks | Split Type        | Task Type   | Metric                  |
-|:---------:|:--------|----------------:|----------------------:|---------------------:|:-------------------------:|:------------------:|
-Medium | [ogbn-products](#ogbn-products) | 2,449,029  | 61,859,140 | 1       | Sales rank      | Multi-class classification | Accuracy |
-Medium | [ogbn-proteins](#ogbn-proteins) | 132,534  |  39,561,252 | 112       | Species  | Binary classification   | ROC-AUC     |
-Small | [ogbn-arxiv](#ogbn-arxiv) | 169,343  | 1,166,243 | 1       | Time      | Multi-class classification | Accuracy |
-Large | [ogbn-papers100M](#ogbn-papers100M) | 111,059,956  | 1,615,685,872 |  1    | Time      | Multi-class classification | Accuracy |
-Medium | [ogbn-mag](#ogbn-mag) | 1,939,743  | 25,582,108 | 1       | Time      | Multi-class classification | Accuracy |
+Scale | Name      | Package              | #Nodes  | #Edges\* | #Tasks | Split Type        | Task Type   | Metric                  |
+|:---------:|:--------|:-----:|----------------:|----------------------:|---------------------:|:-------------------------:|:------------------:|
+Medium | [ogbn-products](#ogbn-products) | >=1.1.1  | 2,449,029  | 61,859,140 | 1       | Sales rank      | Multi-class classification | Accuracy |
+Medium | [ogbn-proteins](#ogbn-proteins) | >=1.1.1  | 132,534  |  39,561,252 | 112       | Species  | Binary classification   | ROC-AUC     |
+Small | [ogbn-arxiv](#ogbn-arxiv) |  >=1.1.1  | 169,343 | 1,166,243 | 1       | Time      | Multi-class classification | Accuracy |
+Large | [ogbn-papers100M](#ogbn-papers100M) | >=1.2.0  | 111,059,956  | 1,615,685,872 |  1    | Time      | Multi-class classification | Accuracy |
+Medium | [ogbn-mag](#ogbn-mag) |  >=1.2.1  | 1,939,743  | 21,111,007 | 1       | Time      | Multi-class classification | Accuracy |
 
 
 **Note:** For undirected graphs, the loaded graphs will have the doubled number of edges because we add the bidirectional edges automatically.

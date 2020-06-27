@@ -11,7 +11,8 @@ permalink: /docs/leader_linkprop/
 ###### - [ogbl-wikikg](#ogbl-wikikg)
 ###### - [ogbl-biokg](#ogbl-biokg)
 
-**Note:** The **bold** method name indicates that the implementation is **official** (by the author of the original paper).
+The **bold** method name indicates that the implementation is **official** (by the author of the original paper). <br/>
+**Package** denotes the required package version for each dataset to be eligible for the leaderboard.
 
 
 <a name="ogbl-ppa"/>
@@ -19,7 +20,9 @@ permalink: /docs/leader_linkprop/
 -------
 
 ### Leaderboard for [ogbl-ppa](../linkprop/#ogbl-ppa)
-The Hits@100 score on the test set. The higher, the better.
+##### The Hits@100 score on the test set. The higher, the better.
+
+#### Package: >=1.1.1
 
 #ogbl-ppa
 
@@ -30,7 +33,9 @@ The Hits@100 score on the test set. The higher, the better.
 -------
 
 ### Leaderboard for [ogbl-collab](../linkprop/#ogbl-collab)
-The Hits@10 score on the test set. The higher, the better.
+##### The Hits@50 score on the test set. The higher, the better.
+
+#### Package: >=1.2.1
 
 #ogbl-collab
 
@@ -41,7 +46,9 @@ The Hits@10 score on the test set. The higher, the better.
 -------
 
 ### Leaderboard for [ogbl-ddi](../linkprop/#ogbl-ddi)
-The Hits@20 score on the test set. The higher, the better.
+##### The Hits@20 score on the test set. The higher, the better.
+
+#### Package: >=1.2.1
 
 #ogbl-ddi
 
@@ -52,7 +59,9 @@ The Hits@20 score on the test set. The higher, the better.
 -------
 
 ### Leaderboard for [ogbl-citation](../linkprop/#ogbl-citation)
-The MRR score on the test set. The higher, the better.
+##### The MRR score on the test set. The higher, the better.
+
+#### Package: >=1.1.1
 
 #ogbl-citation
 
@@ -64,7 +73,9 @@ The MRR score on the test set. The higher, the better.
 -------
 
 ### Leaderboard for [ogbl-wikikg](../linkprop/#ogbl-wikikg)
-The MRR score on the test set. The higher, the better.
+##### The MRR score on the test set. The higher, the better.
+
+#### Package: >=1.1.1
 
 #ogbl-wikikg
 
@@ -76,7 +87,9 @@ The MRR score on the test set. The higher, the better.
 -------
 
 ### Leaderboard for [ogbl-biokg](../linkprop/#ogbl-biokg)
-The MRR score on the test set. The higher, the better.
+##### The MRR score on the test set. The higher, the better.
+
+#### Package: >=1.2.0
 
 #ogbl-biokg
 

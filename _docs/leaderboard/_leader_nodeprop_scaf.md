@@ -10,8 +10,8 @@ permalink: /docs/leader_nodeprop/
 ###### - [ogbn-papers100M](#ogbn-papers100M)
 ###### - [ogbn-mag](#ogbn-mag)
 
-
-**Note:** The **bold** method name indicates that the implementation is **official** (by the author of the original paper).
+The **bold** method name indicates that the implementation is **official** (by the author of the original paper). <br/>
+**Package** denotes the required package version for each dataset to be eligible for the leaderboard.
 
 
 <a name="ogbn-products"/>
@@ -19,7 +19,9 @@ permalink: /docs/leader_nodeprop/
 ---------
 
 ### Leaderboard for [ogbn-products](../nodeprop/#ogbn-products)
-The classification accuracy on the test set. The higher, the better.
+##### The classification accuracy on the test set. The higher, the better.
+
+#### Package: >=1.1.1
 
 
 #ogbn-products
@@ -29,7 +31,9 @@ The classification accuracy on the test set. The higher, the better.
 ------
 
 ### Leaderboard for [ogbn-proteins](../nodeprop/#ogbn-proteins)
-The ROC-AUC score on the test set. The higher, the better.
+##### The ROC-AUC score on the test set. The higher, the better.
+
+#### Package: >=1.1.1
 
 #ogbn-proteins
 
@@ -38,20 +42,24 @@ The ROC-AUC score on the test set. The higher, the better.
 ---------
 
 ### Leaderboard for [ogbn-arxiv](../nodeprop/#ogbn-arxiv)
-The classification accuracy on the test set. The higher, the better.
+##### The classification accuracy on the test set. The higher, the better.
 
+#### Package: >=1.1.1
 
 #ogbn-arxiv
+
 
 <a name="ogbn-papers100M"/>
 
 ---------
 
 ### Leaderboard for [ogbn-papers100M](../nodeprop/#ogbn-papers100M)
-The classification accuracy on the test set. The higher, the better.
+##### The classification accuracy on the test set. The higher, the better.
 
+#### Package: >=1.2.0
 
 #ogbn-papers100M
+
 
 
 <a name="ogbn-mag"/>
@@ -59,8 +67,9 @@ The classification accuracy on the test set. The higher, the better.
 ---------
 
 ### Leaderboard for [ogbn-mag](../nodeprop/#ogbn-mag)
-The classification accuracy on the test set. The higher, the better.
+##### The classification accuracy on the test set. The higher, the better.
 
+#### Package: >=1.2.1
 
 #ogbn-mag
 
