@@ -90,7 +90,8 @@ The **bold** method name indicates that the implementation is **official** (by t
 | Rank  | Method | Accuracy | Contact | References | #Params | Hardware | Date 
 |:----:|:-----:|:------:|:-----:|:-----:|-----:|:-----:|:-----:|
 |  1  |  SGC  | 0.6329 ± 0.0019   | [Weihua Hu -- OGB team](mailto:weihuahu@cs.stanford.edu) | [Paper](https://arxiv.org/abs/1902.07153), [Code](https://github.com/snap-stanford/ogb/tree/master/examples/nodeproppred/papers100M) | 144,044 | Xeon E7-8890x (1.5TB CPU) | Jun 10, 2020 |
-|  2  |  MLP  | 0.4724 ± 0.0031   | [Weihua Hu -- OGB team](mailto:weihuahu@cs.stanford.edu) | [Paper](https://arxiv.org/abs/2005.00687), [Code](https://github.com/snap-stanford/ogb/tree/master/examples/nodeproppred/papers100M) | 144,044 | Xeon E7-8890x (1.5TB CPU) | Jun 10, 2020 |
+|  2  |  Node2vec  | 0.5560 ± 0.0023   | [Weihua Hu -- OGB team](mailto:weihuahu@cs.stanford.edu) | [Paper](https://arxiv.org/abs/1607.00653), [Code](https://github.com/snap-stanford/ogb/tree/master/examples/nodeproppred/papers100M) | 14,215,818,412 | Xeon E7-8890x (1.5TB CPU) | Jun 26, 2020 |
+|  3  |  MLP  | 0.4724 ± 0.0031   | [Weihua Hu -- OGB team](mailto:weihuahu@cs.stanford.edu) | [Paper](https://arxiv.org/abs/2005.00687), [Code](https://github.com/snap-stanford/ogb/tree/master/examples/nodeproppred/papers100M) | 144,044 | Xeon E7-8890x (1.5TB CPU) | Jun 10, 2020 |
 
 
 
