@@ -1,7 +1,6 @@
 ---
 title: Updates from OGB
-permalink: /docs/home/update
-redirect_from: /docs/update.html
+permalink: /docs/update/
 ---
 
 ###### - **June 27th, 2020**: Leaderboard policy changed.
