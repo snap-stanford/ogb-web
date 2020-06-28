@@ -21,7 +21,7 @@ For each dataset, we require you to submit the following information.
     - We recommend using Pytorch.
     - The authors are responsible for addressing any inquiry about their code. Please make sure results are easily reproducible by giving enough instruction in your repository.
 - **Paper**: The original paper describing the method (arXiv link is recommended. paper needs not be peer-reviewed). 
-- **#Params**: The number of parameters of your model, which can be calculated by `sum(p.numel() for p in model.parameters())`.
+- **#Params**: The number of parameters of your model, which can be calculated by `sum(p.numel() for p in model.parameters())`. If you use multi-stage training (e.g., apply node2vec and then MLP), please sum up all the parameters (both node2vec and MLP parameters).
 - **Hardware**: The hardware (primarily for GPU) used for the experiments, e.g., GeForce RTX 2080 (11GB GPU). If multiple GPUs are used, please specify so.
 - **Officiality**: Whether the implementation is **official** (implementation by authors who proposed the method) or **unofficial** (re-implementation of the method by non-authors).
 
