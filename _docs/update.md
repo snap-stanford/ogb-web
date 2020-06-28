@@ -3,7 +3,7 @@ title: Updates from OGB
 permalink: /docs/update/
 ---
 
-###### - **June 27th, 2020**: Leaderboard policy changed.
+###### - **June 27th, 2020**: Leaderboard policy updated.
 1. Additional information is required for leaderboard submission (thanks to the suggestion from [Google group discussion](https://groups.google.com/forum/#!topic/open-graph-benchmark/duLzqer4mUE) and [Github issue](https://github.com/snap-stanford/ogb/issues/39)).
 - We additionally require reporting **hardwares** and **#parameters** in the leaderboard submission. Please refer to [here](../leader_overview) for more details.
 - If you have previously made leaderboard submissions, please [tell us](mailto:ogb@cs.stanford.edu) the above two information.
