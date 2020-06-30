@@ -38,6 +38,8 @@ We also prepare a unified [performance evaluator](#eval).
 Instead of randomly assigning 90% of the nodes for training and 10% of the nodes for testing (without use of a validation set), we use the *sales ranking* (popularity) to split nodes into training/validation/test sets.
 Specifically, we sort the products according to their sales ranking and use the top 10% for training, next top 2% for validation, and the rest for testing. This is a more challenging splitting procedure that closely matches the real-world application where labels are first assigned to important nodes in the network and ML models are subsequently used to make predictions on less important ones.
 
+**Other note:** Self-connnecting edges are duplicated (see [here](https://github.com/snap-stanford/ogb/issues/41)); you may remove them if necessary.
+
 #### References
 [1] [http://manikvarma.org/downloads/XC/XMLRepository.html](http://manikvarma.org/downloads/XC/XMLRepository.html) <br/>
 [2] Wei-Lin Chiang, Xuanqing Liu, Si Si, Yang Li, Samy Bengio, and Cho-Jui Hsieh. Cluster-GCN: An efficient algorithm for training deep and large graph convolutional networks. In ACM SIGKDD Conference on Knowledge Discovery and Data Mining (KDD), pp. 257–266, 2019.
