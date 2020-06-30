@@ -38,7 +38,7 @@ We also prepare a unified [performance evaluator](#eval).
 Instead of randomly assigning 90% of the nodes for training and 10% of the nodes for testing (without use of a validation set), we use the *sales ranking* (popularity) to split nodes into training/validation/test sets.
 Specifically, we sort the products according to their sales ranking and use the top 10% for training, next top 2% for validation, and the rest for testing. This is a more challenging splitting procedure that closely matches the real-world application where labels are first assigned to important nodes in the network and ML models are subsequently used to make predictions on less important ones.
 
-**Other note:** A very small number of self-connnecting edges are duplicated (see [here](https://github.com/snap-stanford/ogb/issues/41)); you may remove them if necessary.
+**Note:** A very small number of self-connnecting edges are duplicated (see [here](https://github.com/snap-stanford/ogb/issues/41)); you may remove them if necessary.
 
 #### References
 [1] [http://manikvarma.org/downloads/XC/XMLRepository.html](http://manikvarma.org/downloads/XC/XMLRepository.html) <br/>
