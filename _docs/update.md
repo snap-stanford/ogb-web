@@ -23,7 +23,7 @@ permalink: /docs/update/
 - **[Bug fix]** The Evaluator for [`ogbl-collab`](../linkprop/#ogbl-collab) and [`ogbl-ddi`](../linkprop/#ogbl-ddi) has been changed to use **Hits@50** and **Hits@20**, respectively.
 - **[Bug fix]** The DGL data loader for the two heterogeneous graph datasets ([`ogbn-mag`](../nodeprop/#ogbn-mag) and [`ogbl-biokg`](../linkprop/#ogbl-biokg)) is fixed (fix [issue](https://github.com/snap-stanford/ogb/issues/36)).
 - Baseline performance on [`ogbn-mag`](../leader_nodeprop/#ogbn-mag), [`ogbl-collab`](../leader_linkprop/#ogbl-collab), [`ogbl-ddi`](../leader_linkprop/#ogbl-ddi), [`ogbl-ppa`](../leader_linkprop/#ogbl-ppa) has been updated.
-- [Arxiv paper]((https://arxiv.org/abs/2005.00687)) has been updated accordingly.
+- [Arxiv paper](https://arxiv.org/abs/2005.00687) has been updated accordingly.
 
 ##### - **June 11st, 2020**: Second major release of OGB.
 - 5 new datasets ([`ogbn-papers100M`](../nodeprop/#ogbn-papers100M), [`ogbn-mag`](../nodeprop/#ogbn-mag), [`ogbl-biokg`](../linkprop/#ogbl-biokg), [`ogbl-ddi`](../linkprop/#ogbl-ddi), and [`ogbg-code`](../graphprop/#ogbg-code)) and their [benchmark experiments](https://github.com/snap-stanford/ogb/tree/master/examples) have been added.
