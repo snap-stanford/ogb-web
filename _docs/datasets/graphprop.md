@@ -63,7 +63,7 @@ We adopt the *scaffold splitting* procedure that splits the molecules based on t
 [2] Greg Landrum et al. RDKit: Open-source cheminformatics, 2006. <br/>
 [3] Eric Anderson, Gilman D. Veith, and David Weininger. SMILES: a line notation and computerized interpreter for chemical structures, 1987. <br/>
 [4] Weihua Hu, Bowen Liu, Joseph Gomes, Marinka Zitnik, Percy Liang, Vijay Pande, and Jure Leskovec.Strategies  for pre-training  graph  neural networks. In International Conference  on Learning Representations (ICLR), 2020.<br/>
-**License:** MIT
+##### License: MIT
 
 <a name="ogbg-ppa"/>
 
@@ -83,7 +83,7 @@ This split stress-tests the model's capability to extract graph features that ar
 [1] Damian Szklarczyk, Annika L Gable, David Lyon, Alexander Junge, Stefan Wyder, Jaime Huerta- Cepas, Milan Simonovic, Nadezhda T Doncheva, John H Morris, Peer Bork, et al. STRING v11: protein–protein association networks with increased coverage, supporting functional discovery in genome-wide experimental datasets. Nucleic Acids Research, 47(D1):D607–D613, 2019. <br/>
 [2] Laura A Hug, Brett J Baker, Karthik Anantharaman, Christopher T Brown, Alexander J Probst, Cindy J Castelle, Cristina N Butterfield, Alex W Hernsdorf, Yuki Amano, Kotaro Ise, et al. A new view of the tree of life. Nature Microbiology, 1(5):16048, 2016. <br/>
 [3] Marinka Zitnik, Marcus W Feldman, Jure Leskovec, et al. Evolution of resilience in protein interactomes across the tree of life. Proceedings of the National Academy of Sciences, 116(10): 4426–4433, 2019. <br/>
-**License:** CC-O
+##### License: CC-O
 
 
 <a name="ogbg-code"/>
@@ -108,7 +108,7 @@ Following [2,3], we use an F1 score to evaluate predicted sub-tokens against gro
 [2] Uri Alon, Shaked Brody, Omer Levy, and Eran Yahav. code2seq: Generating sequences fromstructured representations of code. arXiv preprint arXiv:1808.01400, 2018. <br/>
 [3] Uri Alon, Meital Zilberstein, Omer Levy, and Eran Yahav. code2vec: Learning distributed rep-resentations of code. Proceedings of the ACM on Programming Languages,  3(POPL):1–29,2019. <br/>
 [4] Miltiadis Allamanis. The adverse effects of code duplication in machine learning models of code. In Proceedings of the 2019 ACM SIGPLAN International Symposium on New Ideas, New Paradigms, and Reflections on Programming and Software, pp. 143–153, 2019. <br/>
-**License:** MIT
+##### License: MIT
 
 
 

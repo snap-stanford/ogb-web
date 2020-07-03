@@ -45,7 +45,7 @@ In particular, the goal is to predict a particular type of protein association, 
 #### References
 
 [1] Damian Szklarczyk, Annika L Gable, David Lyon, Alexander Junge, Stefan Wyder, Jaime Huerta- Cepas, Milan Simonovic, Nadezhda T Doncheva, John H Morris, Peer Bork, et al. STRING v11: protein–protein association networks with increased coverage, supporting functional discovery in genome-wide experimental datasets. Nucleic Acids Research, 47(D1):D607–D613, 2019. <br/>
-**License:** CC-0
+##### License: CC-0
 
 <a name="ogbl-collab"/>
 
@@ -66,7 +66,7 @@ The graph can be viewed as a dynamic multi-graph since there can be multiple edg
 #### References
 
 [1] Kuansan Wang, Zhihong Shen, Chiyuan Huang, Chieh-Han Wu, Yuxiao Dong, and Anshul Kanakia.Microsoft academic graph:  When experts are not enough. Quantitative Science Studies, 1(1):396–413, 2020. <br/>
-**License:** ODC-BY
+##### License: ODC-BY
 
 
 <a name="ogbl-ddi"/>
@@ -87,7 +87,7 @@ The graph can be viewed as a dynamic multi-graph since there can be multiple edg
 
 [1] David S Wishart, Yannick D Feunang, An C Guo, Elvis J Lo, Ana Marcu, Jason R Grant, TanvirSajed, Daniel Johnson, Carin Li, Zinat Sayeeda, et al.  DrugBank 5.0:  a major update to theDrugBank database for 2018. Nucleic Acids Research, 46(D1):D1074–D1082, 2018. <br/>
 [2] Emre Guney. Reproducible drug repurposing: When similarity does not suffice. In Pacific Symposiumon Biocomputing, pp. 132–143, 2017. <br/>
-**License:** CC-0
+##### License: CC-0
 
 
 <a name="ogbl-citation"/>
@@ -112,7 +112,7 @@ The evaluation metric is Mean Reciprocal Rank (MRR), where the reciprocal rank o
 
 [1] Kuansan Wang, Zhihong Shen, Chiyuan Huang, Chieh-Han Wu, Yuxiao Dong, and Anshul Kanakia.Microsoft academic graph:  When experts are not enough. Quantitative Science Studies, 1(1):396–413, 2020. <br/>
 [2] Tomas Mikolov, Ilya Sutskever, Kai Chen, Greg S Corrado, and Jeff Dean. Distributed representationsof words and phrases and their compositionality. In Advances in Neural Information Processing Systems (NeurIPS), pp. 3111–3119, 2013. <br/>
-**License:** ODC-BY
+##### License: ODC-BY
 
 <a name="ogbl-wikikg"/>
 
@@ -136,7 +136,7 @@ Note that our dataset split is different from the existing Wikidata KG dataset t
 [1] Denny Vrandecˇic ́ and Markus Krötzsch. Wikidata: a free collaborative knowledgebase. Communications of the ACM, 57(10):78–85, 2014. <br/>
 [2] [https://archive.org/search.php?query=creator\%3A\%22Wikidata+editors\%22](https://archive.org/search.php?query=creator\%3A\%22Wikidata+editors\%22) <br/>
 [3] Xiaozhi Wang, Tianyu Gao, Zhaocheng Zhu, Zhiyuan Liu, Juanzi Li, and Jian Tang. Kepler: A unified model for knowledge embedding and pre-trained language representation. arXiv preprint arXiv:1911.06136, 2019. <br/>
-**License:** CC-0
+##### License: CC-0
 
 
 <a name="ogbl-biokg"/>
@@ -156,7 +156,7 @@ This is because the `ogbl-biokg` dataset involves heterogeneous interactions tha
 **Prediction task:** The task is to predict new triplets given the training triplets. The evaluation protocol is exactly the same as [`ogbl-wikikg`](#ogbl-wikikg), except that here we only consider ranking against *entities of the same type*. For instance, when corrupting head entities of the protein type, we only consider negative protein entities.
 
 **Dataset splitting:** For this dataset, we adopt a random split. While splitting the triplets according to time is an attractive alternative, we note that it is incredibly challenging to obtain accurate information as to when individual experiments and observations underlying the triplets were made. We strive to provide additional dataset splits in future versions of the OGB. <br/>
-**License:** CC-0
+##### License: CC-0
 
 
 <a name="loader"/>

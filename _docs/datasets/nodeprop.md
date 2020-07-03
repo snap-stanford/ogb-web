@@ -43,7 +43,7 @@ Specifically, we sort the products according to their sales ranking and use the 
 #### References
 [1] [http://manikvarma.org/downloads/XC/XMLRepository.html](http://manikvarma.org/downloads/XC/XMLRepository.html) <br/>
 [2] Wei-Lin Chiang, Xuanqing Liu, Si Si, Yang Li, Samy Bengio, and Cho-Jui Hsieh. Cluster-GCN: An efficient algorithm for training deep and large graph convolutional networks. In ACM SIGKDD Conference on Knowledge Discovery and Data Mining (KDD), pp. 257–266, 2019. <br/>
-**License:** [Amazon license](https://s3.amazonaws.com/amazon-reviews-pds/license.txt)
+##### License: [Amazon license](https://s3.amazonaws.com/amazon-reviews-pds/license.txt)
 
 
 <a name="ogbn-proteins"/>
@@ -62,7 +62,7 @@ Specifically, we sort the products according to their sales ranking and use the 
 #### References
 [1] Damian Szklarczyk, Annika L Gable, David Lyon, Alexander Junge, Stefan Wyder, Jaime Huerta- Cepas, Milan Simonovic, Nadezhda T Doncheva, John H Morris, Peer Bork, et al. STRING v11: protein–protein association networks with increased coverage, supporting functional discovery in genome-wide experimental datasets. Nucleic Acids Research, 47(D1):D607–D613, 2019. <br/>
 [2] Gene Ontology Consortium. The gene ontology resource: 20 years and still going strong. Nucleic Acids Research, 47(D1):D330–D338, 2018. <br/>
-**License:** CC-0
+##### License: CC-0
 
 
 <a name="ogbn-arxiv"/>
@@ -89,7 +89,7 @@ Specifically, we propose to train on papers published until 2017, validate on th
 #### References
 [1] Kuansan Wang, Zhihong Shen, Chiyuan Huang, Chieh-Han Wu, Yuxiao Dong, and Anshul Kanakia. Microsoft academic graph:  When experts are not enough. Quantitative Science Studies, 1(1):396–413, 2020. <br/>
 [2] Tomas Mikolov, Ilya Sutskever, Kai Chen, Greg S Corrado, and Jeff Dean. Distributed representationsof words and phrases and their compositionality. In Advances in Neural Information Processing Systems (NeurIPS), pp. 3111–3119, 2013. <br/>
-**License:** ODC-BY
+##### License: ODC-BY
 
 
 <a name="ogbn-papers100M"/>
@@ -114,7 +114,7 @@ Specifically, the training nodes (with labels) are all arXiv papers published un
 
 #### References
 [1] Kuansan Wang, Zhihong Shen, Chiyuan Huang, Chieh-Han Wu, Yuxiao Dong, and Anshul Kanakia. Microsoft academic graph:  When experts are not enough. Quantitative Science Studies, 1(1):396–413, 2020. <br/>
-**License:** ODC-BY
+##### License: ODC-BY
 
 <a name="ogbn-mag"/>
 
@@ -134,7 +134,7 @@ In total, there are 349 different venues in `ogbn-mag`, making the task a 349-cl
 
 #### References
 [1] Kuansan Wang, Zhihong Shen, Chiyuan Huang, Chieh-Han Wu, Yuxiao Dong, and Anshul Kanakia. Microsoft academic graph:  When experts are not enough. Quantitative Science Studies, 1(1):396–413, 2020. <br/>
-**License:** ODC-BY
+##### License: ODC-BY
 
 
 
