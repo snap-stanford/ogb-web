@@ -45,7 +45,7 @@ The **bold** method name indicates that the implementation is **official** (by t
 
 | Rank  | Method | PRC-AUC | Contact | References | #Params | Hardware | Date 
 |:----:|:-----:|:------:|:-----:|:-----:|-----:|:-----:|:-----:|
-|  1  |  **DeeperGCN+VirtualN**  | 0.2745 ± 0.0025   | [Guohao Li - DeepGCNs.org](mailto:guohao.li@kaust.edu.sa) | [Paper](https://arxiv.org/abs/2006.07739), [Code](https://github.com/lightaime/deep_gcns_torch/tree/master/examples/ogb) | 5,550,208 | NVIDIA Tesla V100 (32GB GPU) | Jul 12, 2020 |
+|  1  |  **DeeperGCN+virtual node**  | 0.2745 ± 0.0025   | [Guohao Li - DeepGCNs.org](mailto:guohao.li@kaust.edu.sa) | [Paper](https://arxiv.org/abs/2006.07739), [Code](https://github.com/lightaime/deep_gcns_torch/tree/master/examples/ogb) | 5,550,208 | NVIDIA Tesla V100 (32GB GPU) | Jul 12, 2020 |
 |  2  |  **HIMP**  | 0.2739 ± 0.0017   | [Matthias Fey](mailto:matthias.fey@tu-dortmund.de) | [Paper](https://arxiv.org/abs/2006.12179), [Code](https://github.com/rusty1s/himp-gnn) | 3,224,534 | GeForce RTX 2080 (11GB GPU) | Jun 22, 2020 |
 |  3  |  **GIN+virtual node**  | 0.2655 ± 0.0027   | [Weihua Hu -- OGB team](mailto:weihuahu@cs.stanford.edu) | [Paper](https://arxiv.org/abs/1810.00826), [Code](https://github.com/snap-stanford/ogb/tree/master/examples/graphproppred/mol) | 3,374,533 | GeForce RTX 2080 (11GB GPU) | May 1, 2020 |
 |  4  |  GCN+virtual node  | 0.2397 ± 0.0023   | [Weihua Hu -- OGB team](mailto:weihuahu@cs.stanford.edu) | [Paper](https://arxiv.org/abs/1609.02907), [Code](https://github.com/snap-stanford/ogb/tree/master/examples/graphproppred/mol) | 2,017,028 | GeForce RTX 2080 (11GB GPU) | May 1, 2020 |
