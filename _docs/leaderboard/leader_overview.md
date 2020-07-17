@@ -19,7 +19,8 @@ For each dataset, we require you to submit the following information.
 - **Contact**: A person's name and email address to contact about the method and code. 
 - **Code**: The Github repository or directory containining all code to reproduce the result. **A placeholder repository is not allowed.**
     - We recommend using Pytorch.
-    - The authors are responsible for addressing any inquiry about their code. Please make sure results are easily reproducible by giving enough instruction in your repository.
+    - The authors are responsible for addressing any inquiry about their code. 
+    - **Please provide enough instruction so that your results are easily reproducible.**
 - **Paper**: The original paper describing the method (arXiv link is recommended. paper needs not be peer-reviewed). 
 - **#Params**: The number of parameters of your model, which can be calculated by `sum(p.numel() for p in model.parameters())`. If you use multi-stage training (e.g., apply node2vec and then MLP), please sum up all the parameters (both node2vec and MLP parameters).
 - **Hardware**: The hardware (primarily for GPU) used for the experiments, e.g., GeForce RTX 2080 (11GB GPU). If multiple GPUs are used, please specify so.
