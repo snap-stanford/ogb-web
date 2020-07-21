@@ -18,7 +18,7 @@ permalink: /docs/update/
 - To make sure all the leaderboard submissions use the same datasets and evaluators, we have added the package version requirement for each dataset. It can be checked at both dataset pages (e.g., [here](../nodeprop/)) and leaderboard pages (e.g., [here](../leader_nodeprop/)).
 - We highly recommend always using the newest package version. Our data loader only downloads and processes the modified datasets.
 
-##### - **June 26th, 2020**: Package updated to [1.2.1](https://github.com/snap-stanford/ogb/releases/tag/1.2.1).
+##### - **June 26th, 2020**: Package updated to [`1.2.1`](https://github.com/snap-stanford/ogb/releases/tag/1.2.1).
 - **[Bug fix]** The [`ogbn-mag`](../nodeprop/#ogbn-mag) dataset has been changed to exclude duplicated edges (fix [issue](https://github.com/snap-stanford/ogb/issues/40)).
 - **[Bug fix]** The Evaluator for [`ogbl-collab`](../linkprop/#ogbl-collab) and [`ogbl-ddi`](../linkprop/#ogbl-ddi) has been changed to use **Hits@50** and **Hits@20**, respectively.
 - **[Bug fix]** The DGL data loader for the two heterogeneous graph datasets ([`ogbn-mag`](../nodeprop/#ogbn-mag) and [`ogbl-biokg`](../linkprop/#ogbl-biokg)) is fixed (fix [issue](https://github.com/snap-stanford/ogb/issues/36)).
