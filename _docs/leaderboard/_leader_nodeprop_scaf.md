@@ -19,7 +19,7 @@ The **bold** method name indicates that the implementation is **official** (by t
 ---------
 
 ### Leaderboard for [ogbn-products](../nodeprop/#ogbn-products)
-##### The classification accuracy on the test set. The higher, the better.
+##### The classification accuracy on the test and validation sets. The higher, the better.
 
 #### Package: >=1.1.1
 
@@ -31,7 +31,7 @@ The **bold** method name indicates that the implementation is **official** (by t
 ------
 
 ### Leaderboard for [ogbn-proteins](../nodeprop/#ogbn-proteins)
-##### The ROC-AUC score on the test set. The higher, the better.
+##### The ROC-AUC score on the test and validation sets. The higher, the better.
 
 #### Package: >=1.1.1
 
@@ -42,7 +42,7 @@ The **bold** method name indicates that the implementation is **official** (by t
 ---------
 
 ### Leaderboard for [ogbn-arxiv](../nodeprop/#ogbn-arxiv)
-##### The classification accuracy on the test set. The higher, the better.
+##### The classification accuracy on the test and validation sets. The higher, the better.
 
 #### Package: >=1.1.1
 
@@ -54,7 +54,7 @@ The **bold** method name indicates that the implementation is **official** (by t
 ---------
 
 ### Leaderboard for [ogbn-papers100M](../nodeprop/#ogbn-papers100M)
-##### The classification accuracy on the test set. The higher, the better.
+##### The classification accuracy on the test and validation sets. The higher, the better.
 
 #### Package: >=1.2.0
 
@@ -67,7 +67,7 @@ The **bold** method name indicates that the implementation is **official** (by t
 ---------
 
 ### Leaderboard for [ogbn-mag](../nodeprop/#ogbn-mag)
-##### The classification accuracy on the test set. The higher, the better.
+##### The classification accuracy on the test and validation sets. The higher, the better.
 
 #### Package: >=1.2.1
 

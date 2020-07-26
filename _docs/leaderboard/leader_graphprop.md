@@ -17,7 +17,7 @@ The **bold** method name indicates that the implementation is **official** (by t
 -------------
 
 ### Leaderboard for [ogbg-molhiv](../graphprop/#ogbg-mol)
-##### The ROC-AUC score on the test set. The higher, the better. 
+##### The ROC-AUC score on the test and validation sets. The higher, the better. 
 
 #### Package: >=1.1.1
 
@@ -37,7 +37,7 @@ The **bold** method name indicates that the implementation is **official** (by t
 -----------------
 
 ### Leaderboard for [ogbg-molpcba](../graphprop/#ogbg-mol)
-##### The PRC-AUC score on the test set. The higher, the better. 
+##### The PRC-AUC score on the test and validation sets. The higher, the better. 
 
 #### Package: >=1.1.1
 
@@ -56,7 +56,7 @@ The **bold** method name indicates that the implementation is **official** (by t
 ---------------------
 
 ### Leaderboard for [ogbg-ppa](../graphprop/#ogbg-ppa)
-##### The multi-class classification accuracy on the test set. The higher, the better. 
+##### The multi-class classification accuracy on the test and validation sets. The higher, the better. 
 
 #### Package: >=1.1.1
 
@@ -75,7 +75,7 @@ The **bold** method name indicates that the implementation is **official** (by t
 ---------------------
 
 ### Leaderboard for [ogbg-code](../graphprop/#ogbg-code)
-##### The F1 score on the test set. The higher, the better. 
+##### The F1 score on the test and validation sets. The higher, the better. 
 
 #### Package: >=1.2.0
 
