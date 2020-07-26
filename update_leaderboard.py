@@ -42,7 +42,7 @@ def process_submissions(submissions, metric):
     avg_list = []
     std_list = []
     for submission in submissions:
-        splitted = submission['Performance'].split(',')
+        splitted = submission['Test Performance'].split(',')
         avg_list.append(round_float(float(splitted[0])))
         std_list.append(round_float(float(splitted[1])))
 
@@ -56,20 +56,20 @@ def process_submissions(submissions, metric):
         sorted_ind_list = np.argsort(-avg_list)
         
 
-    header = '| Rank  | Method | {} | Contact | References | #Params | Hardware | Date \n'.format(metric)
-    header += '|:----:|:-----:|:------:|:-----:|:-----:|-----:|:-----:|:-----:|\n'
+    header = '| Rank  | Method | Test {} | Validation {} | Contact | References | #Params | Hardware | Date \n'.format(metric, metric)
+    header += '|:----:|:-----:|:------:|:-----:|:-----:|:-----:|-----:|:-----:|:-----:|\n'
 
     current_ranking = 1
 
     for i, ind in enumerate(sorted_ind_list):
         submission = submissions[ind]
         if submission['Official'] == 'Official':
-            header += '|  {}  |  **{}**  | {:.4f} ± {:.4f}   | [{}](mailto:{}) | [Paper]({}), [Code]({}) | {} | {} | {} |\n'.\
-                        format(current_ranking, submission['Method'], avg_list[ind], std_list[ind], submission['Primary contact person'],
+            header += '|  {}  |  **{}**  | {:.4f} ± {:.4f}   | {} |[{}](mailto:{}) | [Paper]({}), [Code]({}) | {} | {} | {} |\n'.\
+                        format(current_ranking, submission['Method'], avg_list[ind], std_list[ind], submission['Validation Performance'], submission['Primary contact person'],
                             submission['Primary contact email'], submission['Paper'], submission['Code'], submission['#Params'], submission['Hardware'], convert_date_to_str(submission['Timestamp']))
         else:
-            header += '|  {}  |  {}  | {:.4f} ± {:.4f}   | [{}](mailto:{}) | [Paper]({}), [Code]({}) | {} | {} | {} |\n'.\
-                        format(current_ranking, submission['Method'], avg_list[ind], std_list[ind], submission['Primary contact person'],
+            header += '|  {}  |  {}  | {:.4f} ± {:.4f}   | {} | [{}](mailto:{}) | [Paper]({}), [Code]({}) | {} | {} | {} |\n'.\
+                        format(current_ranking, submission['Method'], avg_list[ind], std_list[ind], submission['Validation Performance'], submission['Primary contact person'],
                             submission['Primary contact email'], submission['Paper'], submission['Code'], submission['#Params'], submission['Hardware'], convert_date_to_str(submission['Timestamp']))
         
         if i < len(sorted_ind_list) - 1 and avg_list[ind] != avg_list[sorted_ind_list[i+1]]:
@@ -119,6 +119,12 @@ if __name__ == '__main__':
                     submission['Hardware'] = '[Please tell us](mailto:ogb@cs.stanford.edu)'
             except:
                 pass
+
+            if not isinstance(submission['Validation Performance'], str):
+                submission['Validation Performance'] = '[Please tell us](mailto:ogb@cs.stanford.edu)'
+            else:
+                splitted = submission['Validation Performance'].split(',')
+                submission['Validation Performance'] = '{:.4f} ± {:.4f}'.format(round_float(float(splitted[0])),round_float(float(splitted[1])))
 
             dataset2submissions[dataset].append(submission)
 

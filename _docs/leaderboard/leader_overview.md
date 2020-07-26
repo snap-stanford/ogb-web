@@ -15,7 +15,8 @@ For each dataset, we require you to submit the following information.
 - **OGB version**: The OGB version used to conduct the experiments. **Must satisfy the version requirement for each dataset.**
 - **Method**: The name of the method.
 - **Dataset**: The name of an OGB dataset that you use to evaluate the method.
-- **Performance**: Raw performance output by OGB model evaluators, where **average (`torch.mean`) and unbiased standard deviation (`torch.std`) must be taken over 10 different random seeds.** You can either not fix random seeds at all, or use the random seeds from 0 to 9. We highly discourage you to tune the random seeds.
+- **Test Performance**: Raw test performance output by OGB model evaluators, where **average (`torch.mean`) and unbiased standard deviation (`torch.std`) must be taken over 10 different random seeds.** You can either not fix random seeds at all, or use the random seeds from 0 to 9. We highly discourage you to tune the random seeds.
+- **Validation Performance**: Validation performance of the model that is used to report the test performance above.
 - **Contact**: A person's name and email address to contact about the method and code. 
 - **Code**: The Github repository or directory containining all code to reproduce the result. **A placeholder repository is not allowed.**
     - We recommend using Pytorch.
@@ -23,6 +24,7 @@ For each dataset, we require you to submit the following information.
     - **Please provide enough instruction so that your results are easily reproducible.**
 - **Paper**: The original paper describing the method (arXiv link is recommended. paper needs not be peer-reviewed). 
 - **#Params**: The number of parameters of your model, which can be calculated by `sum(p.numel() for p in model.parameters())`. If you use multi-stage training (e.g., apply node2vec and then MLP), please sum up all the parameters (both node2vec and MLP parameters).
+- **Tuned hyper-parameters**: Please kindly disclose all the hyper-parameters you tuned, and how much you tuned for each of them. Please follow the following form: `"lr: [0.001*, 0.01], num_layers: [4*,5], hidden_channels: [128, 256*], dropout: [0*, 0.5], epochs: early-stop*"`, where the asterisks (\*) denote the hyper-parameters you eventually selected (based on validation performance) to report the test performance. This information will not appear in the leaderboard for the time being, but it will be precious for us to improve OGB and reproducibility.
 - **Hardware**: The hardware (primarily for GPU) used for the experiments, e.g., GeForce RTX 2080 (11GB GPU). If multiple GPUs are used, please specify so.
 - **Officiality**: Whether the implementation is **official** (implementation by authors who proposed the method) or **unofficial** (re-implementation of the method by non-authors).
 

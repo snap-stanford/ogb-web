@@ -9,6 +9,11 @@ permalink: /docs/update/
 
 #### **Recent Updates**
 
+##### - **July 25th, 2020**: Leaderboard policy updated.
+In the leaderboard submission, we additionally require reporting **validation performance** and **tuned hyper-parameters**. 
+Our goal is to prevent the development of models that overfit to our test set. More broadly, our aim is to encourage better reproducibility and the fair model selection procedure. Please refer to [here](../leader_overview) for more details. We thank the community for the great suggestion.
+If you have previously made leaderboard submissions, please [tell us](mailto:ogb@cs.stanford.edu) the above two information. 
+
 ##### - **June 27th, 2020**: Leaderboard policy updated.
 1. Additional information is required for leaderboard submission (thanks to the suggestion from [Google group discussion](https://groups.google.com/forum/#!topic/open-graph-benchmark/duLzqer4mUE) and [Github issue](https://github.com/snap-stanford/ogb/issues/39)).
 - We additionally require reporting **hardwares** and **#parameters** in the leaderboard submission. Please refer to [here](../leader_overview) for more details.
