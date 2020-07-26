@@ -11,7 +11,7 @@ permalink: /docs/update/
 
 ##### - **July 25th, 2020**: Leaderboard policy updated.
 In the leaderboard submission, we additionally require reporting **validation performance** and **tuned hyper-parameters**. 
-Our goal is to prevent the development of models that overfit to our test set. More broadly, our aim is to encourage better reproducibility and the fair model selection procedure. Please refer to [here](../leader_overview) for more details. We thank the community for the great suggestion.
+Our goal is to encourage the fair model selection procedure, by preventing the development of models that are over-tuned to our public test sets. Please refer to [here](../leader_overview) for more details. We thank the community for the great suggestion.
 If you have previously made leaderboard submissions, please [tell us](mailto:ogb@cs.stanford.edu) the above two information. 
 
 ##### - **June 27th, 2020**: Leaderboard policy updated.
