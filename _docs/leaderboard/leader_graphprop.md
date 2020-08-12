@@ -44,10 +44,10 @@ The **bold** method name indicates that the implementation is **official** (by t
 
 | Rank  | Method | Test AP | Validation AP | Contact | References | #Params | Hardware | Date 
 |:----:|:-----:|:------:|:-----:|:-----:|:-----:|-----:|:-----:|:-----:|
-|  1  |  **GIN+virtual node**  | 0.2703 ± 0.0023   | 0.2798 ± 0.0025 |[Weihua Hu -- OGB team](mailto:weihuahu@cs.stanford.edu) | [Paper](https://arxiv.org/abs/1810.00826), [Code](https://github.com/snap-stanford/ogb/tree/master/examples/graphproppred/mol) | 3,374,533 | GeForce RTX 2080 (11GB GPU) | May 1, 2020 |
-|  2  |  GCN+virtual node  | 0.2424 ± 0.0034   | 0.2495 ± 0.0042 | [Weihua Hu -- OGB team](mailto:weihuahu@cs.stanford.edu) | [Paper](https://arxiv.org/abs/1609.02907), [Code](https://github.com/snap-stanford/ogb/tree/master/examples/graphproppred/mol) | 2,017,028 | GeForce RTX 2080 (11GB GPU) | May 1, 2020 |
-|  3  |  **GIN**  | 0.2266 ± 0.0028   | 0.2305 ± 0.0027 |[Weihua Hu -- OGB team](mailto:weihuahu@cs.stanford.edu) | [Paper](https://arxiv.org/abs/1810.00826), [Code](https://github.com/snap-stanford/ogb/tree/master/examples/graphproppred/mol) | 1,923,433 | GeForce RTX 2080 (11GB GPU) | May 1, 2020 |
-|  4  |  GCN  | 0.2020 ± 0.0024   | 0.2059 ± 0.0033 | [Weihua Hu -- OGB team](mailto:weihuahu@cs.stanford.edu) | [Paper](https://arxiv.org/abs/1609.02907), [Code](https://github.com/snap-stanford/ogb/tree/master/examples/graphproppred/mol) | 565,928 | GeForce RTX 2080 (11GB GPU) | May 1, 2020 |
+|  1  |  **GIN+virtual node**  | 0.2703 ± 0.0023   | 0.2798 ± 0.0025 |[Weihua Hu -- OGB team](mailto:weihuahu@cs.stanford.edu) | [Paper](https://arxiv.org/abs/1810.00826), [Code](https://github.com/snap-stanford/ogb/tree/master/examples/graphproppred/mol) | 3,374,533 | GeForce RTX 2080 (11GB GPU) | Aug 11, 2020 |
+|  2  |  GCN+virtual node  | 0.2424 ± 0.0034   | 0.2495 ± 0.0042 | [Weihua Hu -- OGB team](mailto:weihuahu@cs.stanford.edu) | [Paper](https://arxiv.org/abs/1609.02907), [Code](https://github.com/snap-stanford/ogb/tree/master/examples/graphproppred/mol) | 2,017,028 | GeForce RTX 2080 (11GB GPU) | Aug 11, 2020 |
+|  3  |  **GIN**  | 0.2266 ± 0.0028   | 0.2305 ± 0.0027 |[Weihua Hu -- OGB team](mailto:weihuahu@cs.stanford.edu) | [Paper](https://arxiv.org/abs/1810.00826), [Code](https://github.com/snap-stanford/ogb/tree/master/examples/graphproppred/mol) | 1,923,433 | GeForce RTX 2080 (11GB GPU) | Aug 11, 2020 |
+|  4  |  GCN  | 0.2020 ± 0.0024   | 0.2059 ± 0.0033 | [Weihua Hu -- OGB team](mailto:weihuahu@cs.stanford.edu) | [Paper](https://arxiv.org/abs/1609.02907), [Code](https://github.com/snap-stanford/ogb/tree/master/examples/graphproppred/mol) | 565,928 | GeForce RTX 2080 (11GB GPU) | Aug 11, 2020 |
 
 
 <a name="ogbg-ppa"/>
