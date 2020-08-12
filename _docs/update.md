@@ -3,13 +3,13 @@ title: Updates from OGB
 permalink: /docs/update/
 ---
 
-#### **Please update your package to [1.2.1](https://github.com/snap-stanford/ogb/releases/tag/1.2.1)** (June 26th, 2020).
+#### **Please update your package to [1.2.2](https://github.com/snap-stanford/ogb/releases/tag/1.2.2)** (Aug 11st, 2020).
 
 -----
 
 #### **Recent Updates**
 
-##### - **Aug 11th, 2020**: Package updated to [`1.2.2`](https://github.com/snap-stanford/ogb/releases/tag/1.2.2).
+##### - **Aug 11st, 2020**: Package updated to [`1.2.2`](https://github.com/snap-stanford/ogb/releases/tag/1.2.2).
 **We changed the evaluation metric of `ogbg-molpcba` from PRC-AUC to Average Precision (AP)**. AP is shown to be more appropriate to summarize the non-convex nature of the Precision Recall Curve [1]. The leaderboard and our paper have been updated accordingly.
 
 [1] Jesse Davis and Mark Goadrich. The relationship between precision-recall and roc curves. InInternational Conference on Machine Learning (ICML), pp. 233–240, 2006.
