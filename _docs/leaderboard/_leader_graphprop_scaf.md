@@ -28,9 +28,10 @@ The **bold** method name indicates that the implementation is **official** (by t
 -----------------
 
 ### Leaderboard for [ogbg-molpcba](../graphprop/#ogbg-mol)
-##### The PRC-AUC score on the test and validation sets. The higher, the better. 
+##### The Average Precision (AP) score on the test and validation sets. The higher, the better. 
+**Note: The evaluation metric has been changed from PRC-AUC (Aug 11, 2020).**
 
-#### Package: >=1.1.1
+#### Package: >=1.2.2
 
 #ogbg-molpcba
 

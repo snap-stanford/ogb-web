@@ -12,7 +12,7 @@ permalink: /docs/graphprop/
 Scale | Name  | Package   | #Graphs   | #Nodes per graph | #Edges per graph\* | #Tasks | Split Type  | Task Type   | Metric                           |
 |:-----:|:-------|----------:|----------:|-------------:|------------------:|:-----------:|:----------:|
 Small | [ogbg-molhiv](#ogbg-mol) | >=1.1.1 | 41,127 | 25.5 | 27.5 | 1   | Scaffold  |  Binary classification | ROC-AUC  |
-Medium | [ogbg-molpcba](#ogbg-mol)| >=1.1.1  | 437,929 | 26.0 | 28.1 | 128   | Scaffold  |  Binary classification | PRC-AUC  |
+Medium | [ogbg-molpcba](#ogbg-mol)| >=1.2.2  | 437,929 | 26.0 | 28.1 | 128   | Scaffold  |  Binary classification | AP  |
 Medium | [ogbg-ppa](#ogbg-ppa) | >=1.1.1 | 158,100 | 243.4 | 2,266.1 | 1  | Species  |  Multi-class classification | Accuracy  |
 Medium | [ogbg-code](#ogbg-code) | >=1.2.0 | 452,741 | 125.2 | 124.2 | 1  | Project  |  Sub-token prediction | F1 score  |
 
@@ -51,7 +51,7 @@ edge_emb = bond_encoder(edge_attr) # edge_attr is input edge feature
 
 **Prediction task:**  The task is to predict the target molecular properties as accurately as possible, where the molecular properties are cast as binary labels, e.g, whether a molecule inhibits HIV virus replication or not. Note that some datasets (e.g., `ogbg-molpcba`) can have multiple tasks, and can contain `nan` that indicates the corresponding label is not assigned to the molecule.
 For evaluation metric, we closely follow [2].
-Specifically, for `ogbg-molhiv`, we use ROC-AUC for evaluation. For `ogbg-molpcba`, as the class balance is extremely skewed (only 1.4% of data is positive) and the dataset contains multiple classification tasks, we use the PRC-AUC averaged over the tasks as the evaluation metric.
+Specifically, for `ogbg-molhiv`, we use ROC-AUC for evaluation. For `ogbg-molpcba`, as the class balance is extremely skewed (only 1.4% of data is positive) and the dataset contains multiple classification tasks, we use the Average Precision (AP) averaged over the tasks as the evaluation metric.
 
 
 **Dataset splitting:**

@@ -20,7 +20,7 @@ dataset2metric['ogbl-citation'] = 'MRR'
 dataset2metric['ogbl-wikikg'] = 'MRR'
 dataset2metric['ogbl-biokg'] = 'MRR'
 dataset2metric['ogbg-molhiv'] = 'ROC-AUC'
-dataset2metric['ogbg-molpcba'] = 'PRC-AUC'
+dataset2metric['ogbg-molpcba'] = 'AP'
 dataset2metric['ogbg-ppa'] = 'Accuracy'
 dataset2metric['ogbg-code'] = 'F1 score'
 
