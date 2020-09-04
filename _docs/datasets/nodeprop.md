@@ -36,7 +36,7 @@ We also prepare a unified [performance evaluator](#eval).
 
 **Dataset splitting:** We consider a more challenging and realistic dataset splitting that differs from the one used in [2]
 Instead of randomly assigning 90% of the nodes for training and 10% of the nodes for testing (without use of a validation set), we use the *sales ranking* (popularity) to split nodes into training/validation/test sets.
-Specifically, we sort the products according to their sales ranking and use the top 10% for training, next top 2% for validation, and the rest for testing. This is a more challenging splitting procedure that closely matches the real-world application where labels are first assigned to important nodes in the network and ML models are subsequently used to make predictions on less important ones.
+Specifically, we sort the products according to their sales ranking and use the top 8% for training, next top 2% for validation, and the rest for testing. This is a more challenging splitting procedure that closely matches the real-world application where labels are first assigned to important nodes in the network and ML models are subsequently used to make predictions on less important ones.
 
 **Note:** A very small number of self-connecting edges are repeated (see [here](https://github.com/snap-stanford/ogb/issues/41)); you may remove them if necessary.
 
