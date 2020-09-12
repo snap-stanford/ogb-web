@@ -3,11 +3,16 @@ title: Updates from OGB
 permalink: /docs/update/
 ---
 
-#### **Please update your package to [1.2.2](https://github.com/snap-stanford/ogb/releases/tag/1.2.2)** (Aug 11st, 2020).
+#### **Please update your package to [1.2.3](https://github.com/snap-stanford/ogb/releases/tag/1.2.3)** (Sep 12nd, 2020).
 
 -----
 
 #### **Recent Updates**
+
+##### - **Sep 12nd, 2020**: Package updated to [`1.2.3`](https://github.com/snap-stanford/ogb/releases/tag/1.2.3).
+- Made `ogbn-papers100M` data loading more tractable by using compressed binary files (fix [issue](https://github.com/snap-stanford/ogb/issues/46)).
+- Introduced [DatasetSaver](https://github.com/snap-stanford/ogb/blob/master/ogb/io/README.md) module for external contributors.
+- Made dataset object compatible to DGL v0.5 (not backward compatible for heterogeneous graph datasets).
 
 ##### - **Aug 11st, 2020**: Package updated to [`1.2.2`](https://github.com/snap-stanford/ogb/releases/tag/1.2.2).
 **We changed the evaluation metric of `ogbg-molpcba` from PRC-AUC to Average Precision (AP)**. AP is shown to be more appropriate to summarize the non-convex nature of the Precision Recall Curve [1]. The leaderboard and our paper have been updated accordingly.

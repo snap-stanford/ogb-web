@@ -25,7 +25,7 @@ You can install OGB using Python package manager pip.
 pip install ogb
 ```
 
-Please check the version is `1.2.2`.
+Please check the version is `1.2.3`.
 ```bash
 python -c "import ogb; print(ogb.__version__)"
 # Otherwise, please update the version by running
@@ -35,11 +35,12 @@ pip install -U ogb
 #### Requirements
  - Python 3.5
  - PyTorch>=1.2
- - DGL>=0.4.1 or torch-geometric>=1.3.1
+ - DGL>=0.5.0 or torch-geometric>=1.6.0
  - Numpy>=1.16.0
  - pandas>=0.24.0
  - urllib3>=1.24.0
  - scikit-learn>=0.20.0
+ - outdated>=0.2.0
 
 ------
 
