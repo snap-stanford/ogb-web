@@ -75,7 +75,7 @@ The **bold** method name indicates that the implementation is **official** (by t
 
 | Rank  | Method | Test Accuracy | Validation Accuracy | Contact | References | #Params | Hardware | Date 
 |:----:|:-----:|:------:|:-----:|:-----:|:-----:|-----:|:-----:|:-----:|
-|  1  |  GAT+normalized adj.  | 0.7365 ± 0.0011   | 0.7504 ± 0.0006 | [Yangkun Wang (DGL Team)](mailto:wyangkun@amazon.com) | [Paper](https://arxiv.org/abs/1710.10903), [Code](https://github.com/dmlc/dgl/tree/master/examples/pytorch/ogb/ogbn-arxiv) | 1,628,440 | p3.8xlarge (15GB GPU) | Sep 17, 2020 |
+|  1  |  GAT+norm.adj.+labels  | 0.7365 ± 0.0011   | 0.7504 ± 0.0006 | [Yangkun Wang (DGL Team)](mailto:wyangkun@amazon.com) | [Paper](https://arxiv.org/abs/1710.10903), [Code](https://github.com/dmlc/dgl/tree/master/examples/pytorch/ogb/ogbn-arxiv) | 1,628,440 | p3.8xlarge (15GB GPU) | Sep 17, 2020 |
 |  2  |  **UniMP**  | 0.7311 ± 0.0020   | 0.7450 ± 0.0005 |[Yunsheng Shi (PGL team)](mailto:shiyunsheng01@baidu.com) | [Paper](https://arxiv.org/pdf/2009.03509.pdf), [Code](https://github.com/PaddlePaddle/PGL/tree/main/ogb_examples/nodeproppred/unimp) | 473,489 | Tesla V100 (32GB) | Sep 8, 2020 |
 |  3  |  GCN+linear+labels  | 0.7306 ± 0.0024   | 0.7442 ± 0.0012 | [Yangkun Wang (DGL Team)](mailto:wyangkun@amazon.com) | [Paper](https://arxiv.org/abs/1609.02907), [Code](https://github.com/dmlc/dgl/tree/master/examples/pytorch/ogb/ogbn-arxiv) | 238,632 | g4dn.12xlarge, T4 (15GB GPU) | Sep 5, 2020 |
 |  4  |  **GCNII**  | 0.7274 ± 0.0016   | [Please tell us](mailto:ogb@cs.stanford.edu) |[Ming Chen](mailto:chennnming@outlook.com) | [Paper](https://arxiv.org/abs/2007.02133), [Code](https://github.com/chennnM/GCNII/tree/master/PyG/ogbn-arxiv) | 2,148,648 | Quadro RTX 8000 (48GB GPU) | Jul 7, 2020 |
