@@ -9,7 +9,7 @@ permalink: /docs/update/
 
 #### **Recent Updates**
 
-##### - **Sep 25th, 2020**: OGB paper accepted to NeurIPS 2020 (spotlight).
+##### - **Sep 25th, 2020**: [OGB paper](https://arxiv.org/abs/2005.00687) accepted to [NeurIPS](https://neurips.cc/) 2020 (spotlight).
 
 ##### - **Sep 12nd, 2020**: Package updated to [`1.2.3`](https://github.com/snap-stanford/ogb/releases/tag/1.2.3).
 - Made `ogbn-papers100M` data loading more tractable by using compressed binary files (fix [issue](https://github.com/snap-stanford/ogb/issues/46)).
