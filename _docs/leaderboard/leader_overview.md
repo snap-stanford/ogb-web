@@ -21,7 +21,7 @@ For each dataset, we require you to submit the following information.
 - **Code**: The Github repository or directory containining all code to reproduce the result. **A placeholder repository is not allowed.**
     - We recommend using Pytorch.
     - The authors are responsible for addressing any inquiry about their code. 
-    - **Please provide enough instruction so that your results are easily reproducible.**
+    - **Please add `README.md` and provide enough instruction to reproduce the result.** Good example is like [this](https://github.com/PaddlePaddle/PGL/tree/main/ogb_examples/nodeproppred/unimp).
 - **Paper**: The original paper describing the method (arXiv link is recommended. paper needs not be peer-reviewed). 
 - **#Params**: The number of parameters of your model, which can be calculated by `sum(p.numel() for p in model.parameters())`. If you use multi-stage training (e.g., apply node2vec and then MLP), please sum up all the parameters (both node2vec and MLP parameters).
 - **Tuned hyper-parameters**: Please kindly disclose all the hyper-parameters you tuned, and how much you tuned for each of them. Please follow the following form: `"lr: [0.001*, 0.01], num_layers: [4*,5], hidden_channels: [128, 256*], dropout: [0*, 0.5], epochs: early-stop*"`, where the asterisks (\*) denote the hyper-parameters you eventually selected (based on validation performance) to report the test performance. This information will not appear in the leaderboard for the time being, but it is important for us to keep the record and encourage the fair model selection.
