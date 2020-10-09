@@ -33,7 +33,7 @@ pip install -U ogb
 ```
 
 #### Requirements
- - Python 3.5
+ - Python>=3.6
  - PyTorch>=1.2
  - DGL>=0.5.0 or torch-geometric>=1.6.0
  - Numpy>=1.16.0
