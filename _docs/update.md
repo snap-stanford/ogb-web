@@ -9,6 +9,9 @@ permalink: /docs/update/
 
 #### **Recent Updates**
 
+##### - **Oct 11st, 2020**: Call for datasets contribution.
+We opened the external dataset contribution from our community. If you have interesting graph datasets, we are looking forward to hearing from you (details [here](https://docs.google.com/document/d/1bSVtHGtSMwu6B3setIrEAnNxI4qBYRoFIClAkk7aOAg/edit))!
+
 ##### - **Sep 25th, 2020**: [OGB paper](https://arxiv.org/abs/2005.00687) accepted to [NeurIPS](https://neurips.cc/).
 
 ##### - **Sep 12nd, 2020**: Package updated to [`1.2.3`](https://github.com/snap-stanford/ogb/releases/tag/1.2.3).

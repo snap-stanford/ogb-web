@@ -1,15 +1,17 @@
 ---
-title: Contact & Team
+title: OGB Team
 permalink: /docs/team/
 ---
 
-OGB is an ongoing effort and we expect the datasets to evolve. Please subscribe to our [google group](https://groups.google.com/forum/#!forum/open-graph-benchmark) to keep up to date with major changes to the datasets and ask us questions. Core development team can be reached at <ogb@cs.stanford.edu>. 
+<!-- OGB Team can be reached at 
+OGB is an ongoing effort and we expect the datasets to evolve. Please subscribe to our [google group](https://groups.google.com/forum/#!forum/open-graph-benchmark) to keep up to date with major changes to the datasets and ask us questions. 
 
-----
+---- -->
 
-### Core Development Team
+### Core Development
 Weihua Hu  <br/> Matthias Fey  <br/> Marinka Zitnik <br/> Yuxiao Dong <br/> Hongyu Ren <br/> Bowen Liu <br/> Michele Catasta <br/> Jure Leskovec
 
+The core development team can be reached at <ogb@cs.stanford.edu>. 
 
 ------
 

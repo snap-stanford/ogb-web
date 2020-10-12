@@ -25,10 +25,19 @@ permalink: /docs/dataset_overview/
             <img src="{{ "/assets/img/dataset_overview.png" | relative_url }}" class="img-responsive">
         </div>
     </div>
-        <p class="lead">
-                OGB is an on-going effort, and we are planning to increase our coverage in the future. 
-            </p>
+    <!-- <p class="lead">
+    <font size="+2"><b>Contributing datasets</b></font>
+    <br/>
+    OGB is an on-going effort and welcomes contribution of datasets from the community.
+    <br/>
+If you are interested, please follow the instructions <a href="https://docs.google.com/document/d/1bSVtHGtSMwu6B3setIrEAnNxI4qBYRoFIClAkk7aOAg/edit?usp=sharing">here</a>. -->
+    <!-- </p> -->
+</div>
+----
 
+### **Contributing datasets**
+<font size="4">OGB is an on-going effort and welcomes contribution of datasets from the community. <br/>
+If you are interested, please follow the instructions <a href="https://docs.google.com/document/d/1bSVtHGtSMwu6B3setIrEAnNxI4qBYRoFIClAkk7aOAg/edit?usp=sharing">here</a>.  </font>
 
 <!-- #### [**Node Property Prediction**](../nodeprop/)
 The task is to predict properties of single nodes.
