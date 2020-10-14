@@ -1,5 +1,5 @@
 ---
-title: Rules for Experimental Protocol
+title: Rules for the Experimental Protocol
 permalink: /docs/leader_rules/
 ---
 
