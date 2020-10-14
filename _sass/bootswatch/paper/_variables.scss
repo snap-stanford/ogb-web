@@ -13,7 +13,7 @@ $gray-darker:            lighten($gray-base, 13.5%) !default; // #222
 $gray-dark:              #212121 !default;
 $gray:                   #666 !default;
 $gray-light:             #bbb !default;
-$gray-lighter:           lighten($gray-base, 93.5%) !default; // #eee
+$gray-lighter:           lighten($gray-base, 90.0%) !default; // #eee
 
 $brand-primary:         #2196F3 !default;
 $brand-success:         #4CAF50 !default;
@@ -242,11 +242,11 @@ $dropdown-fallback-border:       #ccc !default;
 $dropdown-divider-bg:            #e5e5e5 !default;
 
 //** Dropdown link text color.
-$dropdown-link-color:            $text-color !default;
+$dropdown-link-color:            $gray !default;
 //** Hover color for dropdown links.
-$dropdown-link-hover-color:      darken($gray-dark, 5%) !default;
+$dropdown-link-hover-color:      darken($gray, 5%) !default;
 //** Hover background for dropdown links.
-$dropdown-link-hover-bg:         $gray-light !default;
+$dropdown-link-hover-bg:         $gray-lighter !default;
 
 //** Active dropdown menu item text color.
 $dropdown-link-active-color:     $component-active-color !default;
