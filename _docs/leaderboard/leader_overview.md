@@ -3,7 +3,8 @@ title: Leaderboards
 permalink: /docs/leader_overview/
 ---
 
-Public leaderboards allow researchers to keep track of state-of-the-art methods and encourage reproducible research.
+Public leaderboards allow researchers to keep track of state-of-the-art methods and encourage reproducible research. <br/>
+**Important**: Please make sure your experimental protocol follows the rules [here](../leader_rules).
 
 -----
 

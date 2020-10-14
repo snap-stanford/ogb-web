@@ -1,0 +1,27 @@
+---
+title: Rules for Leaderboards
+permalink: /docs/leader_rules/
+---
+
+----
+
+### Preamble
+Here we present the rules of how we expect the community to use train/validation/test labels for the leaderboard submissions. 
+The rules are designed to enforce the standardized experimental protocol for easy and direct model comparison. We acknowledge that these rules are by no means perfect in evaluating many advanced models (e.g., time-series models, and models that take explicit advantage of validation labels). 
+We encourage the community to explore these advanced models by setting up their own experimental protocol.
+Besides, we are working towards datasets with hidden test sets so that models can be evaluated in a way closer to their realistic use case. We will keep the community updated.
+
+---
+### Rules
+
+General rules are as follows.
+- **Training labels**: Training model parameters (can be used in whatever ways, e.g., for gradient-descent, architecture search, model input). <br/>
+- **Validation labels**: Meant for standard hyper-parameters tuning (not allowed: gradient-based search, super exhaustive architecture search, use as model input). <br/>
+- **Test labels**: Final model evaluation.
+
+The only exception is the `ogbl-collab` dataset. For this dataset only, we allow models to utilize validation labels both for training and as input, **after all the model hyper-parameters are fixed using the validation labels.**
+
+##### Remarks
+- For link property prediction datasets (`ogbl-*`), "labels" should be interpreted as "edges."
+- Some ML models might want to utilize validation labels more directly. For the sake of leaderboard submissions, we enforce the above rules, i.e., do not allow the validation labels to be used beyond the standard hyper-parameter tuning. See our rationale and discussion [here](https://github.com/snap-stanford/ogb/issues/73#issuecomment-707258886).
+

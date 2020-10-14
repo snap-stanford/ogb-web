@@ -36,8 +36,10 @@ If you are interested, please follow the instructions <a href="https://docs.goog
 ----
 
 ### **Contributing datasets**
-<font size="4">OGB is an on-going community-driven effort and welcomes contribution of datasets from the community. <br/>
+<p class="lead">
+<font size="5">OGB is an on-going community-driven effort and welcomes contribution of datasets from the community. <br/>
 If you are interested, please follow the instructions <a href="https://docs.google.com/document/d/1bSVtHGtSMwu6B3setIrEAnNxI4qBYRoFIClAkk7aOAg/edit?usp=sharing">here</a>.  </font>
+</p>
 
 <!-- #### [**Node Property Prediction**](../nodeprop/)
 The task is to predict properties of single nodes.
