@@ -1,5 +1,5 @@
 ---
-title: Rules for Leaderboards
+title: Rules for Experimental Protocol
 permalink: /docs/leader_rules/
 ---
 
