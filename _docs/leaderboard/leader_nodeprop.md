@@ -143,7 +143,7 @@ The **bold** method name indicates that the implementation is **official** (by t
 
 | Rank  | Method | Test Accuracy | Validation Accuracy | Contact | References | #Params | Hardware | Date 
 |:----:|:-----:|:------:|:-----:|:-----:|:-----:|-----:|:-----:|:-----:|
-|  1  |  **HGT (LADIES Sample)**  | 0.5007 ± 0.0043   | [Please tell us](mailto:ogb@cs.stanford.edu) |[Ziniu Hu](mailto:bull@cs.ucla.edu) | [Paper](https://arxiv.org/abs/2003.01332), [Code](https://github.com/acbull/pyHGT/tree/master/ogbn-mag) | 21,173,389 | Tesla K80 (12GB GPU) | Jul 7, 2020 |
+|  1  |  **HGT (LADIES Sample)**  | 0.5007 ± 0.0043   | 0.5124 ± 0.0039 |[Ziniu Hu](mailto:bull@cs.ucla.edu) | [Paper](https://arxiv.org/abs/2003.01332), [Code](https://github.com/acbull/pyHGT/tree/master/ogbn-mag) | 21,173,389 | Tesla K80 (12GB GPU) | Jul 7, 2020 |
 |  2  |  GraphSAINT (R-GCN aggr)  | 0.4751 ± 0.0022   | 0.4837 ± 0.0026 | [Matthias Fey -- OGB team](mailto:matthias.fey@tu-dortmund.de) | [Paper](https://arxiv.org/abs/1907.04931), [Code](https://github.com/snap-stanford/ogb/tree/master/examples/nodeproppred/mag) | 154,366,772 | GeForce RTX 2080 (11GB GPU) | Jun 26, 2020 |
 |  3  |  **R-GCN+FLAG**  | 0.4737 ± 0.0048   | 0.4835 ± 0.0036 |[Kezhi Kong](mailto:kong@cs.umd.edu) | [Paper](https://arxiv.org/abs/2010.09891), [Code](https://github.com/devnkong/FLAG) | 154,366,772 | GeForce RTX 2080 Ti (11GB GPU) | Oct 21, 2020 |
 |  4  |  NeighborSampling (R-GCN aggr)  | 0.4678 ± 0.0067   | 0.4761 ± 0.0068 | [Matthias Fey -- OGB team](mailto:matthias.fey@tu-dortmund.de) | [Paper](https://arxiv.org/abs/1706.02216), [Code](https://github.com/snap-stanford/ogb/tree/master/examples/nodeproppred/mag) | 154,366,772 | GeForce RTX 2080 (11GB GPU) | Jun 26, 2020 |
