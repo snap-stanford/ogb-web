@@ -75,6 +75,7 @@ Specifically, we sort the products according to their sales ranking and use the 
 The `ogbn-arxiv` dataset is a directed graph, representing the citation network between all Computer Science (CS) arXiv papers indexed by MAG [1]. Each node is an arXiv paper and each directed edge indicates that one paper cites another one. 
 Each paper comes with a 128-dimensional feature vector obtained by averaging the embeddings of words in its title and abstract. 
 The embeddings of individual words are computed by running the skip-gram model [2] over the MAG corpus. 
+We also provide the mapping from MAG paper IDs into the raw texts of titles and abstracts [here](https://snap.stanford.edu/ogb/data/misc/ogbn_arxiv/titleabs.tsv.gz).
 In addition, all papers are also associated with the year that the corresponding paper was published. 
 
 **Prediction task:** The task is to predict the 40 subject areas of arXiv CS papers, e.g., cs.AI, cs.LG, and cs.OS, 
