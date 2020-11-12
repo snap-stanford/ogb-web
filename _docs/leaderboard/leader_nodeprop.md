@@ -87,7 +87,7 @@ The **bold** method name indicates that the implementation is **official** (by t
 
 | Rank  | Method | Test Accuracy | Validation Accuracy | Contact | References | #Params | Hardware | Date 
 |:----:|:-----:|:------:|:-----:|:-----:|:-----:|-----:|:-----:|:-----:|
-|  1  |  GAT+norm. adj.+label reuse  | 0.7399 ± 0.0010   | 0.7518 ± 0.0004 | [Yangkun Wang (DGL Team)](mailto:espylapiza@gmail.com) | [Paper](https://arxiv.org/abs/1710.10903), [Code](https://github.com/Espylapiza/dgl/tree/master/examples/pytorch/ogb/ogbn-arxiv) | 1,441,580 | p3.8xlarge (15GB GPU) | Oct 29, 2020 |
+|  1  |  GAT+norm. adj.+label reuse  | 0.7391 ± 0.0012   | 0.7516 ± 0.0008 | [Yangkun Wang (DGL Team)](mailto:espylapiza@gmail.com) | [Paper](https://arxiv.org/abs/1710.10903), [Code](https://github.com/Espylapiza/dgl/tree/master/examples/pytorch/ogb/ogbn-arxiv) | 1,441,580 | p3.8xlarge (15GB GPU) | Nov 11, 2020 |
 |  2  |  **GAT + C&S**  | 0.7386 ± 0.0014   | 0.7484 ± 0.0007 |[Horace He (Cornell)](mailto:hh498@cornell.edu) | [Paper](https://arxiv.org/abs/2010.13993), [Code](https://github.com/Chillee/CorrectAndSmooth) | 1,567,000 | GeForce RTX 2080 (11GB GPU) | Oct 27, 2020 |
 |  3  |  **UniMP_large**  | 0.7379 ± 0.0014   | 0.7475 ± 0.0008 |[Yunsheng Shi (PGL team)](mailto:shiyunsheng01@baidu.com) | [Paper](https://arxiv.org/pdf/2009.03509.pdf), [Code](https://github.com/PaddlePaddle/PGL/tree/main/ogb_examples/nodeproppred/unimp) | 1,162,515 | Tesla V100 (32GB) | Sep 25, 2020 |
 |  4  |  **GAT+FLAG**  | 0.7371 ± 0.0013   | 0.7496 ± 0.0010 |[Kezhi Kong](mailto:kong@cs.umd.edu) | [Paper](https://arxiv.org/abs/2010.09891), [Code](https://github.com/devnkong/FLAG) | 1,628,440 | GeForce RTX 2080 Ti (11GB GPU) | Oct 20, 2020 |
