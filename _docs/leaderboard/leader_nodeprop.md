@@ -48,7 +48,8 @@ The **bold** method name indicates that the implementation is **official** (by t
 |  20  |  Label Propagation  | 0.7434 ± 0.0000   | 0.9091 ± 0.0000 | [Horace He (Cornell)](mailto:hh498@cornell.edu) | [Paper](http://pages.cs.wisc.edu/~jerryzhu/pub/thesis.pdf), [Code](https://github.com/Chillee/CorrectAndSmoothOGB) | 0 | GeForce RTX 2080 (11GB GPU) | Oct 3, 2020 |
 |  21  |  **GraphZoom (Node2vec)**  | 0.7406 ± 0.0026   | 0.9066 ± 0.0011 |[Xiuyu Li - GraphZoom](mailto:xl289@cornell.edu) | [Paper](https://openreview.net/forum?id=r1lGO0EKDH), [Code](https://github.com/cornell-zhang/GraphZoom/tree/master/ogb/ogbn-products) | 120,251,183 | NVIDIA TITAN RTX (24GB GPU) | Oct 6, 2020 |
 |  22  |  Node2vec  | 0.7249 ± 0.0010   | 0.9032 ± 0.0006 | [Matthias Fey -- OGB team](mailto:matthias.fey@tu-dortmund.de) | [Paper](https://arxiv.org/abs/1607.00653), [Code](https://github.com/snap-stanford/ogb/tree/master/examples/nodeproppred/products) | 313,612,207 | GeForce RTX 2080 (11GB GPU) | Jun 10, 2020 |
-|  23  |  MLP  | 0.6106 ± 0.0008   | 0.7554 ± 0.0014 | [Matthias Fey -- OGB team](mailto:matthias.fey@tu-dortmund.de) | [Paper](https://arxiv.org/abs/2005.00687), [Code](https://github.com/snap-stanford/ogb/tree/master/examples/nodeproppred/products) | 103,727 | GeForce RTX 2080 (11GB GPU) | Jun 10, 2020 |
+|  23  |  **MLP+FLAG**  | 0.6241 ± 0.0016   | 0.7688 ± 0.0014 |[Kezhi Kong](mailto:kong@cs.umd.edu) | [Paper](https://arxiv.org/abs/2010.09891), [Code](https://github.com/devnkong/FLAG) | 103,727 | GeForce RTX 2080 Ti (11GB GPU) | Nov 17, 2020 |
+|  24  |  MLP  | 0.6106 ± 0.0008   | 0.7554 ± 0.0014 | [Matthias Fey -- OGB team](mailto:matthias.fey@tu-dortmund.de) | [Paper](https://arxiv.org/abs/2005.00687), [Code](https://github.com/snap-stanford/ogb/tree/master/examples/nodeproppred/products) | 103,727 | GeForce RTX 2080 (11GB GPU) | Jun 10, 2020 |
 
 
 <a name="ogbn-proteins"/>
