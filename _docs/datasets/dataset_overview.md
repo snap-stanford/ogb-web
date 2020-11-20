@@ -32,7 +32,7 @@ permalink: /docs/dataset_overview/
 ### **Contributing datasets**
 <p class="lead">
 <font size="5">OGB is an on-going community-driven effort and welcomes contribution of datasets from the community. <br/>
-If you are interested, please follow the instructions <a href="https://docs.google.com/document/d/1bSVtHGtSMwu6B3setIrEAnNxI4qBYRoFIClAkk7aOAg/edit?usp=sharing">here</a>.  </font>
+If you are interested, please follow the instructions <a href="https://docs.google.com/document/d/e/2PACX-1vS1hBTYLONRwAU9UxK42USTuRKrt_Yk4H0EhpLvJC_eOrGxbJUtrzDqlIStAFpnwZt2N28B3MuSxgqj/pub">here</a>.  </font>
 </p>
 
 
