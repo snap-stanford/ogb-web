@@ -63,7 +63,7 @@ The **bold** method name indicates that the implementation is **official** (by t
 
 | Rank  | Method | Test ROC-AUC | Validation ROC-AUC | Contact | References | #Params | Hardware | Date 
 |:----:|:-----:|:------:|:-----:|:-----:|:-----:|-----:|:-----:|:-----:|
-|  1  |  **unimp_cross_feat**  | 0.8691 ± 0.0018   | 0.9258 ± 0.0009 |[Yelrose](mailto:huangzhengjie@baidu.com) | [Paper](https://arxiv.org/pdf/2009.03509.pdf), [Code](https://github.com/PaddlePaddle/PGL/tree/main/ogb_examples/nodeproppred/ogbn-proteins/unimp_cross_feat) | 1,959,984 | Tesla V100 (32GB) | Nov 24, 2020 |
+|  1  |  **UniMP+CrossEdgeFeat**  | 0.8691 ± 0.0018   | 0.9258 ± 0.0009 |[Yelrose (PGL Team)](mailto:huangzhengjie@baidu.com) | [Paper](https://arxiv.org/pdf/2009.03509.pdf), [Code](https://github.com/PaddlePaddle/PGL/tree/main/ogb_examples/nodeproppred/ogbn-proteins/unimp_cross_feat) | 1,959,984 | Tesla V100 (32GB) | Nov 24, 2020 |
 |  2  |  GAT  | 0.8682 ± 0.0021   | 0.9194 ± 0.0003 | [Yangkun Wang (DGL Team)](mailto:espylapiza@gmail.com) | [Paper](https://arxiv.org/abs/1710.10903), [Code](https://github.com/Espylapiza/dgl/tree/master/examples/pytorch/ogb/ogbn-proteins) | 2,475,232 | p3.8xlarge (15GB GPU) | Nov 6, 2020 |
 |  3  |  **UniMP**  | 0.8642 ± 0.0008   | 0.9175 ± 0.0006 |[Yunsheng Shi (PGL team)](mailto:shiyunsheng01@baidu.com) | [Paper](https://arxiv.org/pdf/2009.03509.pdf), [Code](https://github.com/PaddlePaddle/PGL/tree/main/ogb_examples/nodeproppred/unimp) | 1,909,104 | Tesla V100 (32GB) | Sep 8, 2020 |
 |  4  |  **DeeperGCN+FLAG**  | 0.8596 ± 0.0027   | 0.9132 ± 0.0022 |[Kezhi Kong](mailto:kong@cs.umd.edu) | [Paper](https://arxiv.org/abs/2010.09891), [Code](https://github.com/devnkong/FLAG) | 2,374,568 | GeForce RTX 2080 Ti (11GB GPU) | Oct 20, 2020 |
