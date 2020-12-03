@@ -12,7 +12,7 @@ permalink: /docs/update/
 ###### - **Oct 13rd, 2020**: [Rules](../leader_rules) for the experimental protocol clarified.
 
 ###### - **Oct 11st, 2020**: Call for dataset contribution.
-We opened the dataset contribution from our community. If you have interesting graph datasets, we are looking forward to hearing from you (details [here](https://docs.google.com/document/d/1bSVtHGtSMwu6B3setIrEAnNxI4qBYRoFIClAkk7aOAg/edit?usp=sharing))!
+We opened the dataset contribution from our community. If you have interesting graph datasets, we are looking forward to hearing from you (details [here](https://docs.google.com/document/d/e/2PACX-1vS1hBTYLONRwAU9UxK42USTuRKrt_Yk4H0EhpLvJC_eOrGxbJUtrzDqlIStAFpnwZt2N28B3MuSxgqj/pub))!
 
 ###### - **Sep 25th, 2020**: [OGB paper](https://arxiv.org/abs/2005.00687) accepted to [NeurIPS](https://neurips.cc/).
 
