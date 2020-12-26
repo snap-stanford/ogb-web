@@ -3,9 +3,9 @@ import numpy as np
 import os
 
 nodeprop_dataset_list = ['ogbn-products', 'ogbn-proteins', 'ogbn-arxiv', 'ogbn-papers100M', 'ogbn-mag']
-linkprop_dataset_list = ['ogbl-ppa', 'ogbl-collab', 'ogbl-ddi', 'ogbl-citation', 'ogbl-wikikg', 'ogbl-biokg']
+linkprop_dataset_list = ['ogbl-ppa', 'ogbl-collab', 'ogbl-ddi', 'ogbl-citation2', 'ogbl-wikikg2', 'ogbl-biokg']
 graphprop_mol_dataset_list = ['ogbg-molhiv', 'ogbg-molpcba', 'ogbg-ppa', 'ogbg-code']
-graphprop_other_dataset_list = []
+deprecated_dataset_list = ['ogbl-wikikg', 'ogbl-citation']
 
 dataset2metric = {}
 dataset2metric['ogbn-products'] = 'Accuracy'
@@ -16,7 +16,9 @@ dataset2metric['ogbn-mag'] = 'Accuracy'
 dataset2metric['ogbl-ppa'] = 'Hits@100'
 dataset2metric['ogbl-collab'] = 'Hits@50'
 dataset2metric['ogbl-ddi'] = 'Hits@20'
+dataset2metric['ogbl-citation2'] = 'MRR'
 dataset2metric['ogbl-citation'] = 'MRR'
+dataset2metric['ogbl-wikikg2'] = 'MRR'
 dataset2metric['ogbl-wikikg'] = 'MRR'
 dataset2metric['ogbl-biokg'] = 'MRR'
 dataset2metric['ogbg-molhiv'] = 'ROC-AUC'
@@ -39,41 +41,44 @@ def convert_date_to_str(date):
     return '{} {}, {}'.format(month, day, year)
 
 def process_submissions(submissions, metric):
-    avg_list = []
-    std_list = []
-    for submission in submissions:
-        splitted = submission['Test Performance'].split(',')
-        avg_list.append(round_float(float(splitted[0])))
-        std_list.append(round_float(float(splitted[1])))
 
-    avg_list = np.array(avg_list)
+    if len(submissions) > 0:
+        avg_list = []
+        std_list = []
+        for submission in submissions:
+            splitted = submission['Test Performance'].split(',')
+            avg_list.append(round_float(float(splitted[0])))
+            std_list.append(round_float(float(splitted[1])))
 
-    if metric == 'RMSE':
-        ## from small to large
-        sorted_ind_list = np.argsort(avg_list)
-    else:
-        ## from large to small
-        sorted_ind_list = np.argsort(-avg_list)
-        
+        avg_list = np.array(avg_list)
 
-    header = '| Rank  | Method | Test {} | Validation {} | Contact | References | #Params | Hardware | Date \n'.format(metric, metric)
-    header += '|:----:|:-----:|:------:|:-----:|:-----:|:-----:|-----:|:-----:|:-----:|\n'
-
-    current_ranking = 1
-
-    for i, ind in enumerate(sorted_ind_list):
-        submission = submissions[ind]
-        if submission['Official'] == 'Official':
-            header += '|  {}  |  **{}**  | {:.4f} ± {:.4f}   | {} |[{}](mailto:{}) | [Paper]({}), [Code]({}) | {} | {} | {} |\n'.\
-                        format(current_ranking, submission['Method'], avg_list[ind], std_list[ind], submission['Validation Performance'], submission['Primary contact person'],
-                            submission['Primary contact email'], submission['Paper'], submission['Code'], submission['#Params'], submission['Hardware'], convert_date_to_str(submission['Timestamp']))
+        if metric == 'RMSE':
+            ## from small to large
+            sorted_ind_list = np.argsort(avg_list)
         else:
-            header += '|  {}  |  {}  | {:.4f} ± {:.4f}   | {} | [{}](mailto:{}) | [Paper]({}), [Code]({}) | {} | {} | {} |\n'.\
-                        format(current_ranking, submission['Method'], avg_list[ind], std_list[ind], submission['Validation Performance'], submission['Primary contact person'],
-                            submission['Primary contact email'], submission['Paper'], submission['Code'], submission['#Params'], submission['Hardware'], convert_date_to_str(submission['Timestamp']))
-        
-        if i < len(sorted_ind_list) - 1 and avg_list[ind] != avg_list[sorted_ind_list[i+1]]:
-            current_ranking += 1
+            ## from large to small
+            sorted_ind_list = np.argsort(-avg_list)
+            
+        header = '| Rank  | Method | Test {} | Validation {} | Contact | References | #Params | Hardware | Date \n'.format(metric, metric)
+        header += '|:----:|:-----:|:------:|:-----:|:-----:|:-----:|-----:|:-----:|:-----:|\n'
+
+        current_ranking = 1
+
+        for i, ind in enumerate(sorted_ind_list):
+            submission = submissions[ind]
+            if submission['Official'] == 'Official':
+                header += '|  {}  |  **{}**  | {:.4f} ± {:.4f}   | {} |[{}](mailto:{}) | [Paper]({}), [Code]({}) | {} | {} | {} |\n'.\
+                            format(current_ranking, submission['Method'], avg_list[ind], std_list[ind], submission['Validation Performance'], submission['Primary contact person'],
+                                submission['Primary contact email'], submission['Paper'], submission['Code'], submission['#Params'], submission['Hardware'], convert_date_to_str(submission['Timestamp']))
+            else:
+                header += '|  {}  |  {}  | {:.4f} ± {:.4f}   | {} | [{}](mailto:{}) | [Paper]({}), [Code]({}) | {} | {} | {} |\n'.\
+                            format(current_ranking, submission['Method'], avg_list[ind], std_list[ind], submission['Validation Performance'], submission['Primary contact person'],
+                                submission['Primary contact email'], submission['Paper'], submission['Code'], submission['#Params'], submission['Hardware'], convert_date_to_str(submission['Timestamp']))
+            
+            if i < len(sorted_ind_list) - 1 and avg_list[ind] != avg_list[sorted_ind_list[i+1]]:
+                current_ranking += 1
+    else:
+        header = '| Rank  | Method | Test {} | Validation {} | Contact | References | #Params | Hardware | Date \n'.format(metric, metric)
 
     return header
 
@@ -138,6 +143,7 @@ if __name__ == '__main__':
     insert_leaderboard('_leader_graphprop_scaf.md', 'leader_graphprop.md', dataset2leaderboard)
     insert_leaderboard('_leader_nodeprop_scaf.md', 'leader_nodeprop.md', dataset2leaderboard)
     insert_leaderboard('_leader_linkprop_scaf.md', 'leader_linkprop.md', dataset2leaderboard)
+    insert_leaderboard('_leader_deprecated_scaf.md', 'leader_deprecated.md', dataset2leaderboard)
 
 
     ### make leaderboards for graph property prediction. Currently, we only have molecule data.

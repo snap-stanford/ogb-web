@@ -14,8 +14,8 @@ Scale | Name      | Package | #Nodes | #Edges\* |  Split Type   | Task Type     
 Medium | [ogbl-ppa](#ogbl-ppa)      | >=1.1.1   | 576,289 |    30,326,273 |    Throughput  | Link prediction   |     Hits@100              |
 Small | [ogbl-collab](#ogbl-collab)  | >=1.2.1       | 235,868 |    1,285,465 |     Time  | Link prediction   |     Hits@50              |
 Small | [ogbl-ddi](#ogbl-ddi)       | >=1.2.1  | 4,267 |    1,334,889 |     Protein target  | Link prediction   |     Hits@20              |
-Medium | [ogbl-citation](#ogbl-citation) | >=1.1.1       | 2,927,963 |    30,561,187 |     Time  | Link prediction   |     MRR      |
-Medium | [ogbl-wikikg](#ogbl-wikikg)  | >=1.1.1       | 2,500,604 |    17,137,181 |     Time  | KG completion   |    MRR     |
+Medium | [ogbl-citation2](#ogbl-citation2) | >=1.1.1       | 2,927,963 |    30,561,187 |     Time  | Link prediction   |     MRR      |
+Medium | [ogbl-wikikg2](#ogbl-wikikg2)  | >=1.1.1       | 2,500,604 |    17,137,181 |     Time  | KG completion   |    MRR     |
 Small | [ogbl-biokg](#ogbl-biokg)   | >=1.2.0      | 93,773 |  5,088,434 |  Random  | KG completion   |    MRR     |
 
 **Note:** For undirected graphs, the loaded graphs will have the doubled number of edges because we add the bidirectional edges automatically.
@@ -90,13 +90,13 @@ The graph can be viewed as a dynamic multi-graph since there can be multiple edg
 ##### License: CC-0
 
 
-<a name="ogbl-citation"/>
+<a name="ogbl-citation2"/>
 
 ----------
 
-### Dataset `ogbl-citation` ([Leaderboard](../leader_linkprop/#ogbl-citation)):
+### Dataset `ogbl-citation2` ([Leaderboard](../leader_linkprop/#ogbl-citation2)):
 
-**Graph:** The `ogbl-citation` dataset is a directed graph, representing the citation network between a subset of papers extracted from MAG [1]. 
+**Graph:** The `ogbl-citation2` dataset is a directed graph, representing the citation network between a subset of papers extracted from MAG [1]. 
 Dach node is a paper with 128-dimensional word2vec features [2] that summarizes its title and abstract, and each directed edge indicates that one paper cites another. All nodes also come with meta-information indicating the year the corresponding paper was published. 
 
 
@@ -107,6 +107,10 @@ The evaluation metric is Mean Reciprocal Rank (MRR), where the reciprocal rank o
 
 **Dataset splitting:** We split the edges according to time, in order to simulate a realistic application in citation recommendation (e.g., a user is writing a new paper and has already cited several existing papers, but wants to be recommended additional references). To this end, we use the most recent papers (those published in 2019) as the source papers for which we want to recommend the references. For each source paper, we drop *two* papers from its references---the resulting two dropped edges (pointing from the source paper to the dropped papers) are used respectively for validation and testing. All the rest of the edges are used for training.
 
+**Previous version:**
+Previous version `ogbl-citation` was deprecated as of Dec 25th, 2020 due to a bug in negative samples of validation/test sets (many nodes are not sampled as negative samples). The issue is resolved in `ogbl-citation2`.
+The deprecated leaderboard of `ogbl-citation` can be found [here](../leader_deprecated/#ogbl-citation).
+
 
 #### References
 
@@ -114,13 +118,13 @@ The evaluation metric is Mean Reciprocal Rank (MRR), where the reciprocal rank o
 [2] Tomas Mikolov, Ilya Sutskever, Kai Chen, Greg S Corrado, and Jeff Dean. Distributed representationsof words and phrases and their compositionality. In Advances in Neural Information Processing Systems (NeurIPS), pp. 3111–3119, 2013. <br/>
 ##### License: ODC-BY
 
-<a name="ogbl-wikikg"/>
+<a name="ogbl-wikikg2"/>
 
 ----------
 
-### Dataset `ogbl-wikikg` ([Leaderboard](../leader_linkprop/#ogbl-wikikg)):
+### Dataset `ogbl-wikikg2` ([Leaderboard](../leader_linkprop/#ogbl-wikikg2)):
 
-**Graph:** The `ogbl-wikikg` dataset is a Knowledge Graph (KG) extracted from the Wikidata knowledge base [1]. It contains a set of triplet edges (`head`, `relation`, `tail`), capturing the different types of relations between entities in the world, e.g., (Canada, citizen, Hinton). We retrieve all the relational statements in Wikidata and filter out rare entities. Our KG contains 2,500,604 entities and 535 relation types.
+**Graph:** The `ogbl-wikikg2` dataset is a Knowledge Graph (KG) extracted from the Wikidata knowledge base [1]. It contains a set of triplet edges (`head`, `relation`, `tail`), capturing the different types of relations between entities in the world, e.g., (Canada, citizen, Hinton). We retrieve all the relational statements in Wikidata and filter out rare entities. Our KG contains 2,500,604 entities and 535 relation types.
 
 
 **Prediction task:** The task is to predict new triplet edges given the training edges. The evaluation metric follows the standard filtered metric widely used in KG. Specifically, we corrupt each test triplet edges by replacing its `head` or `tail` with randomly-sampled 1,000 negative entities (500 for `head` and 500 for `tail`), while ensuring the resulting triplets do not appear in KG. The goal is to rank the true `head` (or `tail`) entities higher than the negative entities, which is measured by Mean Reciprocal Rank (MRR).
@@ -129,6 +133,10 @@ The evaluation metric is Mean Reciprocal Rank (MRR), where the reciprocal rank o
 Specifically, we downloaded Wikidata at three different time stamps [2] \(May, August, and November of 2015\), and construct three KGs, where we only retain entities and relation types that appear in the earliest May KG.
 We use the triplets in the May KG for training, and use the additional triplets in the August and November KGs for validation and test, respectively.
 Note that our dataset split is different from the existing Wikidata KG dataset that adopts conventional random split [3], which does not reflect the practical usage.
+
+**Previous version:**
+Previous version `ogbl-wikikg` was deprecated as of Dec 25th, 2020 due to a bug in negative samples of validation/test sets (many nodes are not sampled as negative samples). The issue is resolved in `ogbl-wikikg2`.
+The deprecated leaderboard of `ogbl-wikikg` can be found [here](../leader_deprecated/#ogbl-wikikg).
 
 
 #### References
@@ -153,7 +161,7 @@ On the biomedical side, the dataset allows us to get better insights into human 
 This is because the `ogbl-biokg` dataset involves heterogeneous interactions that span from the molecular scale (e.g., protein-protein interactions within a cell) to whole populations (e.g., reports of unwanted side effects experienced by patients in a particular country). Further, triplets in the KG come from sources with a variety of confidence levels, including experimental readouts, human-curated annotations, and automatically extracted metadata. 
 
 
-**Prediction task:** The task is to predict new triplets given the training triplets. The evaluation protocol is exactly the same as [`ogbl-wikikg`](#ogbl-wikikg), except that here we only consider ranking against *entities of the same type*. For instance, when corrupting head entities of the protein type, we only consider negative protein entities.
+**Prediction task:** The task is to predict new triplets given the training triplets. The evaluation protocol is exactly the same as [`ogbl-wikikg2`](#ogbl-wikikg2), except that here we only consider ranking against *entities of the same type*. For instance, when corrupting head entities of the protein type, we only consider negative protein entities.
 
 **Dataset splitting:** For this dataset, we adopt a random split. While splitting the triplets according to time is an attractive alternative, we note that it is incredibly challenging to obtain accurate information as to when individual experiments and observations underlying the triplets were made. We strive to provide additional dataset splits in future versions of the OGB. <br/>
 ##### License: CC-0

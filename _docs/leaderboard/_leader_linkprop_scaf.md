@@ -7,8 +7,8 @@ permalink: /docs/leader_linkprop/
 ###### - [ogbl-ppa](#ogbl-ppa)
 ###### - [ogbl-collab](#ogbl-collab)
 ###### - [ogbl-ddi](#ogbl-ddi)
-###### - [ogbl-citation](#ogbl-citation)
-###### - [ogbl-wikikg](#ogbl-wikikg)
+###### - [ogbl-citation2](#ogbl-citation2)
+###### - [ogbl-wikikg2](#ogbl-wikikg2)
 ###### - [ogbl-biokg](#ogbl-biokg)
 
 The **bold** method name indicates that the implementation is **official** (by the author of the original paper). <br/>
@@ -54,34 +54,30 @@ The **bold** method name indicates that the implementation is **official** (by t
 
 
 
-<a name="ogbl-citation"/>
+<a name="ogbl-citation2"/>
 
 -------
 
-### Leaderboard for [ogbl-citation](../linkprop/#ogbl-citation)
+### Leaderboard for [ogbl-citation2](../linkprop/#ogbl-citation2)
 ##### The MRR score on the test and validation sets. The higher, the better.
 
-#### Package: >=1.1.1
-##### To be deprecated from package 1.2.4 due to a bug in test/val negative samples.
-##### `ogbl-citation2` will be introduced that fixes the issue.
+#### Package: >=1.2.4
+###### Deprecated `ogbl-citation` leaderboard can be found [here](../leader_deprecated/#ogbl-citation).
 
-#ogbl-citation
-
+#ogbl-citation2
 
 
-
-<a name="ogbl-wikikg"/>
+<a name="ogbl-wikikg2"/>
 
 -------
 
-### Leaderboard for [ogbl-wikikg](../linkprop/#ogbl-wikikg)
+### Leaderboard for [ogbl-wikikg2](../linkprop/#ogbl-wikikg2)
 ##### The MRR score on the test and validation sets. The higher, the better.
 
-#### Package: >=1.1.1
-##### To be deprecated from package 1.2.4 due to a bug in test/val negative samples.
-##### `ogbl-wikikg2` will be introduced that fixes the issue.
+#### Package: >=1.2.4
+###### Deprecated `ogbl-wikikg` leaderboard can be found [here](../leader_deprecated/#ogbl-wikikg).
 
-#ogbl-wikikg
+#ogbl-wikikg2
 
 
 

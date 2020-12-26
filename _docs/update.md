@@ -9,6 +9,8 @@ permalink: /docs/update/
 
 #### **Recent Updates**
 
+###### - **Dec 25th, 2020**: `ogbl-citation` and `ogbl-wikikg` are deprecated due to a bug in negative samples in test/validation sets. [`ogbl-citation2`](../linkprop/#ogbl-citation2) and [`ogbl-wikikg2`](../linkprop/#ogbl-wikikg2) will be introduced soon that resolves the issue.
+
 ###### - **Oct 13rd, 2020**: [Rules](../leader_rules) for the experimental protocol clarified.
 
 ###### - **Oct 11st, 2020**: Call for dataset contribution.
@@ -51,7 +53,7 @@ If you have previously made leaderboard submissions, please [tell us](mailto:ogb
 - 5 new datasets ([`ogbn-papers100M`](../nodeprop/#ogbn-papers100M), [`ogbn-mag`](../nodeprop/#ogbn-mag), [`ogbl-biokg`](../linkprop/#ogbl-biokg), [`ogbl-ddi`](../linkprop/#ogbl-ddi), and [`ogbg-code`](../graphprop/#ogbg-code)) and their [benchmark experiments](https://github.com/snap-stanford/ogb/tree/master/examples) have been added.
 - Our [arXiv paper](https://arxiv.org/abs/2005.00687) has been updated accordingly.
 - Our package has been updated to [`1.2.0`](https://github.com/snap-stanford/ogb/releases/tag/1.2.0) that includes the new datasets. **No change has been applied to the existing datasets.**
-- Baseline performance on [`ogbn-products`](../leader_nodeprop/#ogbn-products) and [`ogbl-citation`](../leader_linkprop/#ogbl-citation) has been improved.
+- Baseline performance on [`ogbn-products`](../leader_nodeprop/#ogbn-products) and `ogbl-citation` has been improved.
 
 ###### - **May 4th, 2020**: First major release of OGB.
 ###### - **May 4th, 2020**: Package updated to [`1.1.1`](https://github.com/snap-stanford/ogb/releases/tag/1.1.1). 
