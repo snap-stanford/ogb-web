@@ -14,8 +14,8 @@ Scale | Name      | Package | #Nodes | #Edges\* |  Split Type   | Task Type     
 Medium | [ogbl-ppa](#ogbl-ppa)      | >=1.1.1   | 576,289 |    30,326,273 |    Throughput  | Link prediction   |     Hits@100              |
 Small | [ogbl-collab](#ogbl-collab)  | >=1.2.1       | 235,868 |    1,285,465 |     Time  | Link prediction   |     Hits@50              |
 Small | [ogbl-ddi](#ogbl-ddi)       | >=1.2.1  | 4,267 |    1,334,889 |     Protein target  | Link prediction   |     Hits@20              |
-Medium | [ogbl-citation2](#ogbl-citation2) | >=1.1.1       | 2,927,963 |    30,561,187 |     Time  | Link prediction   |     MRR      |
-Medium | [ogbl-wikikg2](#ogbl-wikikg2)  | >=1.1.1       | 2,500,604 |    17,137,181 |     Time  | KG completion   |    MRR     |
+Medium | [ogbl-citation2](#ogbl-citation2) | >=1.2.4       | 2,927,963 |    30,561,187 |     Time  | Link prediction   |     MRR      |
+Medium | [ogbl-wikikg2](#ogbl-wikikg2)  | >=1.2.4       | 2,500,604 |    17,137,181 |     Time  | KG completion   |    MRR     |
 Small | [ogbl-biokg](#ogbl-biokg)   | >=1.2.0      | 93,773 |  5,088,434 |  Random  | KG completion   |    MRR     |
 
 **Note:** For undirected graphs, the loaded graphs will have the doubled number of edges because we add the bidirectional edges automatically.
@@ -107,8 +107,9 @@ The evaluation metric is Mean Reciprocal Rank (MRR), where the reciprocal rank o
 
 **Dataset splitting:** We split the edges according to time, in order to simulate a realistic application in citation recommendation (e.g., a user is writing a new paper and has already cited several existing papers, but wants to be recommended additional references). To this end, we use the most recent papers (those published in 2019) as the source papers for which we want to recommend the references. For each source paper, we drop *two* papers from its references---the resulting two dropped edges (pointing from the source paper to the dropped papers) are used respectively for validation and testing. All the rest of the edges are used for training.
 
-**Previous version:**
-Previous version `ogbl-citation` was deprecated as of Dec 25th, 2020 due to a bug in negative samples of validation/test sets (many nodes are not sampled as negative samples). The issue is resolved in `ogbl-citation2`.
+**Version:**
+`ogbl-citation2` is available for `ogb>=1.2.4`.
+The previous version `ogbl-citation` is deprecated for `ogb>=1.2.4` due to a bug in negative samples of validation/test sets (many nodes are not sampled as negative samples). The issue is resolved in `ogbl-citation2`.
 The deprecated leaderboard of `ogbl-citation` can be found [here](../leader_deprecated/#ogbl-citation).
 
 
@@ -134,8 +135,9 @@ Specifically, we downloaded Wikidata at three different time stamps [2] \(May, A
 We use the triplets in the May KG for training, and use the additional triplets in the August and November KGs for validation and test, respectively.
 Note that our dataset split is different from the existing Wikidata KG dataset that adopts conventional random split [3], which does not reflect the practical usage.
 
-**Previous version:**
-Previous version `ogbl-wikikg` was deprecated as of Dec 25th, 2020 due to a bug in negative samples of validation/test sets (many nodes are not sampled as negative samples). The issue is resolved in `ogbl-wikikg2`.
+**Version:**
+`ogbl-wikikg2` is available for `ogb>=1.2.4`.
+The previous version `ogbl-wikikg` is deprecated for `ogb>=1.2.4` due to a bug in negative samples of validation/test sets (many nodes are not sampled as negative samples). The issue is resolved in `ogbl-wikikg2`.
 The deprecated leaderboard of `ogbl-wikikg` can be found [here](../leader_deprecated/#ogbl-wikikg).
 
 
