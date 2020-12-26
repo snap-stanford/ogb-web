@@ -78,7 +78,7 @@ The **bold** method name indicates that the implementation is **official** (by t
 ##### The MRR score on the test and validation sets. The higher, the better.
 
 #### Package: >=1.1.1
-#### TO be deprecated from package 1.2.4 due to a bug in test/val negative samples.
+#### To be deprecated from package 1.2.4 due to a bug in test/val negative samples.
 #### `ogbl-wikikg2` will be introduced that fixes the issue.
 
 #ogbl-wikikg
