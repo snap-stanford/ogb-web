@@ -6,7 +6,7 @@ permalink: /docs/leader_deprecated/
 ##### Check leaderboards for
 ###### - [ogbl-citation](#ogbl-citation)
 ###### - [ogbl-wikikg](#ogbl-wikikg)
-###### **Note:** These leaderboard will no longer updated.
+###### **Note:** These leaderboards are deprecated and will no longer updated.
 
 The **bold** method name indicates that the implementation is **official** (by the author of the original paper). <br/>
 **Package** denotes the required package version for each dataset to be eligible for the leaderboard.
@@ -21,8 +21,8 @@ The **bold** method name indicates that the implementation is **official** (by t
 ##### The MRR score on the test and validation sets. The higher, the better.
 
 #### Package: >=1.1.1, <=1.2.3
-##### Deprecated due to a bug in test/val negative samples. [`ogbl-citation2`](../linkprop/#ogbl-citation2) fixes the issue.
-##### The new leaderboard for [`ogbl-citation2`](../linkprop/#ogbl-citation2)  can be found [here](../leader_linkprop/#ogbl-citation2).
+###### Deprecated due to a bug in test/val negative samples. [`ogbl-citation2`](../linkprop/#ogbl-citation2) fixes the issue.
+###### The new leaderboard for [`ogbl-citation2`](../linkprop/#ogbl-citation2)  can be found [here](../leader_linkprop/#ogbl-citation2).
 
 | Rank  | Method | Test MRR | Validation MRR | Contact | References | #Params | Hardware | Date 
 |:----:|:-----:|:------:|:-----:|:-----:|:-----:|-----:|:-----:|:-----:|
@@ -47,8 +47,8 @@ The **bold** method name indicates that the implementation is **official** (by t
 ##### The MRR score on the test and validation sets. The higher, the better.
 
 #### Package: >=1.1.1, <=1.2.3
-##### Deprecated due to a bug in test/val negative samples. [`ogbl-wikikg2`](../linkprop/#ogbl-wikikg2) fixes the issue.
-##### The new leaderboard for [`ogbl-wikikg2`](../linkprop/#ogbl-wikikg2) can be found [here](../leader_linkprop/#ogbl-wikikg2).
+###### Deprecated due to a bug in test/val negative samples. [`ogbl-wikikg2`](../linkprop/#ogbl-wikikg2) fixes the issue.
+###### The new leaderboard for [`ogbl-wikikg2`](../linkprop/#ogbl-wikikg2) can be found [here](../leader_linkprop/#ogbl-wikikg2).
 
 | Rank  | Method | Test MRR | Validation MRR | Contact | References | #Params | Hardware | Date 
 |:----:|:-----:|:------:|:-----:|:-----:|:-----:|-----:|:-----:|:-----:|

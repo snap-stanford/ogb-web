@@ -21,8 +21,8 @@ The **bold** method name indicates that the implementation is **official** (by t
 ##### The MRR score on the test and validation sets. The higher, the better.
 
 #### Package: >=1.1.1, <=1.2.3
-##### Deprecated due to a bug in test/val negative samples. [`ogbl-citation2`](../linkprop/#ogbl-citation2) fixes the issue.
-##### The new leaderboard for [`ogbl-citation2`](../linkprop/#ogbl-citation2)  can be found [here](../leader_linkprop/#ogbl-citation2).
+###### Deprecated due to a bug in test/val negative samples. [`ogbl-citation2`](../linkprop/#ogbl-citation2) fixes the issue.
+###### The new leaderboard for [`ogbl-citation2`](../linkprop/#ogbl-citation2)  can be found [here](../leader_linkprop/#ogbl-citation2).
 
 #ogbl-citation
 
@@ -35,8 +35,8 @@ The **bold** method name indicates that the implementation is **official** (by t
 ##### The MRR score on the test and validation sets. The higher, the better.
 
 #### Package: >=1.1.1, <=1.2.3
-##### Deprecated due to a bug in test/val negative samples. [`ogbl-wikikg2`](../linkprop/#ogbl-wikikg2) fixes the issue.
-##### The new leaderboard for [`ogbl-wikikg2`](../linkprop/#ogbl-wikikg2) can be found [here](../leader_linkprop/#ogbl-wikikg2).
+###### Deprecated due to a bug in test/val negative samples. [`ogbl-wikikg2`](../linkprop/#ogbl-wikikg2) fixes the issue.
+###### The new leaderboard for [`ogbl-wikikg2`](../linkprop/#ogbl-wikikg2) can be found [here](../leader_linkprop/#ogbl-wikikg2).
 
 #ogbl-wikikg
 
