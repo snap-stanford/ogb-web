@@ -3,11 +3,13 @@ title: Updates from OGB
 permalink: /docs/update/
 ---
 
-##### **Please update your package to [1.2.3](https://github.com/snap-stanford/ogb/releases/tag/1.2.3)** (Sep 12nd, 2020).
+##### **Please update your package to [1.2.4](https://github.com/snap-stanford/ogb/releases/tag/1.2.4)** (Dec 29th, 2020).
 
 -------
 
-###### **Dec 25th, 2020**: `ogbl-citation` and `ogbl-wikikg` are deprecated due to a bug in negative samples in test/validation sets. [`ogbl-citation2`](../linkprop/#ogbl-citation2) and [`ogbl-wikikg2`](../linkprop/#ogbl-wikikg2) will be introduced soon that resolves the issue.
+###### **Dec 29th, 2020**: Package updated to [`1.2.4`](https://github.com/snap-stanford/ogb/releases/tag/1.2.4).
+- `ogbl-citation` and `ogbl-wikikg` have been deprecated due to a bug in negative samples in test/validation sets. 
+- [`ogbl-citation2`](../linkprop/#ogbl-citation2) and [`ogbl-wikikg2`](../linkprop/#ogbl-wikikg2) are introduced that fixes the issue.
 
 ---------
 
