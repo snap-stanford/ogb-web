@@ -64,7 +64,7 @@ Following is an example in PyTorch Geometric showing that a few lines of code ar
 from ogb.graphproppred import PygGraphPropPredDataset
 from torch_geometric.data import DataLoader
 
-# download and process data at './dataset/ogbg_molhiv/'
+# Download and process data at './dataset/ogbg_molhiv/'
 dataset = PygGraphPropPredDataset(name = "ogbg-molhiv", root = 'dataset/')
 
  
