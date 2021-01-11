@@ -64,7 +64,9 @@ Following is an example in PyTorch Geometric showing that a few lines of code ar
 from ogb.graphproppred import PygGraphPropPredDataset
 from torch_geometric.data import DataLoader
 
-dataset = PygGraphPropPredDataset(name = "ogbg-molhiv")
+# download and process data at './dataset/ogbg_molhiv/'
+dataset = PygGraphPropPredDataset(name = "ogbg-molhiv", root = 'dataset/')
+
  
 split_idx = dataset.get_idx_split() 
 train_loader = DataLoader(dataset[split_idx["train"]], batch_size=32, shuffle=True)
