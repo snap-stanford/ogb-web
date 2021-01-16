@@ -53,7 +53,7 @@ The **bold** method name indicates that the implementation is **official** (by t
 
 | Rank  | Method | Test AP | Validation AP | Contact | References | #Params | Hardware | Date 
 |:----:|:-----:|:------:|:-----:|:-----:|:-----:|-----:|:-----:|:-----:|
-|  1  |  **GINE+**  | 0.2917 ± 0.0015   | 0.3065 ± 0.0030 |[Rémy Brossard](mailto:remy@anotherbrain.ai) | [Paper](https://arxiv.org/abs/2011.15069), [Code](https://github.com/RBrossard/GINEPLUS) | 6,147,029 | GeForce GTX 1080 Ti | Dec 1, 2020 |
+|  1  |  **GINE+ w/ virtual nodes**  | 0.2917 ± 0.0015   | 0.3065 ± 0.0030 |[Rémy Brossard](mailto:remy@anotherbrain.ai) | [Paper](https://arxiv.org/abs/2011.15069), [Code](https://github.com/RBrossard/GINEPLUS) | 6,147,029 | GeForce GTX 1080 Ti | Dec 1, 2020 |
 |  2  |  **DeeperGCN+virtual node+FLAG**  | 0.2842 ± 0.0043   | 0.2952 ± 0.0029 |[Kezhi Kong](mailto:kong@cs.umd.edu) | [Paper](https://arxiv.org/abs/2010.09891), [Code](https://github.com/devnkong/FLAG) | 5,550,208 | NVIDIA Tesla V100 (32GB GPU) | Oct 21, 2020 |
 |  3  |  **GIN+virtual node+FLAG**  | 0.2834 ± 0.0038   | 0.2912 ± 0.0026 |[Kezhi Kong](mailto:kong@cs.umd.edu) | [Paper](https://arxiv.org/abs/2010.09891), [Code](https://github.com/devnkong/FLAG) | 3,374,533 | GeForce RTX 2080 Ti (11GB GPU) | Oct 21, 2020 |
 |  4  |  **DeeperGCN+virtual node**  | 0.2781 ± 0.0038   | 0.2920 ± 0.0025 |[Guohao Li - DeepGCNs.org](mailto:guohao.li@kaust.edu.sa) | [Paper](https://arxiv.org/abs/2006.07739), [Code](https://github.com/lightaime/deep_gcns_torch/tree/master/examples/ogb) | 5,550,208 | NVIDIA Tesla V100 (32GB GPU) | Aug 11, 2020 |
