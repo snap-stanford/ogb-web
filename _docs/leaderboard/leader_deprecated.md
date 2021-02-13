@@ -26,7 +26,7 @@ The **bold** method name indicates that the implementation is **official** (by t
 
 | Rank  | Method | Test MRR | Validation MRR | Contact | References | #Params | Hardware | Date 
 |:----:|:-----:|:------:|:-----:|:-----:|:-----:|-----:|:-----:|:-----:|
-|  1  |  **SEAL**  | 0.8527 ± 0.0091   | 0.8509 ± 0.0088 |[Muhan Zhang](mailto:muhan.zhang@hotmail.com) | [Paper](https://arxiv.org/pdf/1802.09691.pdf), [Code](https://github.com/facebookresearch/SEAL_OGB) | 871,106 | Tesla V100 (32GB GPU) | Oct 14, 2020 |
+|  1  |  **SEAL**  | 0.8527 ± 0.0091   | 0.8509 ± 0.0088 |[Muhan Zhang](mailto:muhan.zhang@hotmail.com) | [Paper](https://arxiv.org/pdf/2010.16103.pdf), [Code](https://github.com/facebookresearch/SEAL_OGB) | 871,106 | Tesla V100 (32GB GPU) | Oct 14, 2020 |
 |  2  |  Full-batch GCN  | 0.8456 ± 0.0110   | 0.8449 ± 0.0108 | [Matthias Fey -- OGB team](mailto:matthias.fey@tu-dortmund.de) | [Paper](https://arxiv.org/abs/1609.02907), [Code](https://github.com/snap-stanford/ogb/tree/master/examples/linkproppred/citation) | 296,449 | Quadro RTX 8000 (48GB GPU) | Jun 20, 2020 |
 |  3  |  DeepWalk  | 0.8284 ± 0.0005   | [Please tell us](mailto:ogb@cs.stanford.edu) | [Hao Xiong (DGL)](mailto:taxuexh@sjtu.edu.cn) | [Paper](https://arxiv.org/pdf/1403.6652.pdf), [Code](https://github.com/dmlc/dgl/tree/master/examples/pytorch/ogb/deepwalk) | 757,943,019 | g4dn.2xlarge, T4 (15GB GPU) | Jul 23, 2020 |
 |  4  |  Full-batch GraphSAGE  | 0.8228 ± 0.0084   | 0.8217 ± 0.0086 | [Matthias Fey -- OGB team](mailto:matthias.fey@tu-dortmund.de) | [Paper](https://arxiv.org/abs/1706.02216), [Code](https://github.com/snap-stanford/ogb/tree/master/examples/linkproppred/citation) | 460,289 | Quadro RTX 8000 (48GB GPU) | Jun 20, 2020 |
