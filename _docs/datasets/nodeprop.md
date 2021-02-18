@@ -52,7 +52,7 @@ Specifically, we sort the products according to their sales ranking and use the 
 
 ### Dataset `ogbn-proteins` ([Leaderboard](../leader_nodeprop/#ogbn-proteins)):
 
-**Graph:** The `ogbn-proteins` dataset is an undirected, weighted, and typed (according to species) graph. Nodes represent proteins, and edges indicate different types of biologically meaningful associations between proteins, e.g., physical interactions, co-expression or homology [1,2]. All edges come with 8-dimensional features, where each dimension represents the strength of a single association type and takes values between 0 and 1 (the larger the value is, the stronger the association is). The proteins come from 8 species.
+**Graph:** The `ogbn-proteins` dataset is an undirected, weighted, and typed (according to species) graph. Nodes represent proteins, and edges indicate different types of biologically meaningful associations between proteins, e.g., physical interactions, co-expression or homology [1,2]. All edges come with 8-dimensional features, where each dimension represents the approximate confidence of a single association type and takes values between 0 and 1 (the larger the value is, the more confident we are about the association). The proteins come from 8 species.
 
 **Prediction task:** The task is to predict the presence of protein functions in a multi-label binary classification setup, where there are 112 kinds of labels to predict in total. The performance is measured by the average of ROC-AUC scores across the 112 tasks.
 
