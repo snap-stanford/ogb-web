@@ -105,7 +105,7 @@ Following [2,3], we use an F1 score to evaluate predicted sub-tokens against gro
 
 **Version:**
 `ogbg-codeg2` is available for `ogb>=1.2.5`.
-The previous version `ogbg-code` is deprecated for `ogb>=1.2.5` due to prediction target (i.e., method name) leakage in input AST. The issue is resolved in `ogbg-code2`, where the method name and its recursive definition in AST are replace with a special token `_mask_`.
+The previous version `ogbg-code` is deprecated for `ogb>=1.2.5` due to prediction target (i.e., method name) leakage in input AST. The issue is resolved in `ogbg-code2`, where the method name and its recursive definition in AST are replaced with a special token `_mask_`.
 The deprecated leaderboard of `ogbg-code` can be found [here](../leader_deprecated/#ogbg-code).
 
 #### References
