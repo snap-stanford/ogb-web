@@ -7,7 +7,7 @@ permalink: /docs/leader_graphprop/
 ###### - [ogbg-molhiv](#ogbg-molhiv)
 ###### - [ogbg-molpcba](#ogbg-molpcba)
 ###### - [ogbg-ppa](#ogbg-ppa)
-###### - [ogbg-code](#ogbg-code)
+###### - [ogbg-code2](#ogbg-code2)
 
 The **bold** method name indicates that the implementation is **official** (by the author of the original paper). <br/>
 **Package** denotes the required package version for each dataset to be eligible for the leaderboard.
@@ -47,13 +47,14 @@ The **bold** method name indicates that the implementation is **official** (by t
 #ogbg-ppa
 
 
-<a name="ogbg-code"/>
+<a name="ogbg-code2"/>
 
 ---------------------
 
-### Leaderboard for [ogbg-code](../graphprop/#ogbg-code)
+### Leaderboard for [ogbg-code2](../graphprop/#ogbg-code2)
 ##### The F1 score on the test and validation sets. The higher, the better. 
 
-#### Package: >=1.2.0
+#### Package: >=1.2.5
+###### Deprecated `ogbg-code` leaderboard can be found [here](../leader_deprecated/#ogbg-code).
 
-#ogbg-code
+#ogbg-code2

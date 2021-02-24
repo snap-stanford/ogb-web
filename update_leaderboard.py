@@ -4,8 +4,8 @@ import os
 
 nodeprop_dataset_list = ['ogbn-products', 'ogbn-proteins', 'ogbn-arxiv', 'ogbn-papers100M', 'ogbn-mag']
 linkprop_dataset_list = ['ogbl-ppa', 'ogbl-collab', 'ogbl-ddi', 'ogbl-citation2', 'ogbl-wikikg2', 'ogbl-biokg']
-graphprop_mol_dataset_list = ['ogbg-molhiv', 'ogbg-molpcba', 'ogbg-ppa', 'ogbg-code']
-deprecated_dataset_list = ['ogbl-wikikg', 'ogbl-citation']
+graphprop_mol_dataset_list = ['ogbg-molhiv', 'ogbg-molpcba', 'ogbg-ppa', 'ogbg-code2']
+deprecated_dataset_list = ['ogbl-wikikg', 'ogbl-citation', 'ogbg-code']
 
 dataset2metric = {}
 dataset2metric['ogbn-products'] = 'Accuracy'
@@ -25,6 +25,7 @@ dataset2metric['ogbg-molhiv'] = 'ROC-AUC'
 dataset2metric['ogbg-molpcba'] = 'AP'
 dataset2metric['ogbg-ppa'] = 'Accuracy'
 dataset2metric['ogbg-code'] = 'F1 score'
+dataset2metric['ogbg-code2'] = 'F1 score'
 
 month_dict = {1: 'Jan', 2: 'Feb', 3: 'Mar', 4: 'Apr', 5: 'May', 6: 'Jun', 7: 'Jul', 8: 'Aug', 9: 'Sep', 10: 'Oct', 11: 'Nov', 12: 'Dec'}
 

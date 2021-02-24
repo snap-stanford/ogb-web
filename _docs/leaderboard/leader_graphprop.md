@@ -7,7 +7,7 @@ permalink: /docs/leader_graphprop/
 ###### - [ogbg-molhiv](#ogbg-molhiv)
 ###### - [ogbg-molpcba](#ogbg-molpcba)
 ###### - [ogbg-ppa](#ogbg-ppa)
-###### - [ogbg-code](#ogbg-code)
+###### - [ogbg-code2](#ogbg-code2)
 
 The **bold** method name indicates that the implementation is **official** (by the author of the original paper). <br/>
 **Package** denotes the required package version for each dataset to be eligible for the leaderboard.
@@ -92,23 +92,19 @@ The **bold** method name indicates that the implementation is **official** (by t
 
 
 
-<a name="ogbg-code"/>
+<a name="ogbg-code2"/>
 
 ---------------------
 
-### Leaderboard for [ogbg-code](../graphprop/#ogbg-code)
+### Leaderboard for [ogbg-code2](../graphprop/#ogbg-code2)
 ##### The F1 score on the test and validation sets. The higher, the better. 
 
-#### Package: >=1.2.0
+#### Package: >=1.2.5
+###### Deprecated `ogbg-code` leaderboard can be found [here](../leader_deprecated/#ogbg-code).
 
 | Rank  | Method | Test F1 score | Validation F1 score | Contact | References | #Params | Hardware | Date 
 |:----:|:-----:|:------:|:-----:|:-----:|:-----:|-----:|:-----:|:-----:|
-|  1  |  **DAGNN**  | 0.3454 ± 0.0032   | 0.3238 ± 0.0032 |[Veronika Thost](mailto:veronika.thost@ibm.com) | [Paper](https://openreview.net/pdf?id=JbuYF437WB6), [Code](https://github.com/vthost/DAGNN) | 35,246,814 | 2 GPUs, Tesla V100 PCIe 16GB | Feb 3, 2021 |
-|  2  |  **GCN+virtual node+FLAG**  | 0.3316 ± 0.0025   | 0.3099 ± 0.0016 |[Kezhi Kong](mailto:kong@cs.umd.edu) | [Paper](https://arxiv.org/abs/2010.09891), [Code](https://github.com/devnkong/FLAG) | 12,476,210 | GeForce RTX 2080 Ti (11GB GPU) | Oct 21, 2020 |
-|  3  |  **GIN+virtual node+FLAG**  | 0.3296 ± 0.0036   | 0.3092 ± 0.0035 |[Kezhi Kong](mailto:kong@cs.umd.edu) | [Paper](https://arxiv.org/abs/2010.09891), [Code](https://github.com/devnkong/FLAG) | 13,833,715 | GeForce RTX 2080 Ti (11GB GPU) | Oct 21, 2020 |
-|  4  |  GCN+virtual node  | 0.3263 ± 0.0013   | 0.3062 ± 0.0007 | [Weihua Hu -- OGB team](mailto:weihuahu@cs.stanford.edu) | [Paper](https://arxiv.org/abs/1609.02907), [Code](https://github.com/snap-stanford/ogb/tree/master/examples/graphproppred/code) | 12,476,210 | GeForce RTX 2080 (11GB GPU) | Jun 10, 2020 |
-|  5  |  **GIN+FLAG**  | 0.3241 ± 0.0040   | 0.3044 ± 0.0039 |[Kezhi Kong](mailto:kong@cs.umd.edu) | [Paper](https://arxiv.org/abs/2010.09891), [Code](https://github.com/devnkong/FLAG) | 12,382,615 | GeForce RTX 2080 Ti (11GB GPU) | Oct 21, 2020 |
-|  6  |  **GCN+FLAG**  | 0.3209 ± 0.0019   | 0.3016 ± 0.0016 |[Kezhi Kong](mailto:kong@cs.umd.edu) | [Paper](https://arxiv.org/abs/2010.09891), [Code](https://github.com/devnkong/FLAG) | 11,025,110 | GeForce RTX 2080 Ti (11GB GPU) | Oct 21, 2020 |
-|  7  |  **GIN+virtual node**  | 0.3204 ± 0.0018   | 0.3020 ± 0.0016 |[Weihua Hu -- OGB team](mailto:weihuahu@cs.stanford.edu) | [Paper](https://arxiv.org/abs/1810.00826), [Code](https://github.com/snap-stanford/ogb/tree/master/examples/graphproppred/code) | 13,833,715 | GeForce RTX 2080 (11GB GPU) | Jun 10, 2020 |
-|  8  |  GCN  | 0.3163 ± 0.0018   | 0.2973 ± 0.0014 | [Weihua Hu -- OGB team](mailto:weihuahu@cs.stanford.edu) | [Paper](https://arxiv.org/abs/1609.02907), [Code](https://github.com/snap-stanford/ogb/tree/master/examples/graphproppred/code) | 11,025,110 | GeForce RTX 2080 (11GB GPU) | Jun 10, 2020 |
-|  8  |  **GIN**  | 0.3163 ± 0.0020   | 0.2981 ± 0.0014 |[Weihua Hu -- OGB team](mailto:weihuahu@cs.stanford.edu) | [Paper](https://arxiv.org/abs/1810.00826), [Code](https://github.com/snap-stanford/ogb/tree/master/examples/graphproppred/code) | 12,382,615 | GeForce RTX 2080 (11GB GPU) | Jun 10, 2020 |
+|  1  |  GCN+virtual node  | 0.1595 ± 0.0018   | 0.1461 ± 0.0013 | [Weihua Hu -- OGB team](mailto:weihuahu@cs.stanford.edu) | [Paper](https://arxiv.org/abs/1609.02907), [Code](https://github.com/snap-stanford/ogb/tree/master/examples/graphproppred/code) | 12,476,210 | GeForce RTX 2080 (11GB GPU) | Feb 24, 2021 |
+|  2  |  **GIN+virtual node**  | 0.1581 ± 0.0026   | 0.1439 ± 0.0020 |[Weihua Hu -- OGB team](mailto:weihuahu@cs.stanford.edu) | [Paper](https://arxiv.org/abs/1810.00826), [Code](https://github.com/snap-stanford/ogb/tree/master/examples/graphproppred/code) | 13,833,715 | GeForce RTX 2080 (11GB GPU) | Feb 24, 2021 |
+|  3  |  GCN  | 0.1507 ± 0.0018   | 0.1399 ± 0.0017 | [Weihua Hu -- OGB team](mailto:weihuahu@cs.stanford.edu) | [Paper](https://arxiv.org/abs/1609.02907), [Code](https://github.com/snap-stanford/ogb/tree/master/examples/graphproppred/code) | 11,025,110 | GeForce RTX 2080 (11GB GPU) | Feb 24, 2021 |
+|  4  |  **GIN**  | 0.1495 ± 0.0023   | 0.1376 ± 0.0016 |[Weihua Hu -- OGB team](mailto:weihuahu@cs.stanford.edu) | [Paper](https://arxiv.org/abs/1810.00826), [Code](https://github.com/snap-stanford/ogb/tree/master/examples/graphproppred/code) | 12,382,615 | GeForce RTX 2080 (11GB GPU) | Feb 24, 2021 |

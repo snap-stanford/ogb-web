@@ -3,7 +3,13 @@ title: Updates from OGB
 permalink: /docs/update/
 ---
 
-##### **Please update your package to [1.2.4](https://github.com/snap-stanford/ogb/releases/tag/1.2.4)** (Dec 29th, 2020).
+##### **Please update your package to [1.2.5](https://github.com/snap-stanford/ogb/releases/tag/1.2.5)** (Feb 24th, 2021).
+
+-------
+
+###### **Feb 24th, 2021**: Package updated to [`1.2.5`](https://github.com/snap-stanford/ogb/releases/tag/1.2.5).
+- `ogbg-code` has been deprecated due to prediction target (i.e., method name) leakage in input AST.
+- [`ogbg-code2`](../graphprop/#ogbg-code2) is introduced that fixes the issue., where the method name and its recursive definition in AST are replace with a special token `_mask_`.
 
 -------
 
@@ -68,7 +74,7 @@ If you have previously made leaderboard submissions, please [tell us](mailto:ogb
 -------
 
 ###### **June 11st, 2020**: Second major release of OGB.
-- 5 new datasets ([`ogbn-papers100M`](../nodeprop/#ogbn-papers100M), [`ogbn-mag`](../nodeprop/#ogbn-mag), [`ogbl-biokg`](../linkprop/#ogbl-biokg), [`ogbl-ddi`](../linkprop/#ogbl-ddi), and [`ogbg-code`](../graphprop/#ogbg-code)) and their [benchmark experiments](https://github.com/snap-stanford/ogb/tree/master/examples) have been added.
+- 5 new datasets ([`ogbn-papers100M`](../nodeprop/#ogbn-papers100M), [`ogbn-mag`](../nodeprop/#ogbn-mag), [`ogbl-biokg`](../linkprop/#ogbl-biokg), [`ogbl-ddi`](../linkprop/#ogbl-ddi), and [`ogbg-code`](../graphprop/#ogbg-code2)) and their [benchmark experiments](https://github.com/snap-stanford/ogb/tree/master/examples) have been added.
 - Our [arXiv paper](https://arxiv.org/abs/2005.00687) has been updated accordingly.
 - Our package has been updated to [`1.2.0`](https://github.com/snap-stanford/ogb/releases/tag/1.2.0) that includes the new datasets. **No change has been applied to the existing datasets.**
 - Baseline performance on [`ogbn-products`](../leader_nodeprop/#ogbn-products) and `ogbl-citation` has been improved.

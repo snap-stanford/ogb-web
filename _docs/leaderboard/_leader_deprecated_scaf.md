@@ -40,6 +40,19 @@ The **bold** method name indicates that the implementation is **official** (by t
 
 #ogbl-wikikg
 
+<a name="ogbg-code"/>
+
+-------
+
+### Deprecated Leaderboard for ogbg-code
+##### The F1 score on the test and validation sets. The higher, the better.
+
+#### Package: >=1.2.0, <=1.2.4
+###### Deprecated due to prediction target leakage in input graph. [`ogbg-code2`](../graphprop/#ogbg-code2) fixes the issue.
+###### The new leaderboard for [`ogbg-code2`](../graphprop/#ogbg-code2) can be found [here](../leader_graphprop/#ogbg-code2).
+
+#ogbg-code
+
 
 
 
