@@ -9,7 +9,7 @@ permalink: /docs/update/
 
 ###### **Feb 24th, 2021**: Package updated to [`1.2.5`](https://github.com/snap-stanford/ogb/releases/tag/1.2.5).
 - `ogbg-code` has been deprecated due to prediction target (i.e., method name) leakage in input AST.
-- [`ogbg-code2`](../graphprop/#ogbg-code2) is introduced that fixes the issue., where the method name and its recursive definition in AST are replaced with a special token `_mask_`.
+- [`ogbg-code2`](../graphprop/#ogbg-code2) has been introduced that fixes the issue, where the method name and its recursive definition in AST are replaced with a special token `_mask_`.
 
 -------
 
