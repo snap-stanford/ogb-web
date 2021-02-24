@@ -110,7 +110,7 @@ The deprecated leaderboard of `ogbg-code` can be found [here](../leader_deprecat
 
 #### References
 [1] Miltiadis Allamanis, Earl T Barr, Premkumar Devanbu, and Charles Sutton. A survey of machinelearning for big code and naturalness.ACM Computing Surveys (CSUR), 51(4):1–37, 2018. <br/>
-[2] Uri Alon, Shaked Brody, Omer Levy, and Eran Yahav. code2seq: Generating sequences fromstructured representations of code. arXiv preprint arXiv:1808.01400, 2018. <br/>
+[2] Uri Alon, Shaked Brody, Omer Levy, and Eran Yahav. code2seq: Generating sequences from structured representations of code. arXiv preprint arXiv:1808.01400, 2018. <br/>
 [3] Uri Alon, Meital Zilberstein, Omer Levy, and Eran Yahav. code2vec: Learning distributed rep-resentations of code. Proceedings of the ACM on Programming Languages,  3(POPL):1–29,2019. <br/>
 [4] Miltiadis Allamanis. The adverse effects of code duplication in machine learning models of code. In Proceedings of the 2019 ACM SIGPLAN International Symposium on New Ideas, New Paradigms, and Reflections on Programming and Software, pp. 143–153, 2019. <br/>
 ##### License: MIT
