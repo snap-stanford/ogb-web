@@ -6,6 +6,7 @@ permalink: /docs/leader_deprecated/
 ##### Check leaderboards for
 ###### - [ogbl-citation](#ogbl-citation)
 ###### - [ogbl-wikikg](#ogbl-wikikg)
+###### - [ogbg-code](#ogbg-code)
 ###### **Note:** These leaderboards are deprecated and will no longer updated.
 
 The **bold** method name indicates that the implementation is **official** (by the author of the original paper). <br/>
