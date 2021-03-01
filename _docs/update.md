@@ -3,7 +3,12 @@ title: Updates from OGB
 permalink: /docs/update/
 ---
 
-##### **Please update your package to [1.2.5](https://github.com/snap-stanford/ogb/releases/tag/1.2.5)** (Feb 24th, 2021).
+##### **Please update your package to [1.2.6](https://github.com/snap-stanford/ogb/releases/tag/1.2.6)** (Feb 28th, 2021).
+
+-------
+
+###### **Feb 28th, 2021**: Package updated to [`1.2.6`](https://github.com/snap-stanford/ogb/releases/tag/1.2.6).
+- Fixed downloading bug of https (expired certificate) by switching to http.
 
 -------
 
