@@ -47,7 +47,7 @@ Graph-level | **[PCQM4M-LSC](../pcqm4m)** |  >=1.3.0  | 3,803,453  | 53,814,542 
 **\***: The PCQM4M-LSC dataset is provided in the SMILES strings. After processing them into graph objects, the eventual file size will be around 8GB.
 
 **All of these datasets can be downloaded and prepared using our [`ogb` Python package](https://github.com/snap-stanford/ogb).**
-**The model evaluation and test submission file saving are also handled by our package.**
+**The model evaluation and test submission file preparation are also handled by our package.**
 The usage is described in each dataset page. Please install/update it by:
 ```bash
 pip install -U ogb
@@ -58,8 +58,8 @@ python -c "import ogb; print(ogb.__version__)"
 In our **[paper (coming soon)](../paper)**, we further perform an extensive baseline analysis on each dataset, implementing simple baseline models as well as advanced expressive models at scale.
 We find that advanced expressive models, despite requiring more efforts to scale up, do benefit from large data and significantly outperform simple baseline models that are easy to scale.
 
-Our KDD Cup will encourage the community to develop and scale up expressive graph ML models, and can yield breakthrough in their performance. All of our baseline code is made publicly available to facilitate public research. 
-Overall, we hope OGB-LSC at KDD Cup 2021 will serve as an "ImageNet Large Scale Visual Recognition Challenge" in the field of graph ML, encouraging the community to work on the realistic and large-scale graph datasets and significantly advance the state-of-the-art.
+Our KDD Cup will encourage the community to develop and scale up expressive graph ML models, which can yield significant breakthroughs in the respective domains. All of our baseline code is made publicly available to facilitate public research.
+Overall, we hope OGB-LSC at KDD Cup 2021 will serve as an "ImageNet Large Scale Visual Recognition Challenge" in the field of graph ML, encouraging the community to work on realistic and large-scale graph datasets and significantly advance the state-of-the-art.
 
 -----------
 

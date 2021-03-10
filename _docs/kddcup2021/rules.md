@@ -16,7 +16,7 @@ Also, the validation data can be defined by contestants themselves (you can use 
 In OGB-LSC, we still provide the "standardized" validation sets since they have particular practical meaning (e.g., time splits in MAG240M-LSC and WikiKG90M-LSC, and the scaffold split in PCQM4M-LSC) and can be used as a way for participants to understand how test submissions are evaluated.
 
 For the test data, you should only use them for your model inference (make prediction and save it for your test submissions). In other words, your model should be developed only based on training and validation sets and should not touch the test data except for the final inference.
-The only exception is the MAG240M-LSC, where you can use the test nodes in any ways, since the dataset provides the transductive prediction task (i.e., test nodes are part of the entire graph).
+The only exception is the MAG240M-LSC, where you can use the test nodes in any ways, since the dataset is modeled as a transductive prediction task (i.e., test nodes are part of the entire graph).
 
 ------
 
@@ -35,5 +35,5 @@ Our goals are two-fold:
 
 ##### **Public Data Source**
 All of our datasets are constructed from public database.
-To avoid trivial test label leakage, we have anonymized the data as much as we can, removing any obvious clues (e.g., data identifier, raw text information) that can be used to map nodes or graphs into the entities in the public database. At the same time, to keep our datasets practically-relevant and realistic, our anonymization may not be perfect (e.g., we need to provide the real graph connectivity, node features, and SMILES strings). Although we believe it is nearly impossible to recover the test labels, we still significantly discourage the participants to try to de-anonymize the datasets during the competition. 
-Keep in mind that you will need to submit public code once you win the contest, which means that any obvious misconduct (e.g., training or doing early stopping on test labels, directly using the test labels as prediction) will be revealed.
+To avoid trivial test label leakage, we have anonymized the data as much as we can, removing any obvious clues (e.g., data identifier, raw text information) that can be used to map nodes or graphs into the entities in the public database. At the same time, to keep our datasets practically-relevant and realistic, our anonymization may not be perfect (e.g., we need to provide the real graph connectivity, node features, and SMILES strings). Although we believe it is nearly impossible to recover ground-truth test labels, we still significantly discourage the participants to try to de-anonymize the datasets during the competition.
+Keep in mind that you will need to submit your public code once you win the contest, which means that any obvious misconduct (e.g., training or doing early stopping on test labels, directly using the test labels as predictions) will be revealed.
