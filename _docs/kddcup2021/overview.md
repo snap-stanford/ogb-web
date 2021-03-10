@@ -26,7 +26,17 @@ Specifically, **we present three datasets: [MAG240M-LSC](../mag240m)**, **[WikiK
 **Each dataset offers an independent task, and the winners will be selected separately for each dataset.**
 We will announce the top 3 winning teams for each of the datasets (in total of 9 winning teams), and they will be given opportunities to present their solutions during the KDD Cup workshop.
 
-The dataset statistics as well as basic information are summarized below.
+An illustrative overview of the three OGB-LSC datasets is provided below.
+<p align = "center">
+<img width="90%" src="{{ "/assets/img/ogb-lsc-task-overview.png" | relative_url }}" class="img-responsive">
+</p>
+- **[MAG240M-LSC](../mag240m)** is a heterogeneous academic graph, and the task is to predict the subject areas of papers situated in the heterogeneous graph (node classification). 
+- **[WikiKG90M-LSC](../wikikg90m)** is a knowledge graph, and the task is to impute missing triplets (link prediction). 
+- **[PCQM4M-LSC](../pcqm4m)** is a quantum chemistry dataset, and the task is to predict an important molecular property, the HOMO-LUMO gap, of a given molecule (graph regression).
+
+For each dataset, we carefully design its prediction task and data split so that achieving high prediction performance on the task will have direct impact on the corresponding application. Further details are provided in each dataset page.
+
+The dataset statistics as well as basic information are summarized below, showing that our datasets are extremely large.
 
 Task category | Name      | Package      |  #Graphs      | #Total nodes  | #Total edges  | Data split        | Task Type   | Metric  | Download size
 |:---------:|:--------|-----:|-----:|----------------:|----------------------:|:---------------|:-------|---------:|---------:|
@@ -44,13 +54,6 @@ pip install -U ogb
 # Make sure below prints the required package version for the dataset you are working on.
 python -c "import ogb; print(ogb.__version__)"
 ```
-
-An illustrative overview of the three OGB-LSC datasets is provided below.
-For each dataset, we carefully design its prediction task and data split so that achieving high prediction performance on the task will have direct impact on the corresponding application. Further details are provided in each dataset page.
-
-<p align = "center">
-<img width="90%" src="{{ "/assets/img/ogb-lsc-task-overview.png" | relative_url }}" class="img-responsive">
-</p>
 
 In our **[paper (coming soon)](../paper)**, we further perform an extensive baseline analysis on each dataset, implementing simple baseline models as well as advanced expressive models at scale.
 We find that advanced expressive models, despite requiring more efforts to scale up, do benefit from large data and significantly outperform simple baseline models that are easy to scale.
