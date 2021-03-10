@@ -16,6 +16,7 @@
                 <ul class="nav navbar-nav">
                 <li {% if page.sectionid=='Get Started' %} class="active" {% endif %}><a href="{{ "/docs/home/" | relative_url }}">Get Started</a></li>
                 <li {% if page.sectionid=='Updates' %} class="active" {% endif %}><a href="{{ "/docs/update" | relative_url }}">Updates</a></li>
+                <li {% if page.sectionid=='KDD Cup' %} class="active" {% endif %}><a href="{{ "/docs/kddcup2021/overview" | relative_url }}">KDD Cup</a></li>
                 <li {% if page.sectionid=='Datasets' %} class="dropdown" {% endif %}><a class="dropdown-toggle" data-toggle="dropdown" href="#">
                     Datasets <span class="caret"></span>
                 </a>
@@ -29,7 +30,7 @@
                       <li><a href="{{ "/docs/graphprop/" | relative_url }}">Graph Property Prediction</a></li>
                     </ul>
                 </li>
-                <li {% if page.sectionid=='Datasets' %} class="dropdown" {% endif %}><a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                <li {% if page.sectionid=='Leaderboard' %} class="dropdown" {% endif %}><a class="dropdown-toggle" data-toggle="dropdown" href="#">
                     Leaderboards <span class="caret"></span>
                 </a>
                     <ul class="dropdown-menu">

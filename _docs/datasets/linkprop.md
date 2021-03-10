@@ -220,9 +220,9 @@ train_edge, valid_edge, test_edge = split_edge["train"], split_edge["valid"], sp
 graph = dataset[0] # graph: library-agnostic graph object
 ```
 The library-agnostic graph object is a dictionary containing the following keys: `edge_index`, `edge_feat`, `node_feat`, and `num_nodes`, which are detailed below.
-- `edge_index`: numpy arrays of shape `(2, num_edges)`, where each column represents an edge. The first row and the second row represent the indices of source and target nodes. Undirected edges are represented by bi-directional edges.
-- `edge_feat`: numpy arrays of shape `(num_edges, edgefeat_dim)`, where `edgefeat_dim` is the dimensionality of edge features and i-th row represents the feature of i-th edge. This can be `None` if no input edge features are available.
-- `node_feat`: numpy arrays of shape `(num_nodes, nodefeat_dim)`, where `nodefeat_dim` is the dimensionality of node features and i-th row represents the feature of i-th node. This can be `None` if no input node features are available.
+- `edge_index`: numpy ndarray of shape `(2, num_edges)`, where each column represents an edge. The first row and the second row represent the indices of source and target nodes. Undirected edges are represented by bi-directional edges.
+- `edge_feat`: numpy ndarray of shape `(num_edges, edgefeat_dim)`, where `edgefeat_dim` is the dimensionality of edge features and i-th row represents the feature of i-th edge. This can be `None` if no input edge features are available.
+- `node_feat`: numpy ndarray of shape `(num_nodes, nodefeat_dim)`, where `nodefeat_dim` is the dimensionality of node features and i-th row represents the feature of i-th node. This can be `None` if no input node features are available.
 - `num_nodes`: number of nodes in the graph.
 
 **Heterogeneous graph:** We represent a heterogeneous graph using dictionaries: `edge_index_dict`, `edge_feat_dict`, `node_feat_dict`, and `num_nodes_dict`. 

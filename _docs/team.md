@@ -4,7 +4,6 @@ permalink: /docs/team/
 ---
 
 ### Core Development
-<!-- Weihua Hu  <br/> Matthias Fey  <br/> Marinka Zitnik <br/> Yuxiao Dong <br/> Hongyu Ren <br/> Bowen Liu <br/> Michele Catasta <br/> Jure Leskovec -->
 
 The core development team can be reached at <ogb@cs.stanford.edu>. 
 
