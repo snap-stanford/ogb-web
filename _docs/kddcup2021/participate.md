@@ -5,6 +5,7 @@ layout: kdd_participate
 ---
 
 #### **Learn about team registration and test submissions**  
+- **All the deadlines are on 23:59pm PST.** 
 
 -------
 
@@ -43,7 +44,7 @@ In the Google form, you will need to fill in the following information.
 - **Package version**: Package version used for experiments. Must match the required package for the dataset.
 - **Prediction file**: Upload the model's prediction on the test set (format specified in the dataset page).
 
-The submission will be evaluated over 5% of the hidden test data. The submitted performance will be made public in the leaderboards by May 14th. Note that the performance at the initial stage does *not* count in awards.
+The submission will be evaluated over 5% of the hidden test data. The submitted performance will be made public in the leaderboards by May 14th. Note that the performance at the initial stage does *not* affect the winner selection.
 
 -------
 

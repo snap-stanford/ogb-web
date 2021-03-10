@@ -30,7 +30,7 @@ The core development team can be reached at <ogb@cs.stanford.edu>.
     <td style="text-center">
     <div style="margin: 0 auto; width: 180px; text-align: center">
       <img src="{{ "/assets/img/portrait/yuxiao.png" | relative_url }}" class="img-responsive">
-      <strong><a href="https://ericdongyx.github.io/">Yuxiao Dong</a></strong> <br/> Facebook AI Research
+      <strong><a href="https://ericdongyx.github.io/">Yuxiao Dong</a></strong> <br/> Facebook AI
       </div>
     </td>
   </tr> 
@@ -123,7 +123,7 @@ The core development team can be reached at <ogb@cs.stanford.edu>.
     <td>
     <div style="margin: 0 auto; width: 180px; text-align: center">
       <img src="{{ "/assets/img/portrait/maximilian.png" | relative_url }}" class="img-responsive">
-      <strong><a href="https://mnick.github.io/">Maximilian Nickel</a></strong> <br/> Facebook AI Research
+      <strong><a href="https://mnick.github.io/">Maximilian Nickel</a></strong> <br/> Facebook AI
       </div>
     </td>
     <td>

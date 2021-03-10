@@ -5,7 +5,7 @@ layout: kdd_timeline
 ---
 
 #### **Learn about important dates** 
-- **All the deadlines are on 3pm PST.** 
+- **All the deadlines are on 23:59pm PST.** 
 - **All the datasets share the same deadline.** 
 
 -------
@@ -24,7 +24,7 @@ Every team must be registered in order to be eligible for the subsequent test su
 ##### **May 10th, 2021: Initial test submission deadline**
 Each team can optionally submit their initial test prediction.
 The prediction will be evaluated on 5% of test data, and the performance will be made public in our initial leaderboards.
-Although the performance here does not count in awards, we encourage all the teams to try the initial submission to ensure the smooth final test submission.
+Although the performance here does not affect the winner selection, we encourage all the teams to try the initial submission to ensure the smooth final test submission.
 
 --------
 

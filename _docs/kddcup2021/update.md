@@ -5,6 +5,6 @@ layout: kdd_update
 ---
 
 #### **Learn about updates and any changes**
-- **Important: Subscribe to our [Google group](https://groups.google.com/g/open-graph-benchmark) so that you are up-to-date with any changes.**
+- **We will describe any updates and changes from us as the KDD Cup unfolds.**
 
 ----------

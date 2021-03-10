@@ -22,8 +22,10 @@ However, in deep learning, it has been demonstrated over and over again that one
 #### **Overview of OGB-LSC**
 
 Here we propose a large-scale graph ML competition, **OGB Large-Scale Challenge (OGB-LSC)**, to encourage the development of state-of-the-art graph ML models for massive modern datasets. 
-Specifically, **we present three datasets: [MAG240M-LSC](../mag240m)**, **[WikiKG90M-LSC](../wikikg90m)**, and **[PCQM4M-LSC](../pcqm4m)**, that are unprecedentedly large in scale and cover prediction at the level of nodes, links, and graphs, respectively. 
-**Each dataset offers an independent task, and the award will be given separately for each dataset.**
+Specifically, **we present three datasets: [MAG240M-LSC](../mag240m)**, **[WikiKG90M-LSC](../wikikg90m)**, and **[PCQM4M-LSC](../pcqm4m)**, that are unprecedentedly large in scale and cover prediction at the level of nodes, links, and graphs, respectively.
+**Each dataset offers an independent task, and the winners will be selected separately for each dataset.**
+We will announce the top 3 winning teams for each of the datasets (in total of 9 winning teams), and they will be given opportunities to present their solutions during the KDD Cup workshop.
+
 The dataset statistics as well as basic information are summarized below.
 
 Task category | Name      | Package      |  #Graphs      | #Total nodes  | #Total edges  | Data split        | Task Type   | Metric  | File size
@@ -55,13 +57,6 @@ We find that advanced expressive models, despite requiring more efforts to scale
 
 Our KDD Cup will encourage the community to develop and scale up expressive graph ML models, and can yield breakthrough in their performance. All of our baseline code is made publicly available to facilitate public research. 
 Overall, we hope OGB-LSC at KDD Cup 2021 will serve as an "ImageNet Large Scale Visual Recognition Challenge" in the field of graph ML, encouraging the community to work on the realistic and large-scale graph datasets and significantly advance the state-of-the-art.
-
------------
-
-#### **Award**
-
-We will announce the top 3 winners for each of the datasets (in total of 9 winners). The winners will be given opportunities for them to present their solutions during the KDD Cup workshop.
-The concrete prizes are to be decided.
 
 -----------
 
@@ -117,7 +112,7 @@ For questions about our code, use **[our Github issues](https://github.com/snap-
     <td>
     <div style="margin: 0 auto; width: 150px; text-align: center">
       <img src="{{ "/assets/img/portrait/yuxiao.png" | relative_url }}" class="img-responsive">
-      <strong><a href="https://ericdongyx.github.io/">Yuxiao Dong</a></strong> <br/> Facebook AI Research
+      <strong><a href="https://ericdongyx.github.io/">Yuxiao Dong</a></strong> <br/> Facebook AI
       </div>
     </td>
     <td>
@@ -129,4 +124,20 @@ For questions about our code, use **[our Github issues](https://github.com/snap-
   </tr> 
 </table>
 
-
+#### **Partners**
+<table style="background-color:#FDFEFE; border:none;">
+  <tr>
+    <td>
+    <div style="margin: 0 auto; width: 150px; text-align: center">
+      <img src="{{ "/assets/img/intel.png" | relative_url }}" class="img-responsive">
+      <!-- <strong>Intel Israel</strong> -->
+      </div>
+    </td>
+    <td>
+    <div style="margin: 0 auto; width: 220px; text-align: center">
+      <img src="{{ "/assets/img/mit_eecs.png" | relative_url }}" class="img-responsive">
+      <!-- <strong>MIT EECS</strong> -->
+      </div>
+    </td>
+  </tr> 
+</table>
