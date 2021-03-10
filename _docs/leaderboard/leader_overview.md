@@ -16,7 +16,7 @@ For each dataset, we require you to submit the following information.
 - **OGB version**: The OGB version used to conduct the experiments. **Must satisfy the version requirement for each dataset.**
 - **Method**: The name of the method.  
 - **Dataset**: The name of an OGB dataset that you use to evaluate the method.
-- **Test performance**: Raw test performance output by OGB model evaluators, where **average (`torch.mean`) and unbiased standard deviation (`torch.std`) must be taken over 10 different random seeds.** You can either not fix random seeds at all, or use the random seeds from 0 to 9. We highly discourage you to tune the random seeds.
+- **Test performance**: Raw test performance output by OGB model evaluators, where **average (`torch.mean`) and unbiased standard deviation (`torch.std`) must be taken over 10 different random seeds.** You can either not fix random seeds at all, or use the random seeds from 0 to 9. We highly discourage you to tune the random seeds. For the large [`ogbn-papers100M`](../nodeprop/#ogbn-papers100M), you can use ony 3 random seeds to report the performance.
 - **Validation performance**: Validation performance of the model that is used to report the test performance above.
 - **Contact**: A person's name and email address to contact about the method and code. 
 - **Code**: The Github repository or directory containining all code to reproduce the result. **A placeholder repository is not allowed.**
