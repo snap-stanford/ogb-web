@@ -32,7 +32,7 @@ Similar to MAG240M-LSC, we provide RoBERTa embeddings [4,5] for all the entities
 
 **Prediction task and evaluation metric:**
 The task is the KG completion, i.e., given a set of training triplets, predict a set of test triplets. 
-For evaluation, for each test triplet, (`head`, `relation`, `tail`), we corrupt `tail` with randomly-sampled 1000 negative entities, e.g., `tail_neg`, such that (`head`, `relation`, `tail_neg`) does not appear in the train/validation/test KG. 
+For evaluation, for each test triplet, (`head`, `relation`, `tail`), we corrupt `tail` with randomly-sampled 1000 negative entities `tail_neg`, such that (`head`, `relation`, `tail_neg`) does not appear in the train/validation/test KG. 
 The model is asked to rank the 1001 candidates (consisting of 1 positive and 1000 negatives) for each triplet and predict the top 10 entities that are most likely to be positive. The goal is to rank the ground-truth positive entity as high in the rank as possible, which is measured by Mean Reciprocal Rank (MRR).
 
 **Data split:**
