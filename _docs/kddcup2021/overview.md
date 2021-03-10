@@ -34,7 +34,7 @@ Graph-level | [PCQM4M-LSC](../pcqm4m) |  >=1.3.0  | 3,803,453  | 53,814,542 | 55
 
 **\***: The PCQM4M-LSC dataset is provided in the SMILES strings. After processing them into graph objects, the eventual file size will be around 8GB.
 
-**All of these datasets can be downloaded and prepared using our Python `ogb` package.**
+**All of these datasets can be downloaded and prepared using our [`ogb` Python package](https://github.com/snap-stanford/ogb).**
 **The model evaluation and test submission file saving are also handled by our package.**
 The usage is described in each dataset page. Please install/update it by:
 ```bash
