@@ -3,7 +3,7 @@ title: OGB-LSC @ KDD Cup 2021
 permalink: /docs/kddcup2021/pcqm4m
 layout: kdd_pcqm4m
 ---
-#### **Learn about PCQM4M-LSC Dataset and Python Package**
+#### **Learn about PCQM4M-LSC and Python package**
 - **[Dataset](#dataset): Learn about the dataset and the prediction task.**
 - **Python package tutorial**
     - **[Install `rdkit`](https://www.rdkit.org/docs/Install.html): You will need `rdkit` package to create molecular graphs.**

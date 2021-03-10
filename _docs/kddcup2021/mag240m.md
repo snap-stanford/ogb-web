@@ -4,7 +4,7 @@ permalink: /docs/kddcup2021/mag240m/
 layout: kdd_mag240m
 ---
 
-#### **Learn about MAG240M-LSC Dataset and Python Package**
+#### **Learn about MAG240M-LSC and Python package**
 - **[Dataset](#dataset): Learn about the dataset and the prediction task.**
 - **Python package tutorial**
     - **[Dataset object](#dataset_object): Learn about how to prepare and use the dataset with our package.**

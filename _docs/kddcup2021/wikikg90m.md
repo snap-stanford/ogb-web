@@ -3,7 +3,7 @@ title: OGB-LSC @ KDD Cup 2021
 permalink: /docs/kddcup2021/wikikg90m
 layout: kdd_wikikg90m
 ---
-#### **Learn about WikiKG90M-LSC Dataset and Python Package**
+#### **Learn about WikiKG90M-LSC and Python package**
 
 - **[Dataset](#dataset): Learn about the dataset and the prediction task.**
 - **Python package tutorial**
