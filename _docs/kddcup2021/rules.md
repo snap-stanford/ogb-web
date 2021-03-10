@@ -36,4 +36,5 @@ Our goals are two-fold:
 ##### **Public Data Source**
 All of our datasets are constructed from public database.
 To avoid trivial test label leakage, we have anonymized the data as much as we can, removing any obvious clues (e.g., data identifier, raw text information) that can be used to map nodes or graphs into the entities in the public database. At the same time, to keep our datasets practically-relevant and realistic, our anonymization may not be perfect (e.g., we need to provide the real graph connectivity, node features, and SMILES strings). Although we believe it is nearly impossible to recover ground-truth test labels, we still significantly discourage the participants to try to de-anonymize the datasets during the competition.
-Keep in mind that you will need to submit your public code once you win the contest, which means that any obvious misconduct (e.g., training or doing early stopping on test labels, directly using the test labels as predictions) will be revealed.
+Keep in mind that once you win the contest, you will need to share all the code to reproduce your solution through public Github repository, which needs to remain public even after the KDD Cup. 
+This means that any obvious misconduct (e.g., training or doing early stopping on test labels, directly using the test labels as predictions) will be revealed.
