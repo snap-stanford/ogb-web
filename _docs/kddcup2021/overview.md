@@ -28,7 +28,7 @@ We will announce the top 3 winning teams for each of the datasets (in total of 9
 
 The dataset statistics as well as basic information are summarized below.
 
-Task category | Name      | Package      |  #Graphs      | #Total nodes  | #Total edges  | Data split        | Task Type   | Metric  | File size
+Task category | Name      | Package      |  #Graphs      | #Total nodes  | #Total edges  | Data split        | Task Type   | Metric  | Download size
 |:---------:|:--------|-----:|-----:|----------------:|----------------------:|:---------------|:-------|:-------------|
 Node-level | [MAG240-LSC](../mag240m) | >=1.3.0 | 1 | 244,160,499  | 1,728,364,232 | Time      | Multi-class classification | Accuracy | 168GB |
 Link-level | [WikiKG90M-LSC](../wikikg90m) |  >=1.3.0  | 1 | 87,143,637 | 504,220,369 |  Time    | KG completion | MRR | 94GB
