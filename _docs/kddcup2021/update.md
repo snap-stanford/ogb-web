@@ -5,6 +5,6 @@ layout: kdd_update
 ---
 
 #### **Learn about updates and any changes**
-- **We will describe any updates and changes from us as the KDD Cup unfolds.**
+- **We will post any updates and changes from us as the KDD Cup unfolds.**
 
 ----------
