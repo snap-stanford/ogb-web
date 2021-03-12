@@ -127,18 +127,20 @@ For questions about our code, use **[our Github issues](https://github.com/snap-
   </tr> 
 </table>
 
-<!-- #### **Partners**
+#### **Partners**
 <table style="background-color:#FDFEFE; border:none;">
   <tr>
     <td>
     <div style="margin: 0 auto; width: 150px; text-align: center">
-      <img src="{{ "/assets/img/intel.png" | relative_url }}" class="img-responsive">
+      <img src="{{ "/assets/img/portrait/amit.png" | relative_url }}" class="img-responsive">
+      <strong>Amit Bleiweiss</strong> <br/> Intel
       </div>
     </td>
     <td>
-    <div style="margin: 0 auto; width: 220px; text-align: center">
-      <img src="{{ "/assets/img/mit_eecs.png" | relative_url }}" class="img-responsive">
+    <div style="margin: 0 auto; width: 150px; text-align: center">
+      <img src="{{ "/assets/img/portrait/benjamin.png" | relative_url }}" class="img-responsive">
+      <strong>Benjamin Braun</strong> <br/> Intel
       </div>
     </td>
   </tr> 
-</table> -->
+</table>
