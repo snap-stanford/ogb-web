@@ -7,8 +7,9 @@ layout: kdd_participate
 #### **Learn about team registration and test submissions**  
 - **All the deadlines are on 23:59pm PST.** 
 
--------
+<a name="registration"/>
 
+-------
 
 #### **Team registration**: Deadline April 30th, 2021
 ##### **[Google form (coming soon)](../form)**
@@ -31,6 +32,8 @@ In the Google form, you will need to fill in the following information.
 
 Also, keep in mind that **your team name will be made publicly available** in our leaderboards together with your model performance. For the top 3 winners of each dataset, **the team member information will be also made publicly available.**
 
+<a name="initial"/>
+
 -------
 
 #### **Initial test submission**: Deadline May 10th, 2021
@@ -47,6 +50,8 @@ In the Google form, you will need to fill in the following information.
 The submission will be evaluated over 5% of the hidden test data. The submitted performance will be made public in the leaderboards by May 14th. Note that the performance at the initial stage does *not* affect the winner selection.
 
 -------
+
+<a name="final"/>
 
 #### **Final test submission**: Deadline June 8th, 2021
 ##### **[Google form (coming soon)](../form)**

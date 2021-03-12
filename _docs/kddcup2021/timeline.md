@@ -16,19 +16,19 @@ We release all the datasets, package, and baseline code. Welcome to the competit
 
 -------
 
-##### **April 30th, 2021: Team registration deadline**
+##### **April 30th, 2021: [Team registration deadline](../participate/#registration)**
 Every team must be registered in order to be eligible for the subsequent test submissions.
 
 -------
 
-##### **May 10th, 2021: Initial test submission deadline**
+##### **May 10th, 2021: [Initial test submission deadline](../participate/#initial)**
 Each team can optionally submit their initial test prediction.
 The prediction will be evaluated on 5% of test data, and the performance will be made public in our initial leaderboards.
 Although the performance here does not affect the winner selection, we encourage all the teams to try the initial submission to ensure the smooth final test submission.
 
 --------
 
-##### **June 8th, 2021: Final test submission deadline**
+##### **June 8th, 2021: [Final test submission deadline](../participate/#final)**
 Each team submits their final test prediction, which will be evaluated over the entire test data.
 
 -------
