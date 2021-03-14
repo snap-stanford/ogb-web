@@ -12,7 +12,7 @@ layout: kdd_participate
 -------
 
 #### **Team registration**: Deadline April 30th, 2021
-##### **[Google form (coming soon)](../form)**
+##### **[Google form](https://docs.google.com/forms/d/e/1FAIpQLSep990DhDqzkz8DZ4_6LU9aqbpk9iua2cniPAg7v-7GY4Jpwg/viewform)**
 **Every team must be registered through the Google form in order to be eligible for the subsequent test submissions.** 
 **For each dataset, no members can be shared across different teams. If your team wants to work on multiple datasets, you will need to register separately.**
 In the Google form, you will need to fill in the following information. 
