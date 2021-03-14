@@ -26,7 +26,7 @@ During the KDD Cup, we **do not** allow the use of any external datasets to trai
 ---------
 
 ##### **Code Submission by Winners**
-We require public code submission for the winners of the contest, which we will publicize on our webpage.
+We require public code submission for the winners of the contest, which will be publicized on our webpage and need to remain public even after the KDD Cup.
 Our goals are two-fold:
 - To make it easier for the community to follow and build on top of the strong solutions.
 - To incentivize the participants to follow the rules described above. Otherwise, the community would be able to find any misconduct by scrutinizing the code. The winners will be disqualified if there is any misconduct found in the code.
@@ -36,5 +36,5 @@ Our goals are two-fold:
 ##### **Public Data Source**
 All of our datasets are constructed from public database.
 To avoid trivial test label leakage, we have anonymized the data as much as we can, removing any obvious clues (e.g., data identifier, raw text information) that can be used to map nodes or graphs into the entities in the public database. At the same time, to keep our datasets practically-relevant and realistic, our anonymization may not be perfect (e.g., we need to provide the real graph connectivity, node features, and SMILES strings). Although we believe it is nearly impossible to recover ground-truth test labels, we still significantly discourage the participants to try to de-anonymize the datasets during the competition.
-Keep in mind that once you win the contest, you will need to share all the code to reproduce your solution through public Github repository, which needs to remain public even after the KDD Cup. 
+Keep in mind that once you win the contest, you will need to share all the code to reproduce your solution through public Github repository. 
 This means that any obvious misconduct (e.g., training or doing early stopping on test labels, directly using the test labels as predictions) will be revealed.
