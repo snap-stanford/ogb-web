@@ -18,7 +18,7 @@ layout: kdd_participate
 In the Google form, you will need to fill in the following information. 
 
 - **Email:** Your own email address that you check daily.
-- **Dataset:** MAG240-LSC, WikiKG90M-LSC, or PCQM4M-LSC.
+- **Dataset:** MAG240M-LSC, WikiKG90M-LSC, or PCQM4M-LSC.
 - **Team name:** Try to come up with a unique name!
 - **Google group subscription**: From each team, we require at least one email address to be subscribed to our **[Google group](https://groups.google.com/g/open-graph-benchmark)**. We will use the group to make any announcements.
 - **Team member information:** For each member, we require
