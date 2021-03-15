@@ -22,7 +22,7 @@ However, in deep learning, it has been demonstrated over and over again that one
 #### **Overview of OGB-LSC**
 
 Here we propose a large-scale graph ML competition, **OGB Large-Scale Challenge (OGB-LSC)**, to encourage the development of state-of-the-art graph ML models for massive modern datasets. 
-Specifically, **we present three datasets: [MAG240M-LSC](../mag240m)**, **[WikiKG90M-LSC](../wikikg90m)**, and **[PCQM4M-LSC](../pcqm4m)**, that are unprecedentedly large in scale and cover prediction at the level of nodes, links, and graphs, respectively.
+Specifically, **we present three datasets: [MAG240M-LSC](mag240m/)**, **[WikiKG90M-LSC](wikikg90m/)**, and **[PCQM4M-LSC](pcqm4m/)**, that are unprecedentedly large in scale and cover prediction at the level of nodes, links, and graphs, respectively.
 **Each dataset offers an independent task, and the winners will be selected separately for each dataset.**
 We will announce the top 3 winning teams for each of the datasets (in total of 9 winning teams), and they will be given opportunities to present their solutions during the KDD Cup workshop.
 
@@ -30,9 +30,9 @@ An illustrative overview of the three OGB-LSC datasets is provided below.
 <p align = "center">
 <img width="90%" src="{{ "/assets/img/ogb-lsc-task-overview.png" | relative_url }}" class="img-responsive">
 </p>
-- **[MAG240M-LSC](../mag240m)** is a heterogeneous academic graph, and the task is to predict the subject areas of papers situated in the heterogeneous graph (node classification). 
-- **[WikiKG90M-LSC](../wikikg90m)** is a knowledge graph, and the task is to impute missing triplets (link prediction). 
-- **[PCQM4M-LSC](../pcqm4m)** is a quantum chemistry dataset, and the task is to predict an important molecular property, the HOMO-LUMO gap, of a given molecule (graph regression).
+- **[MAG240M-LSC](mag240m/)** is a heterogeneous academic graph, and the task is to predict the subject areas of papers situated in the heterogeneous graph (node classification). 
+- **[WikiKG90M-LSC](wikikg90m/)** is a knowledge graph, and the task is to impute missing triplets (link prediction). 
+- **[PCQM4M-LSC](pcqm4m/)** is a quantum chemistry dataset, and the task is to predict an important molecular property, the HOMO-LUMO gap, of a given molecule (graph regression).
 
 For each dataset, we carefully design its prediction task and data split so that achieving high prediction performance on the task will have direct impact on the corresponding application. Further details are provided in each dataset page.
 
@@ -40,9 +40,9 @@ The dataset statistics as well as basic information are summarized below, showin
 
 Task category | Name      | Package      |  #Graphs      | #Total nodes  | #Total edges  | Data split        | Task Type   | Metric  | Download size
 |:---------:|:--------|-----:|-----:|----------------:|----------------------:|:---------------|:-------|:---------|---------:|
-Node-level | **[MAG240-LSC](../mag240m)** | >=1.3.0 | 1 | 244,160,499  | 1,728,364,232 | Time      | Multi-class classification | Accuracy | 168GB |
-Link-level | **[WikiKG90M-LSC](../wikikg90m)** |  >=1.3.0  | 1 | 87,143,637 | 504,220,369 |  Time    | KG completion | MRR | 94GB
-Graph-level | **[PCQM4M-LSC](../pcqm4m)** |  >=1.3.0  | 3,803,453  | 53,814,542 | 55,399,880   | Scaffold      | Regression | MAE | 58MB**\*** 
+Node-level | **[MAG240-LSC](mag240m/)** | >=1.3.0 | 1 | 244,160,499  | 1,728,364,232 | Time      | Multi-class classification | Accuracy | 168GB |
+Link-level | **[WikiKG90M-LSC](wikikg90m/)** |  >=1.3.0  | 1 | 87,143,637 | 504,220,369 |  Time    | KG completion | MRR | 94GB
+Graph-level | **[PCQM4M-LSC](pcqm4m/)** |  >=1.3.0  | 3,803,453  | 53,814,542 | 55,399,880   | Scaffold      | Regression | MAE | 58MB**\*** 
 
 **\***: The PCQM4M-LSC dataset is provided in the SMILES strings. After processing them into graph objects, the eventual file size will be around 8GB.
 
@@ -55,7 +55,7 @@ pip install -U ogb
 python -c "import ogb; print(ogb.__version__)"
 ```
 
-In our **[paper (coming soon)](../paper)**, we further perform an extensive baseline analysis on each dataset, implementing simple baseline models as well as advanced expressive models at scale.
+In our **[paper (coming soon)](paper/)**, we further perform an extensive baseline analysis on each dataset, implementing simple baseline models as well as advanced expressive models at scale.
 We find that advanced expressive models, despite requiring more efforts to scale up, do benefit from large data and significantly outperform simple baseline models that are easy to scale.
 
 Our KDD Cup will encourage the community to develop and scale up expressive graph ML models, which can yield significant breakthroughs in the respective domains. All of our baseline code is made publicly available to facilitate public research.
