@@ -53,7 +53,7 @@ The **bold** method name indicates that the implementation is **official** (by t
 
 | Rank  | Method | Test AP | Validation AP | Contact | References | #Params | Hardware | Date 
 |:----:|:-----:|:------:|:-----:|:-----:|:-----:|-----:|:-----:|:-----:|
-|  1  |  GINE+ w/ APPNP  | 0.2979 ± 0.0030   | 0.3126 ± 0.0023 | [Weibin Li](mailto:liweibin02@baidu.com) | [Paper](https://arxiv.org/pdf/2011.15069.pdf), [Code](https://github.com/PaddlePaddle/PGL/tree/main/ogb_examples/graphproppred/ogbg_molpcba) | 6,147,029 | Tesla V100 (32GB) | Mar 15, 2021 |
+|  1  |  GINE+ w/ APPNP  | 0.2979 ± 0.0030   | 0.3126 ± 0.0023 | [Weibin Li (PaddleHelix & PGL)](mailto:liweibin02@baidu.com) | [Paper](https://arxiv.org/pdf/2011.15069.pdf), [Code](https://github.com/PaddlePaddle/PGL/tree/main/ogb_examples/graphproppred/ogbg_molpcba) | 6,147,029 | Tesla V100 (32GB) | Mar 15, 2021 |
 |  2  |  **GINE+ w/ virtual nodes**  | 0.2917 ± 0.0015   | 0.3065 ± 0.0030 |[Rémy Brossard](mailto:remy@anotherbrain.ai) | [Paper](https://arxiv.org/abs/2011.15069), [Code](https://github.com/RBrossard/GINEPLUS) | 6,147,029 | GeForce GTX 1080 Ti | Dec 1, 2020 |
 |  3  |  **DGN**  | 0.2885 ± 0.0030   | 0.2970 ± 0.0021 |[Dominique Beaini](mailto:dominique@valencediscovery.com) | [Paper](https://arxiv.org/pdf/2010.02863.pdf), [Code](https://github.com/Saro00/DGN) | 6,732,696 | NVIDIA T4 GPU (16 GB) | Mar 4, 2021 |
 |  4  |  **DeeperGCN+virtual node+FLAG**  | 0.2842 ± 0.0043   | 0.2952 ± 0.0029 |[Kezhi Kong](mailto:kong@cs.umd.edu) | [Paper](https://arxiv.org/abs/2010.09891), [Code](https://github.com/devnkong/FLAG) | 5,550,208 | NVIDIA Tesla V100 (32GB GPU) | Oct 21, 2020 |
