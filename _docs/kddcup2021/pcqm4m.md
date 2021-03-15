@@ -9,7 +9,7 @@ layout: kdd_pcqm4m
     - **[Install `rdkit`](https://www.rdkit.org/docs/Install.html): You will need `rdkit` package to create molecular graphs.**
     - **[Dataset object](#dataset_object): Learn about how to prepare and use the dataset with our package.**
     - **[Performance evaluator](#evaluator): Learn about how to evaluate models and save test submissions with our package.**
-    - **[Initial baseline code (coming soon)](../code): Learn about our initial baseline experiments.**
+    - **[Initial baseline code](https://github.com/snap-stanford/ogb/tree/master/examples/lsc/pcqm4m): Learn about our initial baseline experiments.**
 
 <a name="dataset"/>
 
