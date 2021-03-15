@@ -1,7 +1,7 @@
 with open('kdd.html', 'r') as f:
     lines  = f.read().split('\n')
 
-for page in ['overview', 'timeline', 'rules', 'mag240m', 'wikikg90m', 'pcqm4m', 'participate', 'update']:
+for page in ['Overview', 'timeline', 'rules', 'mag240m', 'wikikg90m', 'pcqm4m', 'participate', 'update']:
     lines_new  = lines.copy()
     for i, line in enumerate(lines_new):
         if page in line:
