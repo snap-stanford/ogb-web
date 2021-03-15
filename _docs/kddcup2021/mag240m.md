@@ -1,6 +1,6 @@
 ---
 title: OGB-LSC @ KDD Cup 2021
-permalink: /docs/kddcup2021/mag240m/
+permalink: /kddcup2021/mag240m/
 layout: kdd_mag240m
 ---
 

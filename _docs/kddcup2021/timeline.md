@@ -1,6 +1,6 @@
 ---
 title: OGB-LSC @ KDD Cup 2021
-permalink: /docs/kddcup2021/timeline/
+permalink: /kddcup2021/timeline/
 layout: kdd_timeline
 ---
 

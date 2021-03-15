@@ -1,6 +1,6 @@
 ---
 title: OGB-LSC @ KDD Cup 2021
-permalink: /docs/kddcup2021/wikikg90m
+permalink: /kddcup2021/wikikg90m
 layout: kdd_wikikg90m
 ---
 #### **Learn about WikiKG90M-LSC and Python package**

@@ -1,6 +1,6 @@
 ---
 title: OGB-LSC @ KDD Cup 2021
-permalink: /docs/kddcup2021/pcqm4m
+permalink: /kddcup2021/pcqm4m
 layout: kdd_pcqm4m
 ---
 #### **Learn about PCQM4M-LSC and Python package**

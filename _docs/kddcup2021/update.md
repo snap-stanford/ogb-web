@@ -1,6 +1,6 @@
 ---
 title: OGB-LSC @ KDD Cup 2021
-permalink: /docs/kddcup2021/update/
+permalink: /kddcup2021/update/
 layout: kdd_update
 ---
 
