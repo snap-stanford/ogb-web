@@ -20,7 +20,7 @@ In the Google form, you will need to fill in the following information.
 - **Email:** Your own email address that you check daily.
 - **Dataset:** MAG240M-LSC, WikiKG90M-LSC, or PCQM4M-LSC.
 - **Team name:** Try to come up with a unique name!
-- **Password:** Come up with a complex password (minimum 10 characters) that cannot be guessed easily. **Do not use your personal password as we won't hash it!** This password will be used to verify that you (not others) are making the test submissions through your email.
+- **Password:** Come up with a complex password (minimum 10 characters) that cannot be guessed easily. **Do not use your personal password as we won't hash it!** This password will be used to verify that you (not others) are making the test submissions with your email address.
 - **Google group subscription**: From each team, we require at least one email address to be subscribed to our **[Google group](https://groups.google.com/g/open-graph-benchmark)**. We will use the group to make any announcements.
 - **Team member information:** For each member, we require
     - Full real name
