@@ -22,7 +22,7 @@ In the Google form, you will need to fill in the following information.
 - **Team name:** Try to come up with a unique name!
 - **Password:** Come up with a complex password (minimum 10 characters) that cannot be guessed easily. This password will be used to verify that you (not others) are making the test submissions with your email address.
     - **Important: Please do not use your personal password as we won't hash it!** 
-    - **Note:** This password can be as random as it can be. You will get a response email recording this password, so you do not need to memorize it (as long as you keep the response email).
+    - **Note:** This password can be as random as it can be. You will get a response receipt email recording this password, so you do not need to memorize it (as long as you keep the receipt email).
 - **Google group subscription**: From each team, we require at least one email address to be subscribed to our **[Google group](https://groups.google.com/g/open-graph-benchmark)**. We will use the group to make any announcements.
 - **Team member information:** For each member, we require
     - Full real name
@@ -31,7 +31,7 @@ In the Google form, you will need to fill in the following information.
 - **Rules**: Promise to follow the [rules](../rules).
 - **Honer code**: You acknowledge that you have entered your own email address and the correct team member information. Whenever we ask you, you will have to respond immediately through the registered email and prove the correctness of the information you have provided. Otherwise, you may be disqualified from the competition.
 
-**Important: After the registration, you will receive a response receipt with all the above information on it. Please keep it for your subsequent test submissions.** As you see below, you will need to enter the information you have registered here.
+**Important: After the registration, you will receive a response receipt email with all the above information on it. Please keep it for your subsequent test submissions.** As you see below, you will need to enter the information you have registered here.
 
 Also, keep in mind that **your team name will be made publicly available** in our leaderboards together with your model performance. For the top 3 winners of each dataset, **the team member information will be also made publicly available.**
 
