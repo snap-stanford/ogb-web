@@ -20,7 +20,7 @@ In the Google form, you will need to fill in the following information.
 - **Email:** Your own email address that you check daily.
 - **Dataset:** MAG240M-LSC, WikiKG90M-LSC, or PCQM4M-LSC.
 - **Team name:** Try to come up with a unique name!
-- **Password:** Come up with a complex password (minimum 10 characters) that cannot be guessed easily. **Do not use your personal password as we won't hash it!** This password will be used to verify that you (not others) are making the test submissions with your email address.
+- **Password:** Come up with a complex password (minimum 10 characters) that cannot be guessed easily. **Please do not use your personal password as we won't hash it!** This password will be used to verify that you (not others) are making the test submissions with your email address.
 - **Google group subscription**: From each team, we require at least one email address to be subscribed to our **[Google group](https://groups.google.com/g/open-graph-benchmark)**. We will use the group to make any announcements.
 - **Team member information:** For each member, we require
     - Full real name
@@ -40,12 +40,13 @@ Also, keep in mind that **your team name will be made publicly available** in ou
 #### **Initial test submission**: Deadline May 10th, 2021
 ##### **[Google form (coming soon)](../form)**
 **Each team can optionally do one initial test submission to ensure the smooth final test submission.**
-In the Google form, you will need to fill in the following information.
+First, please have your registration receipt email with you.
+Then, please fill in the following information.
 
-- **Email:** As registered before.
-- **Dataset:** As registered before.
-- **Team name**: As registered before.
-- **Password**: As registered before.
+- **Email:** As registered in the receipt.
+- **Dataset:** As registered in the receipt.
+- **Team name**: As registered in the receipt.
+- **Password**: As registered in the receipt.
 - **Package version**: Package version used for experiments. Must match the required package for the dataset.
 - **Prediction file**: Upload the model's prediction on the test set (format specified in the dataset page).
 
@@ -58,12 +59,13 @@ The submission will be evaluated over 5% of the hidden test data. The submitted 
 #### **Final test submission**: Deadline June 8th, 2021
 ##### **[Google form (coming soon)](../form)**
 **Each team submits its own final prediction result.**
-In the Google form, you will need to fill in the following information. 
+First, please have your registration receipt email with you.
+Then, please fill in the following information.
 
-- **Email:** As registered before.
-- **Dataset:** As registered before.
-- **Team name**: As registered before.
-- **Password**: As registered before.
+- **Email:** As registered in the receipt.
+- **Dataset:** As registered in the receipt.
+- **Team name**: As registered in the receipt.
+- **Password**: As registered in the receipt.
 - **Prediction file**: Upload the model's prediction on the test set (format specified in the dataset page).
 - **Package version**: Package version used for experiments. Must match the required package for the dataset.
 - **Extra information (irrelevant to winner decision)**:
