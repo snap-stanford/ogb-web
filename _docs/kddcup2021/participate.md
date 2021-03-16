@@ -12,8 +12,7 @@ layout: kdd_participate
 -------
 
 #### **Team registration**: Deadline April 30th, 2021
-<!-- ##### **[Google form](https://docs.google.com/forms/d/e/1FAIpQLSep990DhDqzkz8DZ4_6LU9aqbpk9iua2cniPAg7v-7GY4Jpwg/viewform)** -->
-##### **[Google form (coming soon)](../form)**
+##### **[Google form](https://docs.google.com/forms/d/e/1FAIpQLSep990DhDqzkz8DZ4_6LU9aqbpk9iua2cniPAg7v-7GY4Jpwg/viewform)**
 **Every team must be registered through the Google form in order to be eligible for the subsequent test submissions.** 
 **For each dataset, no members can be shared across different teams. If your team wants to work on multiple datasets, you will need to register separately.**
 In the Google form, you will need to fill in the following information. 
@@ -21,6 +20,7 @@ In the Google form, you will need to fill in the following information.
 - **Email:** Your own email address that you check daily.
 - **Dataset:** MAG240M-LSC, WikiKG90M-LSC, or PCQM4M-LSC.
 - **Team name:** Try to come up with a unique name!
+- **Password:** Come up with a complex password (minimum 10 characters) that cannot be guessed easily. **Do not use your personal password here!** This password will be used to verify that you (not others) are making the test submissions through your email.
 - **Google group subscription**: From each team, we require at least one email address to be subscribed to our **[Google group](https://groups.google.com/g/open-graph-benchmark)**. We will use the group to make any announcements.
 - **Team member information:** For each member, we require
     - Full real name
@@ -29,7 +29,7 @@ In the Google form, you will need to fill in the following information.
 - **Rules**: Promise to follow the [rules](../rules).
 - **Honer code**: You acknowledge that you have entered your own email address and the correct team member information. Whenever we ask you, you will have to respond immediately through the registered email and prove the correctness of the information you have provided. Otherwise, you may be disqualified from the competition.
 
-**After the registration, you will receive a response receipt. Please keep it for your subsequent test submissions.**
+**Important: After the registration, you will receive a response receipt. Please keep it for your subsequent test submissions.** As you see below, you will need to enter the information you have registered here.
 
 Also, keep in mind that **your team name will be made publicly available** in our leaderboards together with your model performance. For the top 3 winners of each dataset, **the team member information will be also made publicly available.**
 
@@ -45,6 +45,7 @@ In the Google form, you will need to fill in the following information.
 - **Email:** As registered before.
 - **Dataset:** As registered before.
 - **Team name**: As registered before.
+- **Password**: As registered before.
 - **Package version**: Package version used for experiments. Must match the required package for the dataset.
 - **Prediction file**: Upload the model's prediction on the test set (format specified in the dataset page).
 
@@ -62,6 +63,7 @@ In the Google form, you will need to fill in the following information.
 - **Email:** As registered before.
 - **Dataset:** As registered before.
 - **Team name**: As registered before.
+- **Password**: As registered before.
 - **Prediction file**: Upload the model's prediction on the test set (format specified in the dataset page).
 - **Package version**: Package version used for experiments. Must match the required package for the dataset.
 - **Extra information (irrelevant to winner decision)**:
