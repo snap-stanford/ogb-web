@@ -7,7 +7,7 @@ permalink: /docs/update/
 
 -------
 
-###### **March 15th, 2021: [OGB-LSC](/kddcup2021/) at KDD Cup 2021 kicked off!**
+###### **March 15th, 2021: [OGB-LSC](/kddcup2021/) at KDD Cup 2021 started!**
 - We organize the machine learning challenge on large-scale graph data.
 - **Please update your package to [`1.3.0`](https://github.com/snap-stanford/ogb/releases/tag/1.3.0)**, through which the OGB-LSC datasets are accessible.
 
