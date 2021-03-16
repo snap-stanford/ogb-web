@@ -22,14 +22,14 @@ Every team must be registered in order to be eligible for the subsequent test su
 -------
 
 ##### **May 10th, 2021: [Initial test submission](../participate/#initial) deadline**
-Each team can optionally submit their initial test prediction.
+Each team can optionally submit one initial test prediction per dataset.
 The prediction will be evaluated on 5% of test data, and the performance will be made public in our initial leaderboards.
 Although the performance here does not affect the winner selection, we encourage all the teams to try the initial submission to ensure the smooth final test submission.
 
 --------
 
 ##### **June 8th, 2021: [Final test submission](../participate/#final) deadline**
-Each team submits their final test prediction, which will be evaluated over the entire test data.
+Each team submits its final test prediction, which will be evaluated over the entire test data.
 
 -------
 
