@@ -38,10 +38,10 @@ Also, keep in mind that **your team name will be made publicly available** in ou
 -------
 
 #### **Initial test submission**: Deadline May 10th, 2021
-##### **[Google form (coming soon)](../form)**
+##### **[Submission website (coming soon)](../form)**
 **Each team can optionally do one initial test submission to ensure the smooth final test submission.**
 First, please have your registration receipt email with you.
-Then, please fill in the following information.
+Then, fill in the following information.
 
 - **Email:** As registered in the receipt.
 - **Dataset:** As registered in the receipt.
@@ -57,10 +57,10 @@ The submission will be evaluated over 5% of the hidden test data. The submitted 
 <a name="final"/>
 
 #### **Final test submission**: Deadline June 8th, 2021
-##### **[Google form (coming soon)](../form)**
+##### **[Submission website (coming soon)](../form)**
 **Each team submits its own final prediction result.**
 First, please have your registration receipt email with you.
-Then, please fill in the following information.
+Then, fill in the following information.
 
 - **Email:** As registered in the receipt.
 - **Dataset:** As registered in the receipt.
