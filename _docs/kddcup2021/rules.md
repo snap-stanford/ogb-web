@@ -28,7 +28,7 @@ During the KDD Cup, we **do not** allow the use of any external datasets to trai
 ##### **Code Submission by Winners**
 For the winners of the contest, we require public code submission through Github repo. The repo should follow the format of our baseline code (e.g., [MAG240M](https://github.com/snap-stanford/ogb/tree/master/examples/lsc/mag240m), [WikiKG90M](https://github.com/snap-stanford/ogb/tree/master/examples/lsc/wikikg90m), [PCQM4M](https://github.com/snap-stanford/ogb/tree/master/examples/lsc/pcqm4m)) and contain
 - All the code to reproduce your results (including data pre-processing and model training/inference) and save the test submission.
-- `README.md` that contains all the instructions to run the code.
+- `README.md` that contains all the instructions to run the code (from data pre-processing to model inference on test data).
 
 The Github repo will be publicized on our webpage and need to remain public even after the KDD Cup.
 Our goals are two-fold:
