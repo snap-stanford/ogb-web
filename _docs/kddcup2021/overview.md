@@ -57,9 +57,10 @@ python -c "import ogb; print(ogb.__version__)"
 
 In our **[paper (coming soon)](paper/)**, we further perform an extensive baseline analysis on each dataset, implementing simple baseline models as well as advanced expressive models at scale.
 We find that advanced expressive models, despite requiring more efforts to scale up, do benefit from large data and significantly outperform simple baseline models that are easy to scale.
+All of our baseline code is made **[publicly available](https://github.com/snap-stanford/ogb/tree/master/examples/lsc)** to facilitate public research.
 
-Our KDD Cup will encourage the community to develop and scale up expressive graph ML models, which can yield significant breakthroughs in the respective domains. All of our baseline code is made publicly available to facilitate public research.
-Overall, we hope OGB-LSC at KDD Cup 2021 will serve as an "ImageNet Large Scale Visual Recognition Challenge" in the field of graph ML, encouraging the community to work on realistic and large-scale graph datasets and significantly advance the state-of-the-art.
+Overall, our KDD Cup will encourage the community to develop and scale up expressive graph ML models, which can yield significant breakthroughs in the respective domains. 
+We hope OGB-LSC at KDD Cup 2021 will serve as an "ImageNet Large Scale Visual Recognition Challenge" in the field of graph ML, encouraging the community to work on realistic and large-scale graph datasets and significantly advance the state-of-the-art.
 
 -----------
 
