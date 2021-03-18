@@ -55,7 +55,7 @@ pip install -U ogb
 python -c "import ogb; print(ogb.__version__)"
 ```
 
-In our **[paper](http://127.0.0.1:4000/)**, we further perform an extensive baseline analysis on each dataset, implementing simple baseline models as well as advanced expressive models at scale.
+In our **[paper](http://arxiv.org/abs/2103.09430)**, we further perform an extensive baseline analysis on each dataset, implementing simple baseline models as well as advanced expressive models at scale.
 We find that advanced expressive models, despite requiring more efforts to scale up, do benefit from large data and significantly outperform simple baseline models that are easy to scale.
 All of our baseline code is made **[publicly available](https://github.com/snap-stanford/ogb/tree/master/examples/lsc)** to facilitate public research.
 
@@ -66,7 +66,7 @@ We hope OGB-LSC at KDD Cup 2021 will serve as an "ImageNet Large Scale Visual Re
 
 #### **[Paper](http://arxiv.org/abs/2103.09430)**
 
-Details about our datasets and our initial baseline analysis are described in our OGB-LSC paper.
+Details about our datasets and our initial baseline analysis are described in our **[OGB-LSC paper](http://arxiv.org/abs/2103.09430)**.
 If you use OGB-LSC in your work, please cite our paper (Bibtex below)
 
 ```
