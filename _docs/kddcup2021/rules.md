@@ -26,22 +26,25 @@ During the KDD Cup, we **do not** allow the use of any external datasets to trai
 ---------
 
 ##### **Test Inference Time for [PCQM4M-LSC](/kddcup2021/pcqm4m/)**
-For the [`PCQM4M-LSC`](/kddcup2021/pcqm4m/) dataset, the goal is to use ML to *accelerate* expensive DFT calculations.
-As such, the ML model's inference over new (test) molecules must be fast in order for the model to be practically useful.
-**Only for `PCQM4M-LSC`, we limit the computational budget for the inference at test time.**
-The specific rules are as below:
+**Note: The motivation behind the rules here can be better understood after you read the description of the [`PCQM4M-LSC`](/kddcup2021/pcqm4m/) dataset.**
 
-- The total inference time over the 377,423 test molecules (time to predict target values of the test molecules **from their raw SMILES strings**) should not exceed **12 hours, using a single GPU and single CPU.**\*1
-- Once you win the contest, you will need to provide the inference code (example [here](https://github.com/snap-stanford/ogb/tree/master/examples/lsc/pcqm4m/test_inference_gnn.py)) that takes the 377,423 test SMILES strings as input and saves 377,423 prediction values within 12 hours with single GPU and CPU.
-- The 12 hours budget does not need to include the time to train your model(s). There is no budget limitation during training.
-- You are allowed to use the following chemistry packages to process molecules from their SMILES strings: [rdkit](https://www.rdkit.org/docs/GettingStartedInPython.html), [Open Babel](https://open-babel.readthedocs.io/en/latest/UseTheLibrary/Python.html), and [pyscf](http://pyscf.org/). **The 12 hours budget must include the pre-processing time of test molecules using these packages**, e.g., transforming test SMILES strings into graphs.
+For the [`PCQM4M-LSC`](/kddcup2021/pcqm4m/) dataset, the goal is to use ML to *accelerate* expensive DFT calculations (which takes up to a few hours per molecule!).
+In order for the model to be practically useful, the inference time of the ML model must be fast enough.
+**Therefore, for `PCQM4M-LSC` only, we limit the computational budget for the test-time inference.**
+The specific rules are as follows:
+
+- The total inference time over the 377,423 test molecules (time to predict target values of the test molecules **from their raw SMILES strings**) should not exceed **12 hours, using a single GPU and single CPU.**\*1 Once you win the contest, you will need to provide the inference code (example [here](https://github.com/snap-stanford/ogb/tree/master/examples/lsc/pcqm4m/test_inference_gnn.py)) that takes the 377,423 test SMILES strings as input and saves 377,423 prediction values within 12 hours with single GPU and CPU.
+- The 12-hour budget does *not* need to include the time to train your model(s). There is no budget limitation during training.
+- You are allowed to use the following chemistry packages to process molecules from their SMILES strings: **[rdkit](https://www.rdkit.org/docs/GettingStartedInPython.html)**, **[Open Babel](https://open-babel.readthedocs.io/en/latest/UseTheLibrary/Python.html)**, and **[pyscf](http://pyscf.org/)**. **The 12-hour budget must include the pre-processing time of test molecules using these packages**, e.g., transforming test SMILES strings into graphs. This means that you cannot use the expensive (quantum) calculations to do feature engineering for your test graphs, while you may include many more cheap features in your graphs.
 
 For your reference, the test inference time for our baseline GNN takes about 3 minutes (you can run the code [here](https://github.com/snap-stanford/ogb/tree/master/examples/lsc/pcqm4m/test_inference_gnn.py)) on a single GeForce RTX 2080 GPU and an Intel(R) Xeon(R) Gold 6148 CPU @ 2.40GHz.
-Hence, the above 12 hours budget is quite generous for an ordinary GNN model applied to our default molecular graphs. Nonetheless, 12 hours per 377,423 molecules (or 0.1 second per molecule) is often more than four-orders-of-magnitude faster than the original DFT calculations, making the ML models practically fast enough.
+Hence, the above 12-hour budget is quite generous for an ordinary GNN model applied to our default molecular graphs. However, the 12-hour budget could be the limiting factor, if you would like to apply expensive feature engineering to obtain your graphs.
+Note that from the quantum chemistry point of view, making predictions over the 377,423 molecules in 12 hours (or 0.1 second per molecule) is about four-orders-of-magnitude faster than the original DFT calculations, making the ML-based approach practically fast and useful.
 
 \*1 Ideally, we would like our participants to use the GPU/CPU with the same specs as ours (GeForce RTX 2080 GPU, and an Intel(R) Xeon(R) Gold 6148 CPU @ 2.40GHz.). 
-However, as it is hard to enforce the hardware constraint, we also allow the use of other GPU/CPU specs (the 12 hours budget stays the same), as long as the specs are clearly reported in the final submission. 
-<!-- If you have any concerns or questions about the hardware, feel free to write them in [our discussion thread](https://github.com/snap-stanford/ogb/discussions/categories/pcqm4m-lsc). -->
+However, as it is hard to enforce the hardware constraint, we also allow the use of other GPU/CPU specs (the 12-hour budget stays the same for simplicity). We will require you to report the hardware specs in the final test submission. 
+
+If you need any clarifications about the rules, please make posts at **[PCQM4M's discussion thread](https://github.com/snap-stanford/ogb/discussions/categories/pcqm4m-lsc).**
 
 ---------
 
