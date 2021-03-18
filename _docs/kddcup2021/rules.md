@@ -25,10 +25,10 @@ During the KDD Cup, we **do not** allow the use of any external datasets to trai
 
 ---------
 
-##### **Test Inference Time for PCQM4M-LSC**
+##### **Test Inference Time for [PCQM4M-LSC](/kddcup2021/pcqm4m/)**
 For the [`PCQM4M-LSC`](/kddcup2021/pcqm4m/) dataset, the goal is to use ML to *accelerate* expensive DFT calculations.
 As such, the ML model's inference over new (test) molecules must be fast in order for the model to be practically useful.
-**In the competition, we limit the computational budget for the inference at test time.**
+**Only for `PCQM4M-LSC`, we limit the computational budget for the inference at test time.**
 The specific rules are as below:
 
 - The total inference time over the 377,423 test molecules (time to predict target values of the test molecules **from their raw SMILES strings**) should not exceed **12 hours, using a single GPU and single CPU.**\*1
