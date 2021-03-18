@@ -10,7 +10,7 @@ layout: kdd_mag240m
     - **[Dataset object](#dataset_object): Learn about how to prepare and use the dataset with our package.**
     - **[Performance evaluator](#evaluator): Learn about how to evaluate models and save test submissions with our package.**
     - **[Initial baseline code ](https://github.com/snap-stanford/ogb/tree/master/examples/lsc/mag240m): Learn about our initial baseline experiments.**
-    - **[Discussion forum](https://github.com/snap-stanford/ogb/discussions/categories/mag240m-lsc): Ask questions and make discussion about the dataset.**
+- **[Discussion forum](https://github.com/snap-stanford/ogb/discussions/categories/mag240m-lsc): Ask questions and make discussion about the dataset.**
 
 
 <a name="dataset"/>
