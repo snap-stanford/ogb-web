@@ -46,7 +46,7 @@ Note that from the quantum chemistry point of view, making predictions over the 
 **\*1** Ideally, we would like our participants to use the GPU/CPU with the same specs as ours (GeForce RTX 2080 GPU, and an Intel(R) Xeon(R) Gold 6148 CPU @ 2.40GHz.). 
 However, as it is hard to enforce the hardware constraint, we also allow the use of other GPU/CPU specs (the 12-hour budget stays the same for simplicity). We will require you to report the hardware specs in the final test submission. 
 
- If you need any clarifications about the rules, please feel free to make posts at **[PCQM4M's discussion thread](https://github.com/snap-stanford/ogb/discussions/categories/pcqm4m-lsc).**
+ If you need any clarifications about the rules, please feel free to make posts at **[PCQM4M's discussion forum](https://github.com/snap-stanford/ogb/discussions/categories/pcqm4m-lsc).**
 
 ---------
 
