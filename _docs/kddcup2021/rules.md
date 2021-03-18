@@ -39,7 +39,7 @@ The specific rules are as below:
 For your reference, the test inference time for our baseline GNN takes about 3 minutes (you can run the code [here](https://github.com/snap-stanford/ogb/tree/master/examples/lsc/pcqm4m/test_inference_gnn.py)) on a single GeForce RTX 2080 GPU and an Intel(R) Xeon(R) Gold 6148 CPU @ 2.40GHz.
 Hence, the above 12 hours budget is quite generous for an ordinary GNN model. Nonetheless, 12 hours per 377,423 molecules (or 0.1 second per molecule) is often more than four-orders-of-magnitude faster than the original DFT calculations, which gives practically-relevant fast DFT approximation.
 
-\*1 Ideally, the participant should use the GPU/CPU with the same specs as ours (GeForce RTX 2080 GPU, and an Intel(R) Xeon(R) Gold 6148 CPU @ 2.40GHz.). 
+\*1 Ideally, the participants should use the GPU/CPU with the same specs as ours (GeForce RTX 2080 GPU, and an Intel(R) Xeon(R) Gold 6148 CPU @ 2.40GHz.). 
 However, as it is hard to enforce the hardware constraint, we also allow the use of other GPU/CPU specs (the 12 hours budget stays the same), as long as the specs are clearly reported in the final submission. If you have any concerns or questions about the hardware, feel free to write them in [our discussion thread](https://github.com/snap-stanford/ogb/discussions/categories/pcqm4m-lsc).
 
 ---------
