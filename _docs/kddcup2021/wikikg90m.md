@@ -179,7 +179,8 @@ To evaluate train/validation performance, first prepare
 from ogb.lsc import WikiKG90MEvaluator
 
 evaluator = WikiKG90MEvaluator()
-input_dict = {'t_pred_top10': t_pred_top10, 't_correct_index', t_correct_index}
+input_dict = {}
+input_dict['h,r->t'] = {'t_pred_top10': t_pred_top10, 't_correct_index', t_correct_index}
 result_dict = evaluator.eval(input_dict)
 print(result_dict['mrr']) # get mrr
 ```
@@ -189,6 +190,7 @@ To save your test submission, first prepare
 - `dir_path`: directory path (type: `str`) to save the test file (our package will create the directory if it does not exist). Test file `t_pred_wikikg90m.npz` will be saved under the directory `dir_path`.
 
 ```python
-input_dict = {'t_pred_top10': t_pred_top10}
+input_dict = {}
+input_dict['h,r->t'] = {'t_pred_top10': t_pred_top10}
 evaluator.save_test_submission(input_dict = input_dict, dir_path = dir_path)
 ```
