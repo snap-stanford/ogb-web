@@ -52,7 +52,7 @@ Then, fill in the following information.
 - **Dataset:** As registered in the receipt.
 - **Team name**: As registered in the receipt.
 - **Password**: As registered in the receipt.
-- **Package version**: Package version used for experiments. Must match the required package for the dataset.
+- **Package version**: OGB package version used for experiments. Must match the required package for the dataset.
 - **Prediction file**: Upload the model's prediction on the test set (format specified in the dataset page).
 
 The submission will be evaluated over 5% of the hidden test data. The submitted performance will be made public in the leaderboards by May 14th. Note that the performance at the initial stage does *not* affect the winner selection.
@@ -72,7 +72,7 @@ Then, fill in the following information.
 - **Team name**: As registered in the receipt.
 - **Password**: As registered in the receipt.
 - **Prediction file**: Upload the model's prediction on the test set (format specified in the dataset page).
-- **Package version**: Package version used for experiments. Must match the required package for the dataset.
+- **Package version**: OGB package version used for experiments. Must match the required package for the dataset.
 - **Extra information (irrelevant to winner decision)**:
     - Validation performance (if you use our official validation set for model selection).
     - Training hardware and time
