@@ -26,7 +26,7 @@ In the Google form, you will need to fill in the following information.
     - **Important: Please do NOT use your personal password as we won't hash it!** 
     - **Note:** This password can be as random as it can be. You will get a response receipt email recording this password, so you do not need to memorize it (as long as you keep the receipt email).
 - **Google group subscription**: From each team, we require at least one email address to be subscribed to our **[Google group](https://groups.google.com/g/open-graph-benchmark)**. We will use the group to make any announcements.
-- **Team member information:** For each member, we require
+- **Team member information:** For each member, we require the following information. Note that you can register at most 10 members per team.
     - Full real name
     - Institution
     - Email address
