@@ -14,8 +14,9 @@ layout: kdd_participate
 #### **Team registration**: Deadline April 30th, 2021
 ##### **[Google form](https://docs.google.com/forms/d/e/1FAIpQLSep990DhDqzkz8DZ4_6LU9aqbpk9iua2cniPAg7v-7GY4Jpwg/viewform)**
 **Every team must be registered through the Google form in order to be eligible for the subsequent test submissions.** 
-**For each dataset, no members can be shared across different teams. If your team wants to work on multiple datasets, you will need to register separately.**
-**For each email address, please do NOT register more than once per dataset.**
+For each dataset, no members can be shared across different teams. If your team wants to work on multiple datasets, you will need to register separately.
+Each team can have at most 10 members.
+For each email address, please do NOT register more than once per dataset.
 In the Google form, you will need to fill in the following information. 
 
 - **Email:** Your own email address that you check daily.
@@ -25,7 +26,7 @@ In the Google form, you will need to fill in the following information.
     - **Important: Please do NOT use your personal password as we won't hash it!** 
     - **Note:** This password can be as random as it can be. You will get a response receipt email recording this password, so you do not need to memorize it (as long as you keep the receipt email).
 - **Google group subscription**: From each team, we require at least one email address to be subscribed to our **[Google group](https://groups.google.com/g/open-graph-benchmark)**. We will use the group to make any announcements.
-- **Team member information:** Each team can have at most 10 members. For each member, we require
+- **Team member information:** For each member, we require
     - Full real name
     - Institution
     - Email address
