@@ -1,1 +1,4 @@
 _site/
+**.npz
+**.txt
+.DS_Store
