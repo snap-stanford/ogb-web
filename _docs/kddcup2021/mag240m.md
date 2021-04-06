@@ -9,7 +9,8 @@ layout: kdd_mag240m
 - **Python package tutorial**
     - **[Dataset object](#dataset_object): Learn about how to prepare and use the dataset with our package.**
     - **[Performance evaluator](#evaluator): Learn about how to evaluate models and save test submissions with our package.**
-    - **[Initial baseline code ](https://github.com/snap-stanford/ogb/tree/master/examples/lsc/mag240m): Learn about our initial baseline experiments.**
+    - **[Initial baseline code](https://github.com/snap-stanford/ogb/tree/master/examples/lsc/mag240m): Learn about our initial baseline experiments.**
+    - **[DGL's baseline code](https://github.com/dmlc/dgl/tree/master/examples/pytorch/ogb_lsc/MAG240M)**
 - **[Discussion forum](https://github.com/snap-stanford/ogb/discussions/categories/mag240m-lsc): Ask questions and make discussion about the dataset.**
 
 
