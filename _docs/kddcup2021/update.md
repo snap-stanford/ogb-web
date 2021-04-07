@@ -11,7 +11,7 @@ layout: kdd_update
 
 ###### **April 8th, 2021: Package updated to [package `1.3.1`](https://github.com/snap-stanford/ogb/releases/tag/1.3.1)**
 - Thanks to the [DGL Team](https://www.dgl.ai/), all the LSC data is now hosted on AWS. This significantly improves the download speed around the globe! The underlying data stays exactly the same.
-- Please consider updating your package if you have not downloaded the datasets.
+- Please consider updating your package if you are planning to downloaded the datasets.
 
 -------
 
