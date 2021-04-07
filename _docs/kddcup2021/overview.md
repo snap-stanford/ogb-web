@@ -87,8 +87,8 @@ The OGB-LSC team can be reached at **<ogb-lsc@cs.stanford.edu>**.
 For discussion or general questions about the datasets, use **[our Github discussion](https://github.com/snap-stanford/ogb/discussions)**.
 For questions about our code, use **[our Github issues](https://github.com/snap-stanford/ogb/issues)**. Subscribe to **[our Google group](https://groups.google.com/forum/#!forum/open-graph-benchmark)** to keep yourself updated with any changes and updates from us.
 
-We greatly acknowledge **[Adrijan Bradaschia](https://www.linkedin.com/in/adrijan-bradaschia-7b58ba8a/)** (Stanford) for setting up the server and the test submission page.
-We also sincerely acknowledge the [DGL Team](https://www.dgl.ai/) for help hosting our data on AWS, which allows much faster downloading.
+We acknowledge **[Adrijan Bradaschia](https://www.linkedin.com/in/adrijan-bradaschia-7b58ba8a/)** (Stanford) for setting up the server and the test submission page.
+We also acknowledge the **[DGL Team](https://www.dgl.ai/)** for helping us host our datasets on AWS, which allows much faster downloading of the datasets.
 
 <table style="background-color:#FDFEFE; border:none;">
   <tr>
