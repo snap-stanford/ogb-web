@@ -9,6 +9,12 @@ layout: kdd_update
 
 -------
 
+###### **April 8th, 2021: Package updated to [package `1.3.1`](https://github.com/snap-stanford/ogb/releases/tag/1.3.1)**
+- Thanks to the [DGL Team](https://www.dgl.ai/), all the LSC data is now hosted on AWS. This significantly improves the download speed around the globe! The underlying data stays exactly the same.
+- Please consider updating your package if you have not downloaded the datasets.
+
+-------
+
 ###### **March 17th, 2021: Rules for PCQM4M-LSC added**
 - Please read **[the new rules](/kddcup2021/rules/#pcqm4m_time)** carefully.
 

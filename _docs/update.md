@@ -3,7 +3,12 @@ title: Updates from OGB
 permalink: /docs/update/
 ---
 
-##### **Please update your package to [1.3.0](https://github.com/snap-stanford/ogb/releases/tag/1.3.0)** (March 15th, 2021).
+##### **Please update your package to [1.3.1](https://github.com/snap-stanford/ogb/releases/tag/1.3.1)** (April 8th, 2021).
+
+--------
+
+###### **April 8th, 2021: Package updated to [package `1.3.1`](https://github.com/snap-stanford/ogb/releases/tag/1.3.1)**
+- Thanks to the [DGL Team](https://www.dgl.ai/), all the LSC data is now hosted on AWS. This significantly improves the download speed around the globe! The underlying LSC data stays exactly the same.
 
 -------
 
