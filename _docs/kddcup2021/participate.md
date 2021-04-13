@@ -15,7 +15,7 @@ layout: kdd_participate
 ##### **[Google form](https://docs.google.com/forms/d/e/1FAIpQLSep990DhDqzkz8DZ4_6LU9aqbpk9iua2cniPAg7v-7GY4Jpwg/viewform)**
 **Every team must be registered through the Google form in order to be eligible for the subsequent test submissions.** 
 Each team can have at most 10 members. If a group of people wants to work on multiple datasets, they should register a separate team for each dataset. A person cannot be on multiple teams that are competing on the same dataset, but a person can be on multiple teams as long as those teams are competing on different datasets. So in other words, for each email address, please do NOT register more than once per dataset. 
-In the Google form, you will need to fill in the following information. 
+In the Google form, you will need to provide the following information. 
 
 - **Email:** Your own email address that you check daily.
 - **Dataset:** MAG240M-LSC, WikiKG90M-LSC, or PCQM4M-LSC.
@@ -44,7 +44,7 @@ Also, keep in mind that **your team name will be made publicly available** in ou
 ##### **[Submission website (coming soon)](../form)**
 **Each team can optionally do one initial test submission to ensure the smooth final test submission.**
 First, please have your registration receipt email with you.
-Then, fill in the following information.
+Then, provide the following information.
 
 - **Email:** As registered in the receipt.
 - **Dataset:** As registered in the receipt.
@@ -63,7 +63,7 @@ The submission will be evaluated over 5% of the hidden test data. The submitted 
 ##### **[Submission website (coming soon)](../form)**
 **Each team submits its own final prediction result.**
 First, please have your registration receipt email with you.
-Then, fill in the following information.
+Then, provide the following information.
 
 - **Email:** As registered in the receipt.
 - **Dataset:** As registered in the receipt.
