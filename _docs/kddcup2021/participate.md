@@ -69,8 +69,8 @@ Then, provide the following information.
 - **Dataset:** As registered in the receipt.
 - **Team name**: As registered in the receipt.
 - **Password**: As registered in the receipt.
-- **Prediction file**: Upload the model's prediction on the test set (format specified in the dataset page).
 - **Package version**: OGB package version used for experiments. Must match the required package for the dataset.
+- **Prediction file**: Upload the model's prediction on the test set (format specified in the dataset page).
 - **Extra information (irrelevant to winner decision)**:
     - Validation performance (if you use our official validation set for model selection).
     - Training hardware and time
