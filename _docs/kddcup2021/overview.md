@@ -38,11 +38,11 @@ For each dataset, we carefully design its prediction task and data split so that
 
 The dataset statistics as well as basic information are summarized below, showing that our datasets are extremely large.
 
-Task category | Name      | Package      |  #Graphs      | #Total nodes  | #Total edges  | Data split        | Task Type   | Metric  | Download size
+Task category | Name      | Package      |  #Graphs      | #Total nodes  | #Total edges  | Task Type   | Metric  | Download size
 |:---------:|:--------|-----:|-----:|----------------:|----------------------:|:---------------|:-------|:---------|---------:|
-Node-level | **[MAG240M-LSC](mag240m/)** | >=1.3.0 | 1 | 244,160,499  | 1,728,364,232 | Time      | Multi-class classification | Accuracy | 167GB |
-Link-level | **[WikiKG90M-LSC](wikikg90m/)** |  >=1.3.0  | 1 | 87,143,637 | 504,220,369 |  Time    | KG completion | MRR | 94GB
-Graph-level | **[PCQM4M-LSC](pcqm4m/)** |  >=1.3.0  | 3,803,453  | 53,814,542 | 55,399,880   | Scaffold   | Regression | MAE | 58MB**\*** 
+Node-level | **[MAG240M-LSC](mag240m/)** | >=1.3.0 | 1 | 244,160,499  | 1,728,364,232 |  Multi-class classification | Accuracy | 167GB |
+Link-level | **[WikiKG90M-LSC](wikikg90m/)** |  >=1.3.0  | 1 | 87,143,637 | 504,220,369 |   KG completion | MRR | 94GB
+Graph-level | **[PCQM4M-LSC](pcqm4m/)** |  >=1.3.0  | 3,803,453  | 53,814,542 | 55,399,880   |  Regression | MAE | 58MB**\*** 
 
 **\***: The PCQM4M-LSC dataset is provided in the SMILES strings. After processing them into graph objects, the eventual file size will be around 8GB.
 
