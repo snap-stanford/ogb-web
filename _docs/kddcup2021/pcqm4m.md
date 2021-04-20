@@ -38,7 +38,8 @@ By default, we follow OGB to convert the SMILES string into a molecular graph re
 The task is graph regression: predicting the HOMO-LUMO energy gap in electronvolt (eV) given 2D molecular graphs. Mean Absolute Error (MAE) is used as evaluation metric.
 
 **Data split:**
-We use the random split with ratio 80/10/10. Note that our original plan was to adopt the scaffold split with ratio 80/10/10 [2], but the split turns out to be random due to a bug. 
+we adopt the scaffold split with ratio 80/10/10 [2]. Specifically, we split the molecules based on their 2D structural frameworks, resulting in validation and test molecules that are structurally very different from training ones.
+Prediction over out-of-distribution molecular structure is commonplace in ML-based virtual screening. This is because training molecules represent an extremely tiny and biased subset of the entire chemical space (estimated to be around 10^60 molecules), to which fast ML models are applied for virtual screening.
 
 ###### **References**
 [1] Nakata, M., & Shimazaki, T. (2017). PubChemQC project: a large-scale first-principles electronic structure database for data-driven chemistry. Journal of chemical information and modeling, 57(6), 1300-1308. <br/>
