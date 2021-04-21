@@ -39,8 +39,8 @@ The task is graph regression: predicting the HOMO-LUMO energy gap in electronvol
 
 **Data split:**
 We split molecules by their PubChem ID (CID) with ratio 80/10/10. 
-Note that our original intention was to provide the scaffold split [2], but the provided data turns out to be split by the CID due to some pre-processing bug.
-The CID number itself does not indicate any meaning about the molecule, but splitting by CID may provide a moderate distribution shift (most likely not as severe as the scaffold split).
+Our original intention was to provide the scaffold split [2], but the provided data turns out to be split by the CID due to some pre-processing bug.
+The CID number itself does not indicate any meaning about the molecule, but splitting by CID may provide a moderate distribution shift (most likely not as severe as the scaffold split). [Here](https://github.com/snap-stanford/ogb/discussions/162#discussioncomment-637529), we provide some analysis, comparing the CID and scaffold splits.
 <!-- Specifically, we split the molecules based on their 2D structural frameworks, resulting in validation and test molecules that are structurally very different from training ones.
 Prediction over out-of-distribution molecular structure is commonplace in ML-based virtual screening. This is because training molecules represent an extremely tiny and biased subset of the entire chemical space (estimated to be around 10^60 molecules), to which fast ML models are applied for virtual screening. -->
 
