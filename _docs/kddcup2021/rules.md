@@ -13,7 +13,7 @@ layout: kdd_rules
 ##### **Data Split**
 We allow our participants to use training and validation sets in any ways. For example, there is no need to use the validation set only for model selection (you can directly train your model on the validation set if you find useful).
 Also, the validation data can be defined by contestants themselves (you can use larger/smaller validation set if you find useful.
-In OGB-LSC, we still provide the "standardized" validation sets since they have particular practical meaning (e.g., time splits in MAG240M-LSC and WikiKG90M-LSC, and the scaffold split in PCQM4M-LSC) and can be used as a way for participants to understand how test submissions are evaluated.
+In OGB-LSC, we still provide the "standardized" validation sets since they have particular practical meaning (e.g., time splits in MAG240M-LSC and WikiKG90M-LSC) and can be used as a way for participants to understand how test submissions are evaluated.
 
 For the test data, you should only use them for your model inference (make prediction and save it for your test submissions). In other words, your model should be developed only based on training and validation sets and should not touch the test data except for the final inference.
 The only exception is the MAG240M-LSC, where you can use the test nodes in any ways, since the dataset is modeled as a transductive prediction task (i.e., test nodes are part of the entire graph).
