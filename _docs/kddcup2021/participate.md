@@ -17,7 +17,7 @@ layout: kdd_participate
 Each team can have at most 10 members. If a group of people wants to work on multiple datasets, they should register a separate team for each dataset. A person cannot be on multiple teams that are competing on the same dataset, but a person can be on multiple teams as long as those teams are competing on different datasets. So in other words, for each email address, please do NOT register more than once per dataset. 
 In the Google form, you will need to provide the following information. 
 
-- **Email:** Your own email address that you check daily.
+- **Email:** Your own email address that you check daily. **Please avoid using an enterprise email, as it sometimes completely blocks an email from the Google form. Gmail/QQ/academic emails should work.**
 - **Dataset:** MAG240M-LSC, WikiKG90M-LSC, or PCQM4M-LSC.
 - **Team name:** Try to come up with a unique name!
 - **Password:** Come up with a complex password (minimum 10 characters) that cannot be guessed easily. This password will be used to verify that you (not others) are making the test submissions with your email address.
