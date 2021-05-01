@@ -9,6 +9,13 @@ layout: kdd_update
 
 -------
 
+###### **May 1st, 2021: Initial test submission opened**
+- For registered teams, please make your initial test submissions **[here](https://ogb-save.stanford.edu/initial/)**. 
+- Detailed instruction **[here](../participate/#initial)**.
+
+
+-------
+
 ###### **April 8th, 2021: Package updated to [package `1.3.1`](https://github.com/snap-stanford/ogb/releases/tag/1.3.1)**
 - Thanks to the [DGL Team](https://www.dgl.ai/), all the LSC data is now hosted on AWS. This significantly improves the download speed around the globe! The underlying data stays exactly the same.
 - Please consider updating your package if you are planning to download the datasets.

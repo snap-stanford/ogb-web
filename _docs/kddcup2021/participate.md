@@ -12,7 +12,7 @@ layout: kdd_participate
 -------
 
 #### **Team registration**: Deadline April 30th, 2021
-##### **[Google form](https://docs.google.com/forms/d/e/1FAIpQLSep990DhDqzkz8DZ4_6LU9aqbpk9iua2cniPAg7v-7GY4Jpwg/viewform)**
+##### **[Google form (closed)](https://docs.google.com/forms/d/e/1FAIpQLSep990DhDqzkz8DZ4_6LU9aqbpk9iua2cniPAg7v-7GY4Jpwg/viewform)**
 **Every team must be registered through the Google form in order to be eligible for the subsequent test submissions.** 
 Each team can have at most 10 members. If a group of people wants to work on multiple datasets, they should register a separate team for each dataset. A person cannot be on multiple teams that are competing on the same dataset, but a person can be on multiple teams as long as those teams are competing on different datasets. So in other words, for each email address, please do NOT register more than once per dataset. 
 In the Google form, you will need to provide the following information. 
@@ -41,7 +41,7 @@ Also, keep in mind that **your team name will be made publicly available** in ou
 -------
 
 #### **Initial test submission**: Deadline May 10th, 2021
-##### **[Submission website (coming soon)](../form)**
+##### **[Submission website](https://ogb-save.stanford.edu/initial/)**
 **Each team can optionally do one initial test submission to ensure the smooth final test submission.**
 First, please have your registration receipt email with you.
 Then, provide the following information.
@@ -53,7 +53,12 @@ Then, provide the following information.
 - **Package version**: OGB package version used for experiments. Must match the required package for the dataset.
 - **Prediction file**: Upload the model's prediction on the test set (format specified in the dataset page).
 
-The submission will be evaluated over 5% of the hidden test data. The submitted performance will be made public in the leaderboards by May 14th. Note that the performance at the initial stage does *not* affect the winner selection.
+The submission will be evaluated over 5% of the hidden test data shared across teams. The submitted performance will be made public in the leaderboards by May 14th. Note that the performance at the initial stage does *not* affect the winner selection.
+
+You can submit the test files multiple times under the same team, but **we will only keep your latest submission.** The submission site will automatically close at the deadline; there won't be any extension. 
+
+**Important:** **Please try your submission early, without waiting until the last minute.** You can always overwrite your submission later with your better model. We are receiving a large volume of emails towards the deadline and cannot respond individually.
+
 
 -------
 
