@@ -41,7 +41,7 @@ Also, keep in mind that **your team name will be made publicly available** in ou
 -------
 
 #### **Initial test submission**: Deadline May 10th, 2021
-##### **[Submission website](https://ogb-save.stanford.edu/initial/)**
+##### **[Submission website (closed)](https://ogb-save.stanford.edu/initial/)**
 **Each team can optionally do one initial test submission to ensure the smooth final test submission.**
 First, please have your registration receipt email with you.
 Then, provide the following information.
