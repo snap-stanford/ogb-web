@@ -9,6 +9,12 @@ layout: kdd_update
 
 -------
 
+###### **May 11st, 2021: Final leaderboards opened**
+- For registered teams, please make your final test submissions **[here](https://ogb-save.stanford.edu/final/)**. 
+- Detailed instruction **[here](../participate/#final)**.
+
+-------
+
 ###### **May 11st, 2021: Initial leaderboards repleased**
 - Available **[here](../leaderboard)**.
 - Evaluated over randomly-selected 5% of test data.
