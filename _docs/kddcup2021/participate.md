@@ -65,7 +65,7 @@ You can submit the test files multiple times under the same team, but **we will 
 <a name="final"/>
 
 #### **Final test submission**: Deadline June 8th, 2021
-##### **[Submission website (coming soon)](../form)**
+##### **[Submission website](https://ogb-save.stanford.edu/final/)**
 **Each team submits its own final prediction result.**
 First, please have your registration receipt email with you.
 Then, provide the following information.
