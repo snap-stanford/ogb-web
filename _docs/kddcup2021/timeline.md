@@ -30,11 +30,15 @@ Although the performance here does not affect the winner selection, we encourage
 
 ##### **June 8th, 2021: [Final test submission](../participate/#final) deadline**
 Each team submits its final test prediction, which will be evaluated over the entire test data.
+Top 3 winners for each dataset will be privately notified soon after. 
 
 -------
 
-##### **June 15th, 2021: Winner announcement**
-Top 3 winners for each dataset will be announced (in total of 9 winners). 
-Results of all the final test submissions will be also made publicly available.
-For the winners, we require public Github code submission to reproduce their solutions.
+##### **June 15th, 2021: Code submission deadline for the winners**
+For the winners, we require public Github code and a short technical report to reproduce and describe their solutions.
 The Github repository needs to remain public even after the KDD Cup. We will publicize the code on our webpage.
+
+--------
+
+##### **TBD: Public annoucement of winners**
+The winners as well as the results of all the final test submissions will be also made publicly available.
