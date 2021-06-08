@@ -33,7 +33,7 @@ Each team submits its final test prediction, which will be evaluated over the en
 
 -------
 
-##### **June 15th, 2021: Code submission deadline for the winners**
+##### **June 15th, 2021: Winner announcement**
 Top 3 winners for each dataset will be announced (in total of 9 winners). 
 Results of all the final test submissions will be also made publicly available.
 For the winners, we require public Github code submission to reproduce their solutions.
