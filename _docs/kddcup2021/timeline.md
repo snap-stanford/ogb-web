@@ -30,7 +30,11 @@ Although the performance here does not affect the winner selection, we encourage
 
 ##### **June 8th, 2021: [Final test submission](../participate/#final) deadline**
 Each team submits its final test prediction, which will be evaluated over the entire test data.
-Top 3 winners for each dataset will be privately notified soon after. 
+
+--------
+
+##### **June 10th, 2021: Winner notification**
+We send private notifications to the winners and provide further instructions about the code and a technical report.
 
 -------
 
