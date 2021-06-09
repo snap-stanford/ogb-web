@@ -77,15 +77,13 @@ Then, provide the following information.
 - **Package version**: OGB package version used for experiments. Must match the required package for the dataset.
 - **Prediction file**: Upload the model's prediction on the test set. **The file must be the one directly saved by the Evaluator---any modification (including filename) is not allowed and disqualifies the submission.**
 - **Extra information (irrelevant to winner decision)**:
-    - **Model description** 
-        - Provide a brief description of your model. Ex) Ensemble of 5 GINs with virtual nodes.
     - **Validation performance** (if you use our official validation set for model selection).
     - **Training hardware and time**
         - Ex) 24 hours on a GeForce RTX 2080 GPU (11GB memory) and an Intel(R) Xeon(R) Gold 6148 CPUs @ 2.40GHz (512GB memory).
     - **Test inference hardware and time**
         - Ex) 1 hour on a GeForce RTX 2080 GPU (11GB memory) and an Intel(R) Xeon(R) Gold 6148 CPU @ 2.40GHz (512GB memory).
     - **List of optimized hyper-parameters**
-        - Ex) lr: [0.001*, 0.01], num_layers: [4*,5], hidden_channels: [128, 256*], dropout: [0*, 0.5], epochs: early-stop*
+        - Ex) lr: [0.001*, 0.01], num_layers: [4, 5*], hidden_channels: [128, 256*], dropout: [0, 0.5*], epochs: early-stop*
         - The asterisks \* denotes the hyper-parameters you eventually selected.
     - **Number of learnable parameters**
         - In Pytorch, it can be calculated by `sum(p.numel() for p in model.parameters())`.
