@@ -83,7 +83,7 @@ Then, provide the following information.
     - **Test inference hardware and time**
         - Ex) 1 hour on a GeForce RTX 2080 GPU (11GB memory) and an Intel(R) Xeon(R) Gold 6148 CPU @ 2.40GHz (512GB memory).
     - **List of optimized hyper-parameters**
-        - Ex) lr: [0.001*, 0.01], num_layers: [4*,5], hidden_channels: [128, 256*], dropout: [0*, 0.5], epochs: early-stop*
+        - Ex) lr: [0.001*, 0.01], num_layers: [4, 5*], hidden_channels: [128, 256*], dropout: [0, 0.5*], epochs: early-stop*
         - The asterisks \* denotes the hyper-parameters you eventually selected.
     - **Number of learnable parameters**
         - In Pytorch, it can be calculated by `sum(p.numel() for p in model.parameters())`.
