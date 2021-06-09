@@ -40,7 +40,7 @@ We send private notifications to the winners and provide further instructions ab
 
 ##### **June 15th, 2021: Code submission deadline for the winners**
 For the winners, we require public Github code and a short technical report to reproduce and describe their solutions.
-The Github repository needs to remain public even after the KDD Cup. We will publicize the code on our webpage.
+The Github repository needs to follow **[the rule](/kddcup2021/rules/#code)** and remain public even after the KDD Cup. We will publicize the code on our webpage.
 
 --------
 

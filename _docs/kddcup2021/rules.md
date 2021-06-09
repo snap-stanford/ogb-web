@@ -52,6 +52,7 @@ However, as it is hard to enforce the hardware constraint, we also allow the use
 
 ---------
 
+<a name="code"/>
 ##### **Code Submission by Winners**
 For the winners of the contest, we require public code submission through Github repo. The repo should follow the format of our baseline code (e.g., [MAG240M](https://github.com/snap-stanford/ogb/tree/master/examples/lsc/mag240m), [WikiKG90M](https://github.com/snap-stanford/ogb/tree/master/examples/lsc/wikikg90m), [PCQM4M](https://github.com/snap-stanford/ogb/tree/master/examples/lsc/pcqm4m)) and contain
 - All the code to reproduce your results (including data pre-processing and model training/inference) and save the test submission.
