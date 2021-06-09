@@ -5,7 +5,7 @@ layout: kdd_participate
 ---
 
 #### **Learn about team registration and test submissions**  
-- **All the deadlines are on 23:59pm PST.** 
+- **All the deadlines are on 23:59pm PDT.** 
 
 <a name="registration"/>
 
