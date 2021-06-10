@@ -115,7 +115,7 @@ Here each data access is a disk access, which could be a bit slow. If you have s
 
 ```python
 # load the entire data (175GB) into CPU memory 
-feat_in_memory = dataset.all_paper_feat[i] # this takes a while
+feat_in_memory = dataset.all_paper_feat # this takes a while
 
 # Fast RAM access.
 print(feat_in_memory[i])
