@@ -34,7 +34,8 @@ Each team submits its final test prediction, which will be evaluated over the en
 --------
 
 ##### **June 10th, 2021: Winner notification**
-We send private notifications to the winners (check the email address you have registered) and provide further instructions about the code and a technical report.
+ We send private notifications to the winners and provide further instructions about the code and a technical report. <br/>
+ **Update:** We have sent out the notifications (only to winners). Check the email you have registered.
 
 -------
 
