@@ -34,7 +34,7 @@ Each team submits its final test prediction, which will be evaluated over the en
 --------
 
 ##### **June 10th, 2021: Winner notification**
-We send private notifications to the winners and provide further instructions about the code and a technical report.
+We send private notifications to the winners (check the email address you have registered) and provide further instructions about the code and a technical report.
 
 -------
 
@@ -45,4 +45,4 @@ The Github repository needs to follow **[the rule](/kddcup2021/rules/#code)** an
 --------
 
 ##### **TBD: Public annoucement of winners**
-The winners as well as the results of all the final test submissions will be also made publicly available.
+The winners and the results of all the final test submissions will be made publicly available.
