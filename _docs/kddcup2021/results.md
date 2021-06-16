@@ -32,7 +32,7 @@ layout: kdd_results
 ###### **1st place: BD-PGL ([contact](mailto:shiyunsheng01@baidu.com))**
 - **Team members**: Yunsheng Shi (Baidu), Zhengjie Huang (Baidu), Weibin Li (Baidu), Weiyue Su (Baidu), Shikun Feng (Baidu)
 - **Method**: R-UNIMP
-- **Short summary**: We adopt the recent advanced technique UniMP which proposes to incorporate feature and label propagation at both training and in- ference time, making significant improvements across several node classification tasks. And we modify it into an R-UniMP version for a heterogeneous graph with "R" stands for "Relational". Besides, we provide a detailed recall of our key strategies and valuable findings during the en- tire competition. 30 models with different initialization are ensembled.
+- **Short summary**: We adopt the recent advanced technique UniMP which proposes to incorporate feature and label propagation at both training and inference time, making significant improvements across several node classification tasks. And we modify it into an R-UniMP version for a heterogeneous graph with "R" stands for "Relational". Besides, we provide a detailed recall of our key strategies and valuable findings during the en- tire competition. 30 models with different initialization are ensembled.
 - **Learn more: [Technical report](/paper/kddcup2021/mag240m_BD-PGL.pdf), [code](https://github.com/PaddlePaddle/PGL/tree/main/examples/kddcup2021/MAG240M/r_unimp)**
 - **Test accuracy**: 0.7549
 
