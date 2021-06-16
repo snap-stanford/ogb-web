@@ -127,7 +127,7 @@ layout: kdd_results
 ##### **Runner-ups**
 ###### **4th place: DIVE@TAMU ([contact](mailto:hao.yuan@tamu.edu), [technical report](/paper/kddcup2021/pcqm4m_DIVE.pdf), [code](https://github.com/divelab/MoleculeX))**
 - **Team members**: Meng Liu (Texas A&M University), Cong Fu (Texas A&M University), Xuan Zhang (Texas A&M University), Limei Wang (Texas A&M University), Yaochen Xie (Texas A&M University), Hao Yuan (Texas A&M University), Youzhi Luo (Texas A&M University), Zhao Xu (Texas A&M University), Shenglong Xu (Texas A&M University), Shuiwang Ji (Texas A&M University)
-- **Method**: 2D Deep GNNs (x 20) + 3D low-cost conformer GNNs (x 5)
+- **Method**: 2D Deep GNNs + 3D low-cost conformer GNNs
 - **Short summary**: (1) 2D Deeper GNN with larger receptive fields (over 20 layers) and more expressivity over 2D molecular graphs.
 (2) 3D GNN over low-cost conformer sets, which can be obtained by RDKit with an affordable budget.
 - **Test MAE**: 0.1235
