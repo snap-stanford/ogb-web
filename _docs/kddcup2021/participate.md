@@ -34,7 +34,7 @@ In the Google form, you will need to provide the following information.
 **Important: After the registration, you will receive a response receipt email with all the above information on it (in case you didn't get it, please check your spam folder as well). Please keep the receipt email for your subsequent test submissions.**
 As you see below, you will need to enter the information you have registered here.
 
-Also, keep in mind that **your team name will be made publicly available** in our leaderboards together with your model performance. For the top 3 winners of each dataset, **the team member information will be also made publicly available.**
+Also, keep in mind that **your team name will be made publicly available** in our leaderboards together with your model performance. For the awardees of each dataset, **the team member information will be also made publicly available.**
 
 <a name="initial"/>
 

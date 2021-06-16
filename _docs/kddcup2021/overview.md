@@ -23,8 +23,8 @@ However, in deep learning, it has been demonstrated over and over again that one
 
 Here we propose a large-scale graph ML competition, **OGB Large-Scale Challenge (OGB-LSC)**, to encourage the development of state-of-the-art graph ML models for massive modern datasets. 
 Specifically, **we present three datasets: [MAG240M-LSC](mag240m/)**, **[WikiKG90M-LSC](wikikg90m/)**, and **[PCQM4M-LSC](pcqm4m/)**, that are unprecedentedly large in scale and cover prediction at the level of nodes, links, and graphs, respectively.
-**Each dataset offers an independent task, and the winners will be selected separately for each dataset.**
-We will announce the top 3 winning teams for each of the datasets (in total of 9 winning teams), and they will be given opportunities to present their solutions during the KDD Cup workshop.
+**Each dataset offers an independent task, and the awardees will be selected separately for each dataset.**
+We will announce the top 3 winning teams for each of the datasets, and they will be given opportunities to present their solutions during the KDD Cup workshop.
 
 An illustrative overview of the three OGB-LSC datasets is provided below.
 <p align = "center">
