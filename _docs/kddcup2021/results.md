@@ -46,7 +46,7 @@ layout: kdd_results
 ###### **3rd place: Synerise AI ([contact](mailto:jack.dabrowski@synerise.com))**
 - **Team members**: Michal Daniluk (Synerise), Jacek Dabrowski (Synerise), Konrad Goluchowski (Synerise), Barbara Rychalska (Warsaw University of Technology/Synerise)
 - **Method**: Cleora + EMDE
-- **Short summary**: We tackle the task with an efficient model based on our previously introduced algorithms: EMDE and Cleora, on top of a simplistic feed-forward neural network.  We use EMDE to represent nodes in the form of sketches- structures representing local similarity, which additionally allow for easy accumulation of multiple object values. We use Cleora for label propagation, i.e. representing nodes with sets of labels observed in the training data. To achieve maximal performance, we train 60 independent ensemble models.
+- **Short summary**: We tackle the task with an efficient model based on our previously introduced algorithms: EMDE and Cleora, on top of a simplistic feed-forward neural network.  We use EMDE to represent nodes in the form of sketches -- structures representing local similarity, which additionally allow for easy accumulation of multiple object values. We use Cleora for label propagation, i.e. representing nodes with sets of labels observed in the training data. To achieve maximal performance, we train 60 independent ensemble models.
 - **Learn more: [Technical report](/paper/kddcup2021/mag240m_SyneriseAI.pdf), [code](https://github.com/Synerise/kdd-cup-2021)**
 - **Test accuracy**: 0.7460
 
@@ -68,7 +68,7 @@ layout: kdd_results
 ###### **6th place: DeeperBiggerBetter ([contact](mailto:guohao.li@kaust.edu.sa))**
 - **Team members**: Guohao Li (KAUST), Hesham Mostafa (Intel Corporation), Jesus Alejandro Zarzar Torano (KAUST), Sami Abu-El-Haija (USC), Marcel Nassar (Intel Labs), Daniel Cummings (Intel Corporation), Sohil Shah (Intel Corporation), Matthias Mueller (Intel Labs), Bernard Ghanem (KAUST)
 - **Method**: GNN180M
-- **Short summary**: We train two R-GAT models, one with 2 layers and another with 3 layers for a total of 180M parameters. We utilize author labels as extra regularization, conduct multiple inference passes with proportional neighborhood sizes, aggregate their results by ensembling and then apply a label smoothing trick on model's predictions with author labels for post-processing. We achieve an accuracy of 73.53% on the held-out test set.
+- **Short summary**: We train two R-GAT models, one with 2 layers and another with 3 layers for a total of 180M parameters. We utilize author labels as extra regularization, conduct multiple inference passes with proportional neighborhood sizes, aggregate their results by ensembling and then apply a label smoothing trick on model's predictions with author labels for post-processing. 
 - **Learn more: [Technical report](/paper/kddcup2021/mag240m_DeeperBiggerBetter.pdf), [code](https://github.com/zarzarj/DeeperBiggerBetter_KDDCup)**
 - **Test accuracy**: 0.7353
 
