@@ -29,41 +29,47 @@ layout: kdd_results
 
 #### **Awardees of [MAG240M-LSC](/kddcup2021/mag240m/) Track ([Leaderboard](#final_mag240m))**
 ##### **Winners**
-###### **1st place: BD-PGL ([contact](mailto:shiyunsheng01@baidu.com), [technical report](/paper/kddcup2021/mag240m_BD-PGL.pdf), [code](https://github.com/PaddlePaddle/PGL/tree/main/examples/kddcup2021/MAG240M/r_unimp))**
+###### **1st place: BD-PGL ([contact](mailto:shiyunsheng01@baidu.com))**
 - **Team members**: Yunsheng Shi (Baidu), Zhengjie Huang (Baidu), Weibin Li (Baidu), Weiyue Su (Baidu), Shikun Feng (Baidu)
 - **Method**: R-UNIMP
 - **Short summary**: We adopt the recent advanced technique UniMP which proposes to incorporate feature and label propagation at both training and in- ference time, making significant improvements across several node classification tasks. And we modify it into an R-UniMP version for a heterogeneous graph with "R" stands for "Relational". Besides, we provide a detailed recall of our key strategies and valuable findings during the en- tire competition. 30 models with different initialization are ensembled.
+- **Learn more: [Technical report](/paper/kddcup2021/mag240m_BD-PGL.pdf), [code](https://github.com/PaddlePaddle/PGL/tree/main/examples/kddcup2021/MAG240M/r_unimp)**
 - **Test accuracy**: 0.7549
 
-###### **2nd place: Academic ([contact](mailto:petarv@google.com), [technical report](/paper/kddcup2021/mag240m_Academic.pdf), [code](https://github.com/deepmind/deepmind-research/tree/master/ogb_lsc/mag))**
+###### **2nd place: Academic ([contact](mailto:petarv@google.com))**
 - **Team members**: Petar Velickovic (DeepMind), Peter Battaglia (DeepMind), Jonathan Godwin (DeepMind), Alvaro Sanchez (DeepMind), David Budden (DeepMind), Shantanu Thakoor (DeepMind), Jacklynn Stott (DeepMind), Ravichandra Addanki (DeepMind), Thomas Keck (DeepMind), Andreea Deac (DeepMind)
 - **Method**: MPNN Ensemble with BGRL fine-tuning
 - **Short summary**: MPNN over subsampled patches, fine-tuned by BGRL (bootstrapped graph latents) self-supervised objective. 20 models with different initialisation and validation split are ensembled.
+- **Learn more: [Technical report](/paper/kddcup2021/mag240m_Academic.pdf), [code](https://github.com/deepmind/deepmind-research/tree/master/ogb_lsc/mag)**
 - **Test accuracy**: 0.7519
 
-###### **3rd place: Synerise AI ([contact](mailto:jack.dabrowski@synerise.com), [technical report](/paper/kddcup2021/mag240m_SyneriseAI.pdf), [code](https://github.com/Synerise/kdd-cup-2021))**
+###### **3rd place: Synerise AI ([contact](mailto:jack.dabrowski@synerise.com))**
 - **Team members**: Michal Daniluk (Synerise), Jacek Dabrowski (Synerise), Konrad Goluchowski (Synerise), Barbara Rychalska (Warsaw University of Technology/Synerise)
 - **Method**: Cleora + EMDE
 - **Short summary**: We tackle the task with an efficient model based on our previously introduced algorithms: EMDE and Cleora, on top of a simplistic feed-forward neural network.  We use EMDE to represent nodes in the form of sketches- structures representing local similarity, which additionally allow for easy accumulation of multiple object values. We use Cleora for label propagation, i.e. representing nodes with sets of labels observed in the training data. To achieve maximal performance, we train 60 independent ensemble models.
+- **Learn more: [Technical report](/paper/kddcup2021/mag240m_SyneriseAI.pdf), [code](https://github.com/Synerise/kdd-cup-2021)**
 - **Test accuracy**: 0.7460
 
 ##### **Runner-ups**
-###### **4th place: Topology_mag ([contact](mailto:caowencai@oppo.com), [technical report](/paper/kddcup2021/mag240m_Topology_mag.pdf), [code](https://github.com/qypeng-ustc/mplp))**
+###### **4th place: Topology_mag ([contact](mailto:caowencai@oppo.com))**
 - **Team members**: Qiuying Peng (OPPO Research), Wencai Cai (OPPO Research), Zheng Pan (OPPO Research)
 - **Method**: MPLP + finetune (40 ensemble)
 - **Short summary**: Metapath-based Label Propagation with fine-tuning using latest year samples. models from 5-fold cross-validation in 8 random seeds are ensembled.
+- **Learn more: [Technical report](/paper/kddcup2021/mag240m_Topology_mag.pdf), [code](https://github.com/qypeng-ustc/mplp)**
 - **Test accuracy**: 0.7447
 
-###### **5th place: passages ([contact](mailto:tsotfsk@bupt.edu.cn), [technical report](/paper/kddcup2021/mag240m_passages.pdf), [code](https://github.com/passages-kddcup2021/KDDCUP2021_OGB_LSC_MAG240M))**
+###### **5th place: passages ([contact](mailto:tsotfsk@bupt.edu.cn))**
 - **Team members**: Bole Ai (Nanjing University), Xiang Long (Beijing University of Posts and Telecommunications), Kaiyuan Li (Beijing University of Posts and Telecommunications), Quan Lin (Huazhong University of Science and Technology), Xiaofan Liu (Beijing University of Posts and Telecommunications), Pengfei Wang (Beijing University of Posts and Telecommunications), Mingdao Wang (Beijing University of Posts and Telecommunications), Zhichao Feng (Beijing University of Posts and Telecommunications), Kun Zhao (Nanjing University)
 - **Method**: SGC + R-GAT + Finetune
 - **Short summary**: Our method can be largely summarized in two main stages: a pretraining stage is designed to explore heterogeneous academic networks for better node embeddings; and a transfer learning stage is used to alleviate differences of label distributions and node representations between training and test set.
+- **Learn more: [Technical report](/paper/kddcup2021/mag240m_passages.pdf), [code](https://github.com/passages-kddcup2021/KDDCUP2021_OGB_LSC_MAG240M)**
 - **Test accuracy**: 0.7381
 
-###### **6th place: DeeperBiggerBetter ([contact](mailto:guohao.li@kaust.edu.sa), [technical report](/paper/kddcup2021/mag240m_DeeperBiggerBetter.pdf), [code](https://github.com/zarzarj/DeeperBiggerBetter_KDDCup))**
+###### **6th place: DeeperBiggerBetter ([contact](mailto:guohao.li@kaust.edu.sa))**
 - **Team members**: Guohao Li (KAUST), Hesham Mostafa (Intel Corporation), Jesus Alejandro Zarzar Torano (KAUST), Sami Abu-El-Haija (USC), Marcel Nassar (Intel Labs), Daniel Cummings (Intel Corporation), Sohil Shah (Intel Corporation), Matthias Mueller (Intel Labs), Bernard Ghanem (KAUST)
 - **Method**: GNN180M
 - **Short summary**: We train two R-GAT models, one with 2 layers and another with 3 layers for a total of 180M parameters. We utilize author labels as extra regularization, conduct multiple inference passes with proportional neighborhood sizes, aggregate their results by ensembling and then apply a label smoothing trick on model's predictions with author labels for post-processing. We achieve an accuracy of 73.53% on the held-out test set.
+- **Learn more: [Technical report](/paper/kddcup2021/mag240m_DeeperBiggerBetter.pdf), [code](https://github.com/zarzarj/DeeperBiggerBetter_KDDCup)**
 - **Test accuracy**: 0.7353
 
 ---------
@@ -73,29 +79,33 @@ layout: kdd_results
 #### **Awardees of [WikiKG90M-LSC](/kddcup2021/wikikg90m/) Track ([Leaderboard](#final_wikikg90m))**
 
 ##### **Winners**
-###### **1st place: BD-PGL ([contact](mailto:weiyue.su@gmail.com), [technical report](/paper/kddcup2021/wikikg90m_BD-PGL.pdf), [code](https://github.com/PaddlePaddle/PGL/tree/main/examples/kddcup2021/WikiKG90M))**
+###### **1st place: BD-PGL ([contact](mailto:weiyue.su@gmail.com))**
 - **Team members**: Suwei Yue (Baidu), Fengshi Kun (Baidu), Fangze Yang (Baidu), Wanghui Juan (Baidu), Daisi Ming (Baidu), Zhong Hui (Baidu), Shiyun Sheng (Baidu), Huangzheng Jie (Baidu)
 - **Method**: NOTE + Feature
 - **Short summary**: We modified OTE into NOTE for better performance and use the post-smoothing technique to capture the graph structure for supplementation. Feature engineering further improves the results.
+- **Learn more: [Technical report](/paper/kddcup2021/wikikg90m_BD-PGL.pdf), [code](https://github.com/PaddlePaddle/PGL/tree/main/examples/kddcup2021/WikiKG90M)**
 - **Test MRR**: 0.9727
 
-###### **2nd place: OhMyGod ([contact](mailto:pengwh.hit@gmail.com), [technical report](/paper/kddcup2021/wikikg90m_OhMyGod.pdf), [code](https://github.com/biandh/KDDCup2021_WikiKG90M_OhMyGod/tree/master/examples/lsc/wikikg90m))**
+###### **2nd place: OhMyGod ([contact](mailto:pengwh.hit@gmail.com))**
 - **Team members**: Weihua Peng (Harbin Institute of Technology)
 - **Method**: TransE, CompIEx, DistMult, and SimplE (9 ensemble)
 - **Short summary**: a) more powerful representation vector learning, b) the complementarity between different models, c) statistical analysis based on data set.
+- **Learn more: [Technical report](/paper/kddcup2021/wikikg90m_OhMyGod.pdf), [code](https://github.com/biandh/KDDCup2021_WikiKG90M_OhMyGod/tree/master/examples/lsc/wikikg90m)**
 - **Test MRR**: 0.9712
 
-###### **3rd place: GraphMIRAcles ([contact](mailto:jycai@mail.ustc.edu.cn), [technical report](/paper/kddcup2021/wikikg90m_GraphMIRAcles.pdf), [code](https://github.com/MIRALab-USTC/KDDCup2021_WikiKG90M_GraphMIRAcles))**
+###### **3rd place: GraphMIRAcles ([contact](mailto:jycai@mail.ustc.edu.cn))**
 - **Team members**: Jianyu Cai (University of Science and Technology of China), Jiajun Chen (University of Science and Technology of China), Taoxing Pan (University of Science and Technology of China), Zhanqiu Zhang (University of Science and Technology of China), Jie Wang (University of Science and Technology of China)
 - **Method**: ComplEx-CMRC + Rule + KD (15 ensemble)
 - **Short summary**: Encoder: Concat-MLP with Residual Connection (CMRC). Decoder: ComplEx. Rule mining for data augmentation. Knowledge distillation to improve single models. 15 models with different random seeds are ensembled.
+- **Learn more: [Technical report](/paper/kddcup2021/wikikg90m_GraphMIRAcles.pdf), [code](https://github.com/MIRALab-USTC/KDDCup2021_WikiKG90M_GraphMIRAcles)**
 - **Test MRR**: 0.9707
 
 ##### **Runner-ups**
-###### **4th place: littleant ([contact](mailto:kexi.ys@antgroup.com), [technical report](/paper/kddcup2021/wikikg90m_littleant.pdf), [code](https://github.com/herrkun/ogb/tree/master/examples/lsc/wikikg90m/dgl-ke-ogb-lsc/python))**
+###### **4th place: littleant ([contact](mailto:kexi.ys@antgroup.com))**
 - **Team members**: Shuo Yang (Ant Group), Daixin Wang (Ant Group), Dingyuan Zhu (Ant Group), Yakun Wang (Ant Group), Borui Ye (Ant Group)
 - **Method**: AntLinkPred
 - **Short summary**: 1. Heuristic features extraction. 2. Decoder (TransE, AutoSF, PariRE, RotatE,. etc) selection and model ensemble. 3. Model fine-tuning with low-confidence samples. 4. Generate a smaller candidates list with a recall model. 5. Generate final results by a re-ranking model.  
+- **Learn more: [Technical report](/paper/kddcup2021/wikikg90m_littleant.pdf), [code](https://github.com/herrkun/ogb/tree/master/examples/lsc/wikikg90m/dgl-ke-ogb-lsc/python)**
 - **Test MRR**: 0.9511
 
 ---------
@@ -105,43 +115,49 @@ layout: kdd_results
 #### **Awardees of [PCQM4M-LSC](/kddcup2021/pcqm4m/) Track ([Leaderboard](#final_pcqm4m))**
 
 ##### **Winners**
-###### **1st place: MachineLearning ([contact](mailto:yingchengsyuan@gmail.com), [technical report](https://arxiv.org/pdf/2106.08279.pdf), [code](https://github.com/microsoft/Graphormer/tree/ogb-lsc))**
+###### **1st place: MachineLearning ([contact](mailto:yingchengsyuan@gmail.com))**
 - **Team members**: ChengxuanYing (Dalian University of Technology), Mingqi Yang (Dalian University of Technology), Shengjie Luo (Peking University), Tianle Cai (Princeton University), Guolin Ke (MSRA), Di He (MSRA), Shuxin Zheng (MSRA), Chenglin Wu (Xiamen University), Yuxin Wang (Dalian University of Technology), Yanming Shen (Dalian University of Technology)
 - **Method**: Graphormer (10 ensemble) + ExpC (8 ensemble)
 - **Short summary**: We adopt Graphormer and ExpC as our basic models. We train each model by 8-fold cross-validation, and additionally train two Graphormer models on the union of training and validation sets with different random seeds. For final submission, we use a naive ensemble for these 18 models by taking average of their outputs.
+- **Learn more: [Technical report](https://arxiv.org/pdf/2106.08279.pdf), [code](https://github.com/microsoft/Graphormer/tree/ogb-lsc)**
 - **Test MAE**: 0.1200
 
-###### **2nd place: SuperHelix ([contact](mailto:zhangshanzhuo@baidu.com), [technical report](/paper/kddcup2021/pcqm4m_SuperHelix.pdf), [code](https://github.com/PaddlePaddle/PaddleHelix/tree/dev/competition/kddcup2021-PCQM4M-LSC))**
+###### **2nd place: SuperHelix ([contact](mailto:zhangshanzhuo@baidu.com))**
 - **Team members**: Zhang Shanzhuo (Baidu), Liu Lihang (Baidu), Gao Sheng (Baidu), He Donglong (Baidu), Li Weibin (Baidu), Huang Zhengjie (Baidu), Su Weiyue (Baidu), Wang Wenjin (Baidu)
 - **Method**: LiteGEM
 - **Short summary**: Deep graph neural network with self-supervised tasks on topology and geometry information. 73 models with different tasks and hyper-parameters are ensembled.
 
+- **Learn more: [Technical report](/paper/kddcup2021/pcqm4m_SuperHelix.pdf), [code](https://github.com/PaddlePaddle/PaddleHelix/tree/dev/competition/kddcup2021-PCQM4M-LSC)**
 - **Test MAE**: 0.1204
 
-###### **3rd place: Quantum ([contact](mailto:petarv@google.com), [technical report](/paper/kddcup2021/pcqm4m_Quantum.pdf), [code](https://github.com/deepmind/deepmind-research/tree/master/ogb_lsc/pcq))**
+###### **3rd place: Quantum ([contact](mailto:petarv@google.com))**
 - **Team members**: Petar Velickovic (DeepMind), Peter Battaglia (DeepMind), Jonathan Godwin (DeepMind), Alvaro Sanchez (DeepMind), David Budden (DeepMind), Shantanu Thakoor (DeepMind), Jacklynn Stott (DeepMind), Ravichandra Addanki (DeepMind), Sibon Li (DeepMind), Andreea Deac (DeepMind)
 - **Method**: Very Deep GN Ensemble + Conformers + Noisy Nodes
 - **Short summary**: A combination of a 32-layer deep Graph Network over RDKit conformer features, and 50-layer deep Graph Network for molecules for which conformers cannot be computed. Denoising regularisation with Noisy Nodes was applied. 20 models with different initialisation and validation splits are ensembled.
+- **Learn more: [Technical report](/paper/kddcup2021/pcqm4m_Quantum.pdf), [code](https://github.com/deepmind/deepmind-research/tree/master/ogb_lsc/pcq)**
 - **Test MAE**: 0.1205
 
 ##### **Runner-ups**
-###### **4th place: DIVE@TAMU ([contact](mailto:hao.yuan@tamu.edu), [technical report](/paper/kddcup2021/pcqm4m_DIVE.pdf), [code](https://github.com/divelab/MoleculeX))**
+###### **4th place: DIVE@TAMU ([contact](mailto:hao.yuan@tamu.edu))**
 - **Team members**: Meng Liu (Texas A&M University), Cong Fu (Texas A&M University), Xuan Zhang (Texas A&M University), Limei Wang (Texas A&M University), Yaochen Xie (Texas A&M University), Hao Yuan (Texas A&M University), Youzhi Luo (Texas A&M University), Zhao Xu (Texas A&M University), Shenglong Xu (Texas A&M University), Shuiwang Ji (Texas A&M University)
 - **Method**: 2D Deep GNNs + 3D low-cost conformer GNNs
 - **Short summary**: (1) 2D Deeper GNN with larger receptive fields (over 20 layers) and more expressivity over 2D molecular graphs.
 (2) 3D GNN over low-cost conformer sets, which can be obtained by RDKit with an affordable budget.
+- **Learn more: [Technical report](/paper/kddcup2021/pcqm4m_DIVE.pdf), [code](https://github.com/divelab/MoleculeX)**
 - **Test MAE**: 0.1235
 
-###### **5th place: no_free_lunch ([contact](mailto:zouxiaochuan1984@gmail.com), [technical report](/paper/kddcup2021/pcqm4m_no_free_lunch.pdf), [code](https://github.com/zouxiaochuan/molnet_kddcup2021))**
+###### **5th place: no_free_lunch ([contact](mailto:zouxiaochuan1984@gmail.com))**
 - **Team members**: XiaochuanZou (AntGroup), RuofanWu (AntGroup), BaokunWang (AntGroup), ShengTian (AntGroup), YifeiHu (AntGroup), LiangZhu (AntGroup), PeixuanChen (AntGroup), MengjiaoZhang (AntGroup), Yuhao Zhang (AntGroup)
 - **Method**: Ensemble MolNet
 - **Short summary**: Tansformer with graph structure features. 6 models with different initialization and running epochs are ensembled
+- **Learn more: [Technical report](/paper/kddcup2021/pcqm4m_no_free_lunch.pdf), [code](https://github.com/zouxiaochuan/molnet_kddcup2021)**
 - **Test MAE**: 0.1244
 
-###### **6th place: GNNLearner ([contact](mailto:yinxia@microsoft.com), [technical report](/paper/kddcup2021/pcqm4m_GNNLearner.pdf), [code](https://github.com/TransfromerMeetsGraph/GNNLearner))**
+###### **6th place: GNNLearner ([contact](mailto:yinxia@microsoft.com))**
 - **Team members**: Yingce Xia (Microsoft Research Asia), Lijun Wu (Microsoft Research Asia), Shufang Xie (Microsoft Research Asia), Jinhua Zhu (University of Science and Technology of China), Yang Fan (University of Science and Technology of China), Yutai Hou (Harbin Institute of Technology), Tao Qin (Microsoft Research Asia)
 - **Method**: Transformers(standard x4,two-branch x8) + GIN (x5)
 - **Short summary**: (1) Transformer with two branches, where one for regression and the other for classification. Two branches learn from each other; (2) Standard Transformer; (3) GIN; Models with different initialization are aggregated.
+- **Learn more: [Technical report](/paper/kddcup2021/pcqm4m_GNNLearner.pdf), [code](https://github.com/TransfromerMeetsGraph/GNNLearner)**
 - **Test MAE**: 0.1253
 
 -------
