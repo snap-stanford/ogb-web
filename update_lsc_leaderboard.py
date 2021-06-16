@@ -170,7 +170,7 @@ def main(dir, coming_soon_initial = False, coming_soon_final = True):
             dest.append(line)
 
     # destination file
-    with open('_docs/kddcup2021/leaderboard.md', 'w') as f:
+    with open('_docs/kddcup2021/results.md', 'w') as f:
         f.write('\n'.join(dest))
 
 
