@@ -70,6 +70,8 @@ layout: kdd_results
 
 <a name="awardees_wikikg90m"/>
 
+#### **Awardees of [WikiKG90M-LSC](/kddcup2021/wikikg90m/) Track ([Leaderboard](#final_wikikg90m))**
+
 ##### **Winners**
 ###### **1st place: BD-PGL ([contact](mailto:weiyue.su@gmail.com), [technical report](/assets/paper/kddcup2021/wikikg90m_BD-PGL.pdf), [code](https://github.com/PaddlePaddle/PGL/tree/main/examples/kddcup2021/WikiKG90M))**
 - **Team members**: Suwei Yue (Baidu), Fengshi Kun (Baidu), Fangze Yang (Baidu), Wanghui Juan (Baidu), Daisi Ming (Baidu), Zhong Hui (Baidu), Shiyun Sheng (Baidu), Huangzheng Jie (Baidu)
