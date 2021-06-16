@@ -10,7 +10,7 @@ layout: kdd_update
 -------
 
 ###### **June 16th, 2021: Awardee annoucement**
-- Awardees have been publicly announced **[here](../leaderboard)**.
+- Awardees have been publicly announced **[here](../results)**.
 
 -------
 
