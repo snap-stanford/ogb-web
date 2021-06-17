@@ -89,7 +89,7 @@ layout: kdd_results
 ###### **2nd place: OhMyGod ([contact](mailto:pengwh.hit@gmail.com))**
 - **Team members**: Weihua Peng (Harbin Institute of Technology)
 - **Method**: TransE, CompIEx, DistMult, and SimplE (9 ensemble)
-- **Short summary**: a) more powerful representation vector learning, b) the complementarity between different models, c) statistical analysis based on data set.
+- **Short summary**: a) more powerful representation vector learning, b) the complementarity between different models, c) candidate filtering based on the statistics of the validation/test tail candidates.
 - **Learn more: [Technical report](/paper/kddcup2021/wikikg90m_OhMyGod.pdf), [code](https://github.com/biandh/KDDCup2021_WikiKG90M_OhMyGod/tree/master/examples/lsc/wikikg90m)**
 - **Test MRR**: 0.9712
 
