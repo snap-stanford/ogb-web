@@ -4,7 +4,7 @@ permalink: /kddcup2021/results/
 layout: kdd_results
 ---
 
-#### **Learn about competition results**  
+#### **Learn about competition results and winning solutions**  
 
 - **[Awardees](#awardees)**
     - **[MAG240M-LSC track](#awardees_mag240m)**
