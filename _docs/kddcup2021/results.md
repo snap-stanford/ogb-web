@@ -80,7 +80,7 @@ layout: kdd_results
 
 ##### **Winners**
 ###### **1st place: BD-PGL ([contact](mailto:weiyue.su@gmail.com))**
-- **Team members**: Suwei Yue (Baidu), Fengshi Kun (Baidu), Fangze Yang (Baidu), Wanghui Juan (Baidu), Daisi Ming (Baidu), Zhong Hui (Baidu), Shiyun Sheng (Baidu), Huangzheng Jie (Baidu)
+- **Team members**: Weiyue Su (Baidu), Shikun Feng (Baidu), Zeyang Fang (Baidu), Huijuan Wang (Baidu), Siming Dai (Baidu), Hui Zhong (Baidu), Yunsheng Shi (Baidu), Zhengjie Huang (Baidu)
 - **Method**: NOTE + Feature
 - **Short summary**: We modified OTE into NOTE for better performance and use the post-smoothing technique to capture the graph structure for supplementation. Feature engineering further improves the results.
 - **Learn more: [Technical report](/paper/kddcup2021/wikikg90m_BD-PGL.pdf), [code](https://github.com/PaddlePaddle/PGL/tree/main/examples/kddcup2021/WikiKG90M)**
