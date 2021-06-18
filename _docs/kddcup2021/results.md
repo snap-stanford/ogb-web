@@ -52,7 +52,7 @@ layout: kdd_results
 
 ##### **Runner-ups**
 ###### **4th place: Topology_mag ([contact](mailto:caowencai@oppo.com))**
-- **Team members**: Qiuying Peng (OPPO Research), Wencai Cai (OPPO Research), Zheng Pan (OPPO Research)
+- **Team members**: Qiuying Peng (OPPO Research), Wencai Cao (OPPO Research), Zheng Pan (OPPO Research)
 - **Method**: MPLP + finetune (40 ensemble)
 - **Short summary**: Metapath-based Label Propagation with fine-tuning using latest year samples. models from 5-fold cross-validation in 8 random seeds are ensembled.
 - **Learn more: [Technical report](/paper/kddcup2021/mag240m_Topology_mag.pdf), [code](https://github.com/qypeng-ustc/mplp)**
