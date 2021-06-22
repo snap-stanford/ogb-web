@@ -92,6 +92,7 @@ layout: kdd_results
 - **Short summary**: a) more powerful representation vector learning, b) the complementarity between different models, c) candidate filtering based on the aggregated statistics of the validation/test tail candidates.
 - **Learn more: [Technical report](/paper/kddcup2021/wikikg90m_OhMyGod.pdf), [code](https://github.com/biandh/KDDCup2021_WikiKG90M_OhMyGod/tree/master/examples/lsc/wikikg90m)**
 - **Test MRR**: 0.9712
+- **Note:** The solution explictly utilizes val/test tail candidates but they are not provided in the practical KG completion scenario.
 
 ###### **3rd place: GraphMIRAcles ([contact](mailto:jycai@mail.ustc.edu.cn))**
 - **Team members**: Jianyu Cai (University of Science and Technology of China), Jiajun Chen (University of Science and Technology of China), Taoxing Pan (University of Science and Technology of China), Zhanqiu Zhang (University of Science and Technology of China), Jie Wang (University of Science and Technology of China)
@@ -99,6 +100,7 @@ layout: kdd_results
 - **Short summary**: Encoder: Concat-MLP with Residual Connection (CMRC). Decoder: ComplEx. Rule mining for data augmentation. Knowledge distillation to improve single models. 15 models with different random seeds are ensembled.
 - **Learn more: [Technical report](/paper/kddcup2021/wikikg90m_GraphMIRAcles.pdf), [code](https://github.com/MIRALab-USTC/KDDCup2021_WikiKG90M_GraphMIRAcles)**
 - **Test MRR**: 0.9707
+- **Note:** The solution explictly utilizes val/test tail candidates but they are not provided in the practical KG completion scenario.
 
 ##### **Runner-ups**
 ###### **4th place: littleant ([contact](mailto:kexi.ys@antgroup.com))**
