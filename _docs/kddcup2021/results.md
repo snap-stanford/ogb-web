@@ -92,7 +92,7 @@ layout: kdd_results
 - **Short summary**: a) more powerful representation vector learning, b) the complementarity between different models, c) candidate filtering based on the aggregated statistics of the validation/test tail candidates.
 - **Learn more: [Technical report](/paper/kddcup2021/wikikg90m_OhMyGod.pdf), [code](https://github.com/biandh/KDDCup2021_WikiKG90M_OhMyGod/tree/master/examples/lsc/wikikg90m)**
 - **Test MRR**: 0.9712
-- **Note:** The solution explictly utilizes val/test tail candidates but they are not provided in the practical KG completion scenario.
+- **Note:** The solution explictly utilizes val/test tail candidates but those candidates are not provided in the practical KG completion scenario.
 
 ###### **3rd place: GraphMIRAcles ([contact](mailto:jycai@mail.ustc.edu.cn))**
 - **Team members**: Jianyu Cai (University of Science and Technology of China), Jiajun Chen (University of Science and Technology of China), Taoxing Pan (University of Science and Technology of China), Zhanqiu Zhang (University of Science and Technology of China), Jie Wang (University of Science and Technology of China)
@@ -100,7 +100,7 @@ layout: kdd_results
 - **Short summary**: Encoder: Concat-MLP with Residual Connection (CMRC). Decoder: ComplEx. Rule mining for data augmentation. Knowledge distillation to improve single models. 15 models with different random seeds are ensembled.
 - **Learn more: [Technical report](/paper/kddcup2021/wikikg90m_GraphMIRAcles.pdf), [code](https://github.com/MIRALab-USTC/KDDCup2021_WikiKG90M_GraphMIRAcles)**
 - **Test MRR**: 0.9707
-- **Note:** The solution explictly utilizes val/test tail candidates but they are not provided in the practical KG completion scenario.
+- **Note:** The solution explictly utilizes val/test tail candidates but those candidates are not provided in the practical KG completion scenario.
 
 ##### **Runner-ups**
 ###### **4th place: littleant ([contact](mailto:kexi.ys@antgroup.com))**
@@ -128,7 +128,6 @@ layout: kdd_results
 - **Team members**: Zhang Shanzhuo (Baidu), Liu Lihang (Baidu), Gao Sheng (Baidu), He Donglong (Baidu), Li Weibin (Baidu), Huang Zhengjie (Baidu), Su Weiyue (Baidu), Wang Wenjin (Baidu)
 - **Method**: LiteGEM
 - **Short summary**: Deep graph neural network with self-supervised tasks on topology and geometry information. 73 models with different tasks and hyper-parameters are ensembled.
-
 - **Learn more: [Technical report](/paper/kddcup2021/pcqm4m_SuperHelix.pdf), [code](https://github.com/PaddlePaddle/PaddleHelix/tree/dev/competition/kddcup2021-PCQM4M-LSC)**
 - **Test MAE**: 0.1204
 
