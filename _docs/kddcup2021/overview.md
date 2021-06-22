@@ -72,7 +72,7 @@ If you use OGB-LSC in your work, please cite our paper (Bibtex below)
 ```
 @article{hu2021ogblsc,
   title={OGB-LSC: A Large-Scale Challenge for Machine Learning on Graphs},
-  author={Weihua Hu, Matthias Fey, Hongyu Ren, Maho Nakata, Yuxiao Dong, Jure Leskovec},
+  author={Hu, Weihua and Fey, Matthias and Ren, Hongyu and Nakata, Maho and Dong, Yuxiao and Leskovec, Jure},
   journal={arXiv preprint arXiv:2103.09430},
   year={2021}
 }

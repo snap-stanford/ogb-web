@@ -101,8 +101,8 @@ If you use OGB datasets in your work, please cite [our paper](https://arxiv.org/
 
 ```
 @article{hu2020ogb,
-  title={Open Graph Benchmark: Datasets for Machine Learning on Graphs},
-  author={Weihua Hu, Matthias Fey, Marinka Zitnik, Yuxiao Dong, Hongyu Ren, Bowen Liu, Michele Catasta, Jure Leskovec},
+  title={Open graph benchmark: Datasets for machine learning on graphs},
+  author={Hu, Weihua and Fey, Matthias and Zitnik, Marinka and Dong, Yuxiao and Ren, Hongyu and Liu, Bowen and Catasta, Michele and Leskovec, Jure},
   journal={arXiv preprint arXiv:2005.00687},
   year={2020}
 }
