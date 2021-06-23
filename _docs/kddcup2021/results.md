@@ -126,7 +126,7 @@ layout: kdd_results
 - **Test MAE**: 0.1200
 
 ###### **2nd place: SuperHelix ([contact](mailto:zhangshanzhuo@baidu.com))**
-- **Team members**: Zhang Shanzhuo (Baidu), Liu Lihang (Baidu), Gao Sheng (Baidu), He Donglong (Baidu), Li Weibin (Baidu), Huang Zhengjie (Baidu), Su Weiyue (Baidu), Wang Wenjin (Baidu)
+- **Team members**: Shanzhuo Zhang (Baidu), Lihang Liu (Baidu), Sheng Gao (Baidu), Donglong He (Baidu), Weibin Li (Baidu), Zhengjie Huang (Baidu), Weiyue Su (Baidu), Wenjin Wang (Baidu)
 - **Method**: LiteGEM
 - **Short summary**: Deep graph neural network with self-supervised tasks on topology and geometry information. 73 models with different tasks and hyper-parameters are ensembled.
 - **Learn more: [Technical report](/paper/kddcup2021/pcqm4m_SuperHelix.pdf), [code](https://github.com/PaddlePaddle/PaddleHelix/tree/dev/competition/kddcup2021-PCQM4M-LSC)**
@@ -149,7 +149,7 @@ layout: kdd_results
 - **Test MAE**: 0.1235
 
 ###### **5th place: no_free_lunch ([contact](mailto:zouxiaochuan1984@gmail.com))**
-- **Team members**: XiaochuanZou (AntGroup), RuofanWu (AntGroup), BaokunWang (AntGroup), ShengTian (AntGroup), YifeiHu (AntGroup), LiangZhu (AntGroup), PeixuanChen (AntGroup), MengjiaoZhang (AntGroup), Yuhao Zhang (AntGroup)
+- **Team members**: Xiaochuan Zou (AntGroup), Ruofan Wu (AntGroup), Baokun Wang (AntGroup), Sheng Tian (AntGroup), Yifei Hu (AntGroup), Liang Zhu (AntGroup), Peixuan Chen (AntGroup), MengjiaoZ hang (AntGroup), Yuhao Zhang (AntGroup)
 - **Method**: Ensemble MolNet
 - **Short summary**: Tansformer with graph structure features. 6 models with different initialization and running epochs are ensembled
 - **Learn more: [Technical report](/paper/kddcup2021/pcqm4m_no_free_lunch.pdf), [code](https://github.com/zouxiaochuan/molnet_kddcup2021)**
