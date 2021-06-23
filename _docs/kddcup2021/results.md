@@ -85,6 +85,7 @@ layout: kdd_results
 - **Short summary**: We modified OTE into NOTE for better performance and use the post-smoothing technique to capture the graph structure for supplementation. Feature engineering further improves the results.
 - **Learn more: [Technical report](/paper/kddcup2021/wikikg90m_BD-PGL.pdf), [code](https://github.com/PaddlePaddle/PGL/tree/main/examples/kddcup2021/WikiKG90M)**
 - **Test MRR**: 0.9727
+- **Note:** The solution explictly utilizes val/test tail candidates but those candidates are not provided in the practical KG completion scenario.
 
 ###### **2nd place: OhMyGod ([contact](mailto:pengwh.hit@gmail.com))**
 - **Team members**: Weihua Peng (Harbin Institute of Technology)
