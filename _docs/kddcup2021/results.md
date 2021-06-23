@@ -85,7 +85,7 @@ layout: kdd_results
 - **Short summary**: We modified OTE into NOTE for better performance and use the post-smoothing technique to capture the graph structure for supplementation. Feature engineering further improves the results.
 - **Learn more: [Technical report](/paper/kddcup2021/wikikg90m_BD-PGL.pdf), [code](https://github.com/PaddlePaddle/PGL/tree/main/examples/kddcup2021/WikiKG90M)**
 - **Test MRR**: 0.9727
-- **Note:** The solution explictly utilizes val/test tail candidates but those candidates are not provided in the practical KG completion scenario.
+- **Note:** The solution explictly makes use of val/test tail candidate entities provided by the organizer. In practice, those candidates are not provided, and a model needs to rank among all entities.
 
 ###### **2nd place: OhMyGod ([contact](mailto:pengwh.hit@gmail.com))**
 - **Team members**: Weihua Peng (Harbin Institute of Technology)
@@ -93,7 +93,7 @@ layout: kdd_results
 - **Short summary**: a) more powerful representation vector learning, b) the complementarity between different models, c) candidate filtering based on the aggregated statistics of the validation/test tail candidates.
 - **Learn more: [Technical report](/paper/kddcup2021/wikikg90m_OhMyGod.pdf), [code](https://github.com/biandh/KDDCup2021_WikiKG90M_OhMyGod/tree/master/examples/lsc/wikikg90m)**
 - **Test MRR**: 0.9712
-- **Note:** The solution explictly utilizes val/test tail candidates but those candidates are not provided in the practical KG completion scenario.
+- **Note:** The solution explictly makes use of val/test tail candidate entities provided by the organizer. In practice, those candidates are not provided, and a model needs to rank among all entities.
 
 ###### **3rd place: GraphMIRAcles ([contact](mailto:jycai@mail.ustc.edu.cn))**
 - **Team members**: Jianyu Cai (University of Science and Technology of China), Jiajun Chen (University of Science and Technology of China), Taoxing Pan (University of Science and Technology of China), Zhanqiu Zhang (University of Science and Technology of China), Jie Wang (University of Science and Technology of China)
@@ -101,7 +101,7 @@ layout: kdd_results
 - **Short summary**: Encoder: Concat-MLP with Residual Connection (CMRC). Decoder: ComplEx. Rule mining for data augmentation. Knowledge distillation to improve single models. 15 models with different random seeds are ensembled.
 - **Learn more: [Technical report](/paper/kddcup2021/wikikg90m_GraphMIRAcles.pdf), [code](https://github.com/MIRALab-USTC/KDDCup2021_WikiKG90M_GraphMIRAcles)**
 - **Test MRR**: 0.9707
-- **Note:** The solution explictly utilizes val/test tail candidates but those candidates are not provided in the practical KG completion scenario.
+- **Note:** The solution explictly makes use of val/test tail candidate entities provided by the organizer. In practice, those candidates are not provided, and a model needs to rank among all entities.
 
 ##### **Runner-ups**
 ###### **4th place: littleant ([contact](mailto:kexi.ys@antgroup.com))**
