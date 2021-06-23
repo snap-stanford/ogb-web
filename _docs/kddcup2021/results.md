@@ -119,7 +119,7 @@ layout: kdd_results
 
 ##### **Winners**
 ###### **1st place: MachineLearning ([contact](mailto:yingchengsyuan@gmail.com))**
-- **Team members**: ChengxuanYing (Dalian University of Technology), Mingqi Yang (Dalian University of Technology), Shengjie Luo (Peking University), Tianle Cai (Princeton University), Guolin Ke (MSRA), Di He (MSRA), Shuxin Zheng (MSRA), Chenglin Wu (Xiamen University), Yuxin Wang (Dalian University of Technology), Yanming Shen (Dalian University of Technology)
+- **Team members**: Chengxuan Ying (Dalian University of Technology), Mingqi Yang (Dalian University of Technology), Shengjie Luo (Peking University), Tianle Cai (Princeton University), Guolin Ke (MSRA), Di He (MSRA), Shuxin Zheng (MSRA), Chenglin Wu (Xiamen University), Yuxin Wang (Dalian University of Technology), Yanming Shen (Dalian University of Technology)
 - **Method**: Graphormer (10 ensemble) + ExpC (8 ensemble)
 - **Short summary**: We adopt Graphormer and ExpC as our basic models. We train each model by 8-fold cross-validation, and additionally train two Graphormer models on the union of training and validation sets with different random seeds. For final submission, we use a naive ensemble for these 18 models by taking average of their outputs.
 - **Learn more: [Technical report](https://arxiv.org/pdf/2106.08279.pdf), [code](https://github.com/microsoft/Graphormer/tree/ogb-lsc)**
