@@ -44,6 +44,7 @@ The **bold** method name indicates that the implementation is **official** (by t
 |  19  |  GCN  | 0.7606 ± 0.0097   | 0.8204 ± 0.0141 | [Weihua Hu -- OGB team](mailto:weihuahu@cs.stanford.edu) | [Paper](https://arxiv.org/abs/1609.02907), [Code](https://github.com/snap-stanford/ogb/tree/master/examples/graphproppred/mol) | 527,701 | GeForce RTX 2080 (11GB GPU) | May 1, 2020 |
 |  20  |  GCN+virtual node  | 0.7599 ± 0.0119   | 0.8384 ± 0.0091 | [Weihua Hu -- OGB team](mailto:weihuahu@cs.stanford.edu) | [Paper](https://arxiv.org/abs/1609.02907), [Code](https://github.com/snap-stanford/ogb/tree/master/examples/graphproppred/mol) | 1,978,801 | GeForce RTX 2080 (11GB GPU) | May 1, 2020 |
 |  21  |  **GIN**  | 0.7558 ± 0.0140   | 0.8232 ± 0.0090 |[Weihua Hu -- OGB team](mailto:weihuahu@cs.stanford.edu) | [Paper](https://arxiv.org/abs/1810.00826), [Code](https://github.com/snap-stanford/ogb/tree/master/examples/graphproppred/mol) | 1,885,206 | GeForce RTX 2080 (11GB GPU) | May 1, 2020 |
+|  22  |  GCN (in Julia)  | 0.7549 ± 0.0163   | 0.8042 ± 0.0107 | [Irhum Shafkat (Minerva)](mailto:irhum@minerva.kgi.edu) | [Paper](https://arxiv.org/abs/1609.02907), [Code](https://github.com/irhum/GraphFlux.jl/blob/main/examples/ogbghiv.ipynb) | 527,701 | Tesla T4 (16GB) | Jun 28, 2021 |
 
 
 <a name="ogbg-molpcba"/>
