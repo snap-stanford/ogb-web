@@ -48,8 +48,8 @@ layout: kdd_workshop
 
 ###### **- 11:05PM, August 15th--0:35AM, August 16th: Keynotes**
 - **[Larry Zitnick](http://larryzitnick.org/)**, Facebook AI Research (25min talk + 5min QA)
-- **[Viktor Prasanna](https://sites.usc.edu/prasanna/)**, University of Souther California (25min talk + 5min QA)
-- **[Marinka Zitnik](https://zitniklab.hms.harvard.edu/)** (25min talk + 5min QA)
+- **[Viktor Prasanna](https://sites.usc.edu/prasanna/)**, University of Southern California (25min talk + 5min QA)
+- **[Marinka Zitnik](https://zitniklab.hms.harvard.edu/)**, Harvard University (25min talk + 5min QA)
 
 ###### **- 1:10AM--2:10AM, August 16th: Panel Discussion on Next steps in Graph ML**
 - **[Yizhou Sun](http://web.cs.ucla.edu/~yzsun/)**, University of California, Los Angeles
