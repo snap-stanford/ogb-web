@@ -5,7 +5,7 @@ layout: kdd_workshop
 ---
 
 #### **Learn about the workshop schedule**
-- All the sessions are live talks. The Zoom link will be announced soon.
+- All the sessions are live talks over Zoom. You need to **[register for the KDD conference](https://web.cvent.com/event/911683e0-6654-41ec-ad6e-ceff38441aa1/summary)** in order to join the event.
 
 -------
 
