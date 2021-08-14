@@ -53,7 +53,6 @@ layout: kdd_workshop
 
 ###### **- 1:10AM--2:10AM, August 16th: Panel Discussion on Next steps in Graph ML**
 - **[Yizhou Sun](http://web.cs.ucla.edu/~yzsun/)**, University of California, Los Angeles
-- **[Petar Veličković](https://petar-v.com/)**, DeepMind
 - **[Zheng Zhang](https://shanghai.nyu.edu/academics/faculty/directory/zheng-zhang)**, NYU Shanghai / Amazon AWS
 - **[Shuiwang Ji](http://people.tamu.edu/~sji/)**, Texas A&M University
 - **[Jian Tang](https://jian-tang.com/)**, Mila-Quebec AI Institute
