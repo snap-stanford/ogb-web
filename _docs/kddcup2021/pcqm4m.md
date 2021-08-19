@@ -49,6 +49,8 @@ Prediction over out-of-distribution molecular structure is commonplace in ML-bas
 [1] Nakata, M., & Shimazaki, T. (2017). PubChemQC project: a large-scale first-principles electronic structure database for data-driven chemistry. Journal of chemical information and modeling, 57(6), 1300-1308. <br/>
 [2] Wu, Z., Ramsundar, B., Feinberg, E. N., Gomes, J., Geniesse, C., Pappu, A. S., Leswing, K. & Pande, V. (2018). MoleculeNet: a benchmark for molecular machine learning. Chemical science, 9(2), 513-530.
 
+##### License: CC BY 4.0
+
 
 ---------------
 
