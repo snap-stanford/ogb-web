@@ -20,7 +20,7 @@ The only exception is the MAG240M, where you can use the test nodes in any ways,
 
 ##### **Use of External Data**
 In general, we **do not** allow the use of any external datasets to train models. 
-For PCQM4Mv2 only, we allow the use of *unlabeled* molecules (primarily for unsupervised learning and self-training). However, any expensive calculation (i.e., taking more than 1 second per molecule) should not be performed on the unlabeled molecules in order to augment the dataset.
+For PCQM4Mv2 only, we allow the use of *unlabeled* molecules (primarily for unsupervised learning and self-training). However, any expensive calculation (i.e., taking more than 10 seconds per molecule) should not be performed on the unlabeled molecules in order to augment the dataset.
 
 <a name="pcqm4m_time"/>
 
@@ -40,11 +40,11 @@ The specific rules are as follows:
 - You are allowed to use the following chemistry packages to process molecules from their SMILES strings: **[rdkit](https://www.rdkit.org/docs/GettingStartedInPython.html)**, **[Open Babel](https://open-babel.readthedocs.io/en/latest/UseTheLibrary/Python.html)**, and **[pyscf](http://pyscf.org/)**. **The 4-hour budget must include the pre-processing time of test molecules using these packages**, e.g., transforming test SMILES strings into graphs. This means that you cannot use the expensive (quantum) calculations to do feature engineering for your input test graphs, while you may include many more cheap features in your graphs.
 
 For your reference, the test inference time for our baseline GNN takes about 1 minute (you can run the code [here](https://github.com/snap-stanford/ogb/tree/master/examples/lsc/pcqm4m-v2/test_inference_gnn.py)) on a single GeForce RTX 2080 GPU and an Intel(R) Xeon(R) Gold 6148 CPU @ 2.40GHz.
-Hence, the above 4-hour budget is quite generous for an ordinary GNN model applied to our default molecular graphs. However, the 12-hour budget could be the limiting factor, if you want to apply expensive feature engineering to obtain your input test graphs.
+Hence, the above 4-hour budget is quite generous for an ordinary GNN model applied to our default molecular graphs. However, the 4-hour budget could be the limiting factor, if you want to apply expensive feature engineering to obtain your input test graphs.
 Note that from the quantum chemistry point of view, making predictions over the ~147K molecules in 4 hours (or ~0.1 second per molecule) is about four-orders-of-magnitude faster than the original DFT calculations, making the ML-based approach practically fast and useful.
 
 **\*1** Ideally, we would like our participants to use the GPU/CPU with the same specs as ours (GeForce RTX 2080 GPU, and an Intel(R) Xeon(R) Gold 6148 CPU @ 2.40GHz.). 
-However, as it is hard to enforce the hardware constraint, we also allow the use of other GPU/CPU specs (the 12-hour budget stays the same for simplicity). We will require you to report the hardware specs in the final test submission. 
+However, as it is hard to enforce the hardware constraint, we also allow the use of other GPU/CPU specs (the 4-hour budget stays the same for simplicity). We will require you to report the hardware specs in the final test submission. 
 
  If you need any clarifications about the rules, please feel free to make posts at **[PCQM4Mv2's discussion forum](https://github.com/snap-stanford/ogb/discussions/categories/pcqm4m-lsc).**
 
