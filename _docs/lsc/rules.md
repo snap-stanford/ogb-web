@@ -51,10 +51,15 @@ However, as it is hard to enforce the hardware constraint, we also allow the use
 ---------
 
 <a name="code"/>
-##### **Code Submission**
+##### **Code and Technical Report Submissions**
 For every leaderboard submission, we require public code submission through Github repo. The repo should follow the format of our baseline code (e.g., [MAG240M](https://github.com/snap-stanford/ogb/tree/master/examples/lsc/mag240m), [WikiKG90Mv2](https://github.com/snap-stanford/ogb/tree/master/examples/lsc/wikikg90m-v2), [PCQM4Mv2](https://github.com/snap-stanford/ogb/tree/master/examples/lsc/pcqm4m-v2)) and contain
 - All the code to reproduce your results (including data pre-processing and model training/inference) and save the test submission.
 - `README.md` that contains all the instructions to run the code (from data pre-processing to model inference on test data).
+
+In addition, we require a short technical report that describes your approach. The link can be either Arxiv or PDF uploaded to your Github repository. You are free to update the report once the test-dev performance is announced.
+
+As examples, please refer to the **[KDD Cup winners' code/reports](https://ogb.stanford.edu/kddcup2021/results/)**. For the Latex style file, we recommend using the **[arxiv-style](https://github.com/kourgeorge/arxiv-style)**.
+
 
 ---------
 
@@ -63,3 +68,8 @@ All of our datasets are constructed from public database.
 To avoid trivial test label leakage, we have anonymized the data as much as we can, removing any obvious clues (e.g., data identifier, raw text information) that can be used to map nodes or graphs into the entities in the public database. At the same time, to keep our datasets practically-relevant and realistic, our anonymization may not be perfect (e.g., we need to provide the real graph connectivity, node features, and SMILES strings). Although we believe it is nearly impossible to recover ground-truth test labels, we still significantly discourage the participants to try to de-anonymize the datasets during the competition.
 Keep in mind that you will need to share all the code to reproduce your solution through public Github repository. 
 This means that any obvious misconduct (e.g., training or doing early stopping on test labels, directly using the test labels as predictions) will be revealed.
+
+----------
+
+##### **Horner Code**
+All the information provided in the **[leaderboard submission page](https://ogb-save.stanford.edu/leaderboard/)** must be correct and follows the above rules of OGB-LSC. The leaderboard submission cannot be deleted once it is public. Whenever you are contacted by the OGB-LSC Team, you need to provide information to verify the correctness of the information. Otherwise, the submission may be deleted, and future submissions may be prohibited.

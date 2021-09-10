@@ -190,3 +190,7 @@ evaluator.save_test_submission(input_dict = input_dict, dir_path = dir_path, mod
 ```
 
 You can similarly prepare the test-challenge submission by preparing the corresponding `t_pred_top10` and set `mode` to be `test-challenge`.
+
+---------
+
+#### **Explore [WikiKG90Mv2 leaderboard](/docs/lsc/leaderboards/#wikikg90mv2)!**

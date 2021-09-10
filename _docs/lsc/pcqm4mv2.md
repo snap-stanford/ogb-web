@@ -168,3 +168,7 @@ evaluator.save_test_submission(input_dict = input_dict, dir_path = dir_path, mod
 ```
 
 You can similarly prepare the test-challenge submission by preparing the corresponding `y_pred` and set `mode` to be `test-challenge`.
+
+---------
+
+#### **Explore [PCQM4Mv2 leaderboard](/docs/lsc/leaderboards/#pcqm4mv2)!**

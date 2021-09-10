@@ -55,7 +55,7 @@ All of our baseline code is made **[publicly available](https://github.com/snap-
 Finally, we provide the leaderboard infrastructure (see **[here](/docs/lsc/leaderboards/)** for more details) to evaluate models' prediction on the hidden test sets. There are two kinds of test sets: (1) `test-dev` and (2) `test-challenge`. (1) `test-dev` is used for the [public leaderboards](/docs/lsc/leaderboards/), where the community can evaluate their model performance throughout the year (with some restriction on the frequency of submissions). (2) `test-challenge` will be held out for future ML competitions and will be touched only during the competition.
 
 --------
-### **Next**
+#### **Next Steps**
 
 ##### - **Learn more about the datasets**
 - **[MAG240M](/docs/lsc/mag240m/)** 

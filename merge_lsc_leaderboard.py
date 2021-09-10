@@ -1,12 +1,19 @@
 import os
 import pandas as pd
 
+def extract_date(raw):
+    # 2021-09-08 23:11:44 --> 2021/09/08
+    return raw.split(' ')[0].replace('-', '/')
+    
+
 def main():
     # Retrieve from the server
     os.system('scp weihuahu@ogb-save:/opt/ogb-leaderboard/leaderboard_sample/test-dev_leaderboard.csv .')
 
     # Merge test-dev_leaderboard.csv into test-dev_master.csv
     leaderboard_df = pd.read_csv('test-dev_leaderboard.csv', index_col = 'unique_identifier')
+    leaderboard_df['time'] = leaderboard_df['time'].map(extract_date)
+
     merged_df = pd.read_csv('test-dev_master.csv')
 
     print(leaderboard_df)

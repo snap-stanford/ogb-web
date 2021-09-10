@@ -2,30 +2,12 @@ import pandas as pd
 import numpy as np
 import os
 
-nodeprop_dataset_list = ['ogbn-products', 'ogbn-proteins', 'ogbn-arxiv', 'ogbn-papers100M', 'ogbn-mag']
-linkprop_dataset_list = ['ogbl-ppa', 'ogbl-collab', 'ogbl-ddi', 'ogbl-citation2', 'ogbl-wikikg2', 'ogbl-biokg']
-graphprop_mol_dataset_list = ['ogbg-molhiv', 'ogbg-molpcba', 'ogbg-ppa', 'ogbg-code2']
-deprecated_dataset_list = ['ogbl-wikikg', 'ogbl-citation', 'ogbg-code']
+lsc_dataset_list = ['MAG240M', 'WikiKG90Mv2', 'PCQM4Mv2']
 
 dataset2metric = {}
-dataset2metric['ogbn-products'] = 'Accuracy'
-dataset2metric['ogbn-proteins'] = 'ROC-AUC'
-dataset2metric['ogbn-arxiv'] = 'Accuracy'
-dataset2metric['ogbn-papers100M'] = 'Accuracy'
-dataset2metric['ogbn-mag'] = 'Accuracy'
-dataset2metric['ogbl-ppa'] = 'Hits@100'
-dataset2metric['ogbl-collab'] = 'Hits@50'
-dataset2metric['ogbl-ddi'] = 'Hits@20'
-dataset2metric['ogbl-citation2'] = 'MRR'
-dataset2metric['ogbl-citation'] = 'MRR'
-dataset2metric['ogbl-wikikg2'] = 'MRR'
-dataset2metric['ogbl-wikikg'] = 'MRR'
-dataset2metric['ogbl-biokg'] = 'MRR'
-dataset2metric['ogbg-molhiv'] = 'ROC-AUC'
-dataset2metric['ogbg-molpcba'] = 'AP'
-dataset2metric['ogbg-ppa'] = 'Accuracy'
-dataset2metric['ogbg-code'] = 'F1 score'
-dataset2metric['ogbg-code2'] = 'F1 score'
+dataset2metric['MAG240M'] = 'Accuracy'
+dataset2metric['WikiKG90Mv2'] = 'MRR'
+dataset2metric['PCQM4Mv2'] = 'MAE'
 
 month_dict = {1: 'Jan', 2: 'Feb', 3: 'Mar', 4: 'Apr', 5: 'May', 6: 'Jun', 7: 'Jul', 8: 'Aug', 9: 'Sep', 10: 'Oct', 11: 'Nov', 12: 'Dec'}
 
@@ -33,65 +15,54 @@ def round_float(num):
     return round(num*10000)/10000
 
 def convert_date_to_str(date):
-    # '2/8/2020 23:07:08' -> 'Feb 8, 2020'
-    temp = date.split(' ')[0]
-    splitted = temp.split('/')
-    month = month_dict[int(splitted[0])]
-    day = int(splitted[1])
-    year = int(splitted[2])
+    # '2021/9/8' -> 'Sep 8, 2021'
+    splitted = date.split('/')
+    month = month_dict[int(splitted[1])]
+    day = int(splitted[2])
+    year = int(splitted[0])
     return '{} {}, {}'.format(month, day, year)
 
 def process_submissions(submissions, metric):
 
     if len(submissions) > 0:
-        avg_list = []
-        std_list = []
+        perf_list = []
         for submission in submissions:
-            splitted = submission['Test Performance'].split(',')
-            avg_list.append(round_float(float(splitted[0])))
-            std_list.append(round_float(float(splitted[1])))
+            perf_list.append(round_float(float(submission['test_performance'])))
 
-        avg_list = np.array(avg_list)
+        perf_list = np.array(perf_list)
 
-        if metric == 'RMSE':
+        if metric == 'MAE':
             ## from small to large
-            sorted_ind_list = np.argsort(avg_list)
+            sorted_ind_list = np.argsort(perf_list)
         else:
             ## from large to small
-            sorted_ind_list = np.argsort(-avg_list)
+            sorted_ind_list = np.argsort(-perf_list)
             
-        header = '| Rank  | Method | Test-dev {} | Validation {} | Contact | References | #Params | Hardware | Date \n'.format(metric, metric)
-        header += '|:----:|:-----:|:------:|:-----:|:-----:|:-----:|-----:|:-----:|:-----:|\n'
+        header = '| Rank  | Method | Ensemble | Test-dev {} | Validation {} | Team | Contact | References | #Params | Hardware | Date \n'.format(metric, metric)
+        header += '|:----:|:-----:|:------:|:-----:|:-----:|:-----:|:-----:|:-----:|-----:|:-----:|:-----:|\n'
 
         current_ranking = 1
 
         for i, ind in enumerate(sorted_ind_list):
             submission = submissions[ind]
-            if submission['Official'] == 'Official':
-                header += '|  {}  |  **{}**  | {:.4f} ± {:.4f}   | {} |[{}](mailto:{}) | [Paper]({}), [Code]({}) | {} | {} | {} |\n'.\
-                            format(current_ranking, submission['Method'], avg_list[ind], std_list[ind], submission['Validation Performance'], submission['Primary contact person'],
-                                submission['Primary contact email'], submission['Paper'], submission['Code'], submission['#Params'], submission['Hardware'], convert_date_to_str(submission['Timestamp']))
-            else:
-                header += '|  {}  |  {}  | {:.4f} ± {:.4f}   | {} | [{}](mailto:{}) | [Paper]({}), [Code]({}) | {} | {} | {} |\n'.\
-                            format(current_ranking, submission['Method'], avg_list[ind], std_list[ind], submission['Validation Performance'], submission['Primary contact person'],
-                                submission['Primary contact email'], submission['Paper'], submission['Code'], submission['#Params'], submission['Hardware'], convert_date_to_str(submission['Timestamp']))
-            
-            if i < len(sorted_ind_list) - 1 and avg_list[ind] != avg_list[sorted_ind_list[i+1]]:
+            header += '|  {}  |  **{}**  | {} | {:.4f}  | {:.4f} | {} | [{}](mailto:{}) ({}) | [Paper]({}), [Code]({}) | {} | {} | {} |\n'.\
+                            format(current_ranking, submission['method'], submission['ensemble'], perf_list[ind], submission['val_performance'], submission['team'], submission['contact_name'],
+                                submission['contact_email'], submission['affiliations'], submission['paper'], submission['code'], submission['params'], submission['hardware_gputpu'], convert_date_to_str(submission['time']))
+                        
+            if i < len(sorted_ind_list) - 1 and perf_list[ind] != perf_list[sorted_ind_list[i+1]]:
                 current_ranking += 1
     else:
-        header = '| Rank  | Method | Test {} | Validation {} | Contact | References | #Params | Hardware | Date \n'.format(metric, metric)
+        header = '| Rank  | Method | Ensemble | Test-dev {} | Validation {} | Team | Contact | References | #Params | Hardware | Date \n'.format(metric, metric)
 
     return header
 
 def insert_leaderboard(source_file, dest_file, leaderboard_dict):
-    PATH = '_docs/leaderboard'
+    PATH = '_docs/lsc'
     with open(os.path.join(PATH, source_file), 'r') as f:
         source = f.read().split('\n')
 
     dest = []
     for line in source:
-        ### line = '#ogbg-mol-cls'
-        ### line[1:] = 'ogbg-mol-cls'
         if line[1:] in leaderboard_dict:
             dest.append(leaderboard_dict[line[1:]])
         else:
@@ -102,36 +73,17 @@ def insert_leaderboard(source_file, dest_file, leaderboard_dict):
 
 
 if __name__ == '__main__':
-    url = 'https://docs.google.com/spreadsheets/d/1m9NWfmzxNqoNhX46LGbFLk7NPHWrBSVa73WKP4ObpTQ/export?format=csv&gid=516823038'
-    df = pd.read_csv(url)
+    df = pd.read_csv('test-dev_master.csv')
 
     dataset2submissions = {dataset: [] for dataset in dataset2metric.keys()}
 
     for index, submission in df.iterrows():
         ### only consider the approved entry
 
-        if submission['Approved'] == 'Y':
+        if submission['approved'] == 'Yes':
             # get dataset name
-            dataset = submission['Dataset']
-            # print(submission)
-
-            ### Request additional information
-            if np.isnan(submission['#Params']):
-                submission['#Params'] = '[Please tell us](mailto:ogb@cs.stanford.edu)'
-            else:
-                submission['#Params'] = '{:,}'.format(int(submission['#Params']))
-            try:
-                if np.isnan(submission['Hardware']):
-                    submission['Hardware'] = '[Please tell us](mailto:ogb@cs.stanford.edu)'
-            except:
-                pass
-
-            if not isinstance(submission['Validation Performance'], str):
-                submission['Validation Performance'] = '[Please tell us](mailto:ogb@cs.stanford.edu)'
-            else:
-                splitted = submission['Validation Performance'].split(',')
-                submission['Validation Performance'] = '{:.4f} ± {:.4f}'.format(round_float(float(splitted[0])),round_float(float(splitted[1])))
-
+            dataset = submission['dataset']
+            submission['params'] = '{:,}'.format(int(submission['params']))
             dataset2submissions[dataset].append(submission)
 
     dataset2leaderboard = {}
@@ -140,11 +92,7 @@ if __name__ == '__main__':
         # converting a list of submissions to a leaderboard
         dataset2leaderboard[dataset] = process_submissions(submissions, metric = dataset2metric[dataset])
 
-
-    insert_leaderboard('_leader_graphprop_scaf.md', 'leader_graphprop.md', dataset2leaderboard)
-    insert_leaderboard('_leader_nodeprop_scaf.md', 'leader_nodeprop.md', dataset2leaderboard)
-    insert_leaderboard('_leader_linkprop_scaf.md', 'leader_linkprop.md', dataset2leaderboard)
-    insert_leaderboard('_leader_deprecated_scaf.md', 'leader_deprecated.md', dataset2leaderboard)
+    insert_leaderboard('_leaderboards_scaf.md', 'leaderboards.md', dataset2leaderboard)
 
 
 
