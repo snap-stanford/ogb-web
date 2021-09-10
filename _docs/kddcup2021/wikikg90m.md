@@ -3,6 +3,9 @@ title: OGB-LSC @ KDD Cup 2021
 permalink: /kddcup2021/wikikg90m/
 layout: kdd_wikikg90m
 ---
+
+#### **Important: WikiKG90M has been deprecated. Use [WikiKG90Mv2](/docs/lsc/wikikg90mv2/) instead.**
+
 #### **Learn about WikiKG90M-LSC and Python package**
 
 - **[Dataset](#dataset): Learn about the dataset and the prediction task.**

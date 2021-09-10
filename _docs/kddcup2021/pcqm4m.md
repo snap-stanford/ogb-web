@@ -3,6 +3,7 @@ title: OGB-LSC @ KDD Cup 2021
 permalink: /kddcup2021/pcqm4m/
 layout: kdd_pcqm4m
 ---
+#### **Important: PCQM4M has been deprecated. Use [PCQM4Mv2](/docs/lsc/pcqm4mv2/) instead.**
 #### **Learn about PCQM4M-LSC and Python package**
 - **[Dataset](#dataset): Learn about the dataset and the prediction task.**
 - **Python package tutorial**
@@ -130,9 +131,9 @@ edge_emb = bond_encoder(edge_feat) # edge_feat is input edge feature in Pytorch 
 ###### **- Get data splits**
 ```python
 split_dict = dataset.get_idx_split()
-train_idx = split_dict['train'] # numpy array storing indices of training paper nodes
-valid_idx = split_dict['valid'] # numpy array storing indices of validation paper nodes
-test_idx = split_dict['test'] # numpy array storing indices of testing paper nodes
+train_idx = split_dict['train'] # numpy array storing indices of training molecules
+valid_idx = split_dict['valid'] # numpy array storing indices of validation molecules
+test_idx = split_dict['test'] # numpy array storing indices of testing molecules
 ```
 If you use `PygPCQM4MDataset` or `DglPCQM4MDataset`, `{train,valid,test}_idx` will be `torch` tensors.
 

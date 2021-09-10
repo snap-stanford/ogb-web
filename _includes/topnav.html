@@ -16,7 +16,27 @@
                 <ul class="nav navbar-nav">
                 <li {% if page.sectionid=='Get Started' %} class="active" {% endif %}><a href="{{ "/docs/home/" | relative_url }}">Get Started</a></li>
                 <li {% if page.sectionid=='Updates' %} class="active" {% endif %}><a href="{{ "/docs/update/" | relative_url }}">Updates</a></li>
-                <li {% if page.sectionid=='KDD Cup' %} class="active" {% endif %}><a href="{{ "/kddcup2021/" | relative_url }}">KDD Cup</a></li>
+                <li {% if page.sectionid=='Large-Scale Challenge' %} class="dropdown" {% endif %}><a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                    Large-Scale Challenge <span class="caret"></span>
+                </a>
+                    <ul class="dropdown-menu">
+                      <li><a href="{{ "/docs/lsc/overview/" | relative_url }}">Overview</a></li>
+                      <li class="divider"></li>
+                      <li><a href="{{ "/docs/lsc/mag240m/" | relative_url }}">MAG240M</a></li>
+                      <li class="divider"></li>
+                      <li><a href="{{ "/docs/lsc/wikikg90mv2/" | relative_url }}">WikiKG90Mv2</a></li>
+                      <li class="divider"></li>
+                      <li><a href="{{ "/docs/lsc/pcqm4mv2/" | relative_url }}">PCQM4Mv2</a></li>
+                      <li class="divider"></li>
+                      <li><a href="{{ "/docs/lsc/rules/" | relative_url }}">Rules</a></li>
+                      <li class="divider"></li>
+                      <li><a href="{{ "/docs/lsc/leaderboards/" | relative_url }}">Leaderboards</a></li>
+                      <li class="divider"></li>
+                      <li><a href="https://arxiv.org/abs/2103.09430">LSC Paper</a></li>
+                      <li class="divider"></li>
+                      <li><a href="{{ "/kddcup2021/" | relative_url }}">KDD Cup 2021 (archive)</a></li>
+                    </ul>
+                </li>
                 <li {% if page.sectionid=='Datasets' %} class="dropdown" {% endif %}><a class="dropdown-toggle" data-toggle="dropdown" href="#">
                     Datasets <span class="caret"></span>
                 </a>
