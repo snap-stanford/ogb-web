@@ -1,6 +1,6 @@
 ---
 title: Overview of OGB-LSC
-permalink: /docs/lsc/overview/
+permalink: /docs/lsc/
 ---
 
 #### **Why a Large-Scale Graph ML Datasets?**

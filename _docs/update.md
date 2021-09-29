@@ -11,7 +11,7 @@ permalink: /docs/update/
 - Two datasets from the OGB-LSC have been updated as follows.
     - WikiKG90M --> WikiKG90Mv2
     - PCQM4M --> PCQM4Mv2
-- New OGB-LSC webpage is available **[here](/docs/lsc/overview/)**.
+- New OGB-LSC webpage is available **[here](/docs/lsc/)**.
 
 --------
 
