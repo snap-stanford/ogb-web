@@ -3,7 +3,7 @@ title: Updates from OGB
 permalink: /docs/update/
 ---
 
-##### **Please update your package to [1.3.1](https://github.com/snap-stanford/ogb/releases/tag/1.3.1)** (April 8th, 2021).
+##### **Please update your package to [1.3.2](https://github.com/snap-stanford/ogb/releases/tag/1.3.2)** (September 28th, 2021).
 
 --------
 
@@ -12,6 +12,10 @@ permalink: /docs/update/
     - WikiKG90M --> WikiKG90Mv2
     - PCQM4M --> PCQM4Mv2
 - New OGB-LSC webpage is available **[here](/docs/lsc/overview/)**.
+
+--------
+
+###### **September 7th, 2021: KDD Cup 2021 workshop videos are out [here](/kddcup2021/workshop/)**.
 
 --------
 
