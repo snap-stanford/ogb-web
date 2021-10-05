@@ -28,7 +28,7 @@ WikiKG90Mv2 is a Knowledge Graph (KG) extracted from the *entire* Wikidata knowl
 Each triple (`head`, `relation`, `tail`) in WikiKG90Mv2 represents an Wikidata claim, where `head` and `tail` are the Wikidata items, and `relation` is the Wikidata predicate. We extracted triples from the public Wikidata dump downloaded at three time-stamps: May 17th, June 7th, and June 28th of 2021, for training, validation, and testing, respectively.
 We retain all the entities and relations in the earliest May dump, resulting in 91,230,610 entities, 1,387 relations, and 601,062,811 triples in total.
 In addition to extracting triples, we provide text features for entities and relations. Specifically, each entity/relation in Wikidata is associated with a title and a short description, e.g., one entity is associated with the title `Geoffrey Hinton` and the description `computer scientist and psychologist`.
-We provide the MPNet embeddings [4,5] for all the entities and relations, which was the best-performing sentence embedding model [5] at the time of our dataset creation.
+We provide the MPNet embeddings [4,5] for all the entities and relations, which was the best-performing sentence embedding model [3] at the time of our dataset creation.
 
 **Prediction task and evaluation metric:**
 The task is the KG completion, i.e., given a set of training triples, predict a set of new test triples. 
@@ -40,12 +40,17 @@ We split the triples according to time, simulating a realistic KG completion sce
 Specifically, we construct KGs using the aforementioned three timestamps,  where we only retain entities and relation types that appear in the earliest KG.
 We use the triples in the earlies KG for training, and use the additional triples in the subsequent KGs for validation and test, respectively.
 
+**Updates from WikiKG90M:** Below we summarize the updates we have made to the original WikiKG90M.
+- **No candidate tails provided.** The most important update is that we do not provide any candidate tail entities for validation/test triples. Hence, a model needs to predict the target tail entity out of all the entities in Wikidata.
+- **Created from more recent Wikidata.** The WikiKG90Mv2 is based on the public Wikidata dump downloaded at three time-stamps: May 17th, June 7th, and June 28th of 2021, for training, validation, and testing, respectively. We retain all the entities and relations in the September dump, resulting in 91,230,610 entities, 1,387 relations, and 601,062,811 triplets in total.
+- **A better text encoder used.** The text features of WikiKG90Mv2 are obtained by using MPNet [4], which is shown to be significantly better sentence encoder [3].
+- **Balancing relation types in validation/test triples.** On the new Wikidata dumps, we found the relation types of the raw validation/test triples are highly-skewed; the most frequent relation, "cites work (P2860)", occupies 60% and 8\% of the entire validation and test triples, respectively. To test a model's capability to perform well across all types of relations, we subsample 15,000 triples from the entire validation/test triples such that the resulting relation counts are proportional to the cubic-root of the original relation counts.
+
 ###### **References**
 [1] Vrandečić, D., & Krötzsch, M. (2014). Wikidata: a free collaborative knowledgebase. Communications of the ACM, 57(10), 78-85. <br/>
 [2] Bollacker, K., Evans, C., Paritosh, P., Sturge, T., & Taylor, J. (2008, June). Freebase: a collaboratively created graph database for structuring human knowledge. In Proceedings of the 2008 ACM SIGMOD international conference on Management of data (pp. 1247-1250). <br/>
 [3] Reimers, N., & Gurevych, I. (2019). Sentence-bert: Sentence embeddings using siamese bert-networks. arXiv preprint arXiv:1908.10084. <br/>
 [4] Song, K., Tan, X., Qin, T., Lu, J., & Liu, T. Y. (2020). Mpnet: Masked and permuted pre-training for language understanding. arXiv preprint arXiv:2004.09297. <br/>
-[5] Reimers, N., & Gurevych, I. (2019). Sentence-bert: Sentence embeddings using siamese bert-networks. arXiv preprint arXiv:1908.10084.
 
 ##### License: CC-0
 
