@@ -48,9 +48,9 @@ Overall, we found the model performances were consistent between the two splits.
 
 **Updates from PCQM4M:**
 Below we summarize the updates we have made to the original PCQM4M.
-- **3D molecular structures provided.** We will additionally provide 3D structures for training and validation molecules. These structures are calculated by DFT and are obtained together with the HOMO-LUMO gap.
+- **3D molecular structures provided.** We additionally provide 3D structures for training molecules. These structures are calculated by DFT and are obtained together with the HOMO-LUMO gap.
 - **SMILES strings are partly updated.** In the process of preparing the 3D structures, we found a subtle mismatch between SMILES strings (i.e., 2D molecular graphs) and the HOMO-LUMO gap for about 10% of the entire molecules. 
-Specifically, the SMILES strings can be changed in the course of DFT's geometry optimization, but in PCQM4M, we provided the *initial* SMILES strings. In the updated PCQM4Mv2, we will provide SMILES strings corresponding to the *final* optimized 3D structures. Note that the HOMO-LUMO gap was calculated by DFT based on the final 3D structures; hence, it makes more sense to correspond the HOMO-LUMO gap with the SMILES string associated with the final 3D structures. 
+Specifically, the SMILES strings can be changed in the course of DFT's geometry optimization, but in PCQM4M, we provided the *initial* SMILES strings. In the updated PCQM4Mv2, we provide SMILES strings corresponding to the *final* optimized 3D structures. Note that the HOMO-LUMO gap was calculated by DFT based on the final 3D structures; hence, it makes more sense to correspond the HOMO-LUMO gap with the SMILES string associated with the final 3D structures. 
 - **Number of molecules decreased slightly.** As a result of the SMILES update, some molecules can no longer be parsed by the commonly-used chemistry toolkit, i.e., rdkit. As a result, the total number of molecules has been slightly reduced to 3,746,619. 
 - **Split ratio changed.** For PCQM4Mv2, we set the split ratio for train/validation/test-dev/test-challenge to 90/2/4/4. The split is still done by PubChem compound ID so that there is no test label leakage, i.e., all the test molecules in PCQM4Mv2 is in the test split of PCQM4M.
 
