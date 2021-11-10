@@ -48,7 +48,7 @@ pip install -U ogb
 python -c "import ogb; print(ogb.__version__)"
 ```
 
-In our **[paper](https://arxiv.org/abs/2103.09430&noteId=JiMrMKllK0J)**, we further perform an extensive baseline analysis on each dataset, implementing simple baseline models as well as advanced expressive models at scale.
+In our **[paper](https://arxiv.org/pdf/2103.09430.pdf)**, we further perform an extensive baseline analysis on each dataset, implementing simple baseline models as well as advanced expressive models at scale.
 We find that advanced expressive models, despite requiring more efforts to scale up, do benefit from large data and significantly outperform simple baseline models that are easy to scale.
 All of our baseline code is made **[publicly available](https://github.com/snap-stanford/ogb/tree/master/examples/lsc)** to facilitate public research.
 
@@ -66,9 +66,9 @@ Finally, we provide the leaderboard infrastructure (see **[here](/docs/lsc/leade
 
 -----------
 
-#### **[Paper](https://arxiv.org/abs/2103.09430&noteId=JiMrMKllK0J)**
+#### **[Paper](https://arxiv.org/pdf/2103.09430.pdf)**
 
-Details about our datasets and our initial baseline analysis are described in our **[OGB-LSC paper](https://arxiv.org/abs/2103.09430&noteId=JiMrMKllK0J)**.
+Details about our datasets and our initial baseline analysis are described in our **[OGB-LSC paper](https://arxiv.org/pdf/2103.09430.pdf)**.
 If you use OGB-LSC in your work, please cite our paper (Bibtex below)
 
 ```
