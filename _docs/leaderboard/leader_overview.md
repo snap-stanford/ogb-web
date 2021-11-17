@@ -14,7 +14,8 @@ Once you have developed your model and got results, you can submit your test res
 For each dataset, we require you to submit the following information.
 
 - **OGB version**: The OGB version used to conduct the experiments. **Must satisfy the version requirement for each dataset.**
-- **Method**: The name of the method.  
+- **Method**: The name of the method.
+- **External data:** When building your model, indicate whether you use external data (in the form of external pre-trained models, raw text, external unlabeled/labeled data)? If "Yes", please clearly indicate that in your method name above, e.g., GIN (pre-trained on PubChem).
 - **Dataset**: The name of an OGB dataset that you use to evaluate the method.
 - **Test performance**: Raw test performance output by OGB model evaluators, where **average (`torch.mean`) and unbiased standard deviation (`torch.std`) must be taken over 10 different random seeds.** You can either not fix random seeds at all, or use the random seeds from 0 to 9. We highly discourage you to tune the random seeds. For the large [`ogbn-papers100M`](../nodeprop/#ogbn-papers100M), you only need to use 3 random seeds to report the performance.
 - **Validation performance**: Validation performance of the model that is used to report the test performance above.
