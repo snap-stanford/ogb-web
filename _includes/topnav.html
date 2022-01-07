@@ -48,6 +48,8 @@
                       <li><a href="{{ "/docs/linkprop/" | relative_url }}">Link Property Prediction</a></li>
                       <li class="divider"></li>
                       <li><a href="{{ "/docs/graphprop/" | relative_url }}">Graph Property Prediction</a></li>
+                      <li class="divider"></li>
+                      <li><a href="{{ "/docs/lsc/" | relative_url }}">Large-Scale Challenge</a></li>
                     </ul>
                 </li>
                 <li {% if page.sectionid=='Leaderboard' %} class="dropdown" {% endif %}><a class="dropdown-toggle" data-toggle="dropdown" href="#">
@@ -67,7 +69,16 @@
                       <li><a href="{{ "/docs/lsc/leaderboards/" | relative_url }}">Large-Scale Challenge</a></li>
                     </ul>
                 </li>
-                <li {% if page.sectionid=='Paper' %} class="active" {% endif %}><a href="{{ site.paper_address }}">Paper</a></li>
+                <li {% if page.sectionid=='Papers' %} class="dropdown" {% endif %}><a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                    Leaderboards <span class="caret"></span>
+                </a>
+                    <ul class="dropdown-menu">
+                      <li><a href="https://arxiv.org/abs/2005.00687">OGB-LSC</a></li>
+                      <li class="divider"></li>
+                      <li><a href="https://arxiv.org/abs/2103.09430">OGB-LSC</a></li>
+                    </ul>
+                </li>
+                {% comment %} <li {% if page.sectionid=='Paper' %} class="active" {% endif %}><a href="{{ site.paper_address }}">Paper</a></li> {% endcomment %}
                 <li {% if page.sectionid=='Team' %} class="active" {% endif %}><a href="{{ "/docs/team/" | relative_url }}">Team</a></li>
                 <li {% if page.sectionid=='Github' %} class="active" {% endif %}><a href="{{ site.git_address }}">Github</a></li>
             </div>
