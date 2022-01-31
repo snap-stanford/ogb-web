@@ -8,7 +8,7 @@ def extract_date(raw):
 
 def main():
     # Retrieve from the server
-    os.system('scp weihuahu@ogb-save:/opt/ogb-leaderboard/leaderboard_sample/test-dev_leaderboard.csv .')
+    os.system('scp weihuahu@ogb-save.stanford.edu:/opt/ogb-leaderboard/leaderboard_sample/test-dev_leaderboard.csv .')
 
     # Merge test-dev_leaderboard.csv into test-dev_master.csv
     leaderboard_df = pd.read_csv('test-dev_leaderboard.csv', index_col = 'unique_identifier')
