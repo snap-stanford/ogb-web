@@ -19,8 +19,8 @@ The only exception is the MAG240M, where you can use the test nodes in any ways,
 ------
 
 ##### **Use of External Data**
-In general, we **do not** allow the use of any external datasets to train models. 
-For PCQM4Mv2 only, we allow the use of *unlabeled* molecules (primarily for unsupervised learning and self-training). However, any expensive calculation (i.e., taking more than 10 seconds per molecule) should not be performed on the unlabeled molecules in order to augment the dataset.
+We **do not** allow the use of any external datasets to train models. 
+<!-- For PCQM4Mv2 only, we allow the use of *unlabeled* molecules (primarily for unsupervised learning and self-training). However, any expensive calculation (i.e., taking more than 10 seconds per molecule) should not be performed on the unlabeled molecules in order to augment the dataset. -->
 
 <a name="pcqm4m_time"/>
 
