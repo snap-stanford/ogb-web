@@ -34,7 +34,7 @@ The dataset statistics as well as basic information are summarized below, showin
 Task category | Name      | Package      |  #Graphs      | #Total nodes  | #Total edges  | Task Type   | Metric  | Download size | md5sum | 
 |:---------:|:--------|-----:|-----:|----------------:|----------------------:|:---------------|:-------|:---------|---------:|
 Node-level | **[MAG240M](/docs/lsc/mag240m/)** | >=1.3.2 | 1 | 244,160,499  | 1,728,364,232 |  Multi-class classification | Accuracy | 167GB | xxx |
-Link-level | **[WikiKG90Mv2](/docs/lsc/wikikg90mv2/)** |  >=1.3.2  | 1 | 91,230,610 | 601,062,811 |   KG completion | MRR | 91GB | xxx | 
+Link-level | **[WikiKG90Mv2](/docs/lsc/wikikg90mv2/)** |  >=1.3.3  | 1 | 91,230,610 | 601,062,811 |   KG completion | MRR | 91GB | xxx | 
 Graph-level | **[PCQM4Mv2](/docs/lsc/pcqm4mv2/)** |  >=1.3.2  | 3,746,619  | 52,970,652 | 54,546,813   |  Regression | MAE | 59MB**&Dagger;**  | xxx |
 
 **&Dagger;**: The PCQM4Mv2 dataset is provided in the SMILES strings. After processing them into graph objects, the eventual file size will be around 8GB.
