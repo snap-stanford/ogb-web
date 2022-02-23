@@ -3,7 +3,7 @@ title: Updates from OGB
 permalink: /docs/update/
 ---
 
-##### **Please update your package to [1.3.2](https://github.com/snap-stanford/ogb/releases/tag/1.3.2)** (September 28th, 2021).
+##### **Please update your package to [1.3.3](https://github.com/snap-stanford/ogb/releases/tag/1.3.3)** (February 23th, 2022).
 
 --------
 

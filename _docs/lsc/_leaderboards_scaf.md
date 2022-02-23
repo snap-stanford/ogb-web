@@ -45,7 +45,7 @@ permalink: /docs/lsc/leaderboards/
 ### Leaderboard for [WikiKG90Mv2](/docs/lsc/wikikg90mv2)
 ##### MRR on the test-dev and validation sets. The higher, the better.
 
-#### Package: >=1.3.2
+#### Package: >=1.3.3
 
 
 #WikiKG90Mv2

@@ -44,7 +44,7 @@ Node-level | **[MAG240M](mag240m/)** | >=1.3.0, <=1.3.1 | 1 | 244,160,499  | 1,7
 Link-level | **[WikiKG90M](wikikg90m/)****&dagger;** |  >=1.3.0, <=1.3.1  | 1 | 87,143,637 | 504,220,369 |   KG completion | MRR | 94GB
 Graph-level | **[PCQM4M](pcqm4m/)****&dagger;** |  >=1.3.0, <=1.3.1  | 3,803,453  | 53,814,542 | 55,399,880   |  Regression | MAE | 58MB**&Dagger;** 
 
-**&dagger;**: **The WikiKG90M and PCQM4M datasets have been deprecated after the KDD Cup 2021.** The updated datasets are [WikiKG90Mv2](/docs/lsc/wikikg90mv2/) and [PCQM4Mv2](/docs/lsc/pcqm4mv2/) (available for `ogb>=1.3.2`). <br/>
+**&dagger;**: **The WikiKG90M and PCQM4M datasets have been deprecated after the KDD Cup 2021.** The updated datasets are [WikiKG90Mv2](/docs/lsc/wikikg90mv2/) and [PCQM4Mv2](/docs/lsc/pcqm4mv2/) (available for `ogb>=1.3.3`). <br/>
 **&Dagger;**: The PCQM4M dataset is provided in the SMILES strings. After processing them into graph objects, the eventual file size will be around 8GB.
 
 **All of these datasets can be downloaded and prepared using our [`ogb` Python package](https://github.com/snap-stanford/ogb).**
