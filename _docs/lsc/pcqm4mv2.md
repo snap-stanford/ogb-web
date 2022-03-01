@@ -35,7 +35,22 @@ The conversion requires **[`rdkit` Python package](https://www.rdkit.org/docs/In
 By default, we follow OGB to convert the SMILES string into a molecular graph representation (see code **[here](https://github.com/snap-stanford/ogb/blob/master/ogb/utils/mol.py#L6)**), where each node is associated with a 9-dimensional feature (e.g., atomic number, chirality) and each edge comes with a 3-dimensional feature (e.g., bond type, bond stereochemistry), although the optimal set of input graph features remains to be explored.
 
 **3D Graph:**
-We further provide the equilibrium 3D graph structure for training molecules. The zipped folder can be downloaded **[here](http://ogb-data.stanford.edu/data/lsc/pcqm4m-v2_xyz.zip)** (2.7GB). The folder contains the xyz coordinate files of all the training molecules. For `i`-th molecule, the corresponding xyz file is `i.xyz`, e.g., xyz file of the 1234-th molecule is named `1234.xyz`. The community should feel free to exploit 3D structural information to improve their model performance. Note that 3D information is *not* provided for validation and test molecules, and test-time inference needs to be performed without explicit 3D information.
+We further provide the equilibrium 3D graph structure for training molecules. The compressed SDF file can be downloaded **[here](http://ogb-data.stanford.edu/data/lsc/pcqm4m-v2-train.sdf.tar.gz)** (1.5GB). The single SDF file contains 3D information of all the 3,378,606 training molecules. First download and decompress the file as follows.
+```bash
+wget http://ogb-data.stanford.edu/data/lsc/pcqm4m-v2-train.sdf.tar.gz
+md5sum pcqm4m-v2-train.sdf.tar.gz # fd72bce606e7ddf36c2a832badeec6ab
+tar -xf pcqm4m-v2-train.sdf.tar.gz # extracted pcqm4m-v2-train.sdf
+```
+Then, use `rdkit` to extract molecule information as follows.
+```python
+from rdkit import Chem
+
+suppl = Chem.SDMolSupplier('pcqm4m-v2-train.sdf')
+for idx, mol in enumerate(suppl):
+    print(f'{idx}-th rdkit mol obj: {mol}')
+```
+The community should feel free to exploit 3D structural information to improve their model performance. Note that 3D information is *not* provided for validation and test molecules, and test-time inference needs to be performed without explicit 3D information.
+**Known issue**: A very small number of training molecules (around 46 out of 3,378,606) have 2D graph structures that are inconsistent with the ones calculated from SMILES. These molecules often involve Si atom(s). For the rest of the training molecules, the 2D graphs constructed from SDF and SMILES are identical (even though the atom-to-atom correspondence is not available).
 
 **Prediction task and evaluation metric:**
 The task is graph regression: predicting the HOMO-LUMO energy gap in electronvolt (eV) given 2D molecular graphs. Mean Absolute Error (MAE) is used as evaluation metric.
