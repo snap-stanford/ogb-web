@@ -35,7 +35,7 @@ The conversion requires **[`rdkit` Python package](https://www.rdkit.org/docs/In
 By default, we follow OGB to convert the SMILES string into a molecular graph representation (see code **[here](https://github.com/snap-stanford/ogb/blob/master/ogb/utils/mol.py#L6)**), where each node is associated with a 9-dimensional feature (e.g., atomic number, chirality) and each edge comes with a 3-dimensional feature (e.g., bond type, bond stereochemistry), although the optimal set of input graph features remains to be explored.
 
 **3D Graph:**
-We further provide the equilibrium 3D graph structure for training molecules. The compressed SDF file can be downloaded **[here](http://ogb-data.stanford.edu/data/lsc/pcqm4m-v2-train.sdf.tar.gz)** (1.5GB). The single SDF file contains 3D information of all the 3,378,606 training molecules. First download and decompress the file as follows.
+We further provide the equilibrium 3D graph structure for training molecules in the form of the **[SDF format](https://en.wikipedia.org/wiki/Chemical_table_file#SDF)**. The compressed SDF can be downloaded **[here](http://ogb-data.stanford.edu/data/lsc/pcqm4m-v2-train.sdf.tar.gz)** (1.5GB). The single SDF contains 3D information of all the 3,378,606 training molecules. First download and decompress the file as follows.
 ```bash
 wget http://ogb-data.stanford.edu/data/lsc/pcqm4m-v2-train.sdf.tar.gz
 md5sum pcqm4m-v2-train.sdf.tar.gz # fd72bce606e7ddf36c2a832badeec6ab
