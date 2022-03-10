@@ -1,5 +1,6 @@
 import pandas as pd 
 import numpy as np
+import math
 import os
 
 lsc_dataset_list = ['MAG240M', 'WikiKG90Mv2', 'PCQM4Mv2']
@@ -45,7 +46,12 @@ def process_submissions(submissions, metric):
 
         for i, ind in enumerate(sorted_ind_list):
             submission = submissions[ind]
-            header += '|  {}  |  **{}**  | {} | {:.4f}  | {:.4f} | {} | [{}](mailto:{}) ({}) | [Paper]({}), [Code]({}) | {} | {} | {} |\n'.\
+            if submission['val_performance'] == 'N/A':
+                header += '|  {}  |  **{}**  | {} | {:.4f}  | {} | {} | [{}](mailto:{}) ({}) | [Paper]({}), [Code]({}) | {} | {} | {} |\n'.\
+                            format(current_ranking, submission['method'], submission['ensemble'], perf_list[ind], submission['val_performance'], submission['team'], submission['contact_name'],
+                                submission['contact_email'], submission['affiliations'], submission['paper'], submission['code'], submission['params'], submission['hardware_gputpu'], convert_date_to_str(submission['time']))
+            else:
+                header += '|  {}  |  **{}**  | {} | {:.4f}  | {:.4f} | {} | [{}](mailto:{}) ({}) | [Paper]({}), [Code]({}) | {} | {} | {} |\n'.\
                             format(current_ranking, submission['method'], submission['ensemble'], perf_list[ind], submission['val_performance'], submission['team'], submission['contact_name'],
                                 submission['contact_email'], submission['affiliations'], submission['paper'], submission['code'], submission['params'], submission['hardware_gputpu'], convert_date_to_str(submission['time']))
                         
@@ -81,9 +87,21 @@ if __name__ == '__main__':
         ### only consider the approved entry
 
         if submission['approved'] == 'Yes':
+            for key in submission.keys():
+                try:
+                    if math.isnan(submission[key]):
+                        submission[key] = 'N/A'
+                except:
+                    pass
+            
             # get dataset name
             dataset = submission['dataset']
-            submission['params'] = '{:,}'.format(int(submission['params']))
+            try:
+                submission['params'] = '{:,}'.format(int(submission['params']))
+            except:
+                submission['params'] = 'N/A'
+    
+            
             dataset2submissions[dataset].append(submission)
 
     dataset2leaderboard = {}
