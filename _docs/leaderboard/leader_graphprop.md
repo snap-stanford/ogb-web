@@ -108,7 +108,6 @@ The **bold** method name indicates that the implementation is **official** (by t
 
 | Rank  | Method | Ext. data | Test Accuracy | Validation Accuracy | Contact | References | #Params | Hardware | Date 
 |:----:|:-----:|:------:|:-----:|:-----:|:-----:|-----:|:-----:|:-----:|
-|  1  |  **PAS+F2GNN**  | No | 0.8201 ± 0.0021   | 0.7716 ± 0.0018 |[Xu Wang(4paradigm & EE Tsinghua)](mailto:wangxu01@4paradigm.com) | [Paper](https://github.com/AutoML-Research/PAS-OGB/tree/main/report), [Code](https://github.com/AutoML-Research/PAS-OGB) | 16,346,166 | RTX 3090 | Apr 28, 2022 |
 |  1  |  **PAS+F2GNN**  | No | 0.8201 ± 0.0019   | 0.7720 ± 0.0023 |[Xu Wang(4Paradigm && EE Tsinghua)](mailto:wangxu01@4paradigm.com) | [Paper](https://github.com/AutoML-Research/PAS-OGB/tree/main/report), [Code](https://github.com/AutoML-Research/PAS-OGB) | 16,346,166 | RTX 3090 | Apr 28, 2022 |
 |  2  |  **ExpC*+bag of tricks**  | No | 0.8140 ± 0.0028   | 0.7811 ± 0.0012 |[Hao Zhang](mailto:hao529good@163.com) | [Paper](https://github.com/PierreHao/YouGraph/blob/main/report/GMAN%20and%20bag%20of%20tricks%20for%20graph%20classification.pdf), [Code](https://github.com/PierreHao/YouGraph) | 3,758,642 | Tesla V100(32GB GPU) | Jun 21, 2021 |
 |  3  |  **ExpC**  | No | 0.7976 ± 0.0072   | 0.7518 ± 0.0080 |[Mingqi Yang](mailto:yangmq@mail.dlut.edu.cn) | [Paper](https://arxiv.org/abs/2012.07219), [Code](https://github.com/qslim/epcb-gnns) | 1,369,397 | NVIDIA Tesla V100 (32GB GPU) | Dec 14, 2020 |
