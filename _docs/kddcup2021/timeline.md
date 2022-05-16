@@ -5,7 +5,7 @@ layout: kdd_timeline
 ---
 
 #### **Learn about important dates** 
-- **All the deadlines are on 23:59pm PDT.** 
+- **All the deadlines are on 11:59pm PDT.** 
 - **All the datasets share the same deadline.** 
 
 -------
