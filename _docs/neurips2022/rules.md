@@ -1,18 +1,18 @@
 ---
-title: Rules for OGB-LSC Leaderboards
-permalink: /docs/lsc/rules/
+title: OGB-LSC @ NeurIPS 2022
+permalink: /neurips2022/rules/
+layout: neurips2022_rules
 ---
 
-##### **Please read carefully about what are/aren't allowed in the OGB-LSC leaderboard submissions.**  
+#### **Learn about the rules of the competition**  
+- **Please read carefully about what are/aren't allowed in the competition.**  
+
 
 -------
 
 
 ##### **Data Split**
 We allow you to use training and validation sets in any ways. For example, there is no need to use the validation set only for model selection, and you can directly train your model on the validation set if you find useful.
-Nevertheless, it is often helpful for the community to know the validation performance reported on the standardized validation split.
-Therefore, we still provide the official validation set and **require every leaderboard submission to report the validation performance on it.**
-
 For the test data, you should only use them for your model inference (make prediction and save it for your test submissions). In other words, your model should be developed only based on training and validation sets and should not touch the test data except for the final inference.
 The only exception is the MAG240M, where you can use the test nodes in any ways, since the dataset is modeled as a transductive prediction task (i.e., test nodes are part of the entire graph).
 
@@ -20,7 +20,8 @@ The only exception is the MAG240M, where you can use the test nodes in any ways,
 
 ##### **Use of External Data**
 We **do not** allow the use of any external datasets to train models. 
-<!-- For PCQM4Mv2 only, we allow the use of *unlabeled* molecules (primarily for unsupervised learning and self-training). However, any expensive calculation (i.e., taking more than 10 seconds per molecule) should not be performed on the unlabeled molecules in order to augment the dataset. -->
+For each dataset, models need to be developed only using the provided data.
+
 
 <a name="pcqm4m_time"/>
 
@@ -34,7 +35,7 @@ In order for the model to be practically useful, the inference time of the ML mo
 **Therefore, for `PCQM4Mv2` only, we limit the computational budget for the test-time inference.**
 The specific rules are as follows:
 
-- The total inference time over the ~147K test-dev/test-challenge molecules (i.e., time to predict target values of the test molecules **from their raw SMILES strings**) should not exceed **4 hours, using a single GPU and single CPU.****\*1**
+- The total inference time over the ~147K test-challenge molecules (i.e., time to predict target values of the test molecules **from their raw SMILES strings**) should not exceed **4 hours, using a single GPU and single CPU.****\*1**
  Note that multi-threading on a multi-core CPU is allowed.
  Once you win the contest, you will need to provide the inference code (example [here](https://github.com/snap-stanford/ogb/tree/master/examples/lsc/pcqm4m-v2/test_inference_gnn.py)) that takes the ~147K test SMILES strings as input and saves ~147K prediction values within 4 hours with single GPU and CPU.
 - You are allowed to use the following chemistry packages to process molecules from their SMILES strings: **[rdkit](https://www.rdkit.org/docs/GettingStartedInPython.html)**, **[Open Babel](https://open-babel.readthedocs.io/en/latest/UseTheLibrary/Python.html)**, and **[pyscf](http://pyscf.org/)**. **The 4-hour budget must include the pre-processing time of test molecules using these packages**, e.g., transforming test SMILES strings into graphs. This means that you cannot use the expensive (quantum) calculations to do feature engineering for your input test graphs, while you may include many more cheap features in your graphs.
@@ -51,12 +52,12 @@ However, as it is hard to enforce the hardware constraint, we also allow the use
 ---------
 
 <a name="code"/>
-##### **Code and Technical Report Submissions**
-For every leaderboard submission, we require public code submission through Github repo. The repo should follow the format of our baseline code (e.g., [MAG240M](https://github.com/snap-stanford/ogb/tree/master/examples/lsc/mag240m), [WikiKG90Mv2](https://github.com/snap-stanford/ogb/tree/master/examples/lsc/wikikg90m-v2), [PCQM4Mv2](https://github.com/snap-stanford/ogb/tree/master/examples/lsc/pcqm4m-v2)) and contain
+##### **Code and Technical Report Submissions by Winners**
+For every winner of OGB-LSC 2022, we require public code submission through Github repo. The repo should follow the format of our baseline code (e.g., [MAG240M](https://github.com/snap-stanford/ogb/tree/master/examples/lsc/mag240m), [WikiKG90Mv2](https://github.com/snap-stanford/ogb/tree/master/examples/lsc/wikikg90m-v2), [PCQM4Mv2](https://github.com/snap-stanford/ogb/tree/master/examples/lsc/pcqm4m-v2)) and contain
 - All the code to reproduce your results (including data pre-processing and model training/inference) and save the test submission.
 - `README.md` that contains all the instructions to run the code (from data pre-processing to model inference on test data).
 
-In addition, we require a short technical report that describes your approach. The link can be either Arxiv or PDF uploaded to your Github repository. You are free to update the report once the test-dev performance is announced.
+In addition, we require a short technical report that describes the winning approach. The link can be either Arxiv or PDF uploaded to your Github repository. 
 
 As examples, please refer to the **[KDD Cup winners' code/reports](https://ogb.stanford.edu/kddcup2021/results/)**. For the Latex style file, we recommend using the **[arxiv-style](https://github.com/kourgeorge/arxiv-style)**.
 
@@ -72,4 +73,4 @@ This means that any obvious misconduct (e.g., training or doing early stopping o
 ----------
 
 ##### **Horner Code**
-All the information provided in the **[leaderboard submission page](https://ogb-save.stanford.edu/leaderboard/)** must be correct and follows the above rules of OGB-LSC. The leaderboard submission cannot be deleted once it is public. Whenever you are contacted by the OGB-LSC Team, you need to provide information to verify the correctness of the information. Otherwise, the submission may be deleted, and future submissions may be prohibited.
+All the information provided in the team registration and test submission must be correct and follows the above rules of OGB-LSC. Whenever you are contacted by the OGB-LSC Team, you need to provide information to verify the correctness of the information. Otherwise, your team will be disqualified from the competition.

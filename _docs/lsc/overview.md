@@ -31,11 +31,11 @@ There are three OGB-LSC datasets: **[MAG240M](/docs/lsc/mag240m/)**, **[WikiKG90
 For each dataset, we carefully design its prediction task and data split so that achieving high prediction performance on the task will have direct impact on the corresponding application. Further details are provided in each dataset page.
 The dataset statistics as well as basic information are summarized below, showing that our datasets are extremely large.
 
-Task category | Name      | Package      |  #Graphs      | #Total nodes  | #Total edges  | Task Type   | Metric  | Download size | md5sum | 
+Task category | Name      | Package      |  #Graphs      | #Total nodes  | #Total edges  | Task Type   | Metric  | Download size |
 |:---------:|:--------|-----:|-----:|----------------:|----------------------:|:---------------|:-------|:---------|---------:|
-Node-level | **[MAG240M](/docs/lsc/mag240m/)** | >=1.3.2 | 1 | 244,160,499  | 1,728,364,232 |  Multi-class classification | Accuracy | 167GB | xxx |
-Link-level | **[WikiKG90Mv2](/docs/lsc/wikikg90mv2/)** |  >=1.3.3  | 1 | 91,230,610 | 601,062,811 |   KG completion | MRR | 89GB | xxx | 
-Graph-level | **[PCQM4Mv2](/docs/lsc/pcqm4mv2/)** |  >=1.3.2  | 3,746,619  | 52,970,652 | 54,546,813   |  Regression | MAE | 59MB**&Dagger;**  | xxx |
+Node-level | **[MAG240M](/docs/lsc/mag240m/)** | >=1.3.2 | 1 | 244,160,499  | 1,728,364,232 |  Multi-class classification | Accuracy | 167GB | 
+Link-level | **[WikiKG90Mv2](/docs/lsc/wikikg90mv2/)** |  >=1.3.3  | 1 | 91,230,610 | 601,062,811 |   KG completion | MRR | 89GB |  
+Graph-level | **[PCQM4Mv2](/docs/lsc/pcqm4mv2/)** |  >=1.3.2  | 3,746,619  | 52,970,652 | 54,546,813   |  Regression | MAE | 59MB**&Dagger;**  | 
 
 **&Dagger;**: The PCQM4Mv2 dataset is provided in the SMILES strings. After processing them into graph objects, the eventual file size will be around 8GB.
 
