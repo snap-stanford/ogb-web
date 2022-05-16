@@ -39,7 +39,7 @@ As you see below, you will need to enter the information you have registered her
 <a name="submit"/>
 
 #### **Test-challenge submission**: Deadline November 1st, 2022
-##### **Submission website (TBA on Sep 5th)**
+##### **Submission website (TBA on September 5th)**
 **Each team makes its own test-challenge submission.**
 First, please have your registration receipt email with you.
 Then, provide the following information.
