@@ -34,7 +34,7 @@ In order for the model to be practically useful, the inference time of the ML mo
 **Therefore, for `PCQM4Mv2` only, we limit the computational budget for the test-time inference.**
 The specific rules are as follows:
 
-- The total inference time over the ~147K test-dev/test-challenge molecules (i.e., time to predict target values of the test molecules **from their raw SMILES strings**) should not exceed **4 hours, using a single GPU and single CPU.****\*1**
+- The total inference time over the ~147K test-dev/test-challenge molecules (i.e., time to predict target values of the test molecules **from their raw SMILES strings**) should not exceed **4 hours, using a single GPU/TPU/IPU and single CPU.****\*1**
  Note that multi-threading on a multi-core CPU is allowed.
  Once you win the contest, you will need to provide the inference code (example [here](https://github.com/snap-stanford/ogb/tree/master/examples/lsc/pcqm4m-v2/test_inference_gnn.py)) that takes the ~147K test SMILES strings as input and saves ~147K prediction values within 4 hours with single GPU and CPU.
 - You are allowed to use the following chemistry packages to process molecules from their SMILES strings: **[rdkit](https://www.rdkit.org/docs/GettingStartedInPython.html)**, **[Open Babel](https://open-babel.readthedocs.io/en/latest/UseTheLibrary/Python.html)**, and **[pyscf](http://pyscf.org/)**. **The 4-hour budget must include the pre-processing time of test molecules using these packages**, e.g., transforming test SMILES strings into graphs. This means that you cannot use the expensive (quantum) calculations to do feature engineering for your input test graphs, while you may include many more cheap features in your graphs.
