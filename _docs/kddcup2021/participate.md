@@ -29,7 +29,7 @@ In the Google form, you will need to provide the following information.
     - Institution
     - Email address
 - **Rules**: Promise to follow the [rules](../rules).
-- **Honer code**: You acknowledge that you have entered your own email address and the correct team member information. Whenever we ask you, you will have to respond immediately through the registered email and prove the correctness of the information you have provided. Otherwise, you may be disqualified from the competition.
+- **Honor code**: You acknowledge that you have entered your own email address and the correct team member information. Whenever we ask you, you will have to respond immediately through the registered email and prove the correctness of the information you have provided. Otherwise, you may be disqualified from the competition.
 
 **Important: After the registration, you will receive a response receipt email with all the above information on it (in case you didn't get it, please check your spam folder as well). Please keep the receipt email for your subsequent test submissions.**
 As you see below, you will need to enter the information you have registered here.

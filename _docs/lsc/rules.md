@@ -71,5 +71,5 @@ This means that any obvious misconduct (e.g., training or doing early stopping o
 
 ----------
 
-##### **Horner Code**
+##### **Honor Code**
 All the information provided in the **[leaderboard submission page](https://ogb-save.stanford.edu/leaderboard/)** must be correct and follows the above rules of OGB-LSC. The leaderboard submission cannot be deleted once it is public. Whenever you are contacted by the OGB-LSC Team, you need to provide information to verify the correctness of the information. Otherwise, the submission may be deleted, and future submissions may be prohibited.

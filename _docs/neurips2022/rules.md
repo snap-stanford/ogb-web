@@ -72,5 +72,5 @@ This means that any obvious misconduct (e.g., training or doing early stopping o
 
 ----------
 
-##### **Horner Code**
+##### **Honor Code**
 All the information provided in the team registration and test submission must be correct and follows the above rules of OGB-LSC. Whenever you are contacted by the OGB-LSC Team, you need to provide information to verify the correctness of the information. Otherwise, your team will be disqualified from the competition.
