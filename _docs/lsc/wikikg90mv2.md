@@ -174,9 +174,9 @@ To evaluate train/validation performance, first prepare
 - `t`: numpy array of shape `(num_validation_triples, )`, defined above.
 
 ```python
-from ogb.lsc import WikiKG90MEvaluator
+from ogb.lsc import WikiKG90Mv2Evaluator
 
-evaluator = WikiKG90MEvaluator()
+evaluator = WikiKG90Mv2Evaluator()
 input_dict = {}
 input_dict['h,r->t'] = {'t_pred_top10': t_pred_top10, 't', t}
 result_dict = evaluator.eval(input_dict)
