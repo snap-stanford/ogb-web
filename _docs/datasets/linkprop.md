@@ -17,8 +17,10 @@ Small | [ogbl-ddi](#ogbl-ddi)       | >=1.2.1  | 4,267 |    1,334,889 |     Prot
 Medium | [ogbl-citation2](#ogbl-citation2) | >=1.2.4       | 2,927,963 |    30,561,187 |     Time  | Link prediction   |     MRR      |
 Medium | [ogbl-wikikg2](#ogbl-wikikg2)  | >=1.2.4       | 2,500,604 |    17,137,181 |     Time  | KG completion   |    MRR     |
 Small | [ogbl-biokg](#ogbl-biokg)   | >=1.2.0      | 93,773 |  5,088,434 |  Random  | KG completion   |    MRR     |
+Medium | [ogbl-vessel](#ogbl-vessel)*   | >=1.3.4      | 3,538,495 |  5,345,897 |  Random  | Link prediction   |    ROC-AUC     |
 
 **Note:** For undirected graphs, the loaded graphs will have the doubled number of edges because we add the bidirectional edges automatically.
+\* indicates the externally-contributed datasets.
 
 #### - Module
 We prepare different [data loader](#loader) variants: (1) [Pytorch Geometric one](#pyg) (2) [DGL one](#dgl) and (3) [library-agnostic one](#libagn).
@@ -167,6 +169,27 @@ This is because the `ogbl-biokg` dataset involves heterogeneous interactions tha
 
 **Dataset splitting:** For this dataset, we adopt a random split. While splitting the triplets according to time is an attractive alternative, we note that it is incredibly challenging to obtain accurate information as to when individual experiments and observations underlying the triplets were made. We strive to provide additional dataset splits in future versions of the OGB. <br/>
 ##### License: CC-0
+
+<a name="ogbl-vessel"/>
+
+----------
+
+### Dataset `ogbl-vessel` ([Leaderboard](../leader_linkprop/#ogbl-vessel)):
+
+**Graph:** The `ogbl-vessel` dataset is an undirected, unweighted spatial graph of the whole mouse brain [1]. To generate it we developed a graph extraction pipeline, where nodes represent bifurcation points, and links represent vessels. The link prediction task uses the x,y, and z coordinates of the nodes as node features.
+
+On the one hand, the `ogbl-vessel` graph aims to inspire researchers in the neuroscience domain to adapt graph-structure representations for their research. For machine learning researchers, the presented dataset raises challenging graph learning research questions in terms of incorporating biological priors into learning algorithms, or in scaling these algorithms to handle sparse,spatial graphs with millions of nodes and edges.We believe that the combination of graph learning and neuroscience research is particularly interesting for the machine learning community. In the original repository we provide an alternative line graph representation and additional edge features. 
+
+This dataset is externally contributed by [Johannes C.Paetzold](mailto:johannes.paetzold@tum.de), to whom any inquiry should be directed.
+
+**Prediction task:**  The task is to predict links between two nodes. The link prediction task aims at predicting if a vessel exists (1) or not (0), and serves for graph completion and missing link detection.
+
+**Dataset splitting:** We split the whole brain graph randomly, using a 80/10/10 split ratio and provide a spatial sampling strategy for the negative edges. 
+
+#### References
+[1] Johannes C. Paetzold, Julian McGinnis, Suprosanna Shit, Ivan Ezhov, Paul Büschl, Chinmay Prabhakar, Anjany Sekuboyina, Mihail Todorov, Georgios Kaissis, Ali Ertürk, Stephan Günnemann, Björn Menze. Whole Brain Vessel Graphs: A Dataset and Benchmark for Graph Learning and Neuroscience. Thirty-fifth Conference on Neural Information Processing Systems Datasets and Benchmarks Track. 2021. arXiv:2108.13233  <br/>
+[2] Mihail Ivilinov Todorov, Johannes Christian Paetzold, Oliver Schoppe, Giles Tetteh, Suprosanna Shit, Velizar Efremov, Katalin Todorov-Völgyi, Marco Düring, Martin Dichgans, Marie Piraud, Bjoern Menze, Ali Ertürk. Machine learning analysis of whole mouse brain vasculature. Nature methods 17.4 : 442-449. 2020 <br/>
+##### License: CC BY-NC 4.0
 
 
 <a name="loader"/>

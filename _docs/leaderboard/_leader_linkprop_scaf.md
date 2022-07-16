@@ -10,6 +10,7 @@ permalink: /docs/leader_linkprop/
 ###### - [ogbl-citation2](#ogbl-citation2)
 ###### - [ogbl-wikikg2](#ogbl-wikikg2)
 ###### - [ogbl-biokg](#ogbl-biokg)
+###### - [ogbl-vessel](#ogbl-vessel)
 
 The **bold** method name indicates that the implementation is **official** (by the author of the original paper). <br/>
 **Package** denotes the required package version for each dataset to be eligible for the leaderboard.
@@ -79,9 +80,6 @@ The **bold** method name indicates that the implementation is **official** (by t
 
 #ogbl-wikikg2
 
-
-
-
 <a name="ogbl-biokg"/>
 
 -------
@@ -92,6 +90,17 @@ The **bold** method name indicates that the implementation is **official** (by t
 #### Package: >=1.2.0
 
 #ogbl-biokg
+
+<a name="ogbl-vessel/>
+
+-------
+
+### Leaderboard for [ogbl-vessel](../linkprop/#ogbl-vessel)
+##### The ROC-AUC score on the test and validation sets. The higher, the better.
+
+#### Package: >=1.3.4
+
+#ogbl-vessel
 
 
 

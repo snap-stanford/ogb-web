@@ -3,7 +3,7 @@ import numpy as np
 import os
 
 nodeprop_dataset_list = ['ogbn-products', 'ogbn-proteins', 'ogbn-arxiv', 'ogbn-papers100M', 'ogbn-mag']
-linkprop_dataset_list = ['ogbl-ppa', 'ogbl-collab', 'ogbl-ddi', 'ogbl-citation2', 'ogbl-wikikg2', 'ogbl-biokg']
+linkprop_dataset_list = ['ogbl-ppa', 'ogbl-collab', 'ogbl-ddi', 'ogbl-citation2', 'ogbl-wikikg2', 'ogbl-biokg', 'ogbl-vessel']
 graphprop_mol_dataset_list = ['ogbg-molhiv', 'ogbg-molpcba', 'ogbg-ppa', 'ogbg-code2']
 deprecated_dataset_list = ['ogbl-wikikg', 'ogbl-citation', 'ogbg-code']
 
@@ -21,6 +21,7 @@ dataset2metric['ogbl-citation'] = 'MRR'
 dataset2metric['ogbl-wikikg2'] = 'MRR'
 dataset2metric['ogbl-wikikg'] = 'MRR'
 dataset2metric['ogbl-biokg'] = 'MRR'
+dataset2metric['ogbl-vessel'] = 'ROC-AUC'
 dataset2metric['ogbg-molhiv'] = 'ROC-AUC'
 dataset2metric['ogbg-molpcba'] = 'AP'
 dataset2metric['ogbg-ppa'] = 'Accuracy'
