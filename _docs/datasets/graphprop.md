@@ -50,7 +50,7 @@ edge_emb = bond_encoder(edge_attr) # edge_attr is input edge feature
 #### Datasets
 
 **Prediction task:**  The task is to predict the target molecular properties as accurately as possible, where the molecular properties are cast as binary labels, e.g, whether a molecule inhibits HIV virus replication or not. Note that some datasets (e.g., `ogbg-molpcba`) can have multiple tasks, and can contain `nan` that indicates the corresponding label is not assigned to the molecule.
-For evaluation metric, we closely follow [2].
+For evaluation metric, we closely follow [1].
 Specifically, for `ogbg-molhiv`, we use ROC-AUC for evaluation. For `ogbg-molpcba`, as the class balance is extremely skewed (only 1.4% of data is positive) and the dataset contains multiple classification tasks, we use the Average Precision (AP) averaged over the tasks as the evaluation metric.
 
 
