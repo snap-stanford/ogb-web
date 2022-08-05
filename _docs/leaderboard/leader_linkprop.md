@@ -197,7 +197,7 @@ The **bold** method name indicates that the implementation is **official** (by t
 |  9  |  TransE  | No | 0.7452 ± 0.0004   | 0.7456 ± 0.0003 | [Hongyu Ren -- OGB team](mailto:hyren@cs.stanford.edu) | [Paper](https://papers.nips.cc/paper/5071-translating-embeddings-for-modeling-multi-relational-data.pdf), [Code](https://github.com/snap-stanford/ogb/tree/master/examples/linkproppred/biokg) | 187,648,000 | GeForce RTX 2080 (11GB GPU) | Jun 10, 2020 |
 
 
-<a name="ogbl-vessel/>
+<a name="ogbl-vessel"/>
 
 -------
 
