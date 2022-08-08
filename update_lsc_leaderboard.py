@@ -16,11 +16,11 @@ def round_float(num):
     return round(num*10000)/10000
 
 def convert_date_to_str(date):
-    # '2021/9/8' -> 'Sep 8, 2021'
+    # '9/8/2021' -> 'Sep 8, 2021'
     splitted = date.split('/')
-    month = month_dict[int(splitted[1])]
-    day = int(splitted[2])
-    year = int(splitted[0])
+    month = month_dict[int(splitted[0])]
+    day = int(splitted[1])
+    year = int(splitted[2])
     return '{} {}, {}'.format(month, day, year)
 
 def process_submissions(submissions, metric):
