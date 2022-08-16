@@ -88,7 +88,7 @@ The **bold** method name indicates that the implementation is **official** (by t
 
 | Rank  | Method | Ext. data | Test Hits@20 | Validation Hits@20 | Contact | References | #Params | Hardware | Date 
 |:----:|:-----:|:------:|:-----:|:-----:|:-----:|-----:|:-----:|:-----:|
-|  1  |  **PSG**  | Yes | 0.9284 ± 0.0047   | 0.8306 ± 0.0134 |[Jingsong Lv(Zhuque@ZhejiangLab)](mailto:jingsonglv@zhejianglab.com) | [Paper](https://arxiv.org/pdf/2208.05781.pdf), [Code](https://github.com/jingsonglv/PSG) | 3,499,009 | Tesla V100(32G GPU) | Aug 12, 2022 |
+|  1  |  **PSG**  | No | 0.9284 ± 0.0047   | 0.8306 ± 0.0134 |[Jingsong Lv(Zhuque@ZhejiangLab)](mailto:jingsonglv@zhejianglab.com) | [Paper](https://arxiv.org/pdf/2208.05781.pdf), [Code](https://github.com/jingsonglv/PSG) | 3,499,009 | Tesla V100(32G GPU) | Aug 12, 2022 |
 |  2  |  **PLNLP**  | No | 0.9088 ± 0.0313   | 0.8242 ± 0.0253 |[Zhitao Wang (WeChat@Tencent)](mailto:wztzenk@gmail.com) | [Paper](https://arxiv.org/abs/2112.02936), [Code](https://github.com/zhitao-wang/PLNLP) | 3,497,473 | Tesla-P40(24GB GPU) | Dec 7, 2021 |
 |  3  |  **GraphSAGE + Edge Attr**  | No | 0.8781 ± 0.0474   | 0.8044 ± 0.0404 |[Jing Yang](mailto:jyangboston@gmail.com) | [Paper](https://github.com/lustoo/OGB_link_prediction/blob/main/Link%20prediction%20with%20structural%20information.pdf), [Code](https://github.com/lustoo/OGB_link_prediction) | 3,761,665 | Tesla V100 (32GB) | Aug 9, 2021 |
 |  4  |  **CFLP (w/ JKNet)**  | No | 0.8608 ± 0.0198   | 0.8405 ± 0.0284 |[Tong Zhao](mailto:tzhao2@nd.edu) | [Paper](https://arxiv.org/pdf/2106.02172.pdf), [Code](https://github.com/DM2-ND/CFLP) | 837,635 | GeForce RTX 2080 Ti (11GB GPU) | Nov 17, 2021 |
