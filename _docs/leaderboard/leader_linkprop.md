@@ -213,7 +213,7 @@ The **bold** method name indicates that the implementation is **official** (by t
 
 | Rank  | Method | Ext. data | Test ROC-AUC | Validation ROC-AUC | Contact | References | #Params | Hardware | Date 
 |:----:|:-----:|:------:|:-----:|:-----:|:-----:|-----:|:-----:|:-----:|
-|  1  |  **MLP**  | No | 0.5804 ± 0.0200   | 0.5806 ± 0.0100 |[Julian McGinnis (TUM)](mailto:julian.mcginnis@tum.de) | [Paper](https://arxiv.org/pdf/2005.00687.pdf), [Code](https://github.com/snap-stanford/ogb/tree/master/examples/linkproppred/vessel) | 149,761 | GeForce Quadro RTX 8000 (48GB) | Aug 3, 2022 |
+|  1  |  **Matrix Factorization**  | No | 0.4997 ± 0.0005   | 0.4999 ± 0.0006 |[Julian McGinnis (TUM)](mailto:julian.mcginnis@tum.de) | [Paper](https://arxiv.org/abs/2005.00687), [Code](https://github.com/snap-stanford/ogb/tree/master/examples/linkproppred/vessel) | 8,641 | Quadro RTX 8000Ti (48GB GPU) | Aug 18, 2022 |
 
 
 
