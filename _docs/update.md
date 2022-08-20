@@ -3,9 +3,15 @@ title: Updates from OGB
 permalink: /docs/update/
 ---
 
-##### **Please update your package to [1.3.3](https://github.com/snap-stanford/ogb/releases/tag/1.3.3)** (February 23th, 2022).
+##### **Please update your package to [1.3.4](https://github.com/snap-stanford/ogb/releases/tag/1.3.4)** (August 20th, 2022).
 
 --------
+
+###### **August 20th, 2022: Package updated to [package `1.3.4`](https://github.com/snap-stanford/ogb/releases/tag/1.3.4)**
+- [`ogbl-vessel`](../linkprop/#ogbl-vessel) is included in the OGB. Thank you Julian, Johannes, and Stephan for the contribution!
+- The ranking metric of the link prediction is improved (see [PR](https://github.com/snap-stanford/ogb/pull/357)).
+
+------
 
 ###### **September 28th, 2021: Package updated to [package `1.3.2`](https://github.com/snap-stanford/ogb/releases/tag/1.3.2)**
 - Two datasets from the OGB-LSC have been updated as follows.
