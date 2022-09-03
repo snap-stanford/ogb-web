@@ -11,3 +11,7 @@ layout: neurips2022_update
 
 ###### **May 24th, 2022: OGB-LSC at NeurIPS 2022 started!**
 - We opened team registration **[here](https://docs.google.com/forms/d/e/1FAIpQLSe0-xCtMm5fe87WEwFOn9M75Y5vI1Cq73PZ9TURyF4Og1hxuw/viewform)**.
+
+
+###### **Sep 3rd, 2022: Test submission page opened!**
+- We opened the test submission **[here](https://ogb-save.stanford.edu/neurips2022/)**.
