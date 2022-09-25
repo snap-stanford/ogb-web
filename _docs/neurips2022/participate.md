@@ -12,7 +12,7 @@ layout: neurips2022_participate
 -------
 
 #### **Team registration**: Deadline September 2nd, 2022
-##### **[Google form](https://docs.google.com/forms/d/e/1FAIpQLSe0-xCtMm5fe87WEwFOn9M75Y5vI1Cq73PZ9TURyF4Og1hxuw/viewform)**
+##### **[Google form (closed)](https://docs.google.com/forms/d/e/1FAIpQLSe0-xCtMm5fe87WEwFOn9M75Y5vI1Cq73PZ9TURyF4Og1hxuw/viewform)**
 **Every team must be registered through the Google form in order to be eligible for the subsequent test submissions.** 
 Each team can have at most 10 members. If a group of people wants to work on multiple datasets, they should register a separate team for each dataset. A person cannot be on multiple teams that are competing on the same dataset, but a person can be on multiple teams as long as those teams are competing on different datasets. So in other words, for each email address, please do NOT register more than once per dataset. 
 In the Google form, you will need to provide the following information. 
