@@ -9,6 +9,7 @@ permalink: /docs/lsc/leaderboards/
 - Carefully read the **[rules](/docs/lsc/rules/)**.
 - Develop models and save test-dev prediction using the OGB Evaluator.
 - Submit your result via **[this page](https://ogb-save.stanford.edu/leaderboard/)**.
+- After your submission, it takes up to a week for your result to show up on the leaderboard. Please [contact us](mailto:ogb-lsc@cs.stanford.edu) if it does not.
 
 ---------
 
