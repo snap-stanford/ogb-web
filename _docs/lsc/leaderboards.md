@@ -109,6 +109,7 @@ permalink: /docs/lsc/leaderboards/
 |  18  |  **GraphGPS without PE (subset)**  | No | 0.1395  | 0.1334 | GraphLARS | [Xu Wang](mailto:wangxu01@4paradigm.com) (4Paradigm && EE Tsinghua) | [Paper](https://arxiv.org/abs/2205.12454), [Code](https://github.com/rampasek/GraphGPS) | 6,155,089 | 1 RTX3090 (24GB GPU) | Sep 2, 2022 |
 |  19  |  **GCN**  | No | 0.1398  | 0.1379 | OGB-LSC | [Weihua Hu](mailto:weihua916@gmail.com) (Stanford) | [Paper](https://openreview.net/pdf?id=qkcLxoC52kL), [Code](https://github.com/snap-stanford/ogb/tree/master/examples/lsc/pcqm4m-v2) | 1,955,401 | 1 GeForce RTX 2080 (11GB GPU) | Sep 8, 2021 |
 |  20  |  **MLP-Fingerprint**  | No | 0.1760  | 0.1753 | OGB-LSC | [Weihua Hu](mailto:weihua916@gmail.com) (Stanford) | [Paper](https://openreview.net/pdf?id=qkcLxoC52kL), [Code](https://github.com/snap-stanford/ogb/tree/master/examples/lsc/pcqm4m-v2) | 16,107,201 | 1 GeForce RTX 2080 (11GB GPU) | Sep 8, 2021 |
+|  21  |  **MolNet_Ensemble**  | Yes | 0.9899  | 0.0847 | polixir.ai | [xiaochuan zou](mailto:zouxiaochuan1984@gmail.com) (polixir.ai) | [Paper](https://github.com/zouxiaochuan/code_ogblsc2022/blob/main/molnet2022_arxiv.pdf), [Code](https://github.com/zouxiaochuan/code_ogblsc2022) | 32,047,874 | 8 RTX3090 | Oct 24, 2022 |
 
 
 
