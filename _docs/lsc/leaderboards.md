@@ -9,12 +9,14 @@ permalink: /docs/lsc/leaderboards/
 - Carefully read the **[rules](/docs/lsc/rules/)**.
 - Develop models and save test-dev prediction using the OGB Evaluator.
 - Submit your result via **[this page](https://ogb-save.stanford.edu/leaderboard/)**.
+- Wait at least one week until your test result shows up on our leaderboard. Please **[contact us](mailto:ogb-lsc@cs.stanford.edu)** if this is not the case.
 
 ---------
 
 ##### **Leaderboards policies**
 - For each email address on each dataset, another leaderboard submission cannot be made within one week after the last submission. Our system will automatically reject such submissions. **Please do not use multiple email addresses within the same team.**
 - Extra information (hardware information, training/inference time, validation performance, technical report etc) is required for the OGB-LSC leaderboard submissions. Please check **[the submission page](https://ogb-save.stanford.edu/leaderboard/)** early to understand what is required.
+- **Please do not submit a placeholder Github repository / technical report.** You will be permanently disqualified if we find your submission is based on the placeholder.
 
 ---------
 
