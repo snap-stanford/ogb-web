@@ -39,7 +39,7 @@ As you see below, you will need to enter the information you have registered her
 <a name="submit"/>
 
 #### **Test-challenge submission**: Deadline November 1st, 2022
-##### **[Submission website](https://ogb-save.stanford.edu/neurips2022/)**
+##### **[Submission website (closed)](https://ogb-save.stanford.edu/neurips2022/)**
 **Each team makes its own test-challenge submission.**
 First, please have your registration receipt email with you.
 Then, provide the following information.
