@@ -26,17 +26,17 @@ Each team submits its final test prediction, which will be evaluated over the te
 
 --------
 
-##### **November 4th, 2022: Winners notification**
+##### **November 3th, 2022: Winners notification**
 We privately notify the winners of the NeurIPS challenge. Top 3 winners for each dataset will be notified (in total of 9 winners). 
 
 ----------
 
-##### **November 25th, 2022: Code and report submission by winners**
+##### **November 18th, 2022: Code and report submission by winners**
 The winners are finalized once they provide the public GitHub code and technical report.
 
 
 -------
 
-##### **November 30th, 2022: Publlic winner annoucement**
+##### **November 21st, 2022: Publlic winner annoucement**
 The winners are announced publicly together with their code and technical reports.
 The results of all the final test submissions will be released as the leaderboards. 
