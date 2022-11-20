@@ -67,7 +67,7 @@ layout: neurips2022_results
 - **Test MRR**: 0.2514
 
 ###### **3rd place: TIEG-Youpu ([contact](mailto:fengniesysu@gmail.com))**
-- **Team members**: Feng Nie ( Tencent), Zhixiu Ye ( Tencent), Sifa Xie ( Tencent), Shuang Wu ( Tencent), Xin Yuan ( Tencent), Liang Yao ( Tencent), Jiazhen Peng ( Tencent)
+- **Team members**: Feng Nie (Tencent), Zhixiu Ye (Tencent), Sifa Xie (Tencent), Shuang Wu (Tencent), Xin Yuan (Tencent), Liang Yao (Tencent), Jiazhen Peng (Tencent)
 - **Method**: Structure enhanced retrieval and re-rank
 - **Short summary**: Semantic&Structure enhanced retrieval with TransE+ComplEx+NOTE 6 model ensemble
 - **Learn more: [Technical report](/paper/neurips2022/wikikg90mv2_TIEG-Youpu.pdf), [code](https://github.com/CoderMusou/NeurIPS_2022_WikiKG90Mv2_TIEG-Youpu)**
