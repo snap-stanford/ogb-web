@@ -89,7 +89,7 @@ def get_info(dataset):
 
     return perf_list, team_list, email_list
 
-def process_submissions(perf_list, team_list, dataset):
+def process_submissions(perf_list, team_list, email_list, dataset):
     
     if len(perf_list) > 0:
         perf_list = np.array(perf_list)
@@ -101,6 +101,9 @@ def process_submissions(perf_list, team_list, dataset):
             ## from large to small
             sorted_ind_list = np.argsort(-perf_list)
             
+        # header = f'| Rank  | Team | Email | Test {metric} \n'
+        # header += '|:----:|:-----:|:------:|:------:|\n'
+
         header = f'| Rank  | Team | Test {metric} \n'
         header += '|:----:|:-----:|:------:|\n'
 
@@ -109,12 +112,15 @@ def process_submissions(perf_list, team_list, dataset):
         for i, ind in enumerate(sorted_ind_list):
             perf = float(perf_list[ind])
             team = team_list[ind]
+            email = email_list[ind]
             if perf == 0 or perf == 12345:
+                # header += '|  {}  |  {}  | {} | Invalid  |\n'.format(current_ranking, team, email, perf)
                 header += '|  {}  |  {}  | Invalid  |\n'.format(current_ranking, team, perf)
             else:
+                # header += '|  {}  |  {}  | {} | {:.4f}  |\n'.format(current_ranking, team, email, perf) 
                 header += '|  {}  |  {}  | {:.4f}  |\n'.format(current_ranking, team, perf)  
 
-            if i < len(sorted_ind_list) - 1 and perf_list[ind] != perf_list[sorted_ind_list[i+1]]:
+            if i < len(sorted_ind_list) - 1 and '{:.4f}'.format(perf_list[ind]) != '{:.4f}'.format(perf_list[sorted_ind_list[i+1]]):
                 current_ranking += 1
     else:
         header = f'| Rank  | Team | Test {metric} \n'
@@ -133,7 +139,7 @@ def main():
         print(perf_list)
         print(team_list)
         print(email_list)
-        header = process_submissions(perf_list, team_list, dataset)
+        header = process_submissions(perf_list, team_list, email_list, dataset)
         leaderboard_dict[dataset] = header
         
         print(header)
