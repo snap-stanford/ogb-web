@@ -86,19 +86,21 @@ layout: neurips2022_results
 - **Learn more: [Technical report](/paper/neurips2022/pcqm4mv2_WeLoveGraphs.pdf), [code](https://github.com/graphcore/ogb-lsc-pcqm4mv2)**
 - **Test MAE**: 0.0719
 
-###### **2nd place: ViSNet ([contact](mailto:watong@microsoft.com))**
+###### **2nd place\*: ViSNet ([contact](mailto:watong@microsoft.com))**
 - **Team members**: Tong Wang (MSR AI4Science), Yusong Wang (Xi`an Jiaotong University, MSR AI4Science), Shaoning Li (MSR AI4Science), Zun Wang (MSR AI4Science), Xinheng He (MSR AI4Science), Bin Shao (MSR AI4Science), Tie-Yan Liu (MSR AI4Science)
 - **Method**: 20 Transformer-M-ViSNet + 2 Pretrained-3D-ViSNet 
 - **Short summary**: We designed two kinds of models: Transformer-M-ViSNet which is a geometry-enhanced graph neural network for fully connected molecular graphs and Pretrained-3D-ViSNet which is a pretrained ViSNet by distilling geometric information from optimized structures. 22 models with different settings are ensembles.
 - **Learn more: [Technical report](/paper/neurips2022/pcqm4mv2_ViSNet.pdf), [code](https://github.com/microsoft/ViSNet/tree/OGB-LSC%40NIPS2022)**
 - **Test MAE**: 0.0723
 
-###### **2nd place: NVIDIA-PCQM4Mv2 ([contact](mailto:jeanfrancoispuget@gmail.com))**
+###### **2nd place\*: NVIDIA-PCQM4Mv2 ([contact](mailto:jeanfrancoispuget@gmail.com))**
 - **Team members**: Jean-Francois Puget (NVIDIA), Jiwei Liu (NVIDIA), Gilberto Titericz Junior (NVIDIA), Sajad Darabi (NVIDIA), Alexandre Milesi (NVIDIA), Pawel Morkisz (NVIDIA), Shayan Fazeli (UCLA)
 - **Method**: Heterogenous Ensemble of Models
 - **Short summary**: Our method combines variants of the recent TransformerM architecture with Transformer, GNN, and ResNet backbone architectures. Models are trained on the 2D data, 3D data, and image modalities of molecular graphs. We ensemble these models with a HuberRegressor. The models are trained on 4 different train/validation splits of the original train + valid datasets.
 - **Learn more: [Technical report](/paper/neurips2022/pcqm4mv2_NVIDIA-PCQM4Mv2.pdf), [code](https://github.com/jfpuget/NVIDIA-PCQM4Mv2)**
 - **Test MAE**: 0.0723
+
+\*: **Indicates the tied 2nd place.**
 
 -------
 
