@@ -11,6 +11,7 @@ layout: neurips2022_results
     - **[WikiKG90Mv2 track](#winners_wikikg90mv2)**
     - **[PCQM4Mv2 track](#winners_pcqm4mv2)**
 
+- **[NeurIPS workshop](/neurips2022/workshop/)**
 - **[Leaderboards for test submissions](#leaderboards)**
     - **[MAG240M leaderboard](#leaderboard_mag240m)**
     - **[WikiKG90Mv2 leaderboard](#leaderboard_wikikg90mv2)**

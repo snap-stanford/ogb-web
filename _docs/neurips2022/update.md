@@ -15,3 +15,5 @@ layout: neurips2022_update
 
 ###### **Sep 3rd, 2022: Test submission page opened!**
 - We opened the test submission **[here](https://ogb-save.stanford.edu/neurips2022/)**.
+
+###### **Nov 21st, 2022: Winners are announced [here](/neurips2022/results/)!**
