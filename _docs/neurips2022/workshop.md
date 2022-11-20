@@ -22,14 +22,14 @@ layout: neurips2022_workshop
 ###### **- 10PM--10:50PM, UTC: Link-Level Track (WikiKG90Mv2)**
 - Intro to the task (5min) 
 - Live presentation by 1st place winner: **wikiwiki** (10min) 
-- Recorded presentation by 2nd place winner: **DNAKG** (10min) 
+- Live presentation by 2nd place winner: **DNAKG** (10min) 
 - Live presentation by 3rd place winner: **TIEG-Youpu** (10min) 
 - Live Q&A and discussion (15min)
 
 ###### **- 10:50PM--11:40PM, UTC: Graph-Level Track (PCQM4Mv2)**
 - Intro to the task (5min) 
 - Live presentation by 1st place winner: **WeLoveGraphs** (10min) 
-- Recorded presentation by 2nd place winner: **ViSNet** (10min) 
+- Live presentation by 2nd place winner: **ViSNet** (10min) 
 - Live presentation by 2nd place winner: **NVIDIA-PCQM4Mv2** (10min) 
 - Live Q&A and discussion (15min)
 
