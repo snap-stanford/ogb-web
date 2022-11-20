@@ -93,7 +93,7 @@ layout: neurips2022_results
 - **Learn more: [Technical report](/paper/neurips2022/pcqm4mv2_ViSNet.pdf), [code](https://github.com/microsoft/ViSNet/tree/OGB-LSC%40NIPS2022)**
 - **Test MAE**: 0.0723
 
-###### **3rd place: NVIDIA-PCQM4Mv2 ([contact](mailto:jeanfrancoispuget@gmail.com))**
+###### **2nd place: NVIDIA-PCQM4Mv2 ([contact](mailto:jeanfrancoispuget@gmail.com))**
 - **Team members**: Jean-Francois Puget (NVIDIA), Jiwei Liu (NVIDIA), Gilberto Titericz Junior (NVIDIA), Sajad Darabi (NVIDIA), Alexandre Milesi (NVIDIA), Pawel Morkisz (NVIDIA), Shayan Fazeli (UCLA)
 - **Method**: Heterogenous Ensemble of Models
 - **Short summary**: Our method combines variants of the recent TransformerM architecture with Transformer, GNN, and ResNet backbone architectures. Models are trained on the 2D data, 3D data, and image modalities of molecular graphs. We ensemble these models with a HuberRegressor. The models are trained on 4 different train/validation splits of the original train + valid datasets.
