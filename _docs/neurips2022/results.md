@@ -53,7 +53,7 @@ layout: neurips2022_results
 #### **Winners of [WikiKG90Mv2](/docs/lsc/wikikg90mv2/) Track ([Leaderboard](#leaderboard_wikikg90mv2))**
 
 ###### **1st place: wikiwiki ([contact](mailto:douglas.orr99@gmail.com))**
-- **Team members**: Douglas Orr (Graphcore Research), Alberto Cattaneo (Graphcore Research), Daniel Justus (Graphcore Research), Carlo Luschi (Graphcore Research), Andrew Fitzgibbon (Graphcore Research)
+- **Team members**: Douglas Orr (Graphcore), Alberto Cattaneo (Graphcore), Daniel Justus (Graphcore), Harry Mellor (Graphcore), Jerome Maloberti (Graphcore), Zhenying Liu (Graphcore), Thorin Farnsworth (Graphcore), Andrew Fitzgibbon (Graphcore), Blazej Banaszewski (Graphcore), Carlo Luschi (Graphcore)
 - **Method**: BESS + diverse shallow KGE ensemble (85 models)
 - **Short summary**: An ensemble of 85 shallow KGE models combining five different scoring functions (TransE, TransH, RotatE, DistMult, ComplEx) and two different loss functions (log-sigmoid, sampled softmax cross-entropy), using a new distribution framework, BESS (Balanced Entity Sampling and Sharing).
 - **Learn more: [Technical report](/paper/neurips2022/wikikg90mv2_wikiwiki.pdf), [code](https://github.com/graphcore/distributed-kge-poplar/tree/2022-ogb-submission)**
