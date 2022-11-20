@@ -30,7 +30,7 @@ layout: neurips2022_workshop
 - Intro to the task (5min) 
 - Live presentation by 1st place winner: **WeLoveGraphs** (10min) 
 - Recorded presentation by 2nd place winner: **ViSNet** (10min) 
-- Live presentation by 3rd place winner: **NVIDIA-PCQM4Mv2** (10min) 
+- Live presentation by 2nd place winner: **NVIDIA-PCQM4Mv2** (10min) 
 - Live Q&A and discussion (15min)
 
 ###### **- 11:40PM--11:45PM, UTC: Concluding OGB-LSC**
