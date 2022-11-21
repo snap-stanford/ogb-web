@@ -26,7 +26,7 @@ layout: neurips2022_results
 #### **Winners of [MAG240M](/docs/lsc/mag240m/) Track ([Leaderboard](#leaderboard_mag240m))**
 
 ###### **1st place: ComeAgain ([contact](mailto:huangzhengjie@baidu.com))**
-- **Team members**: Zhengjie Huang (Baidu Inc.), Yunsheng Shi (Baidu Inc.), Weibin Li (Baidu Inc.), Zeyang Fang (Baidu Inc.), Zeyu Chen (Baidu Inc.), Hongwei Chen (Baidu Inc.), Siming Dai (Baidu Inc.), Mingguo He ( Baidu Inc./Renmin University of China), Zhe Dong (Baidu Inc./Tianjin University), Shikun Feng (Baidu Inc.)
+- **Team members**: Zhe Dong (Baidu Inc./Tianjin University), Hongwei Chen (Baidu Inc.), Siming Dai (Baidu Inc.), Yunsheng Shi (Baidu Inc.), Weibin Li (Baidu Inc.), Zhengjie Huang (Baidu Inc.), Mingguo He (Baidu Inc./Renmin University of China), Zeyang Fang (Baidu Inc.), Zeyu Chen (Baidu Inc.), Shikun Feng (Baidu Inc.)
 - **Method**: Fastest R-UniMP (160 Ensemble)
 - **Short summary**: We upgrade the R-UniMP with PEG and GPR methods.  And we train it with a much faster graph neural network training optimization using 8 A100 GPU with total 640G gpu memory, making it possible to train R-UniMP to reach SOTA in almost 1 hour in the fastest mode.
 - **Learn more: [Technical report](/paper/neurips2022/mag240m_ComeAgain.pdf), [code](https://github.com/PaddlePaddle/PGL/tree/main/examples/NeurIPS2022-OGB-Challenge/MAG240M)**
