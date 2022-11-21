@@ -153,13 +153,13 @@ layout: neurips2022_results
 |  1  |  WeLoveGraphs  | 0.0719  |
 |  2  |  ViSNet  | 0.0723  |
 |  2  |  NVIDIA-PCQM4Mv2  | 0.0723  |
-|  3  |  YouGraph  | 0.0734  |
-|  4  |  DIVE-TAMU  | 0.0746  |
-|  5  |  polixir.ai  | 0.0752  |
-|  6  |  PhiNeurons  | 0.0755  |
-|  7  |  GraphLARS  | 0.0756  |
-|  8  |  CogDL  | 0.0758  |
-|  9  |  The Graphoppers  | 0.0899  |
-|  10  |  Zhuque Zhejianglab  | 0.1008  |
-|  11  |  Mingdu Zeeta  | 0.1202  |
-|  12  |  GraFactored  | 0.2224  |
+|  4  |  YouGraph  | 0.0734  |
+|  5  |  DIVE-TAMU  | 0.0746  |
+|  6  |  polixir.ai  | 0.0752  |
+|  7  |  PhiNeurons  | 0.0755  |
+|  8  |  GraphLARS  | 0.0756  |
+|  9  |  CogDL  | 0.0758  |
+|  10  |  The Graphoppers  | 0.0899  |
+|  11  |  Zhuque Zhejianglab  | 0.1008  |
+|  12  |  Mingdu Zeeta  | 0.1202  |
+|  13  |  GraFactored  | 0.2224  |
