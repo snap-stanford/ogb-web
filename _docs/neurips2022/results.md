@@ -33,7 +33,7 @@ layout: neurips2022_results
 - **Test accuracy**: 0.7570
 
 ###### **2nd place: DSE-node ([contact](mailto:wenhongz@msu.edu))**
-- **Team members**: Hongzhi Wen (Michigan State University), Juanhui Li (Michigan State University), Harry Shomer (Michigan State University), Yiqi Wang (Michigan State University), Wei Jin (Michigan State University), Yao Ma (New Jersey Institute of Technology), Jiliang Tang (Michigan State University)
+- **Team members**: Hang Li (Michigan State University), Haoyu Han (Michigan State University), Hongzhi Wen (Michigan State University), Wei Jin (Michigan State University), Feng Shi (TigerGraph Company), Victor Lee (TigerGraph Company), Jiliang Tang (Michigan State University)
 - **Method**: Inverse APPNP + R-UNIMP
 - **Short summary**: Inverse APPNP stacking with R-GAT. 5 Inverse APPNP and 5 R-GAT models trained on different folds are ensembled.
 - **Learn more: [Technical report](/paper/neurips2022/mag240m_DSE-node.pdf), [code](https://github.com/hzlihang99/NeurIPS2022-MAG240M)**
