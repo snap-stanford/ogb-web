@@ -90,7 +90,7 @@ layout: neurips2022_results
 - **Team members**: Tong Wang (MSR AI4Science), Yusong Wang (Xi`an Jiaotong University, MSR AI4Science), Shaoning Li (MSR AI4Science), Zun Wang (MSR AI4Science), Xinheng He (MSR AI4Science), Bin Shao (MSR AI4Science), Tie-Yan Liu (MSR AI4Science)
 - **Method**: 20 Transformer-M-ViSNet + 2 Pretrained-3D-ViSNet 
 - **Short summary**: We designed two kinds of models: Transformer-M-ViSNet which is a geometry-enhanced graph neural network for fully connected molecular graphs and Pretrained-3D-ViSNet which is a pretrained ViSNet by distilling geometric information from optimized structures. 22 models with different settings are ensembles.
-- **Learn more: [Technical report](/paper/neurips2022/pcqm4mv2_ViSNet.pdf), [code](https://github.com/microsoft/ViSNet/tree/OGB-LSC%40NIPS2022)**
+- **Learn more: [Technical report](https://arxiv.org/abs/2211.12791), [code](https://github.com/microsoft/ViSNet/tree/OGB-LSC%40NIPS2022)**
 - **Test MAE**: 0.0723
 
 ###### **2nd place\*: NVIDIA-PCQM4Mv2 ([contact](mailto:jeanfrancoispuget@gmail.com))**
