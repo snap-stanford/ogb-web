@@ -32,5 +32,3 @@ layout: neurips2022_workshop
 - Live presentation by 2nd place winner: **ViSNet** (10min) 
 - Live presentation by 2nd place winner: **NVIDIA-PCQM4Mv2** (10min) 
 - Live Q&A and discussion (15min)
-
-###### **- 11:40PM--11:45PM, UTC: Concluding OGB-LSC**
