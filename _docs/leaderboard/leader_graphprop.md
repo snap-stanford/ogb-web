@@ -138,7 +138,7 @@ The **bold** method name indicates that the implementation is **official** (by t
 
 | Rank  | Method | Ext. data | Test F1 score | Validation F1 score | Contact | References | #Params | Hardware | Date 
 |:----:|:-----:|:------:|:-----:|:-----:|:-----:|-----:|:-----:|:-----:|
-|  1  |  **DAGformer**  | No | 0.1982 ± 0.0010   | 0.1821 ± 0.0013 |[Yuankai Luo(BUAA)](mailto:luoyk@buaa.edu.cn) | [Paper](https://arxiv.org/abs/2210.13148), [Code](https://github.com/LUOyk1999/DAGformer) | 14,952,882 | GeForce RTX 3090 | Oct 25, 2022 |
+|  1  |  **DAGformer**  | No | 0.1982 ± 0.0010   | 0.1821 ± 0.0013 |[anonymous (anonymous)](mailto:luoyk@buaa.edu.cn) | [Paper](https://arxiv.org/abs/2210.13148), [Code](https://github.com/LUOyk1999/DAGformer) | 14,952,882 | GeForce RTX 3090 | Oct 25, 2022 |
 |  2  |  **SAT**  | No | 0.1937 ± 0.0028   | 0.1773 ± 0.0023 |[Dexiong Chen (ETH Zürich)](mailto:dexiong.chen@bsse.ethz.ch) | [Paper](https://arxiv.org/abs/2202.03036), [Code](https://github.com/BorgwardtLab/SAT) | 15,734,000 | 1 Titan RTX | Jun 20, 2022 |
 |  3  |  **GraphTrans (GCN-Virtual)**  | No | 0.1830 ± 0.0024   | 0.1661 ± 0.0012 |[Zhanghao Wu (UC Berkeley)](mailto:zhwu@berkeley.edu) | [Paper](https://openreview.net/pdf?id=nYz2_BbZnYk), [Code](https://github.com/ucbrise/graphtrans) | 9,053,246 | Tesla V100 (32GB GPU) | Jan 15, 2022 |
 |  4  |  GMAN+bag of tricks  | No | 0.1770 ± 0.0012   | 0.1631 ± 0.0090 | [Hao Zhang](mailto:hao529good@163.com) | [Paper](https://github.com/PierreHao/YouGraph/blob/main/report/GMAN%20and%20bag%20of%20tricks%20for%20graph%20classification.pdf), [Code](https://github.com/PierreHao/YouGraph) | 63,684,290 | Tesla V100 (32GB GPU) | Jun 21, 2021 |
