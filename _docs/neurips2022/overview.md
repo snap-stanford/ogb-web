@@ -60,7 +60,7 @@ We also acknowledge the **[DGL Team](https://www.dgl.ai/)** for helping us host 
     <td>
     <div style="margin: 0 auto; width: 150px; text-align: center">
       <img src="{{ "/assets/img/portrait/weihua.png" | relative_url }}" class="img-responsive">
-      <strong><a href="http://web.stanford.edu/~weihuahu/">Weihua Hu</a></strong> <br/> Stanford University
+      <strong><a href="https://weihua916.github.io/">Weihua Hu</a></strong> <br/> Stanford University
       </div>
     </td>
     <td>
