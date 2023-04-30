@@ -3,10 +3,15 @@ title: Updates from OGB
 permalink: /docs/update/
 ---
 
-##### **Please update your package to [1.3.5](https://github.com/snap-stanford/ogb/releases/tag/1.3.5)** (November 2nd, 2022).
+##### **Please update your package to [1.3.6](https://github.com/snap-stanford/ogb/releases/tag/1.3.6)** (April 6th, 2023).
 
 
 -----
+
+###### **April 6th, 2023: Package updated to [package `1.3.6`](https://github.com/snap-stanford/ogb/releases/tag/1.3.6)**
+- Pandas 2.0 compatibility (see [PR](https://github.com/snap-stanford/ogb/pull/420)).
+
+-------
 
 ###### **November 2nd, 2022: Package updated to [package `1.3.5`](https://github.com/snap-stanford/ogb/releases/tag/1.3.5)**
 - Fixed stuck import bug (see [PR](https://github.com/snap-stanford/ogb/pull/368))
