@@ -236,7 +236,7 @@ The **bold** method name indicates that the implementation is **official** (by t
 
 | Rank  | Method | Ext. data | Test ROC-AUC | Validation ROC-AUC | Contact | References | #Params | Hardware | Date 
 |:----:|:-----:|:------:|:-----:|:-----:|:-----:|-----:|:-----:|:-----:|
-|  1  |  **GAV**  | No | 0.9838 ± 0.0002   | 0.9837 ± 0.0002 |[Bastian Wittmann (UZH)](mailto:bastian.wittmann@uzh.ch) | [Paper](https://arxiv.org/abs/2303.14501), [Code](https://github.com/bwittmann/GAV) | 8,184 | Tesla V100 (32 GB GPU) | Mar 28, 2023 |
+|  1  |  **GAV**  | No | 0.9838 ± 0.0002   | 0.9837 ± 0.0002 |[Anonymous (Anonymous)](mailto:anonymous170510@gmail.com) | [Paper](https://arxiv.org/abs/2303.14501), [Code](https://github.com/bwittmann/GAV) | 8,184 | Tesla V100 (32 GB GPU) | Mar 28, 2023 |
 |  2  |  **SIEG w/o NF**  | No | 0.8798 ± 0.0100   | 0.8803 ± 0.0100 |[anonymous20221001 (anonymous)](mailto:anonymous20221001@126.com) | [Paper](https://github.com/anonymous20221001/SIEG_OGB/blob/master/OGB_VESSEL_SIEG.pdf), [Code](https://github.com/anonymous20221001/SIEG_OGB) | 752,716 | P100 (16GB) | Mar 27, 2023 |
 |  3  |  **SUREL+**  | No | 0.8496 ± 0.0068   | 0.8489 ± 0.0067 |[Haoteng Yin (Purdue University)](mailto:yinht@purdue.edu) | [Paper](https://arxiv.org/abs/2303.03379), [Code](https://github.com/Graph-COM/SUREL_Plus) | 56,353 | Quadro RTX 6000 (24GB) | Feb 28, 2023 |
 |  4  |  **SIEG**  | No | 0.8307 ± 0.0044   | 0.8315 ± 0.0044 |[anonymous20221001 (anonymous)](mailto:anonymous20221001@126.com) | [Paper](https://github.com/anonymous20221001/SIEG_OGB/blob/master/OGB_VESSEL_SIEG.pdf), [Code](https://github.com/anonymous20221001/SIEG_OGB) | 407,338 | P100 (16GB) | Jan 29, 2023 |
