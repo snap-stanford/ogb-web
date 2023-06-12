@@ -18,9 +18,32 @@ The only exception is the MAG240M, where you can use the test nodes in any ways,
 
 ------
 
-##### **Use of External Data**
+
+<a name="code"/>
+##### **Code and Technical Report Submissions**
+For every leaderboard submission, we require public code submission through Github repo. The repo should follow the format of our baseline code (e.g., [MAG240M](https://github.com/snap-stanford/ogb/tree/master/examples/lsc/mag240m), [WikiKG90Mv2](https://github.com/snap-stanford/ogb/tree/master/examples/lsc/wikikg90m-v2), [PCQM4Mv2](https://github.com/snap-stanford/ogb/tree/master/examples/lsc/pcqm4m-v2)) and contain
+- All the code to reproduce your results (including data pre-processing and model training/inference) and save the test submission.
+- `README.md` that contains all the instructions to run the code (from data pre-processing to model inference on test data).
+
+In addition, we require a short technical report that describes your approach. The link can be either Arxiv or PDF uploaded to your Github repository. You are free to update the report once the test-dev performance is announced.
+
+As examples, please refer to the **[KDD Cup winners' code/reports](https://ogb.stanford.edu/kddcup2021/results/)**. For the Latex style file, we recommend using the **[arxiv-style](https://github.com/kourgeorge/arxiv-style)**.
+
+------
+
+##### **Use of External Data: Not allowed**
 We **do not** allow the use of any external datasets to train models. 
 <!-- For PCQM4Mv2 only, we allow the use of *unlabeled* molecules (primarily for unsupervised learning and self-training). However, any expensive calculation (i.e., taking more than 10 seconds per molecule) should not be performed on the unlabeled molecules in order to augment the dataset. -->
+
+--------
+
+##### **Use of Text data: Not allowed**
+Based on the request from the community, we have released text data for MAG240M (**[Download (33GB)](http://snap.stanford.edu/ogb/data/lsc/mapping/mag240m_mapping.zip)**) and WikiKG90Mv2 (**[Download (2.4GB)](http://snap.stanford.edu/ogb/data/lsc/mapping/wikikg90mv2_mapping.zip)**). The text data can be used in various purposes, such as pre-training models, improving model performance, and interpreting model's predictions.
+**However, for the purpose of our main leaderboard, we do not allow the models to use the text data**. This is because when LLMs are used, they may leak our test set information since our test set may be included as training data of LLMs. In the future, we plan to set up a new specialized leaderboard where the use of LLMs and text data is allowed. We welcome suggestions from the community.
+
+Moreover, since text data is now released, it becomes easier to reveal hidden test labels by accessing the public database. We ask the community not to do it.
+Keep in mind that you will need to share all the code to reproduce your solution through public Github repository. 
+This means that any obvious misconduct (e.g., training or doing early stopping on test labels, directly using the test labels as predictions) will be revealed.
 
 <a name="pcqm4m_time"/>
 
@@ -48,28 +71,13 @@ However, as it is hard to enforce the hardware constraint, we also allow the use
 
  If you need any clarifications about the rules, please feel free to make posts at **[PCQM4Mv2's discussion forum](https://github.com/snap-stanford/ogb/discussions/categories/pcqm4m-lsc).**
 
----------
-
-<a name="code"/>
-##### **Code and Technical Report Submissions**
-For every leaderboard submission, we require public code submission through Github repo. The repo should follow the format of our baseline code (e.g., [MAG240M](https://github.com/snap-stanford/ogb/tree/master/examples/lsc/mag240m), [WikiKG90Mv2](https://github.com/snap-stanford/ogb/tree/master/examples/lsc/wikikg90m-v2), [PCQM4Mv2](https://github.com/snap-stanford/ogb/tree/master/examples/lsc/pcqm4m-v2)) and contain
-- All the code to reproduce your results (including data pre-processing and model training/inference) and save the test submission.
-- `README.md` that contains all the instructions to run the code (from data pre-processing to model inference on test data).
-
-In addition, we require a short technical report that describes your approach. The link can be either Arxiv or PDF uploaded to your Github repository. You are free to update the report once the test-dev performance is announced.
-
-As examples, please refer to the **[KDD Cup winners' code/reports](https://ogb.stanford.edu/kddcup2021/results/)**. For the Latex style file, we recommend using the **[arxiv-style](https://github.com/kourgeorge/arxiv-style)**.
-
 
 ---------
 
-##### **Public Data Source**
-All of our datasets are constructed from public database.
-To avoid trivial test label leakage, we have anonymized the data as much as we can, removing any obvious clues (e.g., data identifier, raw text information) that can be used to map nodes or graphs into the entities in the public database. At the same time, to keep our datasets practically-relevant and realistic, our anonymization may not be perfect (e.g., we need to provide the real graph connectivity, node features, and SMILES strings). Although we believe it is nearly impossible to recover ground-truth test labels, we still significantly discourage the participants to try to de-anonymize the datasets during the competition.
-Keep in mind that you will need to share all the code to reproduce your solution through public Github repository. 
-This means that any obvious misconduct (e.g., training or doing early stopping on test labels, directly using the test labels as predictions) will be revealed.
+<!-- ##### **Public Data Source** -->
+<!-- All of our datasets are constructed from public database.
+To avoid trivial test label leakage, we have anonymized the data as much as we can, removing any obvious clues (e.g., data identifier, raw text information) that can be used to map nodes or graphs into the entities in the public database. At the same time, to keep our datasets practically-relevant and realistic, our anonymization may not be perfect (e.g., we need to provide the real graph connectivity, node features, and SMILES strings). Although we believe it is nearly impossible to recover ground-truth test labels, we still significantly discourage the participants to try to de-anonymize the datasets during the competition. -->
 
-----------
 
 ##### **Honor Code**
 All the information provided in the **[leaderboard submission page](https://ogb-save.stanford.edu/leaderboard/)** must be correct and follows the above rules of OGB-LSC. The leaderboard submission cannot be deleted once it is public. Whenever you are contacted by the OGB-LSC Team, you need to provide information to verify the correctness of the information. Otherwise, the submission may be deleted, and future submissions may be prohibited.

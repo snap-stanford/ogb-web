@@ -9,6 +9,8 @@ permalink: /docs/lsc/wikikg90mv2/
     - **[Dataset object](#dataset_object): Learn about how to prepare and use the dataset with our package.**
     - **[Performance evaluator](#evaluator): Learn about how to evaluate models and save test submissions with our package.**
     - **[Initial baseline code](https://github.com/snap-stanford/ogb/tree/master/examples/lsc/wikikg90m-v2): Learn about our initial baseline experiments.**
+- **Text data**
+    - **[Download (2.4GB)](http://snap.stanford.edu/ogb/data/lsc/mapping/wikikg90mv2_mapping.zip)** md5sum: 2f0e3178a5e201bd1ab59a81f2dcba72
 - **[Discussion forum](https://github.com/snap-stanford/ogb/discussions/categories/wikikg90m-lsc): Ask questions and make discussion about the dataset.**
 
 <a name="dataset"/>

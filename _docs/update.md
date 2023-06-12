@@ -8,6 +8,12 @@ permalink: /docs/update/
 
 -----
 
+###### **June 11st, 2023: OGB-LSC text data released**
+- MAG240M: **[Download (33GB)](http://snap.stanford.edu/ogb/data/lsc/mapping/mag240m_mapping.zip)** md5sum: fc345d28b45808a2fa280ce6cbbfd198
+- WikiKG90Mv2: **[Download (2.4GB)](http://snap.stanford.edu/ogb/data/lsc/mapping/wikikg90mv2_mapping.zip)** md5sum: 2f0e3178a5e201bd1ab59a81f2dcba72
+
+-----
+
 ###### **April 6th, 2023: Package updated to [package `1.3.6`](https://github.com/snap-stanford/ogb/releases/tag/1.3.6)**
 - Pandas 2.0 compatibility (see [PR](https://github.com/snap-stanford/ogb/pull/420)).
 

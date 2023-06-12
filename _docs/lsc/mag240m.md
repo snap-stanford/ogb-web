@@ -10,6 +10,8 @@ permalink: /docs/lsc/mag240m/
     - **[Performance evaluator](#evaluator): Learn about how to evaluate models and save test submissions with our package.**
     - **[Initial baseline code](https://github.com/snap-stanford/ogb/tree/master/examples/lsc/mag240m): Learn about our initial baseline experiments.**
     - **[DGL's baseline code](https://github.com/dmlc/dgl/tree/master/examples/pytorch/ogb_lsc/MAG240M): [DGL](https://www.dgl.ai/)-based implementation.**
+- **Text data**
+    - **[Download (33GB)](http://snap.stanford.edu/ogb/data/lsc/mapping/mag240m_mapping.zip)** md5sum: fc345d28b45808a2fa280ce6cbbfd198
 - **[Discussion forum](https://github.com/snap-stanford/ogb/discussions/categories/mag240m-lsc): Ask questions and make discussion about the dataset.**
 
 
