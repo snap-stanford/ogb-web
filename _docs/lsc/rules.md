@@ -39,8 +39,8 @@ We **do not** allow the use of any external datasets to train models.
 --------
 
 ##### **Use of Text data: Not allowed**
-Based on the request from the community, we have released text data for MAG240M (**[Download (33GB)](http://snap.stanford.edu/ogb/data/lsc/mapping/mag240m_mapping.zip)**) and WikiKG90Mv2 (**[Download (2.4GB)](http://snap.stanford.edu/ogb/data/lsc/mapping/wikikg90mv2_mapping.zip)**). The text data can be used in various purposes, such as pre-training models, improving model performance, and interpreting model's predictions.
-**However, for the purpose of our main leaderboard, we do not allow the models to use the text data**. This is because when LLMs are used, they may leak our test set information since our test set may be included as training data of LLMs. In the future, we plan to set up a new specialized leaderboard where the use of LLMs and text data is allowed. We welcome suggestions from the community.
+Based on the request from the community, we have released text data for MAG240M (**[Download (33GB)](http://snap.stanford.edu/ogb/data/lsc/mapping/mag240m_mapping.zip)**) and WikiKG90Mv2 (**[Download (2.4GB)](http://snap.stanford.edu/ogb/data/lsc/mapping/wikikg90mv2_mapping.zip)**). The text data can be used in various purposes, such as analyzing model's predictions, improving model performance, and pre-training models.
+**However, for the purpose of our main leaderboard, we do not allow the models to use the text data**. This is because when LLMs are used, they may leak our test set information by being trained on our test data (which is publicly available). In the future, we plan to set up a new specialized leaderboard where the use of LLMs and text data is allowed. We welcome suggestions from the community.
 
 Moreover, since text data is now released, it becomes easier to reveal hidden test labels by accessing the public database. We ask the community not to do it.
 Keep in mind that you will need to share all the code to reproduce your solution through public Github repository. 
